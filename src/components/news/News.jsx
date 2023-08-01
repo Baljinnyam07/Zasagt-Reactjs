@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Posts from '../Posts/Posts';
+import { IntlProvider } from 'react-intl';
 
 const News = () => {
   const [showMandchilgee, setShowMandchilgee] = useState(true);
@@ -31,6 +33,10 @@ const News = () => {
         </div>
         <div className='mt-[60px]'>
         <div className={`flex my-10 ${showMandchilgee ? '' : 'hidden'}`}>
+        <IntlProvider>
+      <Posts />
+      {/* Other components in your app */}
+    </IntlProvider>
         </div>
         <div className={`my-10 ${showTaniulgu ? '' : 'hidden'}`}>
         <ul>
