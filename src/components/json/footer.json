@@ -1,0 +1,87 @@
+[
+    {
+        "headerTitle":"Бидний тухай",
+        "headerproperty":[
+            {
+                "property":"Захирлын мэндчилгээ",
+                "url":"/about-us/ceo"
+            },
+            {
+                "property":"Компанийн танилцуулга",
+                "url":"/taniltsuulga"
+            },
+            {
+                "property":"Алсын хараа, эрхэм зорилго, үнэт зүйл",
+                "url":"/zorilgo"
+            }
+        ]
+    },
+    {
+        "headerTitle":"төслүүд",
+        "headerproperty":[
+            {
+                "property":"Овоо толгой",
+                "url":"/mendchilgee"
+            },
+            {
+                "property":"Алтан Цагаан Овоо",
+                "url":"/taniltsuulga"
+            },
+            {
+                "property":"Цанхийн баруун уурхайн нүүрс ачилт",
+                "url":"/zorilgo"
+            }
+        ]
+    },
+    {
+        "headerTitle":"хамтран ажиллах",
+        "headerproperty":[
+            {
+                "property":"Ил уурхайн хөрс хуулалт, олборлолтын ажил",
+                "url":"/mendchilgee"
+            },
+            {
+                "property":"Уул уурхайн туслах ажил",
+                "url":"/taniltsuulga"
+            },
+            {
+                "property":"Тоног төхөөрөмж түрээс",
+                "url":"/zorilgo"
+            }
+        ]
+    },
+    {
+        "headerTitle":"мэдээ мэдээлэл",
+        "headerproperty":[
+            {
+                "property":"Цаг үеийн мэдээлэл",
+                "url":"/mendchilgee"
+            },
+            {
+                "property":"Байгууллагын мэдээ",
+                "url":"/taniltsuulga"
+            },
+            {
+                "property":"Нийгмийн хариуцлага",
+                "url":"/zorilgo"
+            }
+        ]
+    },
+    {
+        "headerTitle":"хүний нөөц",
+        "headerproperty":[
+            {
+                "property":"Хүний нөөцийн бодлого",
+                "url":"/mendchilgee"
+            },
+            {
+                "property":"Сургалтын хөтөлбөр",
+                "url":"/taniltsuulga"
+            },
+            {
+                "property":"Нээлттэй ажлын байр",
+                "url":"/zorilgo"
+            }
+        ]
+    }
+]
