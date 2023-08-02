@@ -8,6 +8,7 @@ import News from './components/news/News';
 import Admin from './components/Admin';
 import PostsAdmin from './components/Posts/PostsAdmin';
 import PostEdit from './components/Posts/PostEdit';
+import Post from './components/Posts/Post';
 
 function App() {
   return (
@@ -18,9 +19,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about"  element={<About/>}/>
           <Route path="/project"  element={<Project/>}/>
-          <Route path="/news"  element={<News/>}/>
-
-          
+          <Route path="/posts/:type" element={<News />} />
+          <Route path="/posts/:type/:postId" element={<Post />} />          
         </Route>
         <Route path="/admin" element={<Admin />} />
             <Route path="/admin/posts/:type" element={<PostsAdmin />} />

@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { app } from "../firebase";
-import { getFirestore, collection,  onSnapshot ,getDocs, query, where } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
-
 
 const db = getFirestore(app);
 
 function Admin() {
-  const [feedbacksCount, setFeedbacksCount] = useState(0);
   const [phoneNumber, setPhoneNumber] = useState('');
   const [cryptoBasicsQuantity, setCryptoBasicsQuantity] = useState(0);
   const [manageNewsQuantity, setManageNewsQuantity] = useState(0);
@@ -17,24 +15,12 @@ function Admin() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
-    const feedbacksCollection = collection(db, 'feedbacks');
-    const unsubscribe = onSnapshot(feedbacksCollection, (snapshot) => {
-      setFeedbacksCount(snapshot.size); 
-    });
-
-    return () => unsubscribe();
-  }, []);
-  useEffect(() => {
     getPostQuantities();
   }, []);
   const getPostQuantities = async () => {
-    const cryptoBasicsQuery = query(collection(db, "posts"), where("type", "==", "basics"));
-    const manageNewsQuery = query(collection(db, "posts"), where("type", "==", "news"));
-    const manageProjectQuery = query(collection(db, "posts"), where("type", "==", "projects"));
+    const manageNewsQuery = query(collection(db, "posts"), where("type", "==", "posts"));
     const [cryptoBasicsSnapshot, manageNewsSnapshot, manageProjectSnapshot] = await Promise.all([
-      getDocs(cryptoBasicsQuery),
       getDocs(manageNewsQuery),
-      getDocs(manageProjectQuery)
     ]);
 
     setCryptoBasicsQuantity(cryptoBasicsSnapshot.size);
@@ -139,14 +125,6 @@ function Admin() {
           <Link className="flex mt-6 text-[#006cff]" to="/admin">Dashboard</Link>
          <br />
          <Link className="flex" to="/admin/posts/news">Manage News</Link>
-         <br />
-         <Link className="flex" to="/admin/posts/basics">Manage Crypto Basics</Link>
-         <br />
-         <Link className="flex" to="/admin/posts/projects">Manage Projects</Link>
-         <br /> 
-         <Link className="flex" to="/admin/posts/report">Report performance</Link>
-         <br /> 
-         <Link className="flex" to="/admin/posts/AdminFeedback" >Feedback</Link>
          <br/>
           <div>
           </div>
@@ -164,7 +142,6 @@ function Admin() {
                   </div>
                 </div>
                 <div>
-                  <div className='mx-10 font-sans flex justify-end  text-[#343a40] text-[1.5rem] font-[500]'>{feedbacksCount}</div>
                   <div className='mx-10 font-sans flex justify-center text-[0.8rem] text-[#6c757d]'> Feedbacks</div>
                 </div>
               </div>
