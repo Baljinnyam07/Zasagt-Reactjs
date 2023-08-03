@@ -9,7 +9,7 @@ const Editor = ({ content, setContent }) => {
     let name = `${Date.now()}.${file.type.split('/')[1]}`;
     const storageRef = ref(storage, name)
     uploadBytes(storageRef, file).then(() => {
-      setContent(content + `<img src="https://firebasestorage.googleapis.com/v0/b/altexmn.appspot.com/o/${name}?alt=media" />`)
+      setContent(content + `<img src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/${name}?alt=media" />`)
     });
   }
 

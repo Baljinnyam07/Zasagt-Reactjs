@@ -45,11 +45,11 @@ const Project=()=> {
                         </div>
                     </div>
                     <div className='flex items-center mt-12 ml-[52px]'>
-                    <image 
+                    <img 
                         src={steppe}
                         width={236}
                         height={147}
-                        alt="Picture of the author"
+                        alt="Steppe"
                     />
                     </div>
                 </div> 
@@ -78,11 +78,11 @@ const Project=()=> {
                         </div>
                     </div>
                     <div className='flex items-center mt-12 ml-[52px]'>
-                    <image 
+                    <img
                         src={erdenes}
                         width={236}
                         height={147}
-                        alt="Picture of the author"
+                        alt="ErdenesTolgoi"
                     />
                     </div>
                 </div> 
@@ -112,11 +112,11 @@ const Project=()=> {
                         </div>
                     </div>
                     <div className='flex items-center mt-12 ml-[52px]'>
-                    <image 
+                    <img
                         src={gobi}
                         width={536}
                         height={347}
-                        alt="Picture of the author"
+                        alt="SouthGobi"
                     />
                     </div>
                 </div> 

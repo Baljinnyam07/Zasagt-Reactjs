@@ -29,7 +29,7 @@ function PostsAdminItem({post, getPosts}) {
         <div className="border-b rounded p-1 w-[950px] flex justify-between shadow-lg">
           <div className="flex items-center">{post.title}</div>
           <div className="flex">
-            <Link to={`/admin/news/${post.type}/edit/${post.id}`}>
+            <Link to={`/admin/posts/${post.type}/edit/${post.id}`}>
               <div className="mx-2 border rounded shadow-lg p-2 flex justify-center bg-[#84cc16] w-[100px]">
                 Edit
               </div>
@@ -49,7 +49,6 @@ function PostsAdminItem({post, getPosts}) {
             checked={isActive}
             onChange={toggleIsActive}
           />
-          <label>Is Active</label>
         </div>
           </div>
         </div>
@@ -122,11 +121,5 @@ function PostsAdminItem({post, getPosts}) {
     </>
   );
 }
-
-PostsAdminItem.defaultProps = {
-  post: {
-    is_active: true, // Set the default value to true
-  },
-};
 
 export default PostsAdminItem;

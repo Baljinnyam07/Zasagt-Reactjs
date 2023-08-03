@@ -9,9 +9,11 @@ import Admin from './components/Admin';
 import PostsAdmin from './components/Posts/PostsAdmin';
 import PostEdit from './components/Posts/PostEdit';
 import Post from './components/Posts/Post';
+import { IntlProvider } from 'react-intl';
 
 function App() {
   return (
+    <IntlProvider>
     <Router>
       <Routes>
         {/* Use Layout as a layout wrapper for all routes */}
@@ -28,6 +30,7 @@ function App() {
             <Route path="/admin/posts/:type/edit/:postId" element={<PostEdit />} />
       </Routes>
     </Router>
+    </IntlProvider>
   );
 }
 

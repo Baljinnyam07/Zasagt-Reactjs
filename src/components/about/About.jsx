@@ -37,12 +37,12 @@ const About = () => {
         <div className='mt-[60px]'>
         <div className={`flex my-10 ${showMandchilgee ? '' : 'hidden'}`}>
         <div>
-          <image 
-            src={Ceo}
-            width={384}
-            height={576}
-            alt="Picture of the author"
-          /> 
+        <img 
+          src={Ceo}
+          width={384}
+          height={576}
+          alt="Portrait of the company's CEO, John Doe, standing confidently."
+        /> 
         </div>
         <div className='w-[487px] ml-[24px] '>
           <div className="text-black text-[32px] font-500 font-sans mb-5">мэндчилгээ</div>
@@ -61,7 +61,7 @@ const About = () => {
           <div className="text-black text-[24px] font-500 font-sans mb-5">Ц. Батбаяр</div>
           <div>“Засагт хаан” ХХК-ийн захирал</div>
           <div>
-          <image src={CeoC} width={186} height={104} alt="Picture of the author" />
+          <img src={CeoC} width={186} height={104} alt="Ceo" />
           </div>
         </div>
         </div>
@@ -89,22 +89,22 @@ const About = () => {
           <div className="text-black text-[32px] font-500 font-sans mb-5 mb-[24px]">Түүхэн замнал</div>
             <div className="text-black text-base font-normal leading-8 mb-5 w-[894px] ">
               <div className='ml-[100px]'>
-              <image 
+              <img
                   src={History}
                   width={1236}
                   height={1070}
-                  alt="Picture of the author"
+                  alt="history"
                 />
               </div>
             </div>
           </div>
         </div>
         <div className={`flex my-10 ${showUnit ? '' : 'hidden'}`}>
-                <image 
+                <img
                   src={Assets}
                   width={1236}
                   height={970}
-                  alt="Picture of the author"
+                  alt="Pict"
                 />
         </div>
         </div>
