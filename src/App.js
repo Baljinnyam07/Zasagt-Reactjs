@@ -10,24 +10,30 @@ import PostsAdmin from './components/Posts/PostsAdmin';
 import PostEdit from './components/Posts/PostEdit';
 import Post from './components/Posts/Post';
 import { IntlProvider } from 'react-intl';
+import Mechanical from './components/contact-us/Mechanical';
 
 function App() {
   return (
-    <IntlProvider>
+    <IntlProvider locale='en'>
     <Router>
       <Routes>
         {/* Use Layout as a layout wrapper for all routes */}
         <Route  element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/about"  element={<About/>}/>
-          <Route path="/project"  element={<Project/>}/>
+          <Route path="/about/:type"  element={<About/>}/>
+          <Route path="/project/:type"  element={<Project/>}/>
           <Route path="/posts/:type" element={<News />} />
-          <Route path="/posts/:type/:postId" element={<Post />} />          
+          <Route path="/posts/:type/:postId" element={<Post />} />    
+          <Route path='/mechanical/:type' element={<Mechanical/>}/>      
         </Route>
         <Route path="/admin" element={<Admin />} />
             <Route path="/admin/posts/:type" element={<PostsAdmin />} />
             <Route path="/admin/posts/:type/create" element={<PostEdit/>} />
             <Route path="/admin/posts/:type/edit/:postId" element={<PostEdit />} />
+
+            <Route path="/admin/mechanical/:type" element={<PostsAdmin />} />
+            <Route path="/admin/mechanical/:type/create" element={<PostEdit/>} />
+            <Route path="/admin/mechanical/:type/edit/:postId" element={<PostEdit />} />
       </Routes>
     </Router>
     </IntlProvider>

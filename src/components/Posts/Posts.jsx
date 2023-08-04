@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { collection, endBefore, getDocs, limit, orderBy, query, startAfter, where } from "firebase/firestore";
 import { db } from "../../firebase";
 
-function Posts() {
+function Posts({urlType}) {
 const [posts, setPosts] = useState([]);
 const { type } = useParams();
 const paginateBy = 6;
@@ -18,7 +18,7 @@ const paginateBy = 6;
     let q;
   if (direction === 'next') {
     q = query(
-      collection(db, 'posts'),
+      collection(db, urlType),
       where('type', '==', type),
       orderBy('date', 'desc'),
       startAfter(posts[posts.length - 1]?.ref),
@@ -26,7 +26,7 @@ const paginateBy = 6;
     );
   } else if (direction === 'prev') {
     q = query(
-      collection(db, 'posts'),
+      collection(db, urlType),
       where('type', '==', type),
       orderBy('date', 'desc'),
       endBefore(posts[0]?.ref),
@@ -34,7 +34,7 @@ const paginateBy = 6;
     );
   } else {
     q = query(
-      collection(db, 'posts'),
+      collection(db, urlType),
       where('type', '==', type),
       orderBy('date', 'desc')
     );

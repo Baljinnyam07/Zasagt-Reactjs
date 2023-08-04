@@ -7,7 +7,7 @@ function Admin() {
        <div className="bg-[#f5f6f8]  text-center leading-7 font-sans bg-[#eeeff3]">
      
      <div className={`flex h-[70px] bg-[#006cff] items-center text-[#fff] font-sans text-[25px]  `}>
-     <div className="bg-[] text-[20px] w-full flex justify-end items-center ">
+     <div className="text-[20px] w-full flex justify-end items-center ">
     </div>
      </div>
    <div className="flex">
@@ -15,6 +15,10 @@ function Admin() {
           <Link className="flex mt-6 text-[#006cff]" to="/admin">Dashboard</Link>
          <br />
          <Link className="flex" to="/admin/posts/news">Manage News</Link>
+         <br/>
+         <Link className="flex" to="/admin/mechanical/mining">Contact-Us</Link>
+         <br/>
+         <Link className="flex" to="/admin/humanity">Humanity</Link>
          <br/>
           <div>
           </div>

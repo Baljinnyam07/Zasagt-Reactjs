@@ -1,5 +1,22 @@
 [
     {
+        "headerTitle":"Нүүр",
+        "headerproperty":[
+            {
+                "property":"Захирлын мэндчилгээ",
+                "url":"/mendchilgee"
+            },
+            {
+                "property":"Компанийн танилцуулга",
+                "url":"/taniltsuulga"
+            },
+            {
+                "property":"Алсын хараа, эрхэм зорилго, үнэт зүйл",
+                "url":"/zorilgo"
+            }
+        ]
+    },
+    {
         "headerTitle":"Бидний тухай",
         "headerproperty":[
             {

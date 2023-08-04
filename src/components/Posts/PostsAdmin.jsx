@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { collection, endBefore, getDocs, limit, orderBy, query, startAfter, where } from "firebase/firestore";
 import { db } from "../../firebase";
 import PostsAdminItem from "./PostsAdminItem";
 
 
 function PostsAdmin(props) {
+  console.log('props:',props)
   const [posts, setPosts] = useState([]);
   const {type} = useParams(props);
   const [cursorAtEnd, setCursorAtEnd] = useState(false);
   const [cursorAtStart, setCursorAtStart] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
+  const location = useLocation();
+  const pathSegments = location.pathname.split("/");
+  const urlType = pathSegments[2]
+  console.log('urlt:',urlType)
 
   const paginateBy = 10;
   useEffect(() => {
@@ -25,7 +30,7 @@ function PostsAdmin(props) {
     if (direction === "next" && !cursorAtEnd) {
       start = posts[posts.length - 1].ref;
       q = query(
-        collection(db, "posts"),
+        collection(db, urlType),
         type ? where("type", "==", type) : null,
         orderBy("date", "desc"),
         startAfter(start),
@@ -34,7 +39,7 @@ function PostsAdmin(props) {
     } else if (direction === "prev" && !cursorAtStart) {
       end = posts[0].ref;
       q = query(
-        collection(db, "posts"),
+        collection(db, urlType),
         type ? where("type", "==", type) : null,
         orderBy("date", "desc"),
         endBefore(end),
@@ -42,7 +47,7 @@ function PostsAdmin(props) {
       );
     } else {
       q = query(
-        collection(db, "posts"),
+        collection(db, urlType),
         type ? where("type", "==", type) : null,
         orderBy("date", "desc"),
       );
@@ -100,12 +105,12 @@ function PostsAdmin(props) {
           <div className="text-[#000]">
           <div className="h-max px-5 mt-10 font-sans project">
               <div className="flex">
-                <Link className="border w-20 rounded  bg-[#6c757d]  text-[#fff]" to={`/admin/posts/${type}/create`}>Create</Link>
+                <Link className="border w-20 rounded  bg-[#6c757d]  text-[#fff]" to={`/admin/${urlType}/${type}/create`}>Create</Link>
               </div>
               <br />
               <div className="">
                 <div className="">
-                {posts.map((post) => <PostsAdminItem key={post.id} post={post} getPosts={getPosts} />)}
+                {posts.map((post) => <PostsAdminItem key={post.id} dataType={urlType} post={post} getPosts={getPosts} />)}
                 </div>
                 
               </div>

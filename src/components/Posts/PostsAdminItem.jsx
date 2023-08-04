@@ -1,26 +1,19 @@
 import { Link } from "react-router-dom";
-import { deleteDoc, doc, updateDoc } from 'firebase/firestore';
+import { deleteDoc, doc } from 'firebase/firestore';
 import { db } from "../../firebase";
 import { useState } from "react";
 
-function PostsAdminItem({post, getPosts}) {
+function PostsAdminItem({post,dataType, getPosts}) {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
-  const [isActive, setIsActive] = useState(post.is_active);
   console.log(post)
   const remove = () => {
-      deleteDoc(doc(db, "posts", post.id)).then(() => {
+      deleteDoc(doc(db, dataType, post.id)).then(() => {
         getPosts();
         toggleDeleteModal();
       });
   }
   const toggleDeleteModal = () => {
     setShowDeleteModal(!showDeleteModal);
-  };
-
-  const toggleIsActive = async () => {
-    const postRef = doc(db, 'posts', post.id);
-    await updateDoc(postRef, { is_active: !isActive });
-    setIsActive(!isActive);
   };
 
   return (
@@ -44,11 +37,6 @@ function PostsAdminItem({post, getPosts}) {
               </button>
             </div>
             <div className="flex items-center">
-          <input
-            type="checkbox"
-            checked={isActive}
-            onChange={toggleIsActive}
-          />
         </div>
           </div>
         </div>

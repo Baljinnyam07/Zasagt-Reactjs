@@ -1,38 +1,51 @@
-
-import React, { useState } from 'react';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import Ceo from './ceoImage.jpeg';
 import CeoC from './ceoCeo.png';
 import Assets from './assets.png';
-import History from './history.png'
+import HistoryComp from './history.png';
 
 const About = () => {
   const [showMandchilgee, setShowMandchilgee] = useState(true);
   const [showTaniulgu, setShowTaniulgu] = useState(false);
   const [showUnit, setShowUnit] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+
+  useEffect(() => {
+    if (location.pathname === '/about/ceo') {
+      setShowMandchilgee(true);
+      setShowTaniulgu(false);
+      setShowUnit(false);
+    } else if (location.pathname === '/about/about-us') {
+      setShowMandchilgee(false);
+      setShowTaniulgu(true);
+      setShowUnit(false);
+    } else if (location.pathname === '/about/our') {
+      setShowMandchilgee(false);
+      setShowTaniulgu(false);
+      setShowUnit(true);
+    }
+  }, [location.pathname]);
 
   const handleMandchilgeeClick = () => {
-    setShowMandchilgee(true);
-    setShowTaniulgu(false);
-    setShowUnit(false);
+    navigate('/about/ceo');
   };
 
   const handleTaniulguClick = () => {
-    setShowMandchilgee(false);
-    setShowTaniulgu(true);
-    setShowUnit(false);
+    navigate('/about/about-us');
   };
 
   const handleUnetZuylClick = () => {
-    setShowMandchilgee(false);
-    setShowTaniulgu(false);
-    setShowUnit(true);
+    navigate('/about/our');
   };
   return (
       <div className="flex">
         <div className="text-[14px] mt-[40px] uppercase">
-          <div className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer" onClick={handleMandchilgeeClick}>Захирлын мэндчилгээ</div>
-          <div className="text-black w-[226px] mb-[69px] font-medium mb-5 cursor-pointer" onClick={handleTaniulguClick}>компанийн танилцуулга</div>
-          <div className="text-black w-[246px] mr-[102px] font-medium mb-5 cursor-pointer" onClick={handleUnetZuylClick}>алсын хараа, эрхэм зорилго, үнэт зүйл</div>
+          <div className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer" onClick={handleMandchilgeeClick}><Link to="/about/ceo">Захирлын мэндчилгээ</Link></div>
+          <div className="text-black w-[226px] mb-[69px] font-medium mb-5 cursor-pointer" onClick={handleTaniulguClick}><Link to="/about/about-us">компанийн танилцуулга</Link></div>
+          <div className="text-black w-[246px] mr-[102px] font-medium mb-5 cursor-pointer" onClick={handleUnetZuylClick}><Link to="/about/our">алсын хараа, эрхэм зорилго, үнэт зүйл</Link></div>
         </div>
         <div className='mt-[60px]'>
         <div className={`flex my-10 ${showMandchilgee ? '' : 'hidden'}`}>
@@ -65,6 +78,7 @@ const About = () => {
           </div>
         </div>
         </div>
+
         <div className={`my-10 ${showTaniulgu ? '' : 'hidden'}`}>
           <div>
           <div className="text-black text-[32px] font-500 font-sans mb-5 uppercase">танилцуулга</div>
@@ -90,7 +104,7 @@ const About = () => {
             <div className="text-black text-base font-normal leading-8 mb-5 w-[894px] ">
               <div className='ml-[100px]'>
               <img
-                  src={History}
+                  src={HistoryComp}
                   width={1236}
                   height={1070}
                   alt="history"

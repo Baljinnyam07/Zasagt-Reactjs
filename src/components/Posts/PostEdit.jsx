@@ -2,7 +2,7 @@ import Editor from './Editor';
 import { useEffect, useState } from 'react';
 import { collection, addDoc, serverTimestamp, doc, getDoc, updateDoc } from "firebase/firestore"; 
 import { db, storage } from '../../firebase';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 
 
@@ -13,12 +13,18 @@ const PostEdit = () => {
   const [image, setImage] = useState("");
   const [percent, setPercent] = useState(0);
 
+  const location = useLocation();
+  const pathSegments = location.pathname.split("/");
+  const urlType = pathSegments[2];
+
+  const [dataType] = useState(urlType);
+
   const navigate = useNavigate();
   const {type, postId} = useParams();
 
   useEffect(() => {
     if (postId) {
-      const docRef = doc(db, "posts", postId);
+      const docRef = doc(db, dataType, postId);
       getDoc(docRef).then((docSnap) => {
         if (docSnap.exists()) {
           const data = docSnap.data();
@@ -31,11 +37,15 @@ const PostEdit = () => {
         }
       });
     }
-  }, [postId]);
+  }, [dataType,postId]);
 
   const save = async () => {
+    if (!dataType) {
+      console.error("dataType is empty");
+      return;
+    }
     if (postId) {
-      await updateDoc(doc(db, "posts", postId), {
+      await updateDoc(doc(db, dataType, postId), {
         title: title,
         content: content,
         image: image,
@@ -45,7 +55,7 @@ const PostEdit = () => {
       });
       navigate(`/${type}/${postId}`);
     } else {
-      const docRef = await addDoc(collection(db, "posts"), {
+      const docRef = await addDoc(collection(db, dataType), {
         title: title,
         content: content,
         image: image,
@@ -53,7 +63,7 @@ const PostEdit = () => {
         createdAt: serverTimestamp(),
         type: type,
       });
-      navigate(`/posts/${type}/${docRef.id}`);
+      navigate(`/${dataType}/${type}/${docRef.id}`);
     }
   }
 
@@ -81,15 +91,7 @@ const PostEdit = () => {
       <div className='w-screen flex h-max '>
       <div className="w-[300px] bg-[#fff] text-[14px] text-[#6e768e] h-screen p-4 px-8">
             <Link className="flex mt-6" to="/admin">Dashboard</Link>
-            <br />
-            <a className={`flex ${type === 'news' ? 'text-[#006cff]' : ''}`} href="/admin/posts/news">Manage News</a>
-            <br />
-
-            <a className={`flex ${type === 'corp-news' ? 'text-[#006cff]' : ''}`} href="/admin/posts/news">Manage News</a>
-            <br />
-
-            <a className={`flex ${type === 'social-resp' ? 'text-[#006cff]' : ''}`} href="/admin/posts/news">Manage News</a>
-            <br />
+<br />
      </div>
         <div className='w-full p-10'>
         <div className='grid grid-cols-2 gap-4 '>

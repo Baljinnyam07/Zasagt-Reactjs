@@ -2,7 +2,7 @@ import React from 'react';
 import Posts from '../Posts/Posts';
 import { useParams } from 'react-router-dom';
 
-const News = () => {
+const Mechanical = () => {
   const { type } = useParams();
   return (
     <div className="flex">
@@ -24,10 +24,10 @@ const News = () => {
         </div>
       </div>
       <div>
-        <Posts type={`${type}`} urlType='posts' />
+        <Posts type={`${type}`} urlType='mechanical'/>
       </div>
     </div>
   );
 };
 
-export default News;
+export default Mechanical;

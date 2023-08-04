@@ -5,8 +5,6 @@ import { db } from "../../firebase";
 function extractImageAndParagraph(html) {
   const tempElement = document.createElement("div");
   tempElement.innerHTML = html;
-
-  // Get the first image element
   const imageElement = tempElement.querySelector("img");
   const imageSrc = imageElement ? imageElement.src : "";
   if (imageElement) {
