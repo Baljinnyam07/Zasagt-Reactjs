@@ -46,19 +46,19 @@ const Project = () => {
           className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer"
           onClick={handleOvooTolgoiClick}
         >
-          <Link to="/project/ovooTolgoi">овоо толгой</Link>
+          <Link className={`${location.pathname === '/project/ovooTolgoi' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi">овоо толгой</Link>
         </div>
         <div
           className="text-black w-[226px] mb-[69px] font-medium mb-5 cursor-pointer"
           onClick={handleAltanTsagaanOvooClick}
         >
-          <Link to="/project/tsagaanOvoo">алтан цагаан овоо</Link>
+          <Link className={`${location.pathname === '/project/tsagaanOvoo' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/tsagaanOvoo">алтан цагаан овоо</Link>
         </div>
         <div
           className="text-black w-[246px] mr-[102px] font-medium mb-5 cursor-pointer"
           onClick={handleUurkhainNuursClick}
         >
-          <Link to="/project/UurhaiNvvrs">цанхийн баруун уурхайн НҮҮРС АЧИЛТ</Link>
+          <Link className={`${location.pathname === '/project/UurhaiNvvrs' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/UurhaiNvvrs">цанхийн баруун уурхайн НҮҮРС АЧИЛТ</Link>
         </div>
       </div>
       <div className="mt-[80px]">

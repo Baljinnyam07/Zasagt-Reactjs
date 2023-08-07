@@ -5,8 +5,8 @@ import Header from './Header';
 import FeedBack from './FeedBack';
 import AppContainer from './AppContainer';
 import { Outlet } from "react-router-dom";
-import headerMenuJson from "./json/navbar.json"
 import Reverse from './reverse';
+import Nav from './Nav';
 
 
 
@@ -39,30 +39,7 @@ const Layout =()=> {
             </a>
             </div>
             <div className="flex py-[40px] ">
-                <div className="mr-[83px] flex gap-[40px]">
-                {headerMenuJson.map((data, index)=>(
-                    <button key={index} id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" className="text-white flex items-center gap-2 uppercase text-[14px] font-400" type="button">
-                    {data.headerTitle}
-                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
-                    <g clipPath="url(#clip0_323_14)">
-                        <path d="M8.9775 3.80816C8.8603 3.69099 8.70135 3.62516 8.53563 3.62516C8.3699 3.62516 8.21096 3.69099 8.09375 3.80816L5 6.90191L1.90625 3.80816C1.78837 3.69431 1.6305 3.63131 1.46662 3.63273C1.30275 3.63416 1.14599 3.69989 1.03011 3.81577C0.914233 3.93165 0.848503 4.08841 0.847079 4.25228C0.845655 4.41615 0.908652 4.57403 1.0225 4.69191L4.55813 8.22753C4.67533 8.3447 4.83427 8.41052 5 8.41052C5.16573 8.41052 5.32467 8.3447 5.44187 8.22753L8.9775 4.69191C9.09467 4.5747 9.16049 4.41576 9.16049 4.25003C9.16049 4.0843 9.09467 3.92536 8.9775 3.80816Z" fill="white"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_323_14">
-                        <rect width="10" height="10" fill="white" transform="translate(10 10.5) rotate(-180)"/>
-                        </clipPath>
-                    </defs>
-                    </svg>
-                </button>
-                ))}
-                <div id="dropdownHover" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                    <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
-                    <li>
-                        <a href="/" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                    </li>
-                    </ul>
-                </div>
-                </div>
+                <Nav/>
                 <div className="">
                 <svg width="33" height="16" viewBox="0 0 33 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                 <rect width="33" height="16" fill="url(#pattern0)"/>

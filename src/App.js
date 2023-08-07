@@ -11,6 +11,7 @@ import PostEdit from './components/Posts/PostEdit';
 import Post from './components/Posts/Post';
 import { IntlProvider } from 'react-intl';
 import Mechanical from './components/contact-us/Mechanical';
+import Humanity from './components/humanity/Humanity';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about/:type"  element={<About/>}/>
           <Route path="/project/:type"  element={<Project/>}/>
+          <Route path="/humanity/:type"  element={<Humanity/>}/>
           <Route path="/posts/:type" element={<News />} />
           <Route path="/posts/:type/:postId" element={<Post />} />    
           <Route path='/mechanical/:type' element={<Mechanical/>}/>      

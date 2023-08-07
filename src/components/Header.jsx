@@ -4,8 +4,6 @@ import { useLocation } from 'react-router-dom';
 const Navbar = () => {
   const location = useLocation();
   const [bgImage, setBgImage] = useState('');
-  console.log('bgImage:', bgImage)
-  // Logic to set the background image URL
   useEffect(() => {
     const url = location.pathname;
     if (url === '/') {
@@ -18,6 +16,8 @@ const Navbar = () => {
       setBgImage('https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/hamtran-ajillah-transformed-bw%20(2).png?alt=media&token=32e5ef2c-6d20-4b87-b5af-a96eaa1dd0bb');
     }else if (url.startsWith('/about/')) {
       setBgImage('https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/bw%20(3).png?alt=media&token=a57cda8e-e75c-4cc6-98fb-f04bdfe5833a');
+    }else if (url.startsWith('/humanity/')) {
+      setBgImage('https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/hunii-nuuts-transformed-bw%20(2).png?alt=media&token=51971a5f-53ff-43d6-827e-f739d58515ff');
     }else {
       setBgImage('default-image-url');
     }

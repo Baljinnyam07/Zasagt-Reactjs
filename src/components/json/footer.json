@@ -72,15 +72,15 @@
         "headerproperty":[
             {
                 "property":"Хүний нөөцийн бодлого",
-                "url":"/mendchilgee"
+                "url":"/humanity/resource-policy"
             },
             {
                 "property":"Сургалтын хөтөлбөр",
-                "url":"/taniltsuulga"
+                "url":"/humanity/curriculum"
             },
             {
                 "property":"Нээлттэй ажлын байр",
-                "url":"/zorilgo"
+                "url":"/humanity/job-openings"
             }
         ]
     }

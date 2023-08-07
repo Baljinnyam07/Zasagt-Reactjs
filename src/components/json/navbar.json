@@ -1,35 +1,18 @@
 [
     {
-        "headerTitle":"Нүүр",
-        "headerproperty":[
-            {
-                "property":"Захирлын мэндчилгээ",
-                "url":"/mendchilgee"
-            },
-            {
-                "property":"Компанийн танилцуулга",
-                "url":"/taniltsuulga"
-            },
-            {
-                "property":"Алсын хараа, эрхэм зорилго, үнэт зүйл",
-                "url":"/zorilgo"
-            }
-        ]
-    },
-    {
         "headerTitle":"Бидний тухай",
         "headerproperty":[
             {
                 "property":"Захирлын мэндчилгээ",
-                "url":"/mendchilgee"
+                "url":"/about/ceo"
             },
             {
                 "property":"Компанийн танилцуулга",
-                "url":"/taniltsuulga"
+                "url":"/about/about-us"
             },
             {
                 "property":"Алсын хараа, эрхэм зорилго, үнэт зүйл",
-                "url":"/zorilgo"
+                "url":"/about/our"
             }
         ]
     },
@@ -38,15 +21,15 @@
         "headerproperty":[
             {
                 "property":"Овоо толгой",
-                "url":"/mendchilgee"
+                "url":"/project/ovooTolgoi"
             },
             {
                 "property":"Алтан Цагаан Овоо",
-                "url":"/taniltsuulga"
+                "url":"/project/tsagaanOvoo"
             },
             {
                 "property":"Цанхийн баруун уурхайн нүүрс ачилт",
-                "url":"/zorilgo"
+                "url":"/project/UurhaiNvvrs"
             }
         ]
     },
@@ -55,15 +38,15 @@
         "headerproperty":[
             {
                 "property":"Ил уурхайн хөрс хуулалт, олборлолтын ажил",
-                "url":"/mendchilgee"
+                "url":"/mechanical/mining"
             },
             {
                 "property":"Уул уурхайн туслах ажил",
-                "url":"/taniltsuulga"
+                "url":"/mechanical/mining"
             },
             {
                 "property":"Тоног төхөөрөмж түрээс",
-                "url":"/zorilgo"
+                "url":"/mechanical/mining"
             }
         ]
     },
@@ -72,15 +55,15 @@
         "headerproperty":[
             {
                 "property":"Цаг үеийн мэдээлэл",
-                "url":"/mendchilgee"
+                "url":"/posts/news"
             },
             {
                 "property":"Байгууллагын мэдээ",
-                "url":"/taniltsuulga"
+                "url":"/posts/corp-news"
             },
             {
                 "property":"Нийгмийн хариуцлага",
-                "url":"/zorilgo"
+                "url":"/posts/social-resp"
             }
         ]
     },
@@ -89,15 +72,15 @@
         "headerproperty":[
             {
                 "property":"Хүний нөөцийн бодлого",
-                "url":"/mendchilgee"
+                "url":"/humanity/resource-policy"
             },
             {
                 "property":"Сургалтын хөтөлбөр",
-                "url":"/taniltsuulga"
+                "url":"/humanity/curriculum"
             },
             {
                 "property":"Нээлттэй ажлын байр",
-                "url":"/zorilgo"
+                "url":"/humanity/job-openings"
             }
         ]
     }

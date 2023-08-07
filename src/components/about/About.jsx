@@ -43,9 +43,9 @@ const About = () => {
   return (
       <div className="flex">
         <div className="text-[14px] mt-[40px] uppercase">
-          <div className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer" onClick={handleMandchilgeeClick}><Link to="/about/ceo">Захирлын мэндчилгээ</Link></div>
-          <div className="text-black w-[226px] mb-[69px] font-medium mb-5 cursor-pointer" onClick={handleTaniulguClick}><Link to="/about/about-us">компанийн танилцуулга</Link></div>
-          <div className="text-black w-[246px] mr-[102px] font-medium mb-5 cursor-pointer" onClick={handleUnetZuylClick}><Link to="/about/our">алсын хараа, эрхэм зорилго, үнэт зүйл</Link></div>
+        <div className={`text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer ${location.pathname === '/about/ceo' ? 'text-[#D0A616]' : 'text-[#000]'}`} onClick={handleMandchilgeeClick}><Link to="/about/ceo">Захирлын мэндчилгээ</Link></div>
+          <div className={`text-black w-[226px] mb-[69px] font-medium mb-5 cursor-pointer ${location.pathname === '/about/about-us' ? 'text-[#D0A616]' : 'text-[#000]'}`} onClick={handleTaniulguClick}><Link to="/about/about-us">компанийн танилцуулга</Link></div>
+          <div className={`text-black w-[246px] mr-[102px] font-medium mb-5 cursor-pointer ${location.pathname === '/about/our' ? 'text-[#D0A616]' : 'text-[#000]'}`} onClick={handleUnetZuylClick}><Link to="/about/our">алсын хараа, эрхэм зорилго, үнэт зүйл</Link></div>
         </div>
         <div className='mt-[60px]'>
         <div className={`flex my-10 ${showMandchilgee ? '' : 'hidden'}`}>
