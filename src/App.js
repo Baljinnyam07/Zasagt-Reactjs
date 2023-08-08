@@ -16,7 +16,7 @@ import Humanity from './components/humanity/Humanity';
 function App() {
   return (
     <IntlProvider locale='en'>
-    <Router>
+    <Router basename='/'>
       <Routes>
             <Route  element={<Layout />}>
               <Route path="/" element={<Home />} />
