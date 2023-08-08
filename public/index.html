@@ -13,9 +13,44 @@
 
     <link rel="manifest" href="/manifest.json" />
     <title>Засагт Хаан</title>
+    <style>
+      .my-loader-page {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .my-loader {
+        width: 100px;
+        height: 100px;
+        border: 10px solid #bbb;
+        border-left: 10px solid blue;
+        border-right: 10px solid blueviolet;
+        border-radius: 50%;
+        animation: spin 2s linear infinite;
+      }
+  
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+  
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div class="my-loader-page">
+        <div class="my-loader"></div>
+        <p>React isn't ready yet</p>
+      </div>
+    </div>
   </body>
 </html>

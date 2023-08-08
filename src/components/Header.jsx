@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import {ImageCarousel} from './Carousel';
+const images = [
+    "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/1.png?alt=media&token=1a4b5706-eb2f-4e72-ab56-c09430f66432",
+    "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/2%20(1).png?alt=media&token=f92c8655-1f28-439d-be60-843baaf99dce",
+    "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/3%20(1).png?alt=media&token=0aa6a29a-e214-49d0-93b4-f9186cb2722f",
+    "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/istockphoto-505297676-2048x2048-transformed%201%20(1).png?alt=media&token=56a1c2aa-77d1-459f-91ec-fcd674ce31c8"
+];
 
 const Navbar = () => {
   const location = useLocation();
@@ -23,11 +30,10 @@ const Navbar = () => {
     }
   }, [location.pathname]);
 
-  console.log('image:', bgImage);
-
   return (
     <>
-      <nav className="flex items-start w-full justify-between px-[40px] h-[450px]"
+      {location.pathname !== '/' ? (
+        <nav className="flex items-start w-full justify-between px-[40px] h-[450px]"
         style={{
           backgroundImage: `url('${bgImage}')`,
           backgroundRepeat: 'no-repeat',
@@ -35,6 +41,9 @@ const Navbar = () => {
         }}
       >
       </nav>
+      ):(
+        <ImageCarousel images={images}/>
+      )}
     </>
   )
 }
