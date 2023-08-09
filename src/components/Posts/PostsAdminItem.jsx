@@ -5,7 +5,7 @@ import { useState } from "react";
 
 function PostsAdminItem({post,dataType, getPosts}) {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
-  console.log(post)
+  console.log("post:",post)
   const remove = () => {
       deleteDoc(doc(db, dataType, post.id)).then(() => {
         getPosts();

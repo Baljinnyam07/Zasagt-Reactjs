@@ -1,57 +1,31 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams, useLocation } from "react-router-dom";
-import { collection, endBefore, getDocs, limit, orderBy, query, startAfter, where } from "firebase/firestore";
+import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../firebase";
 import PostsAdminItem from "./PostsAdminItem";
 
 
 function PostsAdmin(props) {
-  console.log('props:',props)
   const [posts, setPosts] = useState([]);
   const {type} = useParams(props);
-  const [cursorAtEnd, setCursorAtEnd] = useState(false);
-  const [cursorAtStart, setCursorAtStart] = useState(true);
-  const [currentPage, setCurrentPage] = useState(1);
   const location = useLocation();
   const pathSegments = location.pathname.split("/");
   const urlType = pathSegments[2]
   console.log('urlt:',urlType)
+  console.log('posts:',posts)
+  console.log('type:', type)
 
-  const paginateBy = 10;
   useEffect(() => {
     getPosts();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const getPosts = (direction) => {
+  const getPosts = () => {
     let q;
-    let start = null;
-    let end = null;
-
-    if (direction === "next" && !cursorAtEnd) {
-      start = posts[posts.length - 1].ref;
-      q = query(
-        collection(db, urlType),
-        type ? where("type", "==", type) : null,
-        orderBy("date", "desc"),
-        startAfter(start),
-        limit(paginateBy)
-      );    
-    } else if (direction === "prev" && !cursorAtStart) {
-      end = posts[0].ref;
-      q = query(
-        collection(db, urlType),
-        type ? where("type", "==", type) : null,
-        orderBy("date", "desc"),
-        endBefore(end),
-        limit(paginateBy)
-      );
-    } else {
       q = query(
         collection(db, urlType),
         type ? where("type", "==", type) : null,
         orderBy("date", "desc"),
       );
-    }
     console.log(q)
     
     getDocs(q).then((querySnapshot) => {
@@ -59,22 +33,10 @@ function PostsAdmin(props) {
         id: doc.id,
         ref: doc,
         ...doc.data()
-      
       }));
-      console.log(data)
-
       if (data.length) {
         setPosts(data);
         console.log(data)
-        if (direction === "next") {
-          setCursorAtStart(false);
-          setCurrentPage(currentPage + 1);
-        } else if (direction === "prev") {
-          setCursorAtEnd(false);
-          setCurrentPage(currentPage - 1);
-        } else {
-          setCurrentPage(1);
-        }
       } 
     });
   }
@@ -112,7 +74,6 @@ function PostsAdmin(props) {
                 <div className="">
                 {posts.map((post) => <PostsAdminItem key={post.id} dataType={urlType} post={post} getPosts={getPosts} />)}
                 </div>
-                
               </div>
             </div>
           </div>

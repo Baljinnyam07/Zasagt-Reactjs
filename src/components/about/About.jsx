@@ -71,7 +71,7 @@ const About = () => {
           alt="Portrait of the company's CEO, John Doe, standing confidently."
         /> 
         </div>
-        <div className='w-[487px] ml-[24px] '>
+        <div className='w-[487px] ml-[24px]'>
           <div className="text-black text-[32px] font-500 font-sans mb-5">мэндчилгээ</div>
           <div className="text-black text-base font-normal leading-6 mb-5">
             Lorem ipsum dolor sit amet consectetur. Ullamcorper eget odio sit nam nisl luctus eu dui posuere. Porttitor

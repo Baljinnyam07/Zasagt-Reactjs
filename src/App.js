@@ -34,6 +34,7 @@ function App() {
             <Route path="/admin/mechanical/:type" element={<PostsAdmin />} />
             <Route path="/admin/mechanical/:type/create" element={<PostEdit/>} />
             <Route path="/admin/mechanical/:type/edit/:postId" element={<PostEdit />} />
+            <Route path="/admin/feedbacks/:type" element={<PostsAdmin />} />
       </Routes>
     </Router>
     </IntlProvider>

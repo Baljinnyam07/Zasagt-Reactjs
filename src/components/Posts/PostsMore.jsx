@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 function extractContent(html, lineClamp = Infinity) {
   const tempElement = document.createElement("p");
   tempElement.innerHTML = html;
-
   const contentContainer = document.createElement("p");
   contentContainer.style.overflow = "hidden";
   contentContainer.style.display = "-webkit-box";

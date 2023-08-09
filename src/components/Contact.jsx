@@ -1,7 +1,6 @@
 import React from "react"
 import contactJson from "./json/contact.json"
 
-
 function Contact() {
   return (
     <div className="container mx-auto py-[120px] max-w-[1440px] text-[#23356B]">

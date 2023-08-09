@@ -1,6 +1,6 @@
 [
     {
-      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"20\" viewBox=\"0 0 14 20\" fill=\"none\"><path d=\"M-5 -2H19V22H-5V-2Z\" fill=\"#424B5A\"/></svg>",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"20\" viewBox=\"0 0 14 20\" fill=\"none\">\n<rect x=\"-5\" y=\"-2\" width=\"24\" height=\"24\" fill=\"#424B5\"/>\n</svg>",
       "property": "Монгол улс, Улаанбаатар хот, Сүхбаатар дүүрэг, 1-р хороо, С.Жамъян гүнгийн гудамж, Хаан даатгал байр, 306 тоот"
     },
     {
@@ -8,7 +8,7 @@
       "property": "99115596"
     },
     {
-        "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"22\" height=\"18\" viewBox=\"0 0 22 18\" fill=\"none\"><path d=\"M-1 -3H23V21H-1V-3Z\" fill=\"#424B5A\"/></svg>",
+        "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><path d=\"M26.35 6H5.65A3.66 3.66 0 0 0 2 9.65v12.7A3.66 3.66 0 0 0 5.65 26h20.7A3.66 3.66 0 0 0 30 22.35V9.65A3.66 3.66 0 0 0 26.35 6zM28 22.35A1.65 1.65 0 0 1 26.35 24H5.65A1.65 1.65 0 0 1 4 22.35V9.65A1.65 1.65 0 0 1 5.65 8h20.7A1.65 1.65 0 0 1 28 9.65z\"/><path d=\"M25.49 9.14 16 14.83 6.51 9.14a1 1 0 1 0-1 1.72l10 6a1 1 0 0 0 1 0l10-6a1 1 0 0 0-1-1.72z\"/></svg>",
         "property": "batbayar@zasagt.mn"
     },
     {

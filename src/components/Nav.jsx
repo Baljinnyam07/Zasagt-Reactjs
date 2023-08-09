@@ -7,6 +7,14 @@ export default function Nav() {
     const location = useLocation();
 
   const url = location.pathname;
+  const handleScrollClick = () => {
+    window.scrollTo({
+        top:document.documentElement.scrollHeight,
+        left:'',
+        behavior: 'smooth',
+    });
+  };
+
     return (
         <div className="flex items-center justify-center pr-[49px]">
             <a href="/">
@@ -51,11 +59,11 @@ export default function Nav() {
                     </div>
                 </div>
             ))}
-            <a href="/">
-                <div className={`menu-hover text-[14px] pr-[34px] font-400 ${url === '/' ? 'text-[#D0A616]' : 'text-[#fff]'} lg:mx-4 uppercase`}>
+            <div>
+                <div onClick={handleScrollClick} className={`menu-hover cursor-pointer text-[14px] text-[#fff] pr-[34px] font-400 ${url === '/' ? 'text-[#D0A616]' : ''} lg:mx-4 uppercase`}>
                 холбоо барих
                 </div>
-            </a>
+            </div>
         </div>
     );
 }

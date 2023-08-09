@@ -1,13 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { app } from "../firebase"
+import { collection, addDoc, getFirestore } from 'firebase/firestore';
+
+const db = getFirestore(app);
+
 const FeedBack =() => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const form = e.target; 
+      const name = form.elements.name.value;
+      const phone = form.elements.phone.value;
+      const email = form.elements.email.value;
+      const title = form.elements.title.value;
+      const message = form.elements.text.value;
+      const type = 'feedback';
+
+      const feedbackData = {
+        name,
+        phone,
+        email,
+        title,
+        message,
+        timestamp: new Date().toISOString(),
+        type,
+      };
+      const feedbackCollection = collection(db, 'feedbacks');
+      await addDoc(feedbackCollection, feedbackData);
+      form.elements.name.value = '';
+      form.elements.phone.value = '';
+      form.elements.email.value = '';
+      form.elements.title.value = '';
+      form.elements.text.value = '';
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error adding feedback:', error);
+    }
+  };
   return (
         <div className='relative container mx-auto h-[430px] max-w-[1440px] mt-[80px]'>          
           <div className='py-[80px] grid grid-cols-2 gap-[24px] absolute'>
-            <form className='w-[588px]'>
+            <form className='w-[588px]' onSubmit={handleFormSubmit}>
               <div className="grid grid-cols-2 gap-[10px] mb-[8px]">
                 <div className="relative" data-te-input-wrapper-init>
                   <input
                     type="text"
+                    name="name"
                     className="peer bg-[#F2F2F2] text-[#fff] p-[10px] text-[12px] bg-opacity-10 block w-full rounded-lg border-0 placeholder-[#fff]"
                     id="exampleInput123"
                     aria-describedby="emailHelp123"
@@ -15,7 +54,8 @@ const FeedBack =() => {
                 </div>
                 <div className="relative" data-te-input-wrapper-init>
                   <input
-                    type="text"
+                    type="email"
+                    name="email"
                     className="peer bg-[#F2F2F2] text-[#fff] p-[10px] text-[12px] bg-opacity-10 block w-full rounded-lg border-0 placeholder-[#fff]"
                     id="exampleInput124"
                     aria-describedby="emailHelp124"
@@ -25,7 +65,8 @@ const FeedBack =() => {
               <div className="grid grid-cols-2 gap-[10px] mb-[8px]">
               <div className="relative" data-te-input-wrapper-init>
                   <input
-                    type="text"
+                    type="number"
+                    name='phone'
                     className="peer bg-[#F2F2F2] text-[#fff] p-[10px] text-[12px] bg-opacity-10 block w-full rounded-lg border-0 placeholder-[#fff]"
                     id="exampleInput123"
                     aria-describedby="emailHelp123"
@@ -34,6 +75,7 @@ const FeedBack =() => {
                 <div className="relative" data-te-input-wrapper-init>
                   <input
                     type="text"
+                    name='text'
                     className="peer bg-[#F2F2F2] text-[#fff] p-[10px] text-[12px] bg-opacity-10 block w-full rounded-lg border-0 placeholder-[#fff]"
                     id="exampleInput124"
                     aria-describedby="emailHelp124"
@@ -43,19 +85,21 @@ const FeedBack =() => {
               </div>
               <div className="relative mb-6" data-te-input-wrapper-init>
               <textarea
-                    className="peer bg-[#F2F2F2] text-[#fff] p-[10px] text-[12px] bg-opacity-10 block w-full rounded-lg border-0 placeholder-[#fff]"
-                    id="exampleFormControlTextarea13"
+                type='text'
+                name='title'
+                className="peer bg-[#F2F2F2] text-[#fff] p-[10px] text-[12px] bg-opacity-10 block w-full rounded-lg border-0 placeholder-[#fff]"
+                id="exampleFormControlTextarea13"
                 rows={+"3"}
                 placeholder='Санал хүсэлтийн дэлгэрэнгүй'></textarea>
             </div>
-    
+            {isSubmitted && (
+            <div className="text-green-500 mb-4">Feedback submitted successfully!</div>
+          )}
               <button
                 type="submit"
                 className="inline-block w-[160px] h-[38px] ml-[200px] center rounded-lg bg-[#D0A616] text-[14px] font-medium uppercase leading-normal text-white"
                 data-te-ripple-color="light">
-               
                ХҮСЭЛТ ИЛГЭЭХ
-               
               </button>
             </form>
             <div className=''>
