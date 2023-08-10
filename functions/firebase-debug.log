@@ -1,0 +1,342 @@
+[debug] [2023-08-10T02:36:43.897Z] ----------------------------------------------------------------------
+[debug] [2023-08-10T02:36:43.898Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start --only functions
+[debug] [2023-08-10T02:36:43.898Z] CLI Version:   12.4.6
+[debug] [2023-08-10T02:36:43.898Z] Platform:      darwin
+[debug] [2023-08-10T02:36:43.899Z] Node Version:  v18.16.0
+[debug] [2023-08-10T02:36:43.899Z] Time:          Thu Aug 10 2023 10:36:43 GMT+0800 (Ulaanbaatar Standard Time)
+[debug] [2023-08-10T02:36:43.899Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-10T02:36:43.954Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-10T02:36:43.954Z] > authorizing via signed-in user (green.baljinnyam123@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2023-08-10T02:36:44.121Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-10T02:36:44.122Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-08-10T02:36:44.128Z] [hub] writing locator at /var/folders/7n/q0611f3552sbsh40mhfh02q80000gn/T/hub-zasagt-khaann.json
+[debug] [2023-08-10T02:36:44.236Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-10T02:36:44.236Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-10T02:36:44.236Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2023-08-10T02:36:44.243Z] defaultcredentials: writing to file /Users/altex/.config/firebase/green_baljinnyam123_gmail.com_application_default_credentials.json
+[debug] [2023-08-10T02:36:44.247Z] Setting GAC to /Users/altex/.config/firebase/green_baljinnyam123_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/altex/.config/firebase/green_baljinnyam123_gmail.com_application_default_credentials.json"}}
+[debug] [2023-08-10T02:36:44.248Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/zasagt-khaann/adminSdkConfig [none]
+[debug] [2023-08-10T02:36:45.158Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/zasagt-khaann/adminSdkConfig 200
+[debug] [2023-08-10T02:36:45.158Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/zasagt-khaann/adminSdkConfig {"projectId":"zasagt-khaann","storageBucket":"zasagt-khaann.appspot.com","locationId":"asia-southeast1"}
+[debug] [2023-08-10T02:36:45.182Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-08-10T02:36:45.182Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-08-10T02:36:45.182Z] Starting Emulator UI with command {"binary":"node","args":["/Users/altex/.cache/firebase/emulators/ui-v1.11.7/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/altex/.cache/firebase/emulators/ui-v1.11.7/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-08-10T02:36:45.263Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-08-10T02:36:45.263Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/altex/Desktop/zasagt-react/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/altex/Desktop/zasagt-react/functions\" for Cloud Functions..."}}
+[debug] [2023-08-10T02:36:45.445Z] Validating nodejs source
+[debug] [2023-08-10T02:36:45.842Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-10T02:36:45.842Z] Building nodejs source
+[debug] [2023-08-10T02:36:45.842Z] Failed to find version of module node: reached end of search path /Users/altex/Desktop/zasagt-react/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-10T02:36:45.844Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-10T02:36:45.846Z] Found firebase-functions binary at '/Users/altex/Desktop/zasagt-react/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8176
+
+[debug] [2023-08-10T02:36:46.072Z] Got response from /__/functions.yaml {"endpoints":{"crawlpost":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"crawlpost"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: crawlpost. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: crawlpost."}}
+[info] ✔  functions[us-central1-crawlpost]: http function initialized (http://127.0.0.1:5001/zasagt-khaann/us-central1/crawlpost). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/zasagt-khaann/us-central1/crawlpost)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2023-08-10T02:37:21.691Z] [work-queue] {"queuedWork":["/zasagt-khaann/us-central1/crawlpost-2023-08-10T02:37:21.691Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-08-10T02:37:21.694Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/zasagt-khaann/us-central1/crawlpost-2023-08-10T02:37:21.691Z"],"workRunningCount":1}
+[debug] [2023-08-10T02:37:21.695Z] Accepted request GET /zasagt-khaann/us-central1/crawlpost --> us-central1-crawlpost
+[debug] [2023-08-10T02:37:21.701Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-08-10T02:37:21.702Z] [functions] Got req.url=/zasagt-khaann/us-central1/crawlpost, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/zasagt-khaann/us-central1/crawlpost, mapping to path=/"}}
+[debug] [2023-08-10T02:37:21.707Z] [worker-pool] addWorker(us-central1-crawlpost) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-crawlpost)"}}
+[debug] [2023-08-10T02:37:21.708Z] [worker-pool] Adding worker with key us-central1-crawlpost, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-crawlpost, total=1"}}
+[debug] [2023-08-10T02:37:22.251Z] [runtime-status] [8856] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.10.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8856] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.10.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-08-10T02:37:22.251Z] [runtime-status] [8856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8856] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-10T02:37:22.251Z] [runtime-status] [8856] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8856] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-08-10T02:37:22.252Z] [runtime-status] [8856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8856] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-10T02:37:22.364Z] [runtime-status] [8856] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8856] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-08-10T02:37:22.364Z] [runtime-status] [8856] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8856] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2023-08-10T02:37:22.365Z] [runtime-status] [8856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8856] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-10T02:37:22.365Z] [runtime-status] [8856] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.10.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8856] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.10.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-08-10T02:37:22.366Z] [runtime-status] [8856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8856] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-10T02:37:22.366Z] [runtime-status] [8856] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.10.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8856] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.10.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2023-08-10T02:37:22.372Z] [runtime-status] [8856] Functions runtime initialized. {"cwd":"/Users/altex/Desktop/zasagt-react/functions","node_version":"18.16.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8856] Functions runtime initialized. {\"cwd\":\"/Users/altex/Desktop/zasagt-react/functions\",\"node_version\":\"18.16.0\"}"}}
+[debug] [2023-08-10T02:37:22.373Z] [runtime-status] [8856] Listening to port: /var/folders/7n/q0611f3552sbsh40mhfh02q80000gn/T/fire_emu_acf2ab9dde2dc1cc.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8856] Listening to port: /var/folders/7n/q0611f3552sbsh40mhfh02q80000gn/T/fire_emu_acf2ab9dde2dc1cc.sock"}}
+[debug] [2023-08-10T02:37:22.422Z] [worker-us-central1-crawlpost-c6d87ff8-20ac-4a46-9c87-880be4cb8b4a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[worker-us-central1-crawlpost-c6d87ff8-20ac-4a46-9c87-880be4cb8b4a]: IDLE"}}
+[debug] [2023-08-10T02:37:22.422Z] [worker-pool] submitRequest(triggerId=us-central1-crawlpost) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-crawlpost)"}}
+[info] i  functions: Beginning execution of "us-central1-crawlpost" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"Beginning execution of \"us-central1-crawlpost\""}}
+[debug] [2023-08-10T02:37:22.423Z] [worker-us-central1-crawlpost-c6d87ff8-20ac-4a46-9c87-880be4cb8b4a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[worker-us-central1-crawlpost-c6d87ff8-20ac-4a46-9c87-880be4cb8b4a]: BUSY"}}
+[warn] ⚠  functions: TypeError: fetch failed
+    at Object.fetch (node:internal/deps/undici/undici:11457:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /Users/altex/Desktop/zasagt-react/functions/index.js:22:22
+    at async runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:506:9)
+    at async runHTTPS (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:531:5)
+    at async /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:693:21 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"TypeError: fetch failed\n    at Object.fetch (node:internal/deps/undici/undici:11457:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /Users/altex/Desktop/zasagt-react/functions/index.js:22:22\n    at async runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:506:9)\n    at async runHTTPS (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:531:5)\n    at async /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:693:21"}}
+[warn] ⚠  Your function was killed because it raised an unhandled error. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"Your function was killed because it raised an unhandled error."}}
+[debug] [2023-08-10T02:37:22.473Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-crawlpost" in 51.23675ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"Finished \"us-central1-crawlpost\" in 51.23675ms"}}
+[debug] [2023-08-10T02:37:22.475Z] [worker-us-central1-crawlpost-c6d87ff8-20ac-4a46-9c87-880be4cb8b4a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[worker-us-central1-crawlpost-c6d87ff8-20ac-4a46-9c87-880be4cb8b4a]: IDLE"}}
+[debug] [2023-08-10T02:37:22.476Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-08-10T02:37:22.477Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-08-10T02:37:22.478Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-08-10T02:37:22.482Z] [worker-us-central1-crawlpost-c6d87ff8-20ac-4a46-9c87-880be4cb8b4a]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[worker-us-central1-crawlpost-c6d87ff8-20ac-4a46-9c87-880be4cb8b4a]: exited"}}
+[debug] [2023-08-10T02:37:22.483Z] [worker-us-central1-crawlpost-c6d87ff8-20ac-4a46-9c87-880be4cb8b4a]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[worker-us-central1-crawlpost-c6d87ff8-20ac-4a46-9c87-880be4cb8b4a]: FINISHED"}}
+[debug] [2023-08-10T02:37:22.556Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2023-08-10T02:37:49.197Z] File /Users/altex/Desktop/zasagt-react/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/altex/Desktop/zasagt-react/functions/index.js changed, reloading triggers"}}
+[debug] [2023-08-10T02:37:50.201Z] Validating nodejs source
+[debug] [2023-08-10T02:37:50.616Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-10T02:37:50.616Z] Building nodejs source
+[debug] [2023-08-10T02:37:50.616Z] Failed to find version of module node: reached end of search path /Users/altex/Desktop/zasagt-react/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-10T02:37:50.617Z] File /Users/altex/Desktop/zasagt-react/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/altex/Desktop/zasagt-react/functions/index.js changed, reloading triggers"}}
+[debug] [2023-08-10T02:37:50.617Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-10T02:37:50.618Z] Found firebase-functions binary at '/Users/altex/Desktop/zasagt-react/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8105
+
+[debug] [2023-08-10T02:37:50.851Z] Got response from /__/functions.yaml {"endpoints":{"crawlpost":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"crawlpost"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: crawlpost. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: crawlpost."}}
+[debug] [2023-08-10T02:37:51.620Z] Validating nodejs source
+[debug] [2023-08-10T02:37:51.987Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-10T02:37:51.988Z] Building nodejs source
+[debug] [2023-08-10T02:37:51.988Z] Failed to find version of module node: reached end of search path /Users/altex/Desktop/zasagt-react/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-10T02:37:51.988Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-10T02:37:51.989Z] Found firebase-functions binary at '/Users/altex/Desktop/zasagt-react/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8549
+
+[debug] [2023-08-10T02:37:52.141Z] Got response from /__/functions.yaml {"endpoints":{"crawlpost":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"crawlpost"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: crawlpost. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: crawlpost."}}
+[debug] [2023-08-10T02:37:52.518Z] [work-queue] {"queuedWork":["/zasagt-khaann/us-central1/crawlpost-2023-08-10T02:37:52.518Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-08-10T02:37:52.519Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/zasagt-khaann/us-central1/crawlpost-2023-08-10T02:37:52.518Z"],"workRunningCount":1}
+[debug] [2023-08-10T02:37:52.519Z] Accepted request GET /zasagt-khaann/us-central1/crawlpost --> us-central1-crawlpost
+[debug] [2023-08-10T02:37:52.534Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-08-10T02:37:52.535Z] [functions] Got req.url=/zasagt-khaann/us-central1/crawlpost, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/zasagt-khaann/us-central1/crawlpost, mapping to path=/"}}
+[debug] [2023-08-10T02:37:52.535Z] [worker-pool] Cleaned up workers for us-central1-crawlpost: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-crawlpost: 1 --> 0"}}
+[debug] [2023-08-10T02:37:52.537Z] [worker-pool] addWorker(us-central1-crawlpost) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-crawlpost)"}}
+[debug] [2023-08-10T02:37:52.537Z] [worker-pool] Adding worker with key us-central1-crawlpost, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-crawlpost, total=1"}}
+[debug] [2023-08-10T02:37:53.181Z] [runtime-status] [8917] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.10.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8917] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.10.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-08-10T02:37:53.182Z] [runtime-status] [8917] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8917] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-10T02:37:53.182Z] [runtime-status] [8917] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8917] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-08-10T02:37:53.182Z] [runtime-status] [8917] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8917] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-10T02:37:53.249Z] [runtime-status] [8917] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8917] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-08-10T02:37:53.249Z] [runtime-status] [8917] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8917] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2023-08-10T02:37:53.250Z] [runtime-status] [8917] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8917] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-10T02:37:53.250Z] [runtime-status] [8917] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.10.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8917] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.10.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-08-10T02:37:53.252Z] [runtime-status] [8917] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8917] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-10T02:37:53.252Z] [runtime-status] [8917] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.10.1","resolution":"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8917] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.10.1\",\"resolution\":\"/Users/altex/Desktop/zasagt-react/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2023-08-10T02:37:53.258Z] [runtime-status] [8917] Functions runtime initialized. {"cwd":"/Users/altex/Desktop/zasagt-react/functions","node_version":"18.16.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8917] Functions runtime initialized. {\"cwd\":\"/Users/altex/Desktop/zasagt-react/functions\",\"node_version\":\"18.16.0\"}"}}
+[debug] [2023-08-10T02:37:53.258Z] [runtime-status] [8917] Listening to port: /var/folders/7n/q0611f3552sbsh40mhfh02q80000gn/T/fire_emu_a4aa9acabaa88999.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[runtime-status] [8917] Listening to port: /var/folders/7n/q0611f3552sbsh40mhfh02q80000gn/T/fire_emu_a4aa9acabaa88999.sock"}}
+[debug] [2023-08-10T02:37:53.356Z] [worker-us-central1-crawlpost-0a720442-abde-4be4-b7c9-40bdfbfa1fd8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[worker-us-central1-crawlpost-0a720442-abde-4be4-b7c9-40bdfbfa1fd8]: IDLE"}}
+[debug] [2023-08-10T02:37:53.356Z] [worker-pool] submitRequest(triggerId=us-central1-crawlpost) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-crawlpost)"}}
+[info] i  functions: Beginning execution of "us-central1-crawlpost" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"Beginning execution of \"us-central1-crawlpost\""}}
+[debug] [2023-08-10T02:37:53.356Z] [worker-us-central1-crawlpost-0a720442-abde-4be4-b7c9-40bdfbfa1fd8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[worker-us-central1-crawlpost-0a720442-abde-4be4-b7c9-40bdfbfa1fd8]: BUSY"}}
+[warn] ⚠  functions: TypeError: fetch failed
+    at Object.fetch (node:internal/deps/undici/undici:11457:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /Users/altex/Desktop/zasagt-react/functions/index.js:22:22
+    at async runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:506:9)
+    at async runHTTPS (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:531:5)
+    at async /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:693:21 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"TypeError: fetch failed\n    at Object.fetch (node:internal/deps/undici/undici:11457:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /Users/altex/Desktop/zasagt-react/functions/index.js:22:22\n    at async runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:506:9)\n    at async runHTTPS (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:531:5)\n    at async /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:693:21"}}
+[warn] ⚠  Your function was killed because it raised an unhandled error. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"Your function was killed because it raised an unhandled error."}}
+[error] i  Request to function failed: Error: socket hang up {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"Request to function failed: Error: socket hang up"}}
+[debug] [2023-08-10T02:37:53.380Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-08-10T02:37:53.380Z] [worker-us-central1-crawlpost-0a720442-abde-4be4-b7c9-40bdfbfa1fd8]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[worker-us-central1-crawlpost-0a720442-abde-4be4-b7c9-40bdfbfa1fd8]: exited"}}
+[debug] [2023-08-10T02:37:53.381Z] [worker-us-central1-crawlpost-0a720442-abde-4be4-b7c9-40bdfbfa1fd8]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-crawlpost"},"extension":{},"message":"[worker-us-central1-crawlpost-0a720442-abde-4be4-b7c9-40bdfbfa1fd8]: FINISHED"}}
+[debug] [2023-08-10T02:38:45.639Z] File /Users/altex/Desktop/zasagt-react/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/altex/Desktop/zasagt-react/functions/index.js changed, reloading triggers"}}
+[debug] [2023-08-10T02:38:46.592Z] File /Users/altex/Desktop/zasagt-react/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/altex/Desktop/zasagt-react/functions/index.js changed, reloading triggers"}}
+[debug] [2023-08-10T02:38:47.030Z] File /Users/altex/Desktop/zasagt-react/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/altex/Desktop/zasagt-react/functions/index.js changed, reloading triggers"}}
+[debug] [2023-08-10T02:38:48.034Z] Validating nodejs source
+[debug] [2023-08-10T02:38:48.446Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-10T02:38:48.446Z] Building nodejs source
+[debug] [2023-08-10T02:38:48.446Z] Failed to find version of module node: reached end of search path /Users/altex/Desktop/zasagt-react/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-10T02:38:48.447Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-10T02:38:48.448Z] Found firebase-functions binary at '/Users/altex/Desktop/zasagt-react/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8627
+
+[debug] [2023-08-10T02:38:48.681Z] Got response from /__/functions.yaml {"endpoints":{"crawlpost":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"crawlpost"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: crawlpost. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: crawlpost."}}
+[debug] [2023-08-10T02:38:59.364Z] File /Users/altex/Desktop/zasagt-react/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/altex/Desktop/zasagt-react/functions/index.js changed, reloading triggers"}}
+[debug] [2023-08-10T02:39:00.367Z] Validating nodejs source
+[debug] [2023-08-10T02:39:00.769Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-10T02:39:00.769Z] Building nodejs source
+[debug] [2023-08-10T02:39:00.769Z] Failed to find version of module node: reached end of search path /Users/altex/Desktop/zasagt-react/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-10T02:39:00.771Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-10T02:39:00.771Z] Found firebase-functions binary at '/Users/altex/Desktop/zasagt-react/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8541
+
+[debug] [2023-08-10T02:39:01.095Z] Got response from /__/functions.yaml {"endpoints":{"crawlpost":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"crawlpost"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: crawlpost. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: crawlpost."}}
+[debug] [2023-08-10T02:42:23.717Z] File /Users/altex/Desktop/zasagt-react/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/altex/Desktop/zasagt-react/functions/index.js changed, reloading triggers"}}
+[debug] [2023-08-10T02:42:24.721Z] Validating nodejs source
+[debug] [2023-08-10T02:42:25.400Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-10T02:42:25.401Z] Building nodejs source
+[debug] [2023-08-10T02:42:25.401Z] Failed to find version of module node: reached end of search path /Users/altex/Desktop/zasagt-react/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-10T02:42:25.402Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-10T02:42:25.404Z] Found firebase-functions binary at '/Users/altex/Desktop/zasagt-react/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8687
+
+[debug] [2023-08-10T02:42:25.679Z] Got response from /__/functions.yaml {"endpoints":{"crawlpost":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"crawlpost"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: crawlpost. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: crawlpost."}}
