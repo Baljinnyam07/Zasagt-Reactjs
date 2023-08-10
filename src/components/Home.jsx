@@ -80,19 +80,19 @@ const Home =()=>{
       <div className=''>
         <div className='grid grid-cols-3 gap-[24px] w-full pt-[32px] pb-[40px]'>
           <div>
-            <img className='w-[384px] h-[266px]' src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/pexels-ivan-129544.png?alt=media&token=15560a8c-9c7b-4672-a2be-2364fb2a2530" alt="mechanic images" />
+            <img className='w-[384px] h-[266px] saturate-0 hover:saturate-100 transition ease-in-out delay-150' src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/pexels-ivan-129544.png?alt=media&token=15560a8c-9c7b-4672-a2be-2364fb2a2530" alt="mechanic images" />
           </div>
           <div>
-          <img className='w-[384px] h-[266px]' src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/pexels-manzil-joshi-3998410.png?alt=media&token=2bfe4ef8-b1b2-4a4a-bc39-960387649313" alt="mechanic images" />
+          <img className='w-[384px] h-[266px] saturate-0 hover:saturate-100 transition ease-in-out delay-150' src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/pexels-manzil-joshi-3998410.png?alt=media&token=2bfe4ef8-b1b2-4a4a-bc39-960387649313" alt="mechanic images" />
           </div>
           <div>
-          <img className='w-[384px] h-[266px]' src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/pexels-de-lemster-krant-13997579.png?alt=media&token=8f638526-7bee-4dda-b5fd-39be64517e32" alt="mechanic images" />
+          <img className='w-[384px] h-[266px] saturate-0 hover:saturate-100 transition ease-in-out delay-150' src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/pexels-de-lemster-krant-13997579.png?alt=media&token=8f638526-7bee-4dda-b5fd-39be64517e32" alt="mechanic images" />
           </div>
         </div>
         
-        <div className='text-[16px] mb-[120px] font-[400] text-[#fff] flex justify-center font-400 cursor-pointer'>
+        <div className='text-[16px] mb-[120px] font-[400] text-[#fff] flex justify-center font-400'>
         <a href="/mechanical/mining">
-          <div className='border py-[7px] px-[24px] rounded-[8px] bg-[#D0A616]'>
+          <div className='border cursor-pointer py-[7px] px-[24px] rounded-[8px] bg-[#D0A616]'>
           ДЭЛГЭРЭНГҮЙ
           </div>
           </a>

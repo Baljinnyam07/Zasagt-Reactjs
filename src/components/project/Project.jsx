@@ -46,19 +46,19 @@ const Project = () => {
           className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer"
           onClick={handleOvooTolgoiClick}
         >
-          <Link className={`${location.pathname === '/project/ovooTolgoi' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi">овоо толгой</Link>
+          <Link className={`flex gap-2 ${location.pathname === '/project/ovooTolgoi' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi">овоо толгой{location.pathname === '/project/ovooTolgoi' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
           className="text-black w-[226px] mb-[69px] font-medium mb-5 cursor-pointer"
           onClick={handleAltanTsagaanOvooClick}
         >
-          <Link className={`${location.pathname === '/project/tsagaanOvoo' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/tsagaanOvoo">алтан цагаан овоо</Link>
+          <Link className={`flex gap-2 ${location.pathname === '/project/tsagaanOvoo' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/tsagaanOvoo">алтан цагаан овоо{location.pathname === '/project/tsagaanOvoo' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
           className="text-black w-[246px] mr-[102px] font-medium mb-5 cursor-pointer"
           onClick={handleUurkhainNuursClick}
         >
-          <Link className={`${location.pathname === '/project/UurhaiNvvrs' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/UurhaiNvvrs">цанхийн баруун уурхайн НҮҮРС АЧИЛТ</Link>
+          <Link className={`flex ${location.pathname === '/project/UurhaiNvvrs' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/UurhaiNvvrs"><span className='w-[215px]'>цанхийн баруун уурхайн НҮҮРС АЧИЛТ</span>{location.pathname === '/project/UurhaiNvvrs' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
       </div>
       <div className="mt-[80px]">

@@ -1,11 +1,18 @@
+
 import React, { useEffect, useState } from "react";
 import { Link, useParams, useLocation } from "react-router-dom";
 import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../firebase";
 import PostsAdminItem from "./PostsAdminItem";
 
+const typeLinks = [
+  { url: '/admin/posts/news', label: 'Manage News' },
+  { url: '/admin/mechanical/mining', label: 'Contact Us' },
+  { url: '/admin/humanity/hire', label: 'Humanity' },
+  { url: '/admin/feedbacks/feedback', label: 'Feedback' },
+];
 
-function PostsAdmin(props) {
+function Admin({props}) {
   const [posts, setPosts] = useState([]);
   const {type} = useParams(props);
   const location = useLocation();
@@ -40,48 +47,38 @@ function PostsAdmin(props) {
       } 
     });
   }
-
   return (
-    <>
-    <div className=" text-center leading-7 font-sans bg-[#eeeff3]">
-        <div>
-        <div className={`flex h-[70px] bg-[#006cff] items-center text-[#fff] font-sans text-[25px]`}>
-     <div className="text-[20px] w-full flex justify-end items-center ">
-    </div>
-     </div>
-        </div>
-        <div className="flex">
-          <div className="w-[300px] text-[14px] bg-[#fff] text-[#6e768e] h-screen p-4 px-8">
-            <Link className="flex mt-6" to="/admin">Dashboard</Link>
-          <br />
-            <br />
-            <a className={`flex ${type === 'news' ? 'text-[#006cff]' : ''}`} href="/admin/posts/news">Цаг үеийн мэдээлэл</a>
-            <br />
-
-            <a className={`flex ${type === 'corp-news' ? 'text-[#006cff]' : ''}`} href="/admin/posts/corp-news">Байгууллагын мэдээ</a>
-            <br />
-
-            <a className={`flex ${type === 'social-resp' ? 'text-[#006cff]' : ''}`} href="/admin/posts/social-resp">Нийгмийн хариуцлага</a>
-            <br />
-          </div>
-          <div className="text-[#000]">
-          <div className="h-max px-5 mt-10 font-sans project">
-              <div className="flex">
-                <Link className="border w-20 rounded  bg-[#6c757d]  text-[#fff]" to={`/admin/${urlType}/${type}/create`}>Create</Link>
+    <div className="bg-gray-900 text-white h-screen flex flex-col">
+      <nav className="bg-gray-800 p-4">
+        <ul className="flex space-x-6">
+          <li>
+            <Link className="hover:underline" to="/admin">
+              Dashboard
+            </Link>
+          </li>
+          {typeLinks.map((link) => (
+            <li key={link.url}>
+              <a className="hover:underline" href={link.url}>
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <main className="flex-grow p-10">
+      <div className="flex">
+                <Link className="border w-20 rounded bg-[#6c757d] text-[#fff] mx-20 mb-10" to={`/admin/${urlType}/${type}/create`}>
+                  <div className="ml-3">Create</div>
+                </Link>
               </div>
-              <br />
-              <div className="">
-                <div className="">
+      <div className="">
+                <div className="grid grid-cols-6 gap-4 m-20">
                 {posts.map((post) => <PostsAdminItem key={post.id} dataType={urlType} post={post} getPosts={getPosts} />)}
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </>
+      </main>
+    </div>
   );
 }
 
-export default PostsAdmin;
+export default Admin;

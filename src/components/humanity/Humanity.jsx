@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import humanity1 from './humanity1.png'
 import humanity2 from './humanity2.png'
 import humanity3 from './humanity3.png'
+import Posts from '../Posts/Posts';
 
 function Humanity() {
   const [showOvooTolgoi, setShowOvooTolgoi] = useState(true);
@@ -10,6 +11,8 @@ function Humanity() {
   const [showUurkhainNuurs, setShowUurkhainNuurs] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const { type } = useParams();
+  console.log('type123:',type)
 
   useEffect(() => {
     if (location.pathname === '/humanity/resource-policy') {
@@ -20,7 +23,7 @@ function Humanity() {
       setShowOvooTolgoi(false);
       setShowAltanTsagaanOvoo(true);
       setShowUurkhainNuurs(false);
-    } else if (location.pathname === '/humanity/job-openings') {
+    } else if (location.pathname === '/humanity/hire') {
       setShowOvooTolgoi(false);
       setShowAltanTsagaanOvoo(false);
       setShowUurkhainNuurs(true);
@@ -36,33 +39,36 @@ function Humanity() {
   };
 
   const handleUurkhainNuursClick = () => {
-    navigate('/humanity/job-openings');
+    navigate('/humanity/hire');
   };
 
   return (
     <div className="flex">
       <div className="text-[14px] mt-[40px] uppercase">
-        <div className='flex relative'>
+        
         <div
           className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer"
           onClick={handleOvooTolgoiClick}
         >
-          <Link className={`${location.pathname === '/humanity/resource-policy' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi">хүний нөөцийн бодлого</Link>
-        </div>
-        <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px] absolute right-[130px]'></div>
+          <Link className={`flex gap-2 ${location.pathname === '/humanity/resource-policy' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi">хүний нөөцийн бодлого
+          {location.pathname === '/humanity/resource-policy' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          
         </div>
         <div
           className="text-black w-[226px] mb-[69px] font-medium mb-5 cursor-pointer"
           onClick={handleAltanTsagaanOvooClick}
         >
-          <Link className={`${location.pathname === '/humanity/curriculum' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/tsagaanOvoo">сургалтын хөтөлбөр</Link>
+          <Link className={`flex gap-2 ${location.pathname === '/humanity/curriculum' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/tsagaanOvoo">сургалтын хөтөлбөр{location.pathname === '/humanity/curriculum' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
+
+
         <div
           className="text-black w-[246px] mr-[102px] font-medium mb-5 cursor-pointer"
           onClick={handleUurkhainNuursClick}
         >
-          <Link className={`${location.pathname === '/humanity/job-openings' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/UurhaiNvvrs">нээлттэй ажлын байр</Link>
+          <Link className={`flex gap-2 ${location.pathname === '/humanity/hire' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/UurhaiNvvrs">нээлттэй ажлын байр{location.pathname === '/humanity/hire' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
+        
       </div>
       <div className="mt-[80px]">
         <div className={`${showOvooTolgoi ? '' : 'hidden'}`}>
@@ -133,30 +139,12 @@ function Humanity() {
           </div>
         </div>
         <div className={`${showUurkhainNuurs ? '' : 'hidden'}`}>
-          <div className="flex">
+          <div className="">
             <div>
-              <div className="text-black text-[32px] font-500 font-sans mb-5 uppercase">төслийн тухай</div>
-              <div className="text-black text-base font-normal leading-8 mb-5 w-[520px] ">
-                Монголын өмнөд хэсэгт орших Өмнөговь аймагт оршдог дэлхийн хамгийн том
-                ашиглагдаагүй коксжих болон эрчим хүчний нүүрсний ордуудын нэг бөгөөд нийт 6.4 тэрбум
-                тонн нөөцтэй ба үүний дөрөвний нэг нь сайн чанарын коксжих нүүрс бүхий стратегийн орд юм.
-              </div>
+              <div className="text-black text-[32px] font-500 font-sans mb-5">Нээлттэй ажлын байрууд</div>
             </div>
-            <div className="flex items-center mt-12 ml-[52px]">
-            </div>
-          </div>
-          <div>
-            <div className="text-black text-[32px] font-500 font-sans mb-[24px] mt-[80px] uppercase">
-              Төслийн хүчин чадал
-            </div>
-            <div className="text-black text-base font-normal leading-8 mb-5 w-[480px] ">
-              Одоогоор 4.0 сая м3 уулын цулын ажил гүйцэтгэх хүчин чадалтай.
-            </div>
-            <div className="text-black text-base font-normal leading-8 w-[480px] ">
-              Шинээр тоног төхөөрөмж худалдаж авсны дараа:
-            </div>
-            <div className="text-black text-base font-normal leading-8 mb-5 w-[480px] ">
-              6.0 сая м3 уулын цулын ажил хийх хүчин чадалтай болно.
+            <div className="">
+            <Posts type={`${type}`} urlType='humanity'/>
             </div>
           </div>
         </div>

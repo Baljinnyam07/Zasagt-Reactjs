@@ -46,19 +46,19 @@ const About = () => {
           className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer"
           onClick={handleMandchilgeeClick}
         >
-          <Link className={`${location.pathname === '/about/ceo' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/ceo">Захирлын мэндчилгээ</Link>
+          <Link className={`flex gap-2 ${location.pathname === '/about/ceo' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/ceo">Захирлын мэндчилгээ{location.pathname === '/about/ceo' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
           className="text-black w-[226px] mb-[69px] font-medium mb-5 cursor-pointer"
           onClick={handleTaniulguClick}
         >
-          <Link className={`${location.pathname === '/about/about-us' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/about-us">компанийн танилцуулга</Link>
+          <Link className={`flex gap-2 ${location.pathname === '/about/about-us' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/about-us">компанийн танилцуулга{location.pathname === '/about/about-us' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
           className="text-black w-[246px] mr-[102px] font-medium mb-5 cursor-pointer"
           onClick={handleUnetZuylClick}
         >
-          <Link className={`${location.pathname === '/about/our' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/our">алсын хараа, эрхэм зорилго, үнэт зүйл</Link>
+          <Link className={`flex gap-2 relative ${location.pathname === '/about/our' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/our">алсын хараа, эрхэм зорилго, үнэт зүйл{location.pathname === '/about/our' && <div className='w-[8px] h-[2px] absolute left-[250px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         </div>
         <div className='mt-[60px]'>
