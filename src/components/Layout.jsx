@@ -55,14 +55,10 @@ const Layout =()=> {
                 <div className='border-l h-[102px] absolute top-0 right-[110px]'></div>
                 </div>
             </div>
-
             </div>
-
             <Header/>
       <div className="">
-        <AppContainer>
         <Outlet/>
-        </AppContainer>
       </div>
         <div className='bg-[#23356B]'>
           <AppContainer>

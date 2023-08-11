@@ -1,13 +1,15 @@
 import React from 'react';
 import Posts from '../Posts/Posts';
 import { useLocation, useParams } from 'react-router-dom';
+import AppContainer from '../AppContainer';
 
 const News = () => {
   const location = useLocation();
   const { type } = useParams();
   console.log('type:',type)
   return (
-    <div className="flex">
+    <AppContainer>
+      <div className="flex">
       <div className="text-[14px] mt-[40px] uppercase">
         <div
           className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer"
@@ -29,6 +31,7 @@ const News = () => {
         <Posts type={`${type}`} urlType='posts' />
       </div>
     </div>
+    </AppContainer>
   );
 };
 

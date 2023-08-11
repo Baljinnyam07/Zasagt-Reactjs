@@ -4,13 +4,7 @@ import { Link, useParams, useLocation } from "react-router-dom";
 import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../firebase";
 import PostsAdminItem from "./PostsAdminItem";
-
-const typeLinks = [
-  { url: '/admin/posts/news', label: 'Manage News' },
-  { url: '/admin/mechanical/mining', label: 'Contact Us' },
-  { url: '/admin/humanity/hire', label: 'Humanity' },
-  { url: '/admin/feedbacks/feedback', label: 'Feedback' },
-];
+import AdminNav from "./components/navbar";
 
 function Admin({props}) {
   const [posts, setPosts] = useState([]);
@@ -49,22 +43,7 @@ function Admin({props}) {
   }
   return (
     <div className="bg-gray-900 text-white h-screen flex flex-col">
-      <nav className="bg-gray-800 p-4">
-        <ul className="flex space-x-6">
-          <li>
-            <Link className="hover:underline" to="/admin">
-              Dashboard
-            </Link>
-          </li>
-          {typeLinks.map((link) => (
-            <li key={link.url}>
-              <a className="hover:underline" href={link.url}>
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <AdminNav/>
       <main className="flex-grow p-10">
       <div className="flex">
                 <Link className="border w-20 rounded bg-[#6c757d] text-[#fff] mx-20 mb-10" to={`/admin/${urlType}/${type}/create`}>

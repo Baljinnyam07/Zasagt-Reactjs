@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
+import AppContainer from "../AppContainer";
 function extractImageAndParagraph(html) {
   const tempElement = document.createElement("div");
   tempElement.innerHTML = html;
@@ -55,6 +56,7 @@ function Post() {
 
   return (
     <>
+      <AppContainer>
       <div className="flex">
       <div className="text-[14px] mt-[40px] uppercase">
         <div
@@ -95,6 +97,7 @@ function Post() {
       </div>
       </div>
     </div>
+      </AppContainer>
       
     </>
   );

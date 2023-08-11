@@ -5,13 +5,13 @@ import Layout from './components/Layout';
 import Project from './components/project/Project';
 import About from './components/about/About';
 import News from './components/news/News';
-import Admin from './components/Admin';
-import PostsAdmin from './components/Posts/PostsAdmin';
+import PostsAdmin from './components/admin/PostsAdmin';
 import PostEdit from './components/Posts/PostEdit';
 import Post from './components/Posts/Post';
 import { IntlProvider } from 'react-intl';
 import Mechanical from './components/contact-us/Mechanical';
 import Humanity from './components/humanity/Humanity';
+import Admin from './components/admin/Admin';
 
 function App() {
   return (
@@ -25,7 +25,8 @@ function App() {
               <Route path="/humanity/:type"  element={<Humanity/>}/>
               <Route path="/posts/:type" element={<News />} />
               <Route path="/posts/:type/:postId" element={<Post />} />    
-              <Route path='/mechanical/:type' element={<Mechanical/>}/>      
+              <Route path='/mechanical/:type' element={<Mechanical/>}/>
+              <Route path="/mechanical/:type/:postId" element={<Post />} />       
             </Route>
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/posts/:type" element={<PostsAdmin />} />

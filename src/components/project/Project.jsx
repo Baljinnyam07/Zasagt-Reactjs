@@ -3,6 +3,7 @@ import steppe from './steppe.png';
 import erdenes from './erdenestolgoi.png';
 import gobi from './southgobi.png';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import AppContainer from '../AppContainer';
 
 const Project = () => {
   const [showOvooTolgoi, setShowOvooTolgoi] = useState(true);
@@ -40,7 +41,8 @@ const Project = () => {
   };
 
   return (
-    <div className="flex">
+    <AppContainer>
+      <div className="flex">
       <div className="text-[14px] mt-[40px] uppercase">
         <div
           className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer"
@@ -151,6 +153,7 @@ const Project = () => {
         </div>
       </div>
     </div>
+    </AppContainer>
   );
 };
 

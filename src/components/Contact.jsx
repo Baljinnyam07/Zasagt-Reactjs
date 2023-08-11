@@ -22,7 +22,7 @@ function Contact() {
               Бидэнтэй холбогдох
               </h2>
               {contactJson.map((data, index) => (
-                <div key={index} className="flex mt-[24px] gap-[16px]">
+                <div key={index} className="flex mt-[24px] gap-[16px] items-center">
                   <div dangerouslySetInnerHTML={{ __html: data.icon }} />
                   <div className="text-[16px] w-[483px] font-400">{data.property}</div>
                 </div>

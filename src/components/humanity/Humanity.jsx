@@ -4,6 +4,7 @@ import humanity1 from './humanity1.png'
 import humanity2 from './humanity2.png'
 import humanity3 from './humanity3.png'
 import Posts from '../Posts/Posts';
+import AppContainer from '../AppContainer';
 
 function Humanity() {
   const [showOvooTolgoi, setShowOvooTolgoi] = useState(true);
@@ -12,7 +13,6 @@ function Humanity() {
   const navigate = useNavigate();
   const location = useLocation();
   const { type } = useParams();
-  console.log('type123:',type)
 
   useEffect(() => {
     if (location.pathname === '/humanity/resource-policy') {
@@ -43,7 +43,8 @@ function Humanity() {
   };
 
   return (
-    <div className="flex">
+    <AppContainer>
+      <div className="flex">
       <div className="text-[14px] mt-[40px] uppercase">
         
         <div
@@ -66,7 +67,7 @@ function Humanity() {
           className="text-black w-[246px] mr-[102px] font-medium mb-5 cursor-pointer"
           onClick={handleUurkhainNuursClick}
         >
-          <Link className={`flex gap-2 ${location.pathname === '/humanity/hire' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/UurhaiNvvrs">нээлттэй ажлын байр{location.pathname === '/humanity/hire' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <a className={`flex gap-2 ${location.pathname === '/humanity/hire' ? 'text-[#D0A616]' : 'text-[#000]'}`} href="/humanity/hire">нээлттэй ажлын байр{location.pathname === '/humanity/hire' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
         
       </div>
@@ -150,6 +151,7 @@ function Humanity() {
         </div>
       </div>
     </div>
+    </AppContainer>
   );
 };
 

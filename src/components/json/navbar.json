@@ -42,11 +42,11 @@
             },
             {
                 "property":"Уул уурхайн туслах ажил",
-                "url":"/mechanical/mining"
+                "url":"/mechanical/openings"
             },
             {
                 "property":"Тоног төхөөрөмж түрээс",
-                "url":"/mechanical/mining"
+                "url":"/mechanical/rent"
             }
         ]
     },

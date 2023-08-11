@@ -4,6 +4,7 @@ import Ceo from './ceoImage.jpeg';
 import CeoC from './ceoCeo.png';
 import Assets from './assets.png';
 import HistoryComp from './history.png';
+import AppContainer from '../AppContainer';
 
 const About = () => {
   const [showMandchilgee, setShowMandchilgee] = useState(true);
@@ -40,7 +41,8 @@ const About = () => {
     navigate('/about/our');
   };
   return (
-      <div className="flex">
+      <AppContainer>
+        <div className="flex">
         <div className="text-[14px] mt-[40px] uppercase">
           <div
           className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer"
@@ -137,6 +139,7 @@ const About = () => {
         </div>
         </div>
       </div>
+      </AppContainer>
   );
 }
 
