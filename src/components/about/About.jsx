@@ -67,11 +67,13 @@ const About = () => {
         <div className={`flex my-10 ${showMandchilgee ? '' : 'hidden'}`}>
         <div>
         <img 
+          className="animate-fade-up"
+                  
           src={Ceo}
           width={384}
           height={576}
           alt="Portrait of the company's CEO, John Doe, standing confidently."
-        /> 
+        />
         </div>
         <div className='w-[487px] ml-[24px]'>
           <div className="text-black text-[32px] font-500 font-sans mb-5">мэндчилгээ</div>

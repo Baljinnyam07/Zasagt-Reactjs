@@ -64,7 +64,7 @@ const Navbar = () => {
           backgroundSize: 'cover',
         }}
       >
-        <div className='mt-[350px] ml-[150px]'>
+        <div className='mt-[350px] ml-[150px] animate-fade-left'>
           {svg}
         </div>
       </nav>

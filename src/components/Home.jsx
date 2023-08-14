@@ -78,7 +78,7 @@ const Home =()=>{
     </div>
       
       <AppContainer>
-      <div className='mt-[80px]'>
+      <div className='mt-[80px] animate-fade-up animate-once animate-duration-500 animate-delay-100 animate-ease-linear animate-normal'>
         <h1 className='uppercase text-[#23356B] text-[32px] font-[500]'>төслүүд</h1>
         <ProjectCarousel items={jsonProject}/>
       </div>
@@ -99,7 +99,7 @@ const Home =()=>{
         
         <div className='text-[16px] mb-[120px] font-[400] text-[#fff] flex justify-center font-400'>
         <a href="/mechanical/mining">
-          <div className='border cursor-pointer py-[7px] px-[24px] rounded-[8px] bg-[#D0A616]'>
+          <div className='border cursor-pointer py-[7px] px-[24px] rounded-[8px] bg-[#D0A616] hover:opacity-70'>
           ДЭЛГЭРЭНГҮЙ
           </div>
           </a>

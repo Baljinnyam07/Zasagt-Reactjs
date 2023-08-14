@@ -97,7 +97,7 @@ const FeedBack =() => {
           )}
               <button
                 type="submit"
-                className="inline-block w-[160px] h-[38px] ml-[200px] center rounded-lg bg-[#D0A616] text-[14px] font-medium uppercase leading-normal text-white"
+                className="inline-block w-[160px] h-[38px] ml-[200px] center rounded-lg bg-[#D0A616] text-[14px] font-medium uppercase leading-normal text-white hover:opacity-70"
                 data-te-ripple-color="light">
                ХҮСЭЛТ ИЛГЭЭХ
               </button>
