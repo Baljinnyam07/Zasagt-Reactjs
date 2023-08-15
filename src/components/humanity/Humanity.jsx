@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import humanity1 from './humanity1.png'
 import humanity2 from './humanity2.png'
 import humanity3 from './humanity3.png'
@@ -12,7 +12,6 @@ function Humanity() {
   const [showUurkhainNuurs, setShowUurkhainNuurs] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const { type } = useParams();
 
   useEffect(() => {
     if (location.pathname === '/humanity/resource-policy') {
@@ -145,7 +144,7 @@ function Humanity() {
               <div className="text-black text-[32px] font-500 font-sans mb-5">Нээлттэй ажлын байрууд</div>
             </div>
             <div className="">
-            <Posts type={`${type}`} urlType='humanity'/>
+            <Posts urlType='humanity'/>
             </div>
           </div>
         </div>

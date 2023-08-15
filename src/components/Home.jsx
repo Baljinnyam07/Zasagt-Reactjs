@@ -76,7 +76,7 @@ const Home =()=>{
     </div>
     </AppContainer>
     </div>
-      
+
       <AppContainer>
       <div className='mt-[80px] animate-fade-up animate-once animate-duration-500 animate-delay-100 animate-ease-linear animate-normal'>
         <h1 className='uppercase text-[#23356B] text-[32px] font-[500]'>төслүүд</h1>

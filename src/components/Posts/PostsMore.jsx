@@ -10,7 +10,6 @@ function extractContent(html, lineClamp = Infinity) {
   contentContainer.style.webkitBoxOrient = "vertical";
   contentContainer.appendChild(tempElement);
   const extractedText = contentContainer.textContent;
-
   return extractedText;
 }
 function PostsMore({ posts, type }) {

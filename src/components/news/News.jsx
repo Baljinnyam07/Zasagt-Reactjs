@@ -6,7 +6,6 @@ import AppContainer from '../AppContainer';
 const News = () => {
   const location = useLocation();
   const { type } = useParams();
-  console.log('type:',type)
   return (
     <AppContainer>
       <div className="flex">

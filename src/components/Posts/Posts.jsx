@@ -8,10 +8,9 @@ import PostSkeleton from "../Skeleton";
 function Posts({urlType}) {
 const [posts, setPosts] = useState([]);
 const { type } = useParams();
-console.log('type:',type)
-console.log('posts:',posts)
-console.log('urlType:',urlType)
-
+  console.log('urlType:', urlType)
+  console.log('data:',posts)
+  console.log('typeIs:',type)
   useEffect(() => {
     getPosts();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -25,7 +24,6 @@ console.log('urlType:',urlType)
       orderBy('date', 'desc')
     );
   
-
     getDocs(q)
       .then((querySnapshot) => {
         const data = querySnapshot.docs.map((doc) => ({
