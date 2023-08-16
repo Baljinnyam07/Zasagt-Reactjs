@@ -12,6 +12,7 @@ import { IntlProvider } from 'react-intl';
 import Mechanical from './components/contact-us/Mechanical';
 import Humanity from './components/humanity/Humanity';
 import Admin from './components/admin/Admin';
+import HireEdit from './components/Posts/HireEdit';
 
 function App() {
   return (
@@ -36,7 +37,7 @@ function App() {
             <Route path="/admin/mechanical/:type/create" element={<PostEdit/>} />
             <Route path="/admin/mechanical/:type/edit/:postId" element={<PostEdit />} />
             <Route path="/admin/humanity/:type" element={<PostsAdmin />} />
-            <Route path="/admin/humanity/:type/create" element={<PostEdit/>} />
+            <Route path="/admin/humanity/:type/create" element={<HireEdit/>} />
             <Route path="/admin/humanity/:type/edit/:postId" element={<PostEdit />} />
             <Route path="/admin/feedbacks/:type" element={<PostsAdmin />} />
       </Routes>

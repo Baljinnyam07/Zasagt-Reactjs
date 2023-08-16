@@ -27,7 +27,9 @@ function PostsAdminItem({ post, dataType, getPosts }) {
         <div className="text-sm font-semibold">{post.title}</div>
           <div className="flex space-x-2 items-end absolute bottom-0">
             <Link to={`/admin/${dataType}/${post.type}/edit/${post.id}`}>
-              <button className="btn-edit text-lime-600">Edit</button>
+              <button className="btn-edit text-lime-600">
+                Edit
+              </button>
             </Link>
             <button className="btn-remove text-rose-700" onClick={toggleDeleteModal}>
               Remove

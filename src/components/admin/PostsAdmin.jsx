@@ -5,6 +5,7 @@ import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../firebase";
 import PostsAdminItem from "./PostsAdminItem";
 import AdminNav from "./components/navbar";
+import HireAdminItem from "./HireAdminItem";
 
 function Admin({props}) {
   const [posts, setPosts] = useState([]);
@@ -42,7 +43,7 @@ function Admin({props}) {
     });
   }
   return (
-    <div className="bg-gray-900 text-white h-screen flex flex-col">
+    <div className=" text-white h-screen flex flex-col">
       <AdminNav/>
       <main className="flex-grow p-10">
       <div className="flex">
@@ -50,11 +51,19 @@ function Admin({props}) {
                   <div className="ml-3">Create</div>
                 </Link>
               </div>
-      <div className="">
-                <div className="grid grid-cols-6 gap-4 m-20">
-                {posts.map((post) => <PostsAdminItem key={post.id} dataType={urlType} post={post} getPosts={getPosts} />)}
-                </div>
-              </div>
+              {type !== 'hire' ? (
+                  <div className="grid grid-cols-6 gap-4 m-20">
+                    {posts.map((post) => (
+                      <PostsAdminItem key={post.id} dataType={urlType} post={post} getPosts={getPosts} />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-2 gap-4">
+                    {posts.map((post) => (
+                      <HireAdminItem key={post.id} dataType={urlType} post={post} getPosts={getPosts} />
+                    ))}
+                  </div>
+                )}
       </main>
     </div>
   );
