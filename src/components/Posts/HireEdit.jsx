@@ -104,159 +104,159 @@ const HireEdit = () => {
     setRequirements(updatedRequirements);
   };
   return <>
-    <div className="flex bg-[]">
-    <div className="flex w-2/6 items-center">
-      <div className="bg-[#374151] text-[#fff] w-full border-r h-screen p-8">
-        <h2 className="text-2xl font-semibold mb-6">Нээлттэй ажлын байр</h2>
-        <div className="mb-6">
-          <label htmlFor="title" className="block text-[#fff] font-semibold mb-1">Албан тушаалын нэр</label>
-          <input
-            type="text"
-            name="title"
-            id="title"
-            className="form-input w-full bg-[#4b5563] rounded"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </div>
-        <div className="flex gap-3">
-            <div className="mb-6">
-            <label htmlFor="industry" className="block text-[#fff] font-semibold mb-1">Байршил</label>
+    <div className="grid grid-cols-6">
+      <div className="col-span-2 items-center">
+        <div className="bg-[#374151] text-[#fff] w-full border-r h-max p-8">
+          <h2 className="text-2xl font-semibold mb-6">Нээлттэй ажлын байр</h2>
+          <div className="mb-6">
+            <label htmlFor="title" className="block text-[#fff] font-semibold mb-1">Албан тушаалын нэр</label>
             <input
-                type="text"
-                name="locations"
-                id="locations"
-                className="form-input w-full bg-[#4b5563] rounded"
-                value={industry}
-                onChange={(e) => setLocations(e.target.value)}
+              type="text"
+              name="title"
+              id="title"
+              className="form-input w-full bg-[#4b5563] rounded"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
             />
-            </div>
-            <div className="mb-6">
-            <label htmlFor="date" className="block text-[#fff] font-semibold mb-1">Огноо</label>
-            <input
-                type="date"
-                name="date"
-                id="date"
-                className="form-input w-full bg-[#4b5563] rounded"
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
+          </div>
+          <div className="flex gap-3">
+              <div className="mb-6">
+              <label htmlFor="locations" className="block text-[#fff] font-semibold mb-1">Байршил</label>
+              <input
+                  type="text"
+                  name="locations"
+                  id="locations"
+                  className="form-input w-full bg-[#4b5563] rounded"
+                  value={locations}
+                  onChange={(e) => setLocations(e.target.value)}
+              />
+              </div>
+              <div className="mb-6">
+              <label htmlFor="date" className="block text-[#fff] font-semibold mb-1">Огноо</label>
+              <input
+                  type="date"
+                  name="date"
+                  id="date"
+                  className="form-input w-full bg-[#4b5563] rounded"
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)}
+              />
+              </div>
+          </div>
+          <div className="mb-6">
+            <label htmlFor="basicIssues" className="block text-[#fff] font-semibold mb-1">Гүйцэтгэх үндсэн үүрэг</label>
+            <textarea
+              name="basicIssues"
+              id="basicIssues"
+              className="form-textarea w-full bg-[#4b5563] rounded"
+              value={basicIssues}
+              onChange={(e) => setBasicIssues(e.target.value)}
             />
-            </div>
-        </div>
-        <div className="mb-6">
-          <label htmlFor="basicIssues" className="block text-[#fff] font-semibold mb-1">Гүйцэтгэх үндсэн үүрэг</label>
-          <textarea
-            name="basicIssues"
-            id="basicIssues"
-            className="form-textarea w-full bg-[#4b5563] rounded"
-            value={basicIssues}
-            onChange={(e) => setBasicIssues(e.target.value)}
-          />
-        </div>
-        <div className="mb-6">
-            <label htmlFor="requirements" className="block text-[#fff] font-semibold mb-1">Ажлын байранд тавигдах шаардлага</label>
-            <div>
-                {requirements.map((req, index) => (
-                <div key={index} className="flex items-center mb-2">
-                    <input
-                    type="text"
-                    className="form-input w-full bg-[#4b5563]"
-                    value={req}
-                    onChange={(e) => handleRequirementChange(e.target.value, index)}
-                    />
-                    <button
-                    className="ml-2 text-red-500"
-                    onClick={() => removeRequirement(index)}
-                    >
-                    Remove
-                    </button>
-                </div>
-                ))}
-                <button
-                className="text-[#2dd4bf]"
-                onClick={addRequirement}
-                >
-                Шаардлага
-                </button>
-            </div>
-            </div>
-        <div className="mb-6">
-          <label htmlFor="addInformation" className="block text-[#fff] font-semibold mb-1">Нэмэлт мэдээлэл</label>
-          <textarea
-            name="addInformation"
-            id="addInformation"
-            className="form-textarea w-full bg-[#4b5563] rounded"
-            value={addInformation}
-            onChange={(e) => setAddInformation(e.target.value)}
-          />
-        </div>
-        
-        <div>
-            <h1 className="block text-[#fff] font-semibold mb-1 py-6">Бусад</h1>
-            <div className="mb-6 flex gap-3">
-            <label htmlFor="industry" className="block text-[#fff] mb-1 w-40">Салбар:</label>
-            <input
-                type="text"
-                name="industry"
-                id="industry"
-                className="form-input w-full bg-[#4b5563] rounded"
-                value={industry}
-                onChange={(e) => setIndustry(e.target.value)}
+          </div>
+          <div className="mb-6">
+              <label htmlFor="requirements" className="block text-[#fff] font-semibold mb-1">Ажлын байранд тавигдах шаардлага</label>
+              <div>
+                  {requirements.map((req, index) => (
+                  <div key={index} className="flex items-center mb-2">
+                      <input
+                      type="text"
+                      className="form-input w-full bg-[#4b5563]"
+                      value={req}
+                      onChange={(e) => handleRequirementChange(e.target.value, index)}
+                      />
+                      <button
+                      className="ml-2 text-red-500"
+                      onClick={() => removeRequirement(index)}
+                      >
+                      Remove
+                      </button>
+                  </div>
+                  ))}
+                  <button
+                  className="text-[#2dd4bf]"
+                  onClick={addRequirement}
+                  >
+                  Шаардлага
+                  </button>
+              </div>
+              </div>
+          <div className="mb-6">
+            <label htmlFor="addInformation" className="block text-[#fff] font-semibold mb-1">Нэмэлт мэдээлэл</label>
+            <textarea
+              name="addInformation"
+              id="addInformation"
+              className="form-textarea w-full bg-[#4b5563] rounded"
+              value={addInformation}
+              onChange={(e) => setAddInformation(e.target.value)}
             />
-            </div>
-            <div className="mb-6 flex gap-3">
-            <label htmlFor="industry" className="block text-[#fff] mb-1 w-40">Түвшин:</label>
-            <input
-                type="text"
-                name="industry"
-                id="industry"
-                className="form-input w-full bg-[#4b5563] rounded"
-                value={industry}
-                onChange={(e) => setLevel(e.target.value)}
-            />
-            </div>
-            <div className="mb-6 flex gap-3">
-            <label htmlFor="addInformation" className="block text-[#fff] mb-1 w-40">Байршил:</label>
-            <input
-                type="text"
-                name="addInformation"
-                id="addInformation"
-                className="form-textarea w-full bg-[#4b5563] rounded"
-                value={addInformation}
-                onChange={(e) => setJobLocation(e.target.value)}
-            />
-            </div>
-            <div className="mb-6 flex gap-3">
-            <label htmlFor="addInformation" className="block text-[#fff] mb-1 w-40">Төрөл:</label>
-            <input
-                type="text"
-                name="addInformation"
-                id="addInformation"
-                className="form-textarea w-full bg-[#4b5563] rounded"
-                value={addInformation}
-                onChange={(e) => setJobType(e.target.value)}
-            />
-            </div>
-        </div>
-        <div className="flex justify-end">
-          <button
-            className="bg-indigo-500 text-white px-6 py-2 mr-4 rounded"
-            onClick={() => window.history.go(-1)}
-          >
-            Cancel
-          </button>
-          <button
-            className="bg-green-500 text-white px-6 py-2 rounded"
-            onClick={save}
-          >
-            Save
-          </button>
+          </div>
+          
+          <div>
+              <h1 className="block text-[#fff] font-semibold mb-1 py-6">Бусад</h1>
+              <div className="mb-6 flex gap-3">
+              <label htmlFor="jobLocation" className="block text-[#fff] mb-1 w-40">Байршил:</label>
+              <input
+                  type="text"
+                  name="jobLocation"
+                  id="jobLocation"
+                  className="form-textarea w-full bg-[#4b5563] rounded"
+                  value={jobLocation}
+                  onChange={(e) => setJobLocation(e.target.value)}
+              />
+              </div>
+              <div className="mb-6 flex gap-3">
+              <label htmlFor="industry" className="block text-[#fff] mb-1 w-40">Салбар:</label>
+              <input
+                  type="text"
+                  name="industry"
+                  id="industry"
+                  className="form-input w-full bg-[#4b5563] rounded"
+                  value={industry}
+                  onChange={(e) => setIndustry(e.target.value)}
+              />
+              </div>
+              <div className="mb-6 flex gap-3">
+              <label htmlFor="industry" className="block text-[#fff] mb-1 w-40">Түвшин:</label>
+              <input
+                  type="text"
+                  name="level"
+                  id="level"
+                  className="form-input w-full bg-[#4b5563] rounded"
+                  value={level}
+                  onChange={(e) => setLevel(e.target.value)}
+              />
+              </div>
+              
+              <div className="mb-6 flex gap-3">
+              <label htmlFor="jobType" className="block text-[#fff] mb-1 w-40">Төрөл:</label>
+              <input
+                  type="text"
+                  name="jobType"
+                  id="jobType"
+                  className="form-textarea w-full bg-[#4b5563] rounded"
+                  value={jobType}
+                  onChange={(e) => setJobType(e.target.value)}
+              />
+              </div>
+          </div>
+          <div className="flex justify-end">
+            <button
+              className="bg-indigo-500 text-white px-6 py-2 mr-4 rounded"
+              onClick={() => window.history.go(-1)}
+            >
+              Cancel
+            </button>
+            <button
+              className="bg-green-500 text-white px-6 py-2 rounded"
+              onClick={save}
+            >
+              Save
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div>
-    <div>
-          <div className="bg-white rounded border flex flex-col w-full">
+    <div className="col-span-4 p-40 bg-[#94a3b8]">
+    <div className="bg-white rounded border">
               <div className="border-b">
               <div className="py-[16px] px-[24px]">
               <div className="text-[16px] flex justify-between font-[500] text-[#23356B] mb-[24px]">
@@ -273,12 +273,12 @@ const HireEdit = () => {
                 <div className="flex items-center gap-[8px]">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00014 14.1257L8.4809 13.584C9.02643 12.9593 9.51709 12.3665 9.95366 11.8027L10.314 11.3273C11.8188 9.29983 12.5716 7.69069 12.5716 6.50136C12.5716 3.96269 10.5251 1.90479 8.00014 1.90479C5.47519 1.90479 3.42871 3.96269 3.42871 6.50136C3.42871 7.69069 4.18147 9.29983 5.68623 11.3273L6.04662 11.8027C6.66943 12.6007 7.32103 13.3751 8.00014 14.1257Z" stroke="#8F9099" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.00047 8.38081C9.05244 8.38081 9.90523 7.52802 9.90523 6.47605C9.90523 5.42408 9.05244 4.57129 8.00047 4.57129C6.94849 4.57129 6.0957 5.42408 6.0957 6.47605C6.0957 7.52802 6.94849 8.38081 8.00047 8.38081Z" stroke="#8F9099" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path fillRule="evenodd" clipRule="evenodd" d="M8.00014 14.1257L8.4809 13.584C9.02643 12.9593 9.51709 12.3665 9.95366 11.8027L10.314 11.3273C11.8188 9.29983 12.5716 7.69069 12.5716 6.50136C12.5716 3.96269 10.5251 1.90479 8.00014 1.90479C5.47519 1.90479 3.42871 3.96269 3.42871 6.50136C3.42871 7.69069 4.18147 9.29983 5.68623 11.3273L6.04662 11.8027C6.66943 12.6007 7.32103 13.3751 8.00014 14.1257Z" stroke="#8F9099" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M8.00047 8.38081C9.05244 8.38081 9.90523 7.52802 9.90523 6.47605C9.90523 5.42408 9.05244 4.57129 8.00047 4.57129C6.94849 4.57129 6.0957 5.42408 6.0957 6.47605C6.0957 7.52802 6.94849 8.38081 8.00047 8.38081Z" stroke="#8F9099" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                     </div>
                     <div className="text-[12px] text-[#8F9099] font-400">
-                        {location}
+                        {locations}
                     </div>
                 </div>
                 <div className="flex items-center gap-[8px]">
@@ -336,7 +336,6 @@ const HireEdit = () => {
               </div>
               </div>
             </div>
-          </div>
     </div>
     </div>
   </>;

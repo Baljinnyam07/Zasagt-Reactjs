@@ -44,22 +44,23 @@ const { type } = useParams();
 
 return (
   <>
-    <div className="bg-[#ffff] relative pt-[80px] pb-[240px]">
-      <div className="container px-[26px] sm:mx-auto">
-      {type === 'hire' ? (
-        posts.length > 0 ? (
-          <PostsMoreHumanity posts={posts} type={type} />
+  {type === 'hire' ? (
+  <div className="bg-[#ffff] relative pb-[240px]">
+    {posts.length > 0 ? (
+            <PostsMoreHumanity posts={posts} type={type} />
         ) : (
           <PostSkeleton />
-        )
-      ) : (
-        posts.length > 0 ? (
+        )}
+  </div>):(<div className="bg-[#ffff] relative pt-[80px] pb-[240px]">
+      <div className="container sm:mx-auto">
+      {posts.length > 0 ? (
           <PostsMore posts={posts} type={type} />
         ) : (
           <PostSkeleton />
-        )
-      )}      </div>
+        )}
+            </div>
     </div>
+    )}
   </>
 );
 }

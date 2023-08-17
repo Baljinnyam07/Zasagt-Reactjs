@@ -1,18 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 
 function PostsMoreHumanity({ posts }) {
+  const [expandedPostId, setExpandedPostId] = useState(null);
+
+  const togglePostExpansion = (postId) => {
+    setExpandedPostId((prevExpandedPostId) =>
+      prevExpandedPostId === postId ? null : postId
+    );
+  };
   return (
-    <div className="w-full">
+    <div className="w-full transition duration-150 ease-out">
       {posts.map((post) => (
         <div key={post.id}>
-          <div className="bg-white rounded border flex flex-col w-full">
-              <div className="border-b">
+            <div
+              key={post.id}
+              className={`bg-white mt-[24px] cursor-pointer rounded border flex flex-col w-full ${
+                expandedPostId === post.id ? "h-max" : "h-[128px]"
+              } overflow-hidden`}
+              onClick={() => togglePostExpansion(post.id)}
+              tabIndex="0" // For making it focusable
+            >             
+             <div className="border-b">
               <div className="py-[16px] px-[24px]">
               <div className="text-[16px] flex justify-between font-[500] text-[#23356B] mb-[24px]">
                 <div>
                     {post.title}
                 </div>
-                <div className="p-[8px] border">
+                <div className={`p-[8px] border transition-all transform ${
+                        expandedPostId === post.id ? "rotate-0" : "rotate-180"
+                      }`}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M8.00048 7.21883L4.70048 10.5188L3.75781 9.57616L8.00048 5.3335L12.2431 9.57616L11.2998 10.5188L7.99981 7.21883H8.00048Z" fill="#23356B"/>
                     </svg>
