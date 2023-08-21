@@ -38,7 +38,7 @@ function App() {
             <Route path="/admin/mechanical/:type/edit/:postId" element={<PostEdit />} />
             <Route path="/admin/humanity/:type" element={<PostsAdmin />} />
             <Route path="/admin/humanity/:type/create" element={<HireEdit/>} />
-            <Route path="/admin/humanity/:type/edit/:postId" element={<PostEdit />} />
+            <Route path="/admin/humanity/:type/edit/:postId" element={<HireEdit />} />
             <Route path="/admin/feedbacks/:type" element={<PostsAdmin />} />
       </Routes>
     </Router>

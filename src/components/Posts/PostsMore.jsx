@@ -15,7 +15,7 @@ function extractContent(html, lineClamp = Infinity) {
 function PostsMore({ posts, type }) {
   return (
     <>
-      <div className="grid justify-center sm:grid-cols-2 sm:justify-center lg:grid-cols-3 gap-[24px] ">
+      <div className="grid justify-center sm:grid-cols-2 sm:justify-center lg:grid-cols-3 gap-[24px]">
         {posts.map((post) => (
           <div key={post.id}>
             <div className="bg-white rounded flex flex-col w-full text-[#8F9099]">

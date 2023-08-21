@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+
 function AdminNav(){
     const [dropdowns, setDropdowns] = useState([
         {
@@ -40,8 +41,12 @@ function AdminNav(){
     
 
     return(
-        <nav className="bg-gray-800 p-4">
-        <ul className="flex space-x-6">
+        <nav className="flex">
+        <ul className=" bg-gray-800 w-max h-full p-5 leading-10">
+
+          <li className="w-10 h-10">
+            <img src='' alt="" />
+          </li>
           <li>
             <Link className="hover:underline" to="/admin">
               Dashboard
@@ -56,7 +61,7 @@ function AdminNav(){
                 {dropdown.title}
               </span>
               {dropdown.isOpen && (
-                <ul className="absolute space-y-1 bg-gray-800 text-gray-300 p-2 mt-2 rounded shadow-lg">
+                <ul className="absolute space-y-1 bg-gray-900 text-gray-300 z-10 p-2 mt-2 rounded shadow-lg">
                   {dropdown.items.map((item, itemIndex) => (
                     <li key={itemIndex}>
                       <a
