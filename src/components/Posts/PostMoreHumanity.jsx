@@ -1,15 +1,21 @@
 import React, { useState } from "react";
+import Anket from "../humanity/Anket";
 
 function PostsMoreHumanity({ posts }) {
   const [expandedPostId, setExpandedPostId] = useState(null);
-
   const togglePostExpansion = (postId) => {
     setExpandedPostId((prevExpandedPostId) =>
       prevExpandedPostId === postId ? null : postId
     );
   };
+
+
   return (
-    <div className="w-full transition duration-150 ease-out">
+      <>
+        <div className="w-full transition duration-150 ease-out hidden">
+          <div>
+              <div className="text-black text-[32px] font-500 font-sans mb-5">Нээлттэй ажлын байрууд</div>
+            </div>
       {posts.map((post) => (
         <div key={post.id}>
             <div
@@ -109,6 +115,10 @@ function PostsMoreHumanity({ posts }) {
           </div>
       ))}
     </div>
+    <div className="h-[1400px] overflow-auto">
+    <Anket/>
+    </div>
+      </>
   );
 }
 

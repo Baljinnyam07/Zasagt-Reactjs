@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 function HireAdminItem({ post, dataType, getPosts }) {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
-
   const remove = () => {
     deleteDoc(doc(db, dataType, post.id)).then(() => {
       getPosts();
@@ -19,7 +18,9 @@ function HireAdminItem({ post, dataType, getPosts }) {
   
 
   return (
+      
       <div className="m-8 text-[#cbd5e1] rounded-lg mb-4 relative">
+       
        <form className="p-2 relative">
         <fieldset className="border border-gray-300 p-4 rounded-lg mb-4">
             <legend className="text-lg font-semibold mb-2">{post.title}</legend>

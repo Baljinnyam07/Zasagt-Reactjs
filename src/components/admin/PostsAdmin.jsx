@@ -43,7 +43,7 @@ function Admin({props}) {
     });
   }
   return (
-    <div className="text-white h-screen flex bg-[#4b5563]">
+    <div className="text-white h-full min-h-screen flex bg-[#4b5563]">
       <AdminNav/>
       <div className="">
       {type !== 'hire' ? (
@@ -61,12 +61,21 @@ function Admin({props}) {
                       <PostsAdminItem key={post.id} dataType={urlType} post={post} getPosts={getPosts} />
                     ))}
                   </div>
-        ) : (
+        ) : (     
+          <>
+            <Link className="w-10 text-[#000]" to={`/admin/${urlType}/${type}/create`}>
+                              <div className="p-1 mx-10 mt-[74px] border w-max rounded-full hover:border-[#6ee7b7]">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 24 24" fill="none">
+                              <path d="M4 12H20M12 4V20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              </div>
+                    </Link>
                   <div className="grid grid-cols-2 gap-4 flex-wrap">
                     {posts.map((post) => (
                       <HireAdminItem key={post.id} dataType={urlType} post={post} getPosts={getPosts} />
                     ))}
                   </div>
+          </>
       )}
       </div>
     </div>

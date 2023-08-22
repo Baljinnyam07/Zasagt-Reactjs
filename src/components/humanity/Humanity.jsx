@@ -140,9 +140,6 @@ function Humanity() {
         </div>
         <div className={`${showUurkhainNuurs ? '' : 'hidden'}`}>
           <div className="">
-            <div>
-              <div className="text-black text-[32px] font-500 font-sans mb-5">Нээлттэй ажлын байрууд</div>
-            </div>
             <div className="">
             <Posts urlType='humanity'/>
             </div>
