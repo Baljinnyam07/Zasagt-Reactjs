@@ -9,7 +9,7 @@ const News = () => {
   return (
     <AppContainer>
       <div className="flex">
-      <div className="text-[14px] mt-[40px] uppercase">
+      <div className="text-[14px] mt-[40px] uppercase xl:block hidden">
         <div
           className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer"
         >
@@ -26,7 +26,7 @@ const News = () => {
           <a className={`flex gap-2 ${location.pathname.startsWith('/posts/social-resp')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/posts/social-resp'>нийгмийн хариуцлага{location.pathname === '/posts/social-resp' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
       </div>
-      <div>
+      <div className='mx-[20px] sm:mx-auto'>
         <Posts type={`${type}`} urlType='posts' />
       </div>
     </div>

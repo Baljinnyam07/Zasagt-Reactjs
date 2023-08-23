@@ -6,6 +6,8 @@ import { useLocation } from "react-router-dom";
 export default function Nav() {
     const location = useLocation();
     const url = location.pathname;
+
+
     const handleScrollClick = () => {
     window.scrollTo({
         top:document.documentElement.scrollHeight,

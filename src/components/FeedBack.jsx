@@ -39,9 +39,9 @@ const FeedBack =() => {
     }
   };
   return (
-        <div className='relative container mx-auto h-[430px] max-w-[1440px] mt-[80px]'>          
-          <div className='py-[80px] grid grid-cols-2 gap-[24px] absolute'>
-            <form className='w-[588px]' onSubmit={handleFormSubmit}>
+        <div className='h-[550px] sm:h-[520px] xl:h-max mt-[80px]'>          
+          <div className='py-[80px] px-[20px] xl:px-0  flex flex-col-reverse lg:flex-row gap-[24px] absolute'>
+            <form className='w-full lg:w-[588px]' onSubmit={handleFormSubmit}>
               <div className="grid grid-cols-2 gap-[10px] mb-[8px]">
                 <div className="relative" data-te-input-wrapper-init>
                   <input
@@ -95,19 +95,21 @@ const FeedBack =() => {
             {isSubmitted && (
             <div className="text-green-500 mb-4">Feedback submitted successfully!</div>
           )}
+              <div className='flex justify-center'>
               <button
                 type="submit"
-                className="inline-block w-[160px] h-[38px] ml-[200px] center rounded-lg bg-[#D0A616] text-[14px] font-medium uppercase leading-normal text-white hover:opacity-70"
+                className="w-[160px] h-[38px] center rounded-lg bg-[#D0A616] text-[14px] font-medium uppercase leading-normal text-white hover:opacity-70"
                 data-te-ripple-color="light">
                ХҮСЭЛТ ИЛГЭЭХ
               </button>
+              </div>
             </form>
             <div className=''>
               <h2 className='text-[32px] font-500 mb-[16px] text-[#fff]'>Санал хүсэлт илгээх</h2>
-              <p className='text-[16px] font-400 text-[#fff] w-[606px]'>Та манай бүтээгдэхүүн үйлчилгээтэй холбоотой санал хүсэлтээ дараах формоор илгээнэ үү. Манай мэдээллийн ажилтан таны бөглөсөн мэдээллийн дагуу 24 цагийн дотор эргүүлэн холбоо барих болно.</p>
+              <p className='text-[16px] font-400 text-[#fff] w-full lg:w-[620px]'>Та манай бүтээгдэхүүн үйлчилгээтэй холбоотой санал хүсэлтээ дараах формоор илгээнэ үү. Манай мэдээллийн ажилтан таны бөглөсөн мэдээллийн дагуу 24 цагийн дотор эргүүлэн холбоо барих болно.</p>
             </div>
           </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1344" height="430" viewBox="0 0 1344 430" fill="none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="180%" viewBox="0 0 1344 430" fill="none">
           <defs>
             <linearGradient id="gradient" x1="0" y1="1" x2="0" y2="0">
               <stop offset="0%" stopColor="white" stopOpacity="0.09" />
@@ -116,7 +118,7 @@ const FeedBack =() => {
           </defs>
           <path fillRule="evenodd" clipRule="evenodd" d="M0 133.574L1017.6 261.374L867.252 430H1157.9L1344 128.658L0 0V133.574Z" fill="url(#gradient)" />
         </svg>
-    </div>
+        </div>
   )
 }
 

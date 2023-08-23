@@ -19,7 +19,7 @@ function PostsMore({ posts, type }) {
         {posts.map((post) => (
           <div key={post.id}>
             <div className="bg-white rounded flex flex-col w-full text-[#8F9099]">
-              <div className="aspect-video bg-cover inline-block h-1/2 w-[282px] h-[180px]" style={{ backgroundImage: `url("${post.image}")` }}></div>
+              <div className="aspect-video bg-cover inline-block h-1/2 w-full sm:w-[282px] h-max sm:h-[180px]" style={{ backgroundImage: `url("${post.image}")` }}></div>
               <div className=" flex flex-col justify-between grow">
               <div className="text-[#35363B] mb-[18px] mt-[18px] text-[#8F9099] text-[12px]">
               <svg className="inline-block mr-[8px] mb-[5px]" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">

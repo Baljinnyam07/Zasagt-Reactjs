@@ -9,7 +9,7 @@ const Mechanical = () => {
   return (
     <AppContainer>
       <div className="flex">
-      <div className="text-[14px] mt-[40px] uppercase">
+      <div className="text-[14px] mt-[40px] uppercase xl:block hidden">
         <div
           className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer"
         >
@@ -26,7 +26,7 @@ const Mechanical = () => {
           <a className={`${location.pathname.startsWith('/mechanical/rent')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/mechanical/rent'>тоног төхөөрөмж түрээс</a>
         </div>
       </div>
-      <div>
+      <div className='mx-[20px] sm:mx-auto'>
         <Posts type={`${type}`} urlType='mechanical'/>
       </div>
     </div>

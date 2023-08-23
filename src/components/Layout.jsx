@@ -62,14 +62,20 @@ const Layout =()=> {
       </div>
         <div className='bg-[#23356B]'>
           <AppContainer>
+          <div className=''>
           <FeedBack/>
+          </div>
           </AppContainer>
         </div>
         <AppContainer>
+        <div>
         <Contact/>
+        </div>
         </AppContainer>
         <AppContainer>
+        <div>
         <Footer/>
+        </div>
         </AppContainer>
         <div className='border-t'>
           <AppContainer>

@@ -101,14 +101,14 @@ export const ProjectCarousel = ({ items }) => {
   }, [currentIndex]);
 
   return (
-    <div className="carousel-container">
+    <div className="carousel-container px-[20px] lg:px-20px xl:px-0">
       <div className="carousel">
         {items.map((item, index) => (
           <div
             key={index}
-            className={`flex gap-[200px] h-[180px] items-center carousel-item transition-opacity duration-500 ${index === currentIndex ?  "opacity-100" : "opacity-0 absolute z-0 top-0 left-0 hidden"}`}
+            className={`lg:flex-row flex flex-col-reverse gap-0 lg:gap-[200px] h-max items-center carousel-item transition-opacity duration-500 ${index === currentIndex ?  "opacity-100" : "opacity-0 absolute z-0 top-0 left-0 hidden"}`}
           >
-            <div className="carousel-caption w-max py-[42px]">{item.caption}</div>
+            <div className="carousel-caption w-full h-max py-[42px]">{item.caption}</div>
             <img className="w-max h-max p-[26px] left" src={item.image} alt={`Carousel Item ${index}`} />
           </div>
         ))}

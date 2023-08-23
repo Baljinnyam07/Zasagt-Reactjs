@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       transitionProperty: {
-        'opacity': 'opacity', // Add 'opacity' to the transition properties
+        'opacity': 'opacity',
       },
     },
   },

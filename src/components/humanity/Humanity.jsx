@@ -43,8 +43,8 @@ function Humanity() {
 
   return (
     <AppContainer>
-      <div className="flex">
-      <div className="text-[14px] mt-[40px] uppercase">
+      <div className="xl:flex inline-block">
+      <div className="text-[14px] mt-[40px] uppercase xl:block hidden">
         
         <div
           className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer"
@@ -71,29 +71,29 @@ function Humanity() {
         
       </div>
       <div className="mt-[80px]">
-        <div className={`${showOvooTolgoi ? '' : 'hidden'}`}>
+        <div className={`mx-[24px] xl:mx-0 ${showOvooTolgoi ? '' : 'hidden'}`}>
           <div className="">
-            <div className='flex mb-[80px]'>
+            <div className='sm:flex mb-[80px]'>
               <div className="text-black text-[32px] font-500 font-sans mb-5 uppercase">
-                  <img className='w-[384px] h-[262px]' src={humanity1} alt="humanityPhoto" />
+                  <img className='w-max xl:w-[384px] h-[262px]' src={humanity1} alt="humanityPhoto" />
               </div>
-              <div className="text-[#454655] text-justify align-center h-max mt-[50px] font-normal leading-8 mb-5 w-[604px] pl-[24px]">
+              <div className="text-[#454655] text-justify align-center mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px] sm:pl-[24px]">
                 <h1 className='text-[32px] uppercase'>бодлого</h1>
                 <div className='py-[24px] leading-[24px] pr-[45px]'>Lorem ipsum dolor sit amet consectetur. Ullamcorper eget odio sit nam nisl luctus eu dui posuere. Porttitor imperdiet quis commodo non id nibh. Quis magna donec pulvinar laoreet orci gravida est pharetra in. Id tortor dolor quis amet lorem urna mi.</div>
               </div>
             </div>
-            <div className='flex mb-[80px]'>
+            <div className='sm:flex sm:flex-col-reverse mb-[80px]'>
               <div className="text-[#454655] text-justify align-center h-max mt-[50px] font-normal leading-8 mb-5 w-[604px]">
                 <h1 className='text-[32px] uppercase'>зорилго, зорилт</h1>
                 <div className='py-[24px] leading-[24px] mr-[45px]'>Lorem ipsum dolor sit amet consectetur. Ullamcorper eget odio sit nam nisl luctus eu dui posuere. Porttitor imperdiet quis commodo non id nibh. Quis magna donec pulvinar laoreet orci gravida est pharetra in. Id tortor dolor quis amet lorem urna mi.</div>
               </div>
               <div className="text-black text-[32px] mr-[45px] font-500 font-sans mb-5 uppercase">
-                  <img className='w-[384px] h-[262px]' src={humanity2} alt="humanityPhoto" />
+                  <img className='w-max xl:w-[384px] h-[262px]' src={humanity2} alt="humanityPhoto" />
               </div>
             </div>
-            <div className='flex'>
+            <div className='sm:flex'>
               <div className="text-black text-[32px] font-500 font-sans mb-5 uppercase">
-                  <img className='w-[384px] h-[262px]' src={humanity3} alt="humanityPhoto" />
+                  <img className='w-max xl:w-[384px] h-[262px]' src={humanity3} alt="humanityPhoto" />
               </div>
               <div className="text-[#454655] text-justify align-center h-max mt-[50px] font-normal leading-8 mb-5 w-[604px] pl-[24px]">
                 <h1 className='text-[32px] uppercase'>байгууллагын хүний нөөц</h1>

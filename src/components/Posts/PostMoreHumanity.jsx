@@ -3,16 +3,23 @@ import Anket from "../humanity/Anket";
 
 function PostsMoreHumanity({ posts }) {
   const [expandedPostId, setExpandedPostId] = useState(null);
+  const [showAnket, setShowAnket] = useState(false); // State to show Anket component
+
   const togglePostExpansion = (postId) => {
     setExpandedPostId((prevExpandedPostId) =>
       prevExpandedPostId === postId ? null : postId
     );
   };
 
+  const handleAnketButtonClick = () => {
+    setShowAnket(true);
+  };
+
 
   return (
       <>
-        <div className="w-full transition duration-150 ease-out hidden">
+        {!showAnket && (
+          <div className="w-full transition duration-150 ease-out">
           <div>
               <div className="text-black text-[32px] font-500 font-sans mb-5">Нээлттэй ажлын байрууд</div>
             </div>
@@ -106,7 +113,7 @@ function PostsMoreHumanity({ posts }) {
               </div>
               </div>
               <div className="mt-[40px] flex justify-center">
-                <div className="py-[12px] text-[16px] font-[400] text-[#fff] px-[7px] bg-[#D0A616] border w-[150px] flex justify-center rounded-xl">
+                <div className="py-[12px] text-[16px] font-[400] text-[#fff] px-[7px] bg-[#D0A616] border w-[150px] flex justify-center rounded-xl" onClick={handleAnketButtonClick}>
                 АНКЕТ ИЛГЭЭХ
                 </div>
               </div>
@@ -114,10 +121,13 @@ function PostsMoreHumanity({ posts }) {
             </div>
           </div>
       ))}
-    </div>
-    <div className="h-[1400px] overflow-auto">
-    <Anket/>
-    </div>
+        </div>
+        )}
+    {showAnket && (
+        <div className="h-[1400px] overflow-auto">
+          <Anket />
+        </div>
+      )}
       </>
   );
 }

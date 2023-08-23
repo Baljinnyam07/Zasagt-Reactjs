@@ -4,9 +4,9 @@ import footerMenuJson from './json/footer.json';
 const Footer = () => {
   return (
     <div>
-      <div className="flex gap-[40px] justify-between text-[#454655]">
+      <div className="px-[20px] xl:px-0 flex flex-wrap gap-[40px] justify-between text-[#454655]">
         {footerMenuJson?.map((menuCategory, index) => (
-          <div className="py-[80px] w-[280px] flex-wrap" key={index}>
+          <div className="py-[10px] lg:py-[80px] w-[180px] lg:w-[220px] flex-wrap" key={index}>
             <h2 className="text-[#23356B] uppercase">{menuCategory.headerTitle}</h2>
             {menuCategory.headerproperty.map((menuItem, index) => (
               <div key={index} className='my-[16px] text-[14px]'>
