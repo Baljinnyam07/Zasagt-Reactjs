@@ -54,10 +54,10 @@ const Home =()=>{
     <>
     <div className='bg-blue-50'>
     <AppContainer>
-    <div className='pt-[79px] pb-[80px] px-[20px] xl:px-0'>
-        <div className='mb-[76px]'>
-          <h1 className='mb-[24px] text-[32px] font-[500] uppercase font-bold text-[#23356B]'>Компанийн тухай</h1>
-          <div className='text-justify text-[16px] leading-[24px]'>
+    <div className='pt-[24px] xl:pt-[79px] pb-[40px] px-[20px] xl:px-0'>
+        <div className='mb-[32px] xl:mb-[46px]'>
+          <h1 className='mb-[24px] text-[18px] md:text-[32px] font-[500] uppercase font-bold text-[#23356B]'>Компанийн тухай</h1>
+          <div className='text-justify text-[14px] md:text-[16px] leading-[24px]'>
           Засагт Хаан ХХК нь 2008 онд уул уурхайн хайгуул, олборлолтын чиглэлээр үйл ажиллагаагаа эхэлсэн бөгөөд 2011 оноос эхлэн орон сууцны болон үйлдвэрийн барилга байгууламжийн угсралт,
           хүнд машин механизмын түрээсийн чиглэлээр үйл ажиллагаагаа өргөтгөсөн өдгөө дараах чиглэлээр үйл ажиллагаа явуулж буй оператор компани юм.
           </div>
@@ -78,12 +78,12 @@ const Home =()=>{
     </div>
 
       <AppContainer>
-      <div className='mt-[80px] animate-fade-up animate-once animate-duration-500 animate-delay-100 animate-ease-linear animate-normal'>
-        <h1 className='uppercase text-[#23356B] text-[32px] px-[20px] xl:px-0  font-[500]'>төслүүд</h1>
+      <div className='mt-[40px] xl:mt-[80px] animate-fade-up animate-once animate-duration-500 animate-delay-100 animate-ease-linear animate-normal'>
+        <h1 className='uppercase text-[#23356B] text-[24px] xl:text-[32px] px-[20px] xl:px-0  font-[500]'>төслүүд</h1>
         <ProjectCarousel items={jsonProject}/>
       </div>
-      <div className='mt-[200px]'>
-      <h1 className='uppercase text-[#23356B] px-[20px] lg:px-0 text-[32px] font-[500]'>тоног төхөөрөмж түрээс</h1>
+      <div className='mt-[80px] xl:mt-[200px]'>
+      <h1 className='uppercase text-[#23356B] px-[20px] lg:px-0 text-[18px] md:text-[32px] font-[500]'>тоног төхөөрөмж түрээс</h1>
       <div className=''>
         <div className='grid sm:grid-cols-2 px-[20px] lg:px-0 sm:gap-[14px] lg:grid-cols-3 justify-center gap-[24px] w-full pt-[32px] pb-[40px]'>
           <div>

@@ -19,15 +19,15 @@ function PostsMoreHumanity({ posts }) {
   return (
       <>
         {!showAnket && (
-          <div className="w-full transition duration-150 ease-out">
-          <div>
+          <div className="transition duration-150 ease-out">
+          <div className="mx-[24px] xl:mx-0">
               <div className="text-black text-[32px] font-500 font-sans mb-5">Нээлттэй ажлын байрууд</div>
             </div>
       {posts.map((post) => (
-        <div key={post.id}>
+        <div className="mx-[24px] xl:mx-0" key={post.id}>
             <div
               key={post.id}
-              className={`bg-white mt-[24px] cursor-pointer rounded border flex flex-col w-full ${
+              className={`bg-white mt-[24px] cursor-pointer rounded border w-full flex flex-col ${
                 expandedPostId === post.id ? "h-max" : "h-[128px]"
               } overflow-hidden`}
               onClick={() => togglePostExpansion(post.id)}

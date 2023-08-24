@@ -72,43 +72,43 @@ function Humanity() {
       </div>
       <div className="mt-[80px]">
         <div className={`mx-[24px] xl:mx-0 ${showOvooTolgoi ? '' : 'hidden'}`}>
-          <div className="">
-            <div className='sm:flex mb-[80px]'>
+          <div className="w-full">
+            <div className='flex flex-col-reverse lg:flex-row mb-[80px]'>
               <div className="text-black text-[32px] font-500 font-sans mb-5 uppercase">
-                  <img className='w-max xl:w-[384px] h-[262px]' src={humanity1} alt="humanityPhoto" />
+                  <img className='w-full xl:w-[384px] h-[262px] ' src={humanity1} alt="humanityPhoto" />
               </div>
               <div className="text-[#454655] text-justify align-center mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px] sm:pl-[24px]">
                 <h1 className='text-[32px] uppercase'>бодлого</h1>
-                <div className='py-[24px] leading-[24px] pr-[45px]'>Lorem ipsum dolor sit amet consectetur. Ullamcorper eget odio sit nam nisl luctus eu dui posuere. Porttitor imperdiet quis commodo non id nibh. Quis magna donec pulvinar laoreet orci gravida est pharetra in. Id tortor dolor quis amet lorem urna mi.</div>
+                <div className='py-[24px] leading-[24px] sm:pr-[45px] w-full'>Lorem ipsum dolor sit amet consectetur. Ullamcorper eget odio sit nam nisl luctus eu dui posuere. Porttitor imperdiet quis commodo non id nibh. Quis magna donec pulvinar laoreet orci gravida est pharetra in. Id tortor dolor quis amet lorem urna mi.</div>
               </div>
             </div>
-            <div className='sm:flex sm:flex-col-reverse mb-[80px]'>
-              <div className="text-[#454655] text-justify align-center h-max mt-[50px] font-normal leading-8 mb-5 w-[604px]">
+            <div className='lg:flex  mb-[80px]'>
+              <div className="text-[#454655] text-justify align-center h-max mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px]">
                 <h1 className='text-[32px] uppercase'>зорилго, зорилт</h1>
                 <div className='py-[24px] leading-[24px] mr-[45px]'>Lorem ipsum dolor sit amet consectetur. Ullamcorper eget odio sit nam nisl luctus eu dui posuere. Porttitor imperdiet quis commodo non id nibh. Quis magna donec pulvinar laoreet orci gravida est pharetra in. Id tortor dolor quis amet lorem urna mi.</div>
               </div>
               <div className="text-black text-[32px] mr-[45px] font-500 font-sans mb-5 uppercase">
-                  <img className='w-max xl:w-[384px] h-[262px]' src={humanity2} alt="humanityPhoto" />
+                  <img className='w-full xl:w-[384px] h-[262px]' src={humanity2} alt="humanityPhoto" />
               </div>
             </div>
-            <div className='sm:flex'>
+            <div className='flex flex-col-reverse lg:flex-row'>
               <div className="text-black text-[32px] font-500 font-sans mb-5 uppercase">
-                  <img className='w-max xl:w-[384px] h-[262px]' src={humanity3} alt="humanityPhoto" />
+                  <img className='w-full xl:w-[384px] h-[262px]' src={humanity3} alt="humanityPhoto" />
               </div>
-              <div className="text-[#454655] text-justify align-center h-max mt-[50px] font-normal leading-8 mb-5 w-[604px] pl-[24px]">
+              <div className="text-[#454655] text-start xl:text-justify align-center h-max mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px] sm:pl-[24px]">
                 <h1 className='text-[32px] uppercase'>байгууллагын хүний нөөц</h1>
-                <div className='py-[24px] leading-[24px] pr-[45px]'>Lorem ipsum dolor sit amet consectetur. Ullamcorper eget odio sit nam nisl luctus eu dui posuere. Porttitor imperdiet quis commodo non id nibh. Quis magna donec pulvinar laoreet orci gravida est pharetra in. Id tortor dolor quis amet lorem urna mi.</div>
+                <div className='py-[24px] leading-[24px] sm:pr-[45px]'>Lorem ipsum dolor sit amet consectetur. Ullamcorper eget odio sit nam nisl luctus eu dui posuere. Porttitor imperdiet quis commodo non id nibh. Quis magna donec pulvinar laoreet orci gravida est pharetra in. Id tortor dolor quis amet lorem urna mi.</div>
               </div>
             </div>
             <div className="flex items-center mt-12 ml-[52px]">
             </div>
           </div>
         </div>
-        <div className={`${showAltanTsagaanOvoo ? '' : 'hidden'}`}>
+        <div className={`mx-[24px] xl:mx-0 ${showAltanTsagaanOvoo ? '' : 'hidden'}`}>
           <div className="flex mb-[42px]">
             <div>
               <div className="text-black text-[32px] font-500 font-sans mb-5">Ур чадвар нэмэгдүүлэх сургалт</div>
-              <div className="text-black text-[16px] font-normal leading-[24px] mb-5 w-[486px] text-justify">
+              <div className="text-black text-[16px] font-normal leading-[24px] mb-5 w-full xl:w-[486px] text-justify">
               Lorem ipsum dolor sit amet consectetur. Ullamcorper eget odio sit nam nisl luctus eu dui posuere. Porttitor imperdiet quis commodo non id nibh. Quis magna donec pulvinar laoreet orci gravida est pharetra in. Id tortor dolor quis amet lorem urna mi.
               </div>
               <a href='https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/%D0%A5%D2%AE%D0%9D%D0%98%D0%98%CC%86-%D0%9D%D3%A8%D3%A8%D0%A6%D0%98%D0%98%CC%86%D0%9D-%D0%A1%D0%A2%D0%A0%D0%90%D0%A2%D0%95%D0%93%D0%98.pdf?alt=media&token=9defd37f-444b-49fe-86cd-440dcbee14b8' className='uppercase underline text-[#23356B] text-[14px] font-normal flex w-max' target="_blank" rel="noreferrer">
@@ -124,7 +124,7 @@ function Humanity() {
           <div className="flex">
             <div>
               <div className="text-black text-[32px] font-500 font-sans mb-5">Хөдөлмөрийн эрүүл мэнд аюулгүй байдал (ХЭМАБ)</div>
-              <div className="text-black text-[16px] font-normal leading-[24px] mb-5 w-[486px] text-justify">
+              <div className="text-black text-[16px] font-normal leading-[24px] mb-5 w-full xl:w-[486px] text-justify">
               Lorem ipsum dolor sit amet consectetur. Ullamcorper eget odio sit nam nisl luctus eu dui posuere. Porttitor imperdiet quis commodo non id nibh. Quis magna donec pulvinar laoreet orci gravida est pharetra in. Id tortor dolor quis amet lorem urna mi.
               </div>
               <a href='https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/%D0%A5%D2%AE%D0%9D%D0%98%D0%98%CC%86-%D0%9D%D3%A8%D3%A8%D0%A6%D0%98%D0%98%CC%86%D0%9D-%D0%A1%D0%A2%D0%A0%D0%90%D0%A2%D0%95%D0%93%D0%98.pdf?alt=media&token=9defd37f-444b-49fe-86cd-440dcbee14b8' className='uppercase underline text-[#23356B] text-[14px] font-normal flex w-max' target="_blank" rel="noreferrer">

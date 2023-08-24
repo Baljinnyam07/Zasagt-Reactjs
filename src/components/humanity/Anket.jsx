@@ -171,12 +171,12 @@ const Anket = () =>{
         <>
 
 <form onSubmit={handleFormSubmitAndCloseModal}>
-            <div>
+            <div className="px-[24px] xl:px-0">
             <header>
             <div>
               <div className="text-black text-[32px] font-500 font-sans mb-5">Ажилд орохыг хүсэгчийн анкет</div>
             </div>
-            <div className="w-[894px] bg-[#E9EBF0] rounded-[8px] mb-[40px]">
+            <div className= "w-full w-full xl::w-[894px] bg-[#E9EBF0] rounded-[8px] mb-[40px]">
               <div className="p-[16px] text-[14px] font-[400] text-[#23356B]">
               <h1 className="mb-[8px]">САНАМЖ</h1>
                     <ol className="">
@@ -213,7 +213,7 @@ const Anket = () =>{
                       <div className="flex gap-[24px]">
                       <div className="mb-6">
                         <label htmlFor="image" className="block">Зураг* </label>
-                        <input type="file" onChange={upload} className="mb-4 rounded-[8px] border w-[282px]" />
+                        <input type="file" onChange={upload} className="mb-4 rounded-[8px] border w-full xl:w-[282px]" />
                       </div>
                       <div className="mb-6">
                         <label htmlFor="image" className="block">Сонирхож буй албан тушаал* </label>
@@ -222,66 +222,66 @@ const Anket = () =>{
                       </div>
                     </div>
                     <div className="mt-[24px] text-[14px]">
-                      <div className="flex gap-[24px]">
+                      <div className="xl:flex gap-[24px]">
                       <div className="mb-6">
                         <label className="block mb-[8px]">Ургийн овог*  </label>
-                        <input type="text" name="familyName" value={formData.familyName} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-[282px] h-[40px]" />
+                        <input type="text" name="familyName" value={formData.familyName} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-full xl:w-[282px] h-[40px]" />
                       </div>
                       <div className="mb-6">
                         <label className="block mb-[8px]">Овог*</label>
-                        <input type="text" name="surName" value={formData.surName} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-[282px] h-[40px]"/>
+                        <input type="text" name="surName" value={formData.surName} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-full xl:w-[282px] h-[40px]"/>
                       </div>
                       <div className="mb-6">
                         <label className="block mb-[8px]">Нэр* </label>
-                        <input type="text" name="nickName" value={formData.nickName} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-[282px] h-[40px]"/>
+                        <input type="text" name="nickName" value={formData.nickName} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-full xl:w-[282px] h-[40px]"/>
                       </div>
                       </div>
-                      <div className="flex gap-[24px]">
+                      <div className="xl:flex gap-[24px]">
                       <div className="mb-6">
                         <label className="block mb-[8px]">Үндэс угсаа*</label>
-                        <input type="text" name="nationality" value={formData.nationality} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-[282px] h-[40px]" />
+                        <input type="text" name="nationality" value={formData.nationality} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-full xl:w-[282px] h-[40px]" />
                       </div>
                       <div className="mb-6">
                         <label className="block mb-[8px]">Регистрийн дугаар*</label>
-                        <input type="text" name="registration" value={formData.registration} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-[282px] h-[40px]"/>
+                        <input type="text" name="registration" value={formData.registration} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-full xl:w-[282px] h-[40px]"/>
                       </div>
                       <div className="mb-6">
                         <label className="block mb-[8px]">Хүйс*</label>
-                        <input type="text" name="gender" value={formData.gender} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-[282px] h-[40px]"/>
+                        <input type="text" name="gender" value={formData.gender} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-full xl:w-[282px] h-[40px]"/>
                       </div>
                       </div>
-                      <div className="flex gap-[24px] text-[14px] font-[400]">
+                      <div className="xl:flex gap-[24px] text-[14px] font-[400]">
                       <div className="mb-6">
                         <label className="block mb-[8px]">Facebook*</label>
-                        <input type="text" name="facebook" value={formData.facebook} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-[282px] h-[40px]" />
+                        <input type="text" name="facebook" value={formData.facebook} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-full xl:w-[282px] h-[40px]" />
                       </div>
                       <div className="mb-6">
                         <label className="block mb-[8px]">Гар утас*</label>
-                        <input type="text" name="phone" value={formData.phone} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-[282px] h-[40px]"/>
+                        <input type="text" name="phone" value={formData.phone} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-full xl:w-[282px] h-[40px]"/>
                       </div>
                       <div className="mb-6">
                         <label className="block mb-[8px]">И-мэйл*</label>
-                        <input type="text" name="mail" value={formData.mail} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-[282px] h-[40px]"/>
+                        <input type="text" name="mail" value={formData.mail} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-full xl:w-[282px] h-[40px]"/>
                       </div>
                       </div>
                     </div>
                     <h1 className="mb-[16px] text-[#23356B] text-[14px]">Оршин суугаа хаягийн мэдээлэл</h1>
-                    <div className="grid grid-cols-3 gap-[24px] text-[14px]">
+                    <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-[24px] text-[14px]">
                       <div className="">
                         <label className="block mb-[8px]">Аймаг хот*</label>
-                        <input type="text" name="city" value={formData.city} onChange={handleFormChange} className=" rounded-[8px] border w-[282px] h-[40px]" />
+                        <input type="text" name="city" value={formData.city} onChange={handleFormChange} className=" rounded-[8px] border w-full xl:w-[282px] h-[40px]" />
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Сум, дүүрэг*</label>
-                        <input type="text" name="province" value={formData.province} onChange={handleFormChange} className=" rounded-[8px] border w-[282px] h-[40px]"/>
+                        <input type="text" name="province" value={formData.province} onChange={handleFormChange} className=" rounded-[8px] border w-full xl:w-[282px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Баг, хороо*</label>
-                        <input type="text" name="committee" value={formData.committee} onChange={handleFormChange} className="rounded-[8px] border w-[282px] h-[40px]"/>
+                        <input type="text" name="committee" value={formData.committee} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[282px] h-[40px]"/>
                       </div>
                       <div className="mb-6">
                         <label className="block mb-[8px]">Гудамж/Байр,тоот*</label>
-                        <input type="text" name="house" value={formData.house} onChange={handleFormChange} className="rounded-[8px] border w-[282px] h-[40px]" />
+                        <input type="text" name="house" value={formData.house} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[282px] h-[40px]" />
                       </div>
                     </div>
                     {percent > 0 && percent < 100 && (
@@ -297,18 +297,18 @@ const Anket = () =>{
                     </div>
                     <div>
                     <div className="mt-[24px] text-[14px]">
-                      <div className="flex gap-[24px]">
+                      <div className="xl:flex gap-[24px]">
                       <div className="mb-6">
                         <label className="block mb-[8px]">Гэрлэлтийн байдал*</label>
-                        <input type="text" name="marital" value={formData.marital} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-[282px] h-[40px]" />
+                        <input type="text" name="marital" value={formData.marital} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-full xl:w-[282px] h-[40px]" />
                       </div>
                       <div className="mb-6">
                         <label className="block mb-[8px]">Ам бүлийн тоо*</label>
-                        <input type="text" name="familyStatus" value={formData.familyStatus} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-[282px] h-[40px]"/>
+                        <input type="text" name="familyStatus" value={formData.familyStatus} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-full xl:w-[282px] h-[40px]"/>
                       </div>
                       <div className="mb-6">
                         <label className="block mb-[8px]">Хүүхдийн тоо*</label>
-                        <input type="text" name="childStatus" value={formData.childStatus} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-[282px] h-[40px]"/>
+                        <input type="text" name="childStatus" value={formData.childStatus} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-full xl:w-[282px] h-[40px]"/>
                       </div>
                       </div>
                     </div>
@@ -317,185 +317,185 @@ const Anket = () =>{
                         <h1 className="mb-[16px] uppercase text-[#23356B]">1. Гэр бүлийн байдал</h1>
                         <div className="text-[#919AB5]">/Одоо хамт амьдардаг хүмүүс/</div>
                       </div>
-                      <div className="flex gap-[8px]">
+                      <div className="xl:flex gap-[8px]">
                       <div className="">
                         <label className="block mb-[8px]">Таны хэн болох*</label>
-                        <input type="text" name="whoIs" value={formData.whoIs} onChange={handleFormChange} className="mb-[24px] rounded-[8px] border w-[142px] h-[40px]" />
+                        <input type="text" name="whoIs" value={formData.whoIs} onChange={handleFormChange} className="mb-[24px] rounded-[8px] border w-full xl:w-[142px] h-[40px]" />
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Овог*</label>
-                        <input type="text" name="whoSurname" value={formData.whoSurname} onChange={handleFormChange} className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" name="whoSurname" value={formData.whoSurname} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Нэр*</label>
-                        <input type="text" value={formData.whoIsName} onChange={handleFormChange} name="whoIsName" className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" value={formData.whoIsName} onChange={handleFormChange} name="whoIsName" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Төрсөн огноо*</label>
-                        <input type="text" name="whoDate" value={formData.whoDate} onChange={handleFormChange} className="rounded-[8px] border w-[142px] h-[40px]" />
+                        <input type="text" name="whoDate" value={formData.whoDate} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[142px] h-[40px]" />
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Төрсөн газар*</label>
-                        <input type="text" value={formData.whoIsNameBirth} onChange={handleFormChange} name="whoIsNameBirth" className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" value={formData.whoIsNameBirth} onChange={handleFormChange} name="whoIsNameBirth" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Утасны дугаар*</label>
-                        <input type="text" value={formData.whoIsPhone} onChange={handleFormChange} name="whoIsPhone" className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" value={formData.whoIsPhone} onChange={handleFormChange} name="whoIsPhone" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       </div>
-                      <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white">+ Мөр нэмэх</button>
+                      <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white mt-[8px] xl:mt-0">+ Мөр нэмэх</button>
                     </div>
                     <div className="mt-[24px] text-[14px]">
                       <div className="flex gap-2">
                         <h1 className="mb-[16px] uppercase text-[#23356B]">2. ураг төрлийн байдал</h1>
                         <div className="text-[#919AB5]">/Тусдаа амьдардаг эцэг эх, ах дүү, хүүхэд г.м/</div>
                       </div>
-                      <div className="flex gap-[8px]">
+                      <div className="xl:flex gap-[8px]">
                       <div className="">
                         <label className="block mb-[8px]">Таны хэн болох*</label>
-                        <input type="text" value={formData.familyWho} onChange={handleFormChange} name="familyWho" className="mb-[24px] rounded-[8px] border w-[142px] h-[40px]" />
+                        <input type="text" value={formData.familyWho} onChange={handleFormChange} name="familyWho" className="mb-[24px] rounded-[8px] border w-full xl:w-[142px] h-[40px]" />
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Овог*</label>
-                        <input type="text" value={formData.familyWhoSurName} onChange={handleFormChange} name="familyWhoSurName" className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" value={formData.familyWhoSurName} onChange={handleFormChange} name="familyWhoSurName" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Нэр*</label>
-                        <input type="text" value={formData.familyWhoName} onChange={handleFormChange} name="familyWhoName" className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" value={formData.familyWhoName} onChange={handleFormChange} name="familyWhoName" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Төрсөн огноо*</label>
-                        <input type="text" value={formData.familyWhoBirth} onChange={handleFormChange} name="familyWhoBirth" className="rounded-[8px] border w-[142px] h-[40px]" />
+                        <input type="text" value={formData.familyWhoBirth} onChange={handleFormChange} name="familyWhoBirth" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]" />
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Төрсөн газар*</label>
-                        <input type="text" value={formData.familyWhoBirthCity} onChange={handleFormChange} name="familyWhoBirthCity" className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" value={formData.familyWhoBirthCity} onChange={handleFormChange} name="familyWhoBirthCity" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Утасны дугаар*</label>
-                        <input type="text" value={formData.familyWhoPhone} onChange={handleFormChange} name="familyWhoPhone" className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" value={formData.familyWhoPhone} onChange={handleFormChange} name="familyWhoPhone" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       </div>
-                      <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white">+ Мөр нэмэх</button>
+                      <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white mt-[8px] xl:mt-0">+ Мөр нэмэх</button>
                     </div>
 
                     <div className="mt-[24px] text-[14px]">
                       <div className="flex gap-2">
                         <h1 className="mb-[16px] uppercase text-[#23356B]">ЕРӨНХИЙ БОЛОВСРОЛ</h1>
                       </div>
-                      <div className="flex gap-[8px]">
+                      <div className="xl:flex gap-[8px]">
                       <div className="">
                         <label className="block mb-[8px]">Элссэн он*</label>
-                        <input type="text" value={formData.generalEduStart} onChange={handleFormChange} name="generalEduStart" className="mb-[24px] rounded-[8px] border w-[142px] h-[40px]" />
+                        <input type="text" value={formData.generalEduStart} onChange={handleFormChange} name="generalEduStart" className="mb-[24px] rounded-[8px] border w-full xl:w-[142px] h-[40px]" />
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Төгссөн он*</label>
-                        <input type="text" value={formData.generalEduEnd} onChange={handleFormChange} name="generalEduEnd" className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" value={formData.generalEduEnd} onChange={handleFormChange} name="generalEduEnd" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Улс*</label>
-                        <input type="text" value={formData.generalEduNati} onChange={handleFormChange} name="generalEduNati" className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" value={formData.generalEduNati} onChange={handleFormChange} name="generalEduNati" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Аймаг, хот</label>
-                        <input type="text" value={formData.generalEduProvidor} onChange={handleFormChange} name="generalEduProvidor" className="rounded-[8px] border w-[142px] h-[40px]" />
+                        <input type="text" value={formData.generalEduProvidor} onChange={handleFormChange} name="generalEduProvidor" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]" />
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Сургууль* </label>
-                        <input type="text" value={formData.generalEduName} onChange={handleFormChange} name="generalEduName" className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" value={formData.generalEduName} onChange={handleFormChange} name="generalEduName" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Голч\дүн</label>
-                        <input type="text" value={formData.generalEduGPA} onChange={handleFormChange} name="generalEduGPA" className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" value={formData.generalEduGPA} onChange={handleFormChange} name="generalEduGPA" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       </div>
-                      <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white">+ Мөр нэмэх</button>
+                      <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white mt-[8px] xl:mt-0">+ Мөр нэмэх</button>
                     </div>
                     <div className="mt-[24px] text-[14px]">
                       <div className="flex gap-2">
                         <h1 className="mb-[16px] uppercase text-[#23356B]">ИХ ДЭЭД СУРГУУЛЬ</h1>
                       </div>
-                      <div className="flex gap-[8px]">
+                      <div className="xl:flex gap-[8px]">
                       <div className="">
                         <label className="block mb-[8px]">Элссэн он*</label>
-                        <input type="text" value={formData.univerStart} onChange={handleFormChange} name="univerStart" className="mb-[24px] rounded-[8px] border w-[142px] h-[40px]" />
+                        <input type="text" value={formData.univerStart} onChange={handleFormChange} name="univerStart" className="mb-[24px] rounded-[8px] border w-full xl:w-[142px] h-[40px]" />
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Төгссөн он*</label>
-                        <input type="text" value={formData.univerEnd} onChange={handleFormChange} name="univerEnd" className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" value={formData.univerEnd} onChange={handleFormChange} name="univerEnd" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Улс*</label>
-                        <input type="text" value={formData.univerNati} onChange={handleFormChange} name="univerNati" className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" value={formData.univerNati} onChange={handleFormChange} name="univerNati" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Аймаг, хот</label>
-                        <input type="text" value={formData.univerProvider} onChange={handleFormChange} name="univerProvider" className="rounded-[8px] border w-[142px] h-[40px]" />
+                        <input type="text" value={formData.univerProvider} onChange={handleFormChange} name="univerProvider" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]" />
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Сургууль* </label>
-                        <input type="text" value={formData.univerName} onChange={handleFormChange} name="univerName" className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" value={formData.univerName} onChange={handleFormChange} name="univerName" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Голч\дүн</label>
-                        <input type="text" value={formData.univerGPA} onChange={handleFormChange} name="univerGPA" className="rounded-[8px] border w-[142px] h-[40px]"/>
+                        <input type="text" value={formData.univerGPA} onChange={handleFormChange} name="univerGPA" className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                       </div>
                       </div>
-                      <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white">+ Мөр нэмэх</button>
+                      <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white mt-[8px] xl:mt-0">+ Мөр нэмэх</button>
                     </div>
                     <div className="mt-[24px] text-[14px]">
                       <div className="flex gap-2">
                         <h1 className="mb-[16px] uppercase text-[#23356B]">ЭРДМИЙН ЦОЛ ЗЭРЭГ</h1> 
                         <div className="text-[#919AB5]">/магистр, доктор зэргийг хамруулан бичнэ/</div>
                       </div>
-                      <div className="flex gap-[8px] w-full">
+                      <div className="xl:flex gap-[8px] w-full">
                       <div className="">
                         <label className="block mb-[8px]">Огноо</label>
-                        <input type="text" value={formData.acamedicDegreeWhere} onChange={handleFormChange} name="acamedicDegreeWhere"  className="mb-[24px] rounded-[8px] border w-[172px] h-[40px]" />
+                        <input type="text" value={formData.acamedicDegreeWhere} onChange={handleFormChange} name="acamedicDegreeWhere"  className="mb-[24px] rounded-[8px] border w-full xl:w-[172px] h-[40px]" />
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Хамгаалсан газар</label>
-                        <input type="text" name="academicWhere" value={formData.academicWhere} onChange={handleFormChange} className="rounded-[8px] border w-[172px] h-[40px]"/>
+                        <input type="text" name="academicWhere" value={formData.academicWhere} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[172px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Эрдмийн зэрэг цол</label>
-                        <input type="text" name="academicAward" value={formData.academicAward} onChange={handleFormChange} className="rounded-[8px] border w-[172px] h-[40px]"/>
+                        <input type="text" name="academicAward" value={formData.academicAward} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[172px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Хамгаалсан сэдэв</label>
-                        <input type="text" name="academicTitle" value={formData.academicTitle} onChange={handleFormChange} className="rounded-[8px] border w-[172px] h-[40px]" />
+                        <input type="text" name="academicTitle" value={formData.academicTitle} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[172px] h-[40px]" />
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Гэрчилгээ, диплом №</label>
-                        <input type="text" name="certificates" value={formData.certificates} onChange={handleFormChange}  className="rounded-[8px] border w-[172px] h-[40px]"/>
+                        <input type="text" name="certificates" value={formData.certificates} onChange={handleFormChange}  className="rounded-[8px] border w-full xl:w-[172px] h-[40px]"/>
                       </div>
                       </div>
-                      <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white">+ Мөр нэмэх</button>
+                      <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white mt-[8px] xl:mt-0">+ Мөр нэмэх</button>
                     </div>
                     <div className="mt-[24px] text-[14px]">
                       <div className="flex gap-2">
                         <h1 className="mb-[16px] uppercase text-[#23356B]">мэргэжлээрээ болон бусад чиглэлээр хамрагдаж байсан сургалт</h1>
                         <div className="text-[#919AB5]">/3-аас дээш сараар хамрагдсан сургалт/</div>
                       </div>
-                      <div className="flex gap-[8px]">
+                      <div className="xl:flex gap-[8px]">
                       <div className="">
                         <label className="block mb-[8px]">Огноо</label>
-                        <input type="text" name="trainingDate" value={formData.trainingDate} onChange={handleFormChange} className="mb-[24px] rounded-[8px] border w-[217px] h-[40px]" />
+                        <input type="text" name="trainingDate" value={formData.trainingDate} onChange={handleFormChange} className="mb-[24px] rounded-[8px] border w-full xl:w-[217px] h-[40px]" />
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Хаана ямар байгууллагад</label>
-                        <input type="text" name="trainingWhere" value={formData.trainingWhere} onChange={handleFormChange} className="rounded-[8px] border w-[217px] h-[40px]"/>
+                        <input type="text" name="trainingWhere" value={formData.trainingWhere} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[217px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Ямар чиглэл</label>
-                        <input type="text" name="trainingRotate" value={formData.trainingRotate} onChange={handleFormChange} className="rounded-[8px] border w-[217px] h-[40px]"/>
+                        <input type="text" name="trainingRotate" value={formData.trainingRotate} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[217px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Үргэлжилсэн хугацаа</label>
-                        <input type="text" name="trainingTime" value={formData.trainingTime} onChange={handleFormChange} className="rounded-[8px] border w-[217px] h-[40px]" />
+                        <input type="text" name="trainingTime" value={formData.trainingTime} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[217px] h-[40px]" />
                       </div>
                       </div>
-                      <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white">+ Мөр нэмэх</button>
+                      <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white mt-[8px] xl:mt-0">+ Мөр нэмэх</button>
                     </div>
                     </div>
                     <div>
@@ -504,51 +504,51 @@ const Anket = () =>{
                             <h1 className="uppercase text-[#23356B]">Хөдөлмөрийн дэвтэр болон НДД-ээр баталгаажсан хөдөлмөрийн үйл ажиллагаа</h1>
                         </div>
                         <div className="text-[#919AB5] mb-[10px]">/Сүүлд ажиллаж байсан ажлын байраасаа эхлүүлж бичнэ үү/</div>
-                        <div className="flex gap-[8px]">
+                        <div className="xl:flex gap-[8px]">
                         <div className="">
                             <label className="block mb-[8px]">Орсон он</label>
-                            <input type="text" name="lastJobStart" value={formData.lastJobStart} onChange={handleFormChange} className="mb-[24px] rounded-[8px] border w-[142px] h-[40px]" />
+                            <input type="text" name="lastJobStart" value={formData.lastJobStart} onChange={handleFormChange} className="mb-[24px] rounded-[8px] border w-full xl:w-[142px] h-[40px]" />
                         </div>
                         <div className="">
                             <label className="block mb-[8px]">Гарсан он</label>
-                            <input type="text" name="lastJobEnd" value={formData.lastJobEnd} onChange={handleFormChange} className="rounded-[8px] border w-[142px] h-[40px]"/>
+                            <input type="text" name="lastJobEnd" value={formData.lastJobEnd} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                         </div>
                         <div className="">
                             <label className="block mb-[8px]">Байгууллагын нэр</label>
-                            <input type="text" name="lastJobName" value={formData.lastJobName} onChange={handleFormChange} className="rounded-[8px] border w-[142px] h-[40px]"/>
+                            <input type="text" name="lastJobName" value={formData.lastJobName} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                         </div>
                         <div className="">
                             <label className="block mb-[8px]">Албан тушаал</label>
-                            <input type="text" name="lastJobPosition" value={formData.lastJobPosition} onChange={handleFormChange} className="rounded-[8px] border w-[142px] h-[40px]" />
+                            <input type="text" name="lastJobPosition" value={formData.lastJobPosition} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[142px] h-[40px]" />
                         </div>
                         <div className="">
                             <label className="block mb-[8px]">Гарсан шалтгаан</label>
-                            <input type="text" name="lastJobReason" value={formData.lastJobReason} onChange={handleFormChange} className="rounded-[8px] border w-[142px] h-[40px]"/>
+                            <input type="text" name="lastJobReason" value={formData.lastJobReason} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                         </div>
                         <div className="">
                             <label className="block mb-[8px]">Гол чиг үүрэг</label>
-                            <input type="text" name="lastJobFunctions" value={formData.lastJobFunctions} onChange={handleFormChange} className="rounded-[8px] border w-[142px] h-[40px]"/>
+                            <input type="text" name="lastJobFunctions" value={formData.lastJobFunctions} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[142px] h-[40px]"/>
                         </div>
                         </div>
-                        <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white">+ Мөр нэмэх</button>
+                        <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white mt-[8px] xl:mt-0">+ Мөр нэмэх</button>
                         </div>
                         <div>
                         <div className="mt-[40px] text-[14px]">
                             <label className="block mb-[8px]">Үндсэн мэргэжлээсээ гадна ямар чиглэлийн ажил хийх сонирхол, хүсэлтэй вэ?</label>
                             <input type="text" name="kindOfWork" value={formData.kindOfWork} onChange={handleFormChange} className="rounded-[8px] border w-full h-[40px]"/>
                         </div>
-                        <div className="flex gap-[24px] mt-[24px] text-[14px]">
+                        <div className="xl:flex gap-[24px] mt-[24px] text-[14px]">
                             <div>
                             <label className="block mb-[8px]">Хүсч буй цалин</label>
-                            <input type="text" name="salary" value={formData.salary} onChange={handleFormChange} className="rounded-[8px] border w-[282px] h-[40px]"/>
+                            <input type="text" name="salary" value={formData.salary} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[282px] h-[40px]"/>
                             </div>
                            <div>
                            <label className="block mb-[8px]">Бусад хүлээлт \хангамж, сургалт гэх мэт\</label>
-                            <input type="text" name="other" value={formData.other} onChange={handleFormChange} className="rounded-[8px] border w-[282px] h-[40px]"/>
+                            <input type="text" name="other" value={formData.other} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[282px] h-[40px]"/>
                            </div>
                             <div>
                             <label className="block mb-[8px]">Ажилд орох боломжтой огноо</label>
-                            <input type="text" name="jobStartDate" value={formData.jobStartDate} onChange={handleFormChange} className="rounded-[8px] border w-[282px] h-[40px]"/>
+                            <input type="text" name="jobStartDate" value={formData.jobStartDate} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[282px] h-[40px]"/>
                             </div>
                         </div>
                         <div className="mt-[24px]">
@@ -578,18 +578,18 @@ const Anket = () =>{
                                         <label className="block mb-[8px]">Үгүй</label>
                                     </div>
                                 </div>
-                            <div className="flex gap-[13px]">
+                            <div className="xl:flex gap-[13px]">
                                 <div>
                                 <label className="block mb-[8px]">Хэн</label>
-                                <input type="text" name="relativesWho" value={formData.relativesWho} onChange={handleFormChange} className="rounded-[8px] w-[230px] h-[40px] border"/>
+                                <input type="text" name="relativesWho" value={formData.relativesWho} onChange={handleFormChange} className="rounded-[8px] w-full xl:w-[230px] h-[40px] border"/>
                                 </div>
                                 <div>
                                 <label className="block mb-[8px]">Аль нэгжид</label>
-                                <input type="text" name="relativesWhere" value={formData.relativesWhere} onChange={handleFormChange} className="rounded-[8px] w-[230px] h-[40px] border"/>
+                                <input type="text" name="relativesWhere" value={formData.relativesWhere} onChange={handleFormChange} className="rounded-[8px] w-full xl:w-[230px] h-[40px] border"/>
                                 </div>
                                 <div>
                                 <label className="block mb-[8px]">Таны юу болох</label>
-                                <input type="text" name="relativesYour" value={formData.relativesYour} onChange={handleFormChange} className="rounded-[8px] w-[230px] h-[40px] border"/>
+                                <input type="text" name="relativesYour" value={formData.relativesYour} onChange={handleFormChange} className="rounded-[8px] w-full xl:w-[230px] h-[40px] border"/>
                                 </div>
                             </div>
                         </div>
@@ -600,25 +600,25 @@ const Anket = () =>{
                       <div className="flex gap-2">
                         <h1 className="mb-[16px] uppercase text-[#23356B]">1. гадаад хэлний мэдлэг</h1>
                       </div>
-                      <div className="flex gap-[8px]">
+                      <div className="xl:flex gap-[8px]">
                       <div className="">
                         <label className="block mb-[8px]">Гадаад хэлний нэр</label>
-                        <input type="text" name="foreignLangName" value={formData.foreignLangName} onChange={handleFormChange} className="mb-[24px] rounded-[8px] border w-[217px] h-[40px]" />
+                        <input type="text" name="foreignLangName" value={formData.foreignLangName} onChange={handleFormChange} className="mb-[24px] rounded-[8px] border w-full xl:w-[217px] h-[40px]" />
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Шат</label>
-                        <input type="text" name="foreignLangStep" value={formData.foreignLangStep} onChange={handleFormChange} className="rounded-[8px] border w-[217px] h-[40px]"/>
+                        <input type="text" name="foreignLangStep" value={formData.foreignLangStep} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[217px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Суралцсан хугацаа</label>
-                        <input type="text" name="foreignLangDate" value={formData.foreignLangDate} onChange={handleFormChange} className="rounded-[8px] border w-[217px] h-[40px]"/>
+                        <input type="text" name="foreignLangDate" value={formData.foreignLangDate} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[217px] h-[40px]"/>
                       </div>
                       <div className="">
                         <label className="block mb-[8px]">Тайлбар</label>
-                        <input type="text" name="foreignLangTitle" value={formData.foreignLangTitle} onChange={handleFormChange} className="rounded-[8px] border w-[217px] h-[40px]" />
+                        <input type="text" name="foreignLangTitle" value={formData.foreignLangTitle} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[217px] h-[40px]" />
                       </div>
                       </div>
-                      <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white">+ Мөр нэмэх</button>
+                      <button className="border py-[14px] px-[24px] rounded-[8px] bg-[#23356B] text-white mt-[8px] xl:mt-0">+ Мөр нэмэх</button>
                       <div className="flex mt-[24px]">
                          <div className="">
                             <h1 className="text-[#23356B]">Та ямар нэг хэлний түвшин тогтоох шалгалт өгсөн эсэх:</h1>
@@ -636,39 +636,39 @@ const Anket = () =>{
                             </div>
                             
                            </div>
-                           <div className="flex gap-[13px] mb-[40px]">
+                           <div className="xl:flex gap-[13px] mb-[40px]">
                                 <div>
                                 <label className="block mb-[8px]">Нэр</label>
-                                <input type="text" name="hskName" value={formData.hskName} onChange={handleFormChange}  className="rounded-[8px] w-[230px] h-[40px] border"/>
+                                <input type="text" name="hskName" value={formData.hskName} onChange={handleFormChange}  className="rounded-[8px] w-full xl:w-[230px] h-[40px] border"/>
                                 </div>
                                 <div>
                                 <label className="block mb-[8px]">Огноо</label>
-                                <input type="text" name="hskDate" value={formData.hskDate} onChange={handleFormChange} className="rounded-[8px] w-[230px] h-[40px] border"/>
+                                <input type="text" name="hskDate" value={formData.hskDate} onChange={handleFormChange} className="rounded-[8px] w-full xl:w-[230px] h-[40px] border"/>
                                 </div>
                                 <div>
                                 <label className="block mb-[8px]">Дүн</label>
-                                <input type="text" name="hskGPA" value={formData.hskGPA} onChange={handleFormChange} className="rounded-[8px] w-[230px] h-[40px] border"/>
+                                <input type="text" name="hskGPA" value={formData.hskGPA} onChange={handleFormChange} className="rounded-[8px] w-full xl:w-[230px] h-[40px] border"/>
                                 </div>
                             </div>
                             <div className="flex gap-2">
                                 <h1 className="mb-[16px] uppercase text-[#23356B]">2. гадаад хэлний мэдлэг</h1>
                             </div>
-                            <div className="flex gap-[8px]">
+                            <div className="xl:flex gap-[8px]">
                             <div className="">
                                 <label className="block mb-[8px]">Програмын нэр</label>
-                                <input type="text" name="progName" value={formData.progName} onChange={handleFormChange} className="mb-[24px] rounded-[8px] border w-[217px] h-[40px]" />
+                                <input type="text" name="progName" value={formData.progName} onChange={handleFormChange} className="mb-[24px] rounded-[8px] border w-full xl:w-[217px] h-[40px]" />
                             </div>
                             <div className="">
                                 <label className="block mb-[8px]">Шат</label>
-                                <input type="text" name="progStep" value={formData.progStep} onChange={handleFormChange} className="rounded-[8px] border w-[217px] h-[40px]"/>
+                                <input type="text" name="progStep" value={formData.progStep} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[217px] h-[40px]"/>
                             </div>
                             <div className="">
                                 <label className="block mb-[8px]">Хэрэглэж буй хугацаа</label>
-                                <input type="text" name="progDate" value={formData.progDate} onChange={handleFormChange} className="rounded-[8px] border w-[217px] h-[40px]"/>
+                                <input type="text" name="progDate" value={formData.progDate} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[217px] h-[40px]"/>
                             </div>
                             <div className="">
                                 <label className="block mb-[8px]">Тайлбар</label>
-                                <input type="text" name="progTitle" value={formData.progTitle} onChange={handleFormChange} className="rounded-[8px] border w-[217px] h-[40px]" />
+                                <input type="text" name="progTitle" value={formData.progTitle} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[217px] h-[40px]" />
                             </div>
                       </div>
                       <div>
@@ -684,57 +684,57 @@ const Anket = () =>{
                                 <label className="block mb-[8px]">Үгүй</label>
                             </div>
                            </div>
-                           <div className="flex gap-[13px] mb-[40px]">
+                           <div className="xl:flex gap-[13px] mb-[40px]">
                                 <div>
                                 <label className="block mb-[8px]">Ангилал</label>
-                                <input type="text" name="carType" value={formData.carType} onChange={handleFormChange} className="rounded-[8px] w-[288px] h-[40px] border"/>
+                                <input type="text" name="carType" value={formData.carType} onChange={handleFormChange} className="rounded-[8px] w-full xl:w-[288px] h-[40px] border"/>
                                 </div>
                                 <div>
                                 <label className="block mb-[8px]">Хэдэн жил машин барьж байгаа эсэх</label>
-                                <input type="text" name="carDate" value={formData.carDate} onChange={handleFormChange} className="rounded-[8px] w-[288px] h-[40px] border"/>
+                                <input type="text" name="carDate" value={formData.carDate} onChange={handleFormChange} className="rounded-[8px] w-full xl:w-[288px] h-[40px] border"/>
                                 </div>
                             </div>
                             <div className="flex gap-2">
                                 <h1 className="mb-[16px] uppercase text-[#23356B]">АВЬЯАС ЧАДВАР</h1>
                             </div>
-                            <div className="flex gap-[8px]">
+                            <div className="xl:flex gap-[8px]">
                             <div className="">
                                 <label className="block mb-[8px]">Төрөл</label>
-                                <input type="text" name="talentType" value={formData.talentType} onChange={handleFormChange} className="mb-[24px] rounded-[8px] border w-[217px] h-[40px]" />
+                                <input type="text" name="talentType" value={formData.talentType} onChange={handleFormChange} className="mb-[24px] rounded-[8px] border w-full xl:w-[217px] h-[40px]" />
                             </div>
                             <div className="">
                                 <label className="block mb-[8px]">Хичээллэсэн жил</label>
-                                <input type="text" name="talentDate" value={formData.talentDate} onChange={handleFormChange} className="rounded-[8px] border w-[217px] h-[40px]"/>
+                                <input type="text" name="talentDate" value={formData.talentDate} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[217px] h-[40px]"/>
                             </div>
                             <div className="">
                                 <label className="block mb-[8px]">Зэрэг цол</label>
-                                <input type="text" name="talentLevel" value={formData.talentLevel} onChange={handleFormChange} className="rounded-[8px] border w-[217px] h-[40px]"/>
+                                <input type="text" name="talentLevel" value={formData.talentLevel} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[217px] h-[40px]"/>
                             </div>
                             <div className="">
                                 <label className="block mb-[8px]">Амжилт</label>
-                                <input type="text" name="talentChamp" value={formData.talentChamp} onChange={handleFormChange} className="rounded-[8px] border w-[217px] h-[40px]" />
+                                <input type="text" name="talentChamp" value={formData.talentChamp} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[217px] h-[40px]" />
                             </div>
                             
                       </div>
-                      <div className="flex gap-2">
-                                <h1 className="mb-[16px] uppercase text-[#23356B]">ШАГНАЛ</h1>
+                      <div className="xl:flex gap-2">
+                                <h1 className="mb-[16px] mt-[24px] xl:mt-0 uppercase text-[#23356B]">ШАГНАЛ</h1>
                             </div>
-                            <div className="flex gap-[8px]">
+                            <div className="xl:flex gap-[8px]">
                             <div className="">
                                 <label className="block mb-[8px]">Төрөл</label>
-                                <input type="text" name="rewardType" value={formData.rewardType} onChange={handleFormChange} className="mb-[24px] rounded-[8px] border w-[217px] h-[40px]" />
+                                <input type="text" name="rewardType" value={formData.rewardType} onChange={handleFormChange} className="mb-[24px] rounded-[8px] border w-full xl:w-[217px] h-[40px]" />
                             </div>
                             <div className="">
                                 <label className="block mb-[8px]">Шагналын нэр</label>
-                                <input type="text" name="rewardName" value={formData.rewardName} onChange={handleFormChange} className="rounded-[8px] border w-[217px] h-[40px]"/>
+                                <input type="text" name="rewardName" value={formData.rewardName} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[217px] h-[40px]"/>
                             </div>
                             <div className="">
                                 <label className="block mb-[8px]">Шагналын шалтгаан</label>
-                                <input type="text" name="rewardChamp" value={formData.rewardChamp} onChange={handleFormChange} className="rounded-[8px] border w-[217px] h-[40px]"/>
+                                <input type="text" name="rewardChamp" value={formData.rewardChamp} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[217px] h-[40px]"/>
                             </div>
                             <div className="">
                                 <label className="block mb-[8px]">Шагнал олгосон байгууллага</label>
-                                <input type="text" name="rewardChampCom" value={formData.rewardChampCom} onChange={handleFormChange} className="rounded-[8px] border w-[217px] h-[40px]" />
+                                <input type="text" name="rewardChampCom" value={formData.rewardChampCom} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[217px] h-[40px]" />
                             </div>
                       </div>
                       <div className="mb-[16px]">Та урьд өмнө ял шийтгэл эсвэл ямар нэгэн сахилгын арга хэмжээ авагдаж байсан эсэх:</div>
@@ -754,14 +754,14 @@ const Anket = () =>{
                             <input type="text" name="disciplineTitle" value={formData.disciplineTitle} onChange={handleFormChange} className="rounded-[8px] border w-full h-[40px]"/>
                         </div>
                     </div>
-                    <div className="flex gap-[13px] mb-[40px]">
+                    <div className="xl:flex gap-[13px] mb-[40px]">
                                 <div>
                                 <label className="block mb-[8px]">Таны давуу тал</label>
-                                <input type="text" name="advantage" value={formData.advantage} onChange={handleFormChange} className="rounded-[8px] w-[388px] h-[40px] border"/>
+                                <input type="text" name="advantage" value={formData.advantage} onChange={handleFormChange} className="rounded-[8px] w-full xl:w-[388px] h-[40px] border"/>
                                 </div>
                                 <div>
                                 <label className="block mb-[8px]">Таны сул тал</label>
-                                <input type="text" name="weakness" value={formData.weakness} onChange={handleFormChange} className="rounded-[8px] w-[388px] h-[40px] border"/>
+                                <input type="text" name="weakness" value={formData.weakness} onChange={handleFormChange} className="rounded-[8px] w-full xl:w-[388px] h-[40px] border"/>
                                 </div>
                             </div>
                             <div className="flex gap-[13px] mb-[40px]">

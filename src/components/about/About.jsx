@@ -67,11 +67,10 @@ const About = () => {
         <div className={`grid lg:grid-cols-2 grid-cols-1 justify-center my-10 w-full ${showMandchilgee ? '' : 'hidden'}`}>
           <div className='col-span-1'>
           <img 
-            className="animate-fade-up mx-auto"
-                    
+            className="animate-fade-up mx-auto w-[250px] md:w-[384px] md:h-[576px] rounded-md xl:rounded-none mb-10"
             src={Ceo}
-            width={384}
-            height={576}
+            width='100%'
+            height='100%'
             alt="Portrait of the company's CEO, John Doe, standing confidently."
           />
           </div>
@@ -92,7 +91,7 @@ const About = () => {
             <div className="text-black text-[24px] font-500 font-sans mb-5">Ц. Батбаяр</div>
             <div>“Засагт хаан” ХХК-ийн захирал</div>
             <div>
-            <img src={CeoC} width={186} height={104} alt="Ceo" />
+            <img src={CeoC} width={126} height={104} alt="Ceo" />
             </div>
           </div>
         </div>

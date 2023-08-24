@@ -32,6 +32,37 @@ const Navbar = () => {
       setBgImage('https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/hamtran-ajillah-transformed-bw.png?alt=media&token=a504a6c1-d35f-4f09-8fad-a451fb8b23d5');
     } else if (url.startsWith('/mechanical/')) {
       setSvg(
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 414.912 92.159">
+      <defs>
+        <style>
+          {`.cls-1{font-size:37px;fill:#fff;font-family:Montserrat-SemiBold, Montserrat;font-weight:600;}
+            .cls-2{letter-spacing:-0.02em;}
+            .cls-3{letter-spacing:-0.02em;}`}
+        </style>
+      </defs>
+      <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+          <text className="cls-1" transform="translate(0 31.45)">
+            М<tspan className="cls-2" x="35.631" y="0">Э</tspan>
+            <tspan x="61.161" y="0">Д</tspan>
+            <tspan className="cls-3" x="91.353" y="0">Э</tspan>
+            <tspan x="116.883" y="0">Э М</tspan>
+            <tspan className="cls-2" x="188.995" y="0">Э</tspan>
+            <tspan x="214.524" y="0">Д</tspan>
+            <tspan className="cls-2" x="244.716" y="0">ЭЭ</tspan>
+            <tspan x="295.776" y="0">Л</tspan>
+            <tspan className="cls-2" x="325.191" y="0">Э</tspan>
+            <tspan x="350.721" y="0">Л</tspan>
+          </text>
+        </g>
+      </g>
+    </svg>
+
+
+
+
+
+
 
       )
       setBgImage('https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/hamtran-ajillah-transformed-bw%20(2).png?alt=media&token=32e5ef2c-6d20-4b87-b5af-a96eaa1dd0bb');
@@ -57,19 +88,20 @@ const Navbar = () => {
   return (
     <>
       {location.pathname !== '/' ? (
-        <nav className="flex items-start w-full justify-between px-[40px] h-[450px]"
+        <nav className="flex bg-scroll w-full bg-no-repeat bg-cover h-full w-full md:h-[350px] px-[40px] xl:h-[450px]"
         style={{
           backgroundImage: `url('${bgImage}')`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
+          backgroundSize:'100% 100%'
         }}
       >
-        <div className='mt-[350px] ml-[150px] animate-fade-left'>
+        <div className='mt-[210px] mb-[20px] md:mt-[250px] xl:mt-[350px] md:ml-[150px] animate-fade-left'>
           {svg}
         </div>
       </nav>
       ):(
-        <ImageCarousel images={images}/>
+        <div className=''>
+          <ImageCarousel images={images}/>
+        </div>
       )}
     </>
   )
