@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import navMenuJson from './json/navbar.json';
 import { useLocation } from "react-router-dom";
+import Modal from "./Modal";
 
 
 export default function Nav() {
@@ -8,9 +9,14 @@ export default function Nav() {
     const url = location.pathname;
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false); // Add state for the modal
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
+    };
+
+    const toggleModal = () => {
+        setIsModalOpen(!isModalOpen);
     };
 
     const handleScrollClick = () => {
@@ -32,13 +38,15 @@ export default function Nav() {
             </div>
             <div className="lg:hidden relative">
                 <div className="absolute flex w-full h-6 sm:h-10 justify-end">
-                    <span id="mobile_menu_academy" className="mobile_menu" onClick={toggleMobileMenu}>
+                    <span id="mobile_menu_academy" className="mobile_menu" onClick={toggleModal}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 70 600 612" width='100%' height='100%' fill="#fff">
                             <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
                         </svg>
                     </span>
                 </div>
-                <div className={`expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden space-y-4 transition-[max-height] duration-700 pl-[15px] ${mobileMenuOpen ? 'max-h-[200px]' : ''}`}>
+                {isModalOpen && <Modal />} 
+                <div className="">
+                <div className={`expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden space-y-4 transition-[max-height] duration-700 pl-[15px] ${mobileMenuOpen ? 'max-h-full max-w-full bg-[#23356B] text-white' : ''}`}>
                     <a id="mobile_menu_market_news" className="block" href="/posts/news">
                         News
                     </a>
@@ -51,6 +59,7 @@ export default function Nav() {
                     <a id="menu_release" className="block" href="/posts/release">
                         World
                     </a>
+                </div>
                 </div>
             </div>
             {navMenuJson.map((items) => (

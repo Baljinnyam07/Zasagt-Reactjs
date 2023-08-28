@@ -1,5 +1,6 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import Home from './components/Home';
 import Layout from './components/Layout';
 import Project from './components/project/Project';
@@ -13,6 +14,8 @@ import Mechanical from './components/contact-us/Mechanical';
 import Humanity from './components/humanity/Humanity';
 import Admin from './components/admin/Admin';
 import HireEdit from './components/Posts/HireEdit';
+import { auth } from './firebase';
+import Auth from './components/Auth';
 
 function App() {
   return (
@@ -29,17 +32,18 @@ function App() {
               <Route path='/mechanical/:type' element={<Mechanical/>}/>
               <Route path="/mechanical/:type/:postId" element={<Post />} />       
             </Route>
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/admin/posts/:type" element={<PostsAdmin />} />
-            <Route path="/admin/posts/:type/create" element={<PostEdit/>} />
-            <Route path="/admin/posts/:type/edit/:postId" element={<PostEdit />} />
-            <Route path="/admin/mechanical/:type" element={<PostsAdmin />} />
-            <Route path="/admin/mechanical/:type/create" element={<PostEdit/>} />
-            <Route path="/admin/mechanical/:type/edit/:postId" element={<PostEdit />} />
-            <Route path="/admin/humanity/:type" element={<PostsAdmin />} />
-            <Route path="/admin/humanity/:type/create" element={<HireEdit/>} />
-            <Route path="/admin/humanity/:type/edit/:postId" element={<HireEdit />} />
-            <Route path="/admin/feedbacks/:type" element={<PostsAdmin />} />
+            <Route path="/admin" element={<RequireAuth><Admin /></RequireAuth>} />
+            <Route path="/admin/posts/:type" element={<RequireAuth><PostsAdmin /></RequireAuth>} />
+            <Route path="/admin/posts/:type/create" element={<RequireAuth><PostEdit/></RequireAuth>} />
+            <Route path="/admin/posts/:type/edit/:postId" element={<RequireAuth><PostEdit /></RequireAuth>} />
+            <Route path="/admin/mechanical/:type" element={<RequireAuth><PostsAdmin /></RequireAuth>} />
+            <Route path="/admin/mechanical/:type/create" element={<RequireAuth><PostEdit/></RequireAuth>} />
+            <Route path="/admin/mechanical/:type/edit/:postId" element={<RequireAuth><PostEdit /></RequireAuth>} />
+            <Route path="/admin/humanity/:type" element={<RequireAuth><PostsAdmin /></RequireAuth>} />
+            <Route path="/admin/humanity/:type/create" element={<RequireAuth><HireEdit/></RequireAuth>} />
+            <Route path="/admin/humanity/:type/edit/:postId" element={<RequireAuth><HireEdit /></RequireAuth>} />
+            <Route path="/admin/feedbacks/:type" element={<RequireAuth><PostsAdmin /></RequireAuth>} />
+            <Route path="/auth" element={<Auth />} />
       </Routes>
     </Router>
     </IntlProvider>
@@ -47,3 +51,14 @@ function App() {
 }
 
 export default App;
+
+function RequireAuth({ children }) {
+  const [user, loading] = useAuthState(auth);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!loading && !user) navigate("/auth");
+  }, [user, loading, navigate]);
+
+  return user && children;
+}

@@ -16,3 +16,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.modal-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-content {
+  max-width: 400px; /* Adjust as needed */
+}
+
+.modal-item {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.modal-link {
+  display: block;
+  padding: 8px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.modal-link:hover {
+  background-color: #eee;
+}

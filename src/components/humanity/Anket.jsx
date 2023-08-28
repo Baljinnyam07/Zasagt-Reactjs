@@ -101,13 +101,15 @@ const initialFormData = {
             hasSkill1: false,
             hasSkill2: false,
             hasOtherExperience1: false,
-            hasOtherExperience2: false
+            hasOtherExperience2: false,
 }
 
 
 const Anket = () =>{
     const [formData, setFormData] = useState(initialFormData);
     const [image, setImage] = useState("");
+    const [date] = useState((new Date()).toJSON().slice(0, 10));
+
     const [percent, setPercent] = useState(0);
     const [submitButtonClicked, setSubmitButtonClicked] = useState(false);
 
@@ -117,18 +119,18 @@ const Anket = () =>{
         setSubmitButtonClicked(true);
         try {
             const db = getFirestore(app);
-            const collectionRef = collection(db, 'anket');
+            const collectionRef = collection(db, 'humanity');
             const formDataWithoutEmptyStrings = Object.fromEntries(
                 Object.entries(formData).filter(([_, value]) => value !== "")
             );
             await addDoc(collectionRef, {
                 ...formDataWithoutEmptyStrings,
                 createdAt: serverTimestamp(),
+                date: date,
+                type:"hired",
                 image: image,
             });
             setFormData(initialFormData);
-
-            // Clear the image URL
             setImage('');
 
         } catch (error) {

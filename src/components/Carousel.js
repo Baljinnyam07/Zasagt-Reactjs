@@ -23,7 +23,7 @@ export const ImageCarousel = ({ images }) => {
   return (
     <div className="relative">
       <button
-        className="absolute z-20 top-1/2 left-[4px] xl:left-[64px] rounded-[90px] bg-[#FFFFFF] bg-opacity-20 p-[6px] xl:p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
+        className="absolute z-10 top-1/2 left-[4px] xl:left-[64px] rounded-[90px] bg-[#FFFFFF] bg-opacity-20 p-[6px] xl:p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
         onClick={prevSlide}
       >
         <div className="w-3 md:w-5">
@@ -46,7 +46,7 @@ export const ImageCarousel = ({ images }) => {
           key={index}
           src={image}
           alt={`Slide ${index}`}
-          className={`w-full h-[400px] xl:h-[769px] object-cover transition-opacity ${
+          className={`w-full -z-10 h-[400px] xl:h-[769px] object-cover transition-opacity ${
             index === currentIndex ? "opacity-100" : "opacity-0 absolute top-0 left-0"
           }`}
         />

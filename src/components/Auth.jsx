@@ -1,65 +1,77 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { auth } from '../firebase';
+import { sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
 
-import { useNavigate } from 'react-router-dom';
-import { auth } from "../../../../firebase";
-
-
-function AdminNav(){
+const Auth = () => {
+  const [user] = useAuthState(auth);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
   const navigate = useNavigate();
-  const [dropdowns, setDropdowns] = useState([
-        {
-          title: 'Мэдээ',
-          isOpen: false,
-          items: [
-            { title: 'ЦАГ ҮЕИЙН МЭДЭЭЛЭЛ', url: '/admin/posts/news' },
-            { title: 'БАЙГУУЛЛАГЫН МЭДЭЭ', url: '/admin/posts/corp-news' },
-            { title: 'НИЙГМИЙН ХАРИУЦЛАГА', url: '/admin/posts/social-resp' }
-          ]
-        },
-        {
-          title: 'Хамтран ажиллах',
-          isOpen: false,
-          items: [
-            { title: 'ОЛБОРЛОЛТЫН АЖИЛ', url: '/admin/mechanical/mining' },
-            { title: 'УУЛ УУРХАЙН ТУСЛАХ АЖИЛ', url: '/admin/mechanical/openings' },
-            { title: 'ТОНОГ ТӨХӨӨРӨМЖ ТҮРЭЭС', url: '/admin/mechanical/rent' }
-          ]
-        },
-        {
-          title: 'Хүний Нөөц',
-          isOpen: false,
-          items: [
-            { title: 'НЭЭЛТТЭЙ АЖЛЫН БАЙР', url: '/admin/humanity/hire' },
-            { title: 'АЖЛЫН АНКЕТ', url: '/admin/humanity/hired' }
+  const [showPassword] = useState(false);
 
-          ]
-        }
-      ]);
+  useEffect(() => {
+    if (user) {
+      navigate('/admin');
+    }
 
-      const toggleDropdown = (index) => {
-        const updatedDropdowns = dropdowns.map((dropdown, i) => ({
-          ...dropdown,
-          isOpen: index === i ? !dropdown.isOpen : false // Toggle clicked dropdown, close others
-        }));
-        setDropdowns(updatedDropdowns);
-      };
+    const timeout = setTimeout(() => {
+      setError('');
+      setSuccess('');
+    }, 3000);
 
-      const logout = () => {
-        auth.signOut().then(() => {
-          navigate("/auth");
-        }).catch((error) => {
-          console.log(error);
-        });
-      };
-    
+    return () => clearTimeout(timeout);
+  }, [user, navigate, error, success]);
 
-    return(
-        <nav className="relative">
-        <ul className="bg-gray-800 w-max h-4/5 p-5 leading-10">
-          <li className="w-full mb-20 flex justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="78" height="50" viewBox="0 0 78 50" fill="none">
-                <g clipPath="url(#clip0_322_545)">
+  const signInWithEmail = () => {
+    setSending(true);
+    setError('');
+    setSuccess('');
+    signInWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        setSending(false);
+        setSuccess('Successfully signed in with email!');
+      })
+      .catch((error) => {
+        console.log(error);
+        setSending(false);
+        setError(error.code);
+      });
+  }
+
+  const handleKeyDownOnPassword = (event) => {
+    if (event.key === 'Enter') {
+      signInWithEmail();
+    }
+  }
+  const handleResetPassword = () => {
+    setSending(true);
+    setError('');
+    setSuccess('');
+  
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        setSending(false);
+        setSuccess('Password reset email sent. Please check your inbox.');
+      })
+      .catch((error) => {
+        console.error(error);
+        setSending(false);
+        setError('Failed to send password reset email. Please try again.');
+      });
+  };
+
+  return (
+    <body className="flex h-screen bg-indigo-700">
+      <div className="w-full max-w-xs m-auto bg-indigo-100 rounded p-5">
+        <header>
+          <div className="w-20 mx-auto mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="78" height="50" viewBox="0 0 78 50" fill="none">
+                <g clip-path="url(#clip0_322_545)">
                 <path d="M69.786 10.8743C69.5869 11.7564 69.3987 12.5836 69.2141 13.4108C68.3489 17.2777 67.4855 21.1446 66.6221 25.0116C66.1425 27.1546 65.6592 29.2976 65.1941 31.4443C65.1361 31.7151 65.0149 31.7353 64.7977 31.6968C63.0673 31.3821 61.337 31.071 59.6048 30.758C59.5813 30.7544 59.5577 30.7525 59.5342 30.7489C58.9242 30.6354 58.9441 30.6171 59.0944 30.0004C59.3948 28.776 59.65 27.5407 59.927 26.3091C60.4283 24.0709 60.9333 21.8346 61.4347 19.5964C61.46 19.4811 61.4709 19.364 61.4999 19.1608C60.9695 19.2615 60.4826 19.3402 60.003 19.4482C57.6934 19.9643 55.3839 20.4803 53.0798 21.0184C52.7503 21.0952 52.5494 21.0074 52.3268 20.7786C49.6933 18.0591 47.0525 15.3488 44.4117 12.6366C44.314 12.536 44.1999 12.4555 44.0316 12.3127C44.0153 12.4829 43.9972 12.5817 43.9972 12.6806C43.9972 18.0903 43.999 23.5 44.0026 28.9096C44.0026 29.4038 44.0081 29.4038 43.5067 29.4038C41.7293 29.4038 39.9537 29.4038 38.1763 29.4038C38.0351 29.4038 37.8957 29.4038 37.7093 29.4038C37.7093 23.7159 37.7093 18.0628 37.7093 12.2798C37.4523 12.4847 37.2658 12.6019 37.1156 12.7556C34.5255 15.4184 31.9354 18.0793 29.3616 20.7585C29.0792 21.0513 28.824 21.1026 28.453 21.0165C26.7027 20.6121 24.947 20.2351 23.1949 19.8416C22.3243 19.6476 21.4573 19.4409 20.5885 19.245C20.4655 19.2176 20.3388 19.2121 20.1523 19.1883C21.003 23.0168 21.8411 26.7922 22.6845 30.5951C20.565 30.9666 18.5469 31.3217 16.5052 31.6804C14.9522 24.7279 13.4137 17.8359 11.8535 10.8413C12.5522 10.9731 13.1459 11.0664 13.7305 11.2C15.6907 11.6447 17.6473 12.1078 19.6075 12.5525C21.9497 13.0832 24.2972 13.5993 26.6394 14.1282C26.8765 14.1812 27.0448 14.1263 27.2131 13.9506C29.6566 11.4306 32.1074 8.91794 34.5508 6.3961C36.4767 4.41047 38.3935 2.41569 40.3175 0.428237C40.4731 0.26719 40.6487 0.122615 40.7808 0C41.4071 0.603924 42.0225 1.16942 42.6053 1.76602C46.4136 5.6659 50.2236 9.56762 54.0155 13.484C54.8463 14.3423 54.5296 14.2142 55.659 13.9708C58.4844 13.3614 61.2989 12.7098 64.1189 12.0785C65.8366 11.6942 67.5543 11.3153 69.2738 10.9365C69.4204 10.9036 69.5724 10.8981 69.7824 10.8743H69.786Z" fill="white"/>
                 <path d="M5.56018 36.4202C7.25615 35.6168 8.97745 34.9031 10.7693 34.3577C13.1984 33.6184 15.6527 32.9998 18.1469 32.5533C20.1614 32.1928 22.1814 31.8579 24.2067 31.5797C27.6313 31.1094 31.0721 30.7543 34.5255 30.6756C38.5401 30.5841 42.5601 30.5622 46.5747 30.6665C49.4164 30.7397 52.2562 31.027 55.0907 31.2997C56.8663 31.4699 58.6347 31.7517 60.394 32.0518C62.3506 32.3849 64.309 32.7308 66.2384 33.1902C68.1226 33.6404 69.9761 34.2187 71.8313 34.7841C72.7399 35.0605 73.6196 35.4283 74.5101 35.7632C74.6603 35.82 74.7961 35.9133 74.9156 36.0597C74.4088 35.9774 73.9038 35.8895 73.3952 35.8163C70.4974 35.3936 67.6032 34.947 64.7018 34.5627C63.2628 34.3724 61.8076 34.2973 60.3614 34.1729C58.7976 34.0375 57.2337 33.8966 55.6699 33.7758C54.9929 33.7245 54.3124 33.7136 53.6336 33.6916C49.7277 33.5671 45.8217 33.4226 41.9139 33.3329C40.1275 33.2908 38.3356 33.3164 36.5491 33.3787C32.9291 33.5031 29.3073 33.6221 25.6927 33.8453C23.0121 34.01 20.3315 34.2717 17.6654 34.6103C14.2192 35.0477 10.7874 35.6022 7.34845 36.1128C6.75116 36.2006 6.15748 36.3214 5.56199 36.4257L5.56018 36.4202Z" fill="white"/>
                 <path d="M47.791 49.9591C48.4788 48.0064 49.1449 46.0446 49.8671 44.1047C50.0843 43.5209 50.0734 43.0286 49.8417 42.454C49.1901 40.8362 48.5983 39.1928 47.9829 37.5585C47.9412 37.4487 47.9087 37.3352 47.858 37.187C48.8209 37.187 49.7512 37.1815 50.6816 37.198C50.7558 37.198 50.8662 37.3535 50.8952 37.456C51.1938 38.523 51.478 39.5917 51.7947 40.7703C52.126 39.513 52.4318 38.3564 52.7395 37.1962C53.7242 37.1962 54.6799 37.1962 55.6844 37.1962C55.5016 37.7122 55.3296 38.2045 55.1541 38.6968C54.6418 40.1243 54.1188 41.5499 53.621 42.9828C53.5577 43.1677 53.5613 43.4147 53.6264 43.5996C54.2038 45.2466 54.8029 46.8864 55.3966 48.528C55.4328 48.6286 55.4708 48.7274 55.5686 48.8281C56.1116 44.9538 56.6546 41.0777 57.1976 37.2035C58.6238 37.2035 60.0085 37.2035 61.4167 37.2035C61.9397 40.7849 62.4592 44.3536 62.9805 47.9222C63.0094 47.9222 63.0366 47.9204 63.0656 47.9186C63.5651 44.3572 64.0629 40.7959 64.566 37.2108C64.6837 37.2016 64.7851 37.1888 64.8882 37.1888C66.0738 37.1888 67.2575 37.1962 68.4431 37.1815C68.7146 37.1779 68.8032 37.2565 68.8431 37.5347C69.2069 40.1023 69.5906 42.6662 69.9634 45.2338C70.1915 46.8095 70.4087 48.3852 70.6313 49.9609C69.6739 49.9609 68.7164 49.9609 67.7589 49.9609C67.6919 49.1831 67.6231 48.4035 67.5543 47.6001C67.1073 47.6001 66.7 47.6312 66.3 47.591C65.9163 47.5525 65.8403 47.7282 65.8149 48.0595C65.7643 48.6945 65.6774 49.3277 65.605 49.9609C63.8819 49.9609 62.1569 49.9609 60.4338 49.9609C60.4157 49.8914 60.3868 49.8237 60.3813 49.7523C60.3252 49.1502 60.28 48.5481 60.2112 47.9478C60.1985 47.8289 60.1026 47.6239 60.0374 47.6221C59.5306 47.5946 59.022 47.6074 58.4971 47.6074C58.4211 48.4236 58.3505 49.1923 58.2799 49.9609C56.4844 49.9609 54.6889 49.9609 52.8934 49.9609C52.8753 49.8456 52.868 49.7248 52.8337 49.6132C52.6237 48.9251 52.4065 48.2388 52.1929 47.5525C52.0698 47.1554 51.9486 46.7583 51.8273 46.3612C51.5866 46.9687 51.4056 47.5635 51.2354 48.1619C51.0653 48.7604 50.9024 49.3606 50.7377 49.9609C49.7567 49.9609 48.7738 49.9609 47.7928 49.9609L47.791 49.9591ZM59.9596 45.1533C59.8999 44.5549 59.8456 43.993 59.7877 43.4294C59.6772 42.3624 59.5686 41.2937 59.4474 40.2286C59.4347 40.1224 59.3424 40.0254 59.2881 39.9248C59.2356 40.0254 59.1505 40.1224 59.1379 40.2286C59.0872 40.6477 59.0582 41.0686 59.0238 41.4895C58.9225 42.701 58.8247 43.9144 58.7216 45.1533C59.1288 45.1533 59.5162 45.1533 59.9596 45.1533ZM67.3335 45.157C67.281 44.65 67.234 44.1815 67.1869 43.7149C67.0656 42.5143 66.9462 41.3157 66.8159 40.117C66.8086 40.0474 66.7145 39.9888 66.662 39.9248C66.615 39.9815 66.5462 40.0328 66.5263 40.0987C66.4919 40.2121 66.481 40.3347 66.4702 40.4555C66.3978 41.3083 66.3272 42.163 66.2584 43.0176C66.2023 43.724 66.1498 44.4304 66.0937 45.1588C66.519 45.1588 66.9064 45.1588 67.3317 45.1588L67.3335 45.157Z" fill="white"/>
@@ -76,69 +88,54 @@ function AdminNav(){
                 </clipPath>
                 </defs>
             </svg>
-          </li>
-          <li>
-            <Link className="hover:underline" to="/admin">
-              Dashboard
-            </Link>
-          </li>
-          {dropdowns.map((dropdown, index) => (
-            <li key={index} className="group">
-              <span
-                className="col-span-1 hover:underline cursor-pointer"
-                onClick={() => toggleDropdown(index)}
-              >
-                {dropdown.title}
-              </span>
-              <span className="w-max h-full">
-              {dropdown.isOpen && (
-                <ul className="bg-gray-900 text-gray-300 z-10 mt-2 rounded shadow-lg">
-                  {dropdown.items.map((item, itemIndex) => (
-                    <li key={itemIndex}>
-                      <a
-                        className="hover:bg-blue-500 w-[200px] hover:text-white block px-2 py-1 text-[12px]"
-                        href={item.url}
-                      >
-                        {item.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
-              </span>
-            </li>
-          ))}
-          <li>
-            <Link className="hover:underline" to="/admin/feedbacks/feedback">
-              Санал Хүсэлт
-            </Link>
-          </li>
-        </ul>
-        <div className="text-black absolute h-1/5 bg-[#fff] w-full">
-        <div className="w-full h-full bg-gray-900 border border-gray-900">
-				<div className="flex items-center mt-4">
-					<div className="relative flex flex-col items-center w-full">
-						<div
-							className="mt-4 rounded-full flex items-end justify-end">
-              <img width="60" height="60" src="https://img.icons8.com/material/96/user-male-circle--v1.png" alt="user-male-circle--v1"/>
-						<div className="absolute"></div>
-						</div>
-						<div className="flex flex-col space-y-1 justify-center items-center w-full">
-                  <div className="mt-2 bg-gray-900 text-gray-300 z-10 rounded shadow-lg">
-                              <button
-                                  className="hover:bg-blue-500 hover:text-white rounded-md block px-2 py-1 text-xs"
-                                  onClick={logout}
-                              >
-                                  Гарах
-                              </button>
-                  </div>
-						</div>
-					</div>
-				</div>
-			</div>
+          </div>
+        </header>
+        <form>
+          <div>
+            <label className="block mb-2 text-indigo-500" htmlFor="username">
+              Username
+            </label>
+            <input
+              className="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
+              type="text"
+              name="username"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              onKeyDown={handleKeyDownOnPassword}
+            />
+          </div>
+          <div>
+            <label className="block mb-2 text-indigo-500" htmlFor="password">
+              Password
+            </label>
+            <input
+              className="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
+              type={showPassword ? 'text' : 'password'}
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              onKeyDown={handleKeyDownOnPassword}
+            />
+          </div>
+          <div>
+             <button
+             className="w-full bg-indigo-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-6 rounded"
+             type="button"
+             onClick={signInWithEmail}
+             disabled={sending}
+           >
+             {sending ? 'Signing In...' : 'Sign In'}
+           </button>
+          </div>
+        </form>
+        <footer>
+          <Link className="text-indigo-700 hover:text-pink-700 text-sm float-left" href="#" onClick={handleResetPassword}>Forgot Password?</Link>
+        </footer>
+        <div>
         </div>
-      </nav>
-    )
+      </div>
+    </body>
+  );
 }
 
-export default AdminNav
+export default Auth;
