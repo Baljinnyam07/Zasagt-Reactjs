@@ -178,7 +178,7 @@ const Anket = () =>{
             <div>
               <div className="text-black text-[32px] font-500 font-sans mb-5">Ажилд орохыг хүсэгчийн анкет</div>
             </div>
-            <div className= "w-full w-full xl::w-[894px] bg-[#E9EBF0] rounded-[8px] mb-[40px]">
+            <div className= "w-full xl:w-[894px] bg-[#E9EBF0] rounded-[8px] mb-[40px]">
               <div className="p-[16px] text-[14px] font-[400] text-[#23356B]">
               <h1 className="mb-[8px]">САНАМЖ</h1>
                     <ol className="">
@@ -188,29 +188,46 @@ const Anket = () =>{
                     </ol>
               </div>
             </div>
-            <div className="border bg-[#E9EBF0] mb-[40px]">
-              <ul className="flex text-[12px] font-[400] text-[#23356B] divide-x-[2px]">
-                <li className="py-[15px] px-[17px]">ҮНДСЭН МЭДЭЭЛЭЛ</li>
-                <li className="py-[15px] px-[17px]">ГЭР БҮЛИЙН БАЙДАЛ</li>
-                <li className="py-[15px] px-[17px]">БОЛОВСРОЛ</li>
-                <li className="py-[15px] px-[17px]">АЖИЛЛАСАН БАЙДАЛ</li>
-                <li className="py-[15px] px-[17px]">УР ЧАДВАР</li>
-                <li className="py-[15px] px-[17px]">ХУВЬ ХҮНИЙ ОНЦЛОГ</li>
+            <div className="border bg-[#E9EBF0] mb-[40px] h-max w-max">
+              <ul className="flex text-[6px] xl:text-[12px] font-[400] text-[#23356B] divide-x-[2px]">
+                <li className="py-[8px] xl:py-[15px] px-[10px] xl:px-[17px]">ҮНДСЭН МЭДЭЭЛЭЛ</li>
+                <li className="py-[8px] xl:py-[15px] px-[10px] xl:px-[17px]">ГЭР БҮЛИЙН БАЙДАЛ</li>
+                <li className="py-[8px] xl:py-[15px] px-[10px] xl:px-[17px]">БОЛОВСРОЛ</li>
+                <li className="py-[8px] xl:py-[15px] px-[10px] xl:px-[17px]">АЖИЛЛАСАН БАЙДАЛ</li>
+                <li className="py-[8px] xl:py-[15px] px-[10px] xl:px-[17px]">УР ЧАДВАР</li>
+                <li className="py-[8px] xl:py-[15px] px-[10px] xl:px-[17px]">ХУВЬ ХҮНИЙ ОНЦЛОГ</li>
               </ul>
             </div>
             </header>
             <main>
                     <div>
-                    <div className="text-[#919AB5] text-[12px] font-[400] border w-max bg-[#E9EBF0] content-center rounded-[8px]">
-                      <div className="p-[10px] flex-none justify-center items-center">
-                        <div className="w-full flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="73" height="73" viewBox="0 0 73 73" fill="none">
-                          <path d="M36.4998 0C10.9498 0 23.2686 33.3063 23.2686 33.3063C26.0061 37.8688 29.6561 36.9562 29.6561 40.15C29.6561 42.8875 26.4623 43.8 23.2686 44.2562C18.2498 44.2562 13.6873 43.3438 9.1248 51.5563C6.3873 56.575 5.01855 73 5.01855 73H67.5248C67.5248 73 66.1561 56.575 63.8748 51.5563C59.3123 42.8875 54.7498 44.2563 49.7311 43.8C46.5373 43.3438 43.3436 42.4312 43.3436 39.6937C43.3436 36.9562 46.9935 37.8687 49.7311 32.85C49.7311 33.3062 62.0498 0 36.4998 0Z" fill="#919AB5"/>
-                        </svg>
+                    {image !== '' ? (
+                        <>
+                          {percent > 0 && percent < 100 && (
+                            <div className='w-full h-4 bg-gray-200 rounded'>
+                              <div
+                                className={`w-${percent} bg-green-400 h-full rounded`}
+                              ></div>
+                            </div>
+                          )}
+                          {image && (
+                            <img className='w-[150px] border mt-4 mb-[24px] rounded' src={image} alt='post_image' />
+                          )}
+                        </>
+                      ) : (
+                        <>
+                        <div className="text-[#919AB5] text-[12px] font-[400] border w-max bg-[#E9EBF0] content-center rounded-[8px]">
+                          <div className="p-[10px] flex-none justify-center items-center">
+                            <div className="w-full flex justify-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="73" height="73" viewBox="0 0 73 73" fill="none">
+                                <path d="M36.4998 0C10.9498 0 23.2686 33.3063 23.2686 33.3063C26.0061 37.8688 29.6561 36.9562 29.6561 40.15C29.6561 42.8875 26.4623 43.8 23.2686 44.2562C18.2498 44.2562 13.6873 43.3438 9.1248 51.5563C6.3873 56.575 5.01855 73 5.01855 73H67.5248C67.5248 73 66.1561 56.575 63.8748 51.5563C59.3123 42.8875 54.7498 44.2563 49.7311 43.8C46.5373 43.3438 43.3436 42.4312 43.3436 39.6937C43.3436 36.9562 46.9935 37.8687 49.7311 32.85C49.7311 33.3062 62.0498 0 36.4998 0Z" fill="#919AB5"/>
+                              </svg>
+                            </div>
+                            <div className="w-[98px] text-center pt-[10px]">Сүүлийн 3 сард авхуулсан 3x4 цээж зураг</div>
+                          </div>
                         </div>
-                        <div className="w-[98px] text-center pt-[10px]">Сүүлийн 3 сард авхуулсан 3x4 цээж зураг</div>
-                      </div>
-                    </div>
+                        </>
+                      )}
                     <div className="mt-[24px]">
                       <div className="flex gap-[24px]">
                       <div className="mb-6">
@@ -219,7 +236,7 @@ const Anket = () =>{
                       </div>
                       <div className="mb-6">
                         <label htmlFor="image" className="block">Сонирхож буй албан тушаал* </label>
-                        <input type="text" name="positionOfInterest" value={formData.positionOfInterest} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-[282px] h-max" placeholder="Сонгоно уу" />
+                        <input type="text" name="positionOfInterest" value={formData.positionOfInterest} onChange={handleFormChange} className="mb-4 rounded-[8px] border w-[282px] h-max"/>
                       </div>
                       </div>
                     </div>
@@ -286,16 +303,7 @@ const Anket = () =>{
                         <input type="text" name="house" value={formData.house} onChange={handleFormChange} className="rounded-[8px] border w-full xl:w-[282px] h-[40px]" />
                       </div>
                     </div>
-                    {percent > 0 && percent < 100 && (
-                        <div className='w-full h-4 bg-gray-200 rounded'>
-                          <div
-                            className={`w-${percent} bg-green-400 h-full rounded`}
-                          ></div>
-                        </div>
-                      )}
-                      {image && (
-                        <img className='w-[1000px] mt-4 mb-[24px] rounded' src={image} alt='post_image' />
-                      )}
+                    
                     </div>
                     <div>
                     <div className="mt-[24px] text-[14px]">
