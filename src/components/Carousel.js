@@ -46,7 +46,7 @@ export const ImageCarousel = ({ images }) => {
           key={index}
           src={image}
           alt={`Slide ${index}`}
-          className={`w-full -z-10 h-[400px] xl:h-[769px] object-cover transition-opacity ${
+          className={`w-full h-[400px] -z-10 xl:h-[769px] object-cover transition-opacity ${
             index === currentIndex ? "opacity-100" : "opacity-0 absolute top-0 left-0"
           }`}
         />
