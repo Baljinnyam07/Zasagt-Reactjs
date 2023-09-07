@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import humanity1 from './humanity1.png'
 import humanity2 from './humanity2.png'
 import humanity3 from './humanity3.png'
+
 import Posts from '../Posts/Posts';
 import AppContainer from '../AppContainer';
 
@@ -79,13 +80,17 @@ function Humanity() {
               </div>
               <div className="text-[#454655] text-justify align-center mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px] sm:pl-[24px]">
                 <h1 className='text-[32px] uppercase'>бодлого</h1>
-                <div className='py-[24px] leading-[24px] sm:pr-[45px] w-full'>Lorem ipsum dolor sit amet consectetur. Ullamcorper eget odio sit nam nisl luctus eu dui posuere. Porttitor imperdiet quis commodo non id nibh. Quis magna donec pulvinar laoreet orci gravida est pharetra in. Id tortor dolor quis amet lorem urna mi.</div>
+                <div className='py-[24px] leading-[24px] sm:pr-[45px] w-full'>
+                Бид “Засагт Хаан” компанийн үнэт зүйлс болон ёс зүйн зан төлвийг зохистойгоор баримтлан ажиллахыг хичээдэг. Манай ажилтнуудын соёл нь аюулгүй осолгүй ажиллагаа, ёс зүй, хамтын ажиллагаа, хариуцлага гэсэн үндсэн 3 тулгуур багана дээр суурилдаг.
+                </div>
               </div>
             </div>
             <div className='lg:flex  mb-[80px]'>
               <div className="text-[#454655] text-justify align-center h-max mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px]">
                 <h1 className='text-[32px] uppercase'>зорилго, зорилт</h1>
-                <div className='py-[24px] leading-[24px] mr-[45px]'>Lorem ipsum dolor sit amet consectetur. Ullamcorper eget odio sit nam nisl luctus eu dui posuere. Porttitor imperdiet quis commodo non id nibh. Quis magna donec pulvinar laoreet orci gravida est pharetra in. Id tortor dolor quis amet lorem urna mi.</div>
+                <div className='py-[24px] leading-[24px] mr-[45px]'>
+                  Байгууллага доторх ажиллах хүчийг бүрдүүлж, чадварлаг, мэргэшсэн ажил горилогчийг сонгон шалгаруулж , тогтвор суурьшилтай ажиллуулах, хөгжүүлэх, дэмжлэг туслалцаа үзүүлэх зорилготой.
+                </div>                
               </div>
               <div className="text-black text-[32px] mr-[45px] font-500 font-sans mb-5 uppercase">
                   <img className='w-full xl:w-[384px] h-[262px]' src={humanity2} alt="humanityPhoto" />
@@ -96,11 +101,9 @@ function Humanity() {
                   <img className='w-full xl:w-[384px] h-[262px]' src={humanity3} alt="humanityPhoto" />
               </div>
               <div className="text-[#454655] text-start xl:text-justify align-center h-max mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px] sm:pl-[24px]">
-                <h1 className='text-[32px] uppercase'>байгууллагын хүний нөөц</h1>
-                <div className='py-[24px] leading-[24px] sm:pr-[45px]'>Lorem ipsum dolor sit amet consectetur. Ullamcorper eget odio sit nam nisl luctus eu dui posuere. Porttitor imperdiet quis commodo non id nibh. Quis magna donec pulvinar laoreet orci gravida est pharetra in. Id tortor dolor quis amet lorem urna mi.</div>
+                <h1 className='text-[32px] uppercase'>Ажилд авах журам</h1>
+                <div className='py-[24px] leading-[24px] sm:pr-[45px]'>Бид ажилд орох хүсэлт гаргасан иргэн бүрд адил, тэгш боломж олгож, ажилтан сонгон шалгаруулалтаа шударга, ил тодоор явуулдаг.</div>
               </div>
-            </div>
-            <div className="flex items-center mt-12 ml-[52px]">
             </div>
           </div>
         </div>

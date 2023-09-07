@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import steppe from './steppe.png';
-import erdenes from './erdenestolgoi.png';
 import gobi from './southgobi.png';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import AppContainer from '../AppContainer';
 
 const Project = () => {
   const [showOvooTolgoi, setShowOvooTolgoi] = useState(true);
-  const [showAltanTsagaanOvoo, setShowAltanTsagaanOvoo] = useState(false);
   const [showUurkhainNuurs, setShowUurkhainNuurs] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -15,25 +13,18 @@ const Project = () => {
   useEffect(() => {
     if (location.pathname === '/project/ovooTolgoi') {
       setShowOvooTolgoi(true);
-      setShowAltanTsagaanOvoo(false);
       setShowUurkhainNuurs(false);
     } else if (location.pathname === '/project/tsagaanOvoo') {
       setShowOvooTolgoi(false);
-      setShowAltanTsagaanOvoo(true);
       setShowUurkhainNuurs(false);
     } else if (location.pathname === '/project/UurhaiNvvrs') {
       setShowOvooTolgoi(false);
-      setShowAltanTsagaanOvoo(false);
       setShowUurkhainNuurs(true);
     }
   }, [location.pathname]);
 
   const handleOvooTolgoiClick = () => {
     navigate('/project/ovooTolgoi');
-  };
-
-  const handleAltanTsagaanOvooClick = () => {
-    navigate('/project/tsagaanOvoo');
   };
 
   const handleUurkhainNuursClick = () => {
@@ -49,12 +40,6 @@ const Project = () => {
           onClick={handleOvooTolgoiClick}
         >
           <Link className={`flex gap-2 ${location.pathname === '/project/ovooTolgoi' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi">овоо толгой{location.pathname === '/project/ovooTolgoi' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
-        </div>
-        <div
-          className="text-black w-[226px] mb-[69px] font-medium mb-5 cursor-pointer"
-          onClick={handleAltanTsagaanOvooClick}
-        >
-          <Link className={`flex gap-2 ${location.pathname === '/project/tsagaanOvoo' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/tsagaanOvoo">алтан цагаан овоо{location.pathname === '/project/tsagaanOvoo' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
           className="text-black w-[246px] mr-[102px] font-medium mb-5 cursor-pointer"
@@ -90,36 +75,6 @@ const Project = () => {
             <div className="text-black text-base font-normal leading-8 mb-5 sm:w-[480px]">
               Степ Голд ХК-ийн хоёрдугаар шатны ил уурхайн төсөл эхэлснээр хүчин чадал нь 4.0 сая.тн хүдэр
               олборлох, хөрс хуулалт 2.0 сая м3 болж өснө.
-            </div>
-          </div>
-        </div>
-        <div className={`mx-[24px] xl:mx-0 ${showAltanTsagaanOvoo ? '' : 'hidden'}`}>
-        <div className="text-black text-[32px] font-500 font-sans mb-5 uppercase">төслийн тухай</div>
-          <div className="flex flex-col-reverse md:flex-row">
-            <div>
-              <div className="text-black text-base font-normal leading-8 mb-5 sm:w-[604px] ">
-                Саусгоби Ресурс Лимитед (Саусгоби) нь Торонто болон Хонконгийн Хөрөнгийн
-                Биржид (TSX: SGQ, HK: 1878) бүртгэлтэй олон нийтэд нээлттэй нүүрс
-                нийлүүлэгч компани бөгөөд Саусгоби компани нь логистикийн дэд бүтэцтэй,
-                арилжааны чадамж бүхий стратегийн ач холбогдолтой нүүрсний орд эзэмшдэг болно.
-              </div>
-            </div>
-            <div className="flex items-center mt-12 my-10 ml-[52px]">
-              <img src={erdenes} width={236} height={147} alt="ErdenesTolgoi" />
-            </div>
-          </div>
-          <div>
-            <div className="text-black text-[32px] font-500 font-sans mb-[24px] mt-[80px] uppercase">
-              Төслийн хүчин чадал
-            </div>
-            <div className="text-black text-base font-normal leading-8 mb-5 sm:w-[480px]">
-              Одоогоор 4.0 сая м3 уулын цулын ажил гүйцэтгэх хүчин чадалтай.
-            </div>
-            <div className="text-black text-base font-normal leading-8 sm:w-[480px]">
-              Шинээр тоног төхөөрөмж худалдаж авсны дараа:
-            </div>
-            <div className="text-black text-base font-normal leading-8 mb-5 sm:w-[480px]">
-              6.0 сая м3 уулын цулын ажил хийх хүчин чадалтай болно.
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { auth } from '../firebase';
 import { sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
+import backImage from './authBackImage.jpg'
 
 const Auth = () => {
   const [user] = useAuthState(auth);
@@ -66,8 +67,8 @@ const Auth = () => {
   };
 
   return (
-    <body className="flex h-screen bg-indigo-700">
-      <div className="w-full max-w-xs m-auto bg-indigo-100 rounded p-5">
+    <body className='flex h-screen' style={{backgroundImage: `url(${backImage})`, backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
+      <div className="w-full max-w-xs m-auto bg-gray-300 rounded p-5">
         <header>
           <div className="w-20 mx-auto mb-5">
             <svg xmlns="http://www.w3.org/2000/svg" width="78" height="50" viewBox="0 0 78 50" fill="none">
@@ -84,7 +85,7 @@ const Auth = () => {
                 </g>
                 <defs>
                 <clipPath id="clip0_322_545">
-                <rect width="78" height="50" fill="white"/>
+                  <rect width="78" height="50" fill="white"/>
                 </clipPath>
                 </defs>
             </svg>
@@ -92,11 +93,11 @@ const Auth = () => {
         </header>
         <form>
           <div>
-            <label className="block mb-2 text-indigo-500" htmlFor="username">
+            <label className="block mb-2 text-gray-500" htmlFor="username">
               Username
             </label>
             <input
-              className="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
+              className="w-full p-2 mb-6 text-gray-500 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
               type="text"
               name="username"
               value={email}
@@ -105,7 +106,7 @@ const Auth = () => {
             />
           </div>
           <div>
-            <label className="block mb-2 text-indigo-500" htmlFor="password">
+            <label className="block mb-2 text-gray-500" htmlFor="password">
               Password
             </label>
             <input
@@ -119,7 +120,7 @@ const Auth = () => {
           </div>
           <div>
              <button
-             className="w-full bg-indigo-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-6 rounded"
+             className="w-full bg-indigo-700 hover:bg-pink-700 text-gray-500 font-bold py-2 px-4 mb-6 rounded"
              type="button"
              onClick={signInWithEmail}
              disabled={sending}
@@ -129,7 +130,7 @@ const Auth = () => {
           </div>
         </form>
         <footer>
-          <Link className="text-indigo-700 hover:text-pink-700 text-sm float-left" href="#" onClick={handleResetPassword}>Forgot Password?</Link>
+          <Link className="text-gray-500 hover:text-pink-700 text-sm float-left" href="#" onClick={handleResetPassword}>Forgot Password?</Link>
         </footer>
         <div>
         </div>

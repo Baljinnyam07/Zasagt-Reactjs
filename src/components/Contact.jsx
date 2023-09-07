@@ -25,7 +25,7 @@ function Contact() {
               {contactJson.map((data, index) => (
                 <div key={index} className="flex w-max mt-[24px] gap-[16px]">
                   <div className="pt-1" dangerouslySetInnerHTML={{ __html: data.icon }} />
-                  <div className="text-[16px] w-full font-400 lg:w-[433px]">{data.property}</div>
+                  <a href={data.link} target="_blank" rel="noreferrer" className="text-[16px] w-full font-400 lg:w-[433px]">{data.property}</a>
                 </div>
               ))}
               </div>
