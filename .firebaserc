@@ -1,7 +1,8 @@
 {
   "projects": {
     "default": "zasagt-khaann",
-    "staging": "zasagt-khaann"
+    "staging": "zasagt-khaann",
+    "zasagt-khaan": "zasagt-khaann"
   },
   "targets": {},
   "etags": {}
