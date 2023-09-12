@@ -21,14 +21,14 @@ function PostsMoreHumanity({ posts }) {
         {!showAnket && (
           <div className="transition duration-150 ease-out">
           <div className="mx-[24px] xl:mx-0">
-              <div className="text-black text-[32px] font-500 font-sans mb-5">Нээлттэй ажлын байрууд</div>
+              <div className="text-black text-[32px] font-[500] font-sans mb-5">Нээлттэй ажлын байрууд</div>
             </div>
       {posts.map((post) => (
         <div className="mx-[24px] xl:mx-0" key={post.id}>
             <div
               key={post.id}
-              className={`bg-white mt-[24px] cursor-pointer rounded border w-full flex flex-col ${
-                expandedPostId === post.id ? "h-max" : "h-[128px]"
+              className={`bg-white mt-[24px] cursor-pointer rounded border-[1px] border-[#23356B] w-full flex flex-col ${
+                expandedPostId === post.id ? "h-max" : "h-[110px]"
               } overflow-hidden`}
               onClick={() => togglePostExpansion(post.id)}
               tabIndex="0" // For making it focusable
@@ -39,7 +39,7 @@ function PostsMoreHumanity({ posts }) {
                 <div>
                     {post.title}
                 </div>
-                <div className={`p-[8px] border transition-all transform ${
+                <div className={`p-[8px] bg-[#ECEDEE] border transition-all transform ${
                         expandedPostId === post.id ? "rotate-0" : "rotate-180"
                       }`}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -124,7 +124,7 @@ function PostsMoreHumanity({ posts }) {
         </div>
         )}
     {showAnket && (
-        <div className="h-[1400px] overflow-auto">
+        <div className="">
           <Anket />
         </div>
       )}

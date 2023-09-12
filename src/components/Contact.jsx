@@ -21,7 +21,7 @@ function Contact() {
               <h2 className="text-[32px] font-500 flex justify-center lg:justify-start">
               Бидэнтэй холбогдох
               </h2>
-              <div className="w-full flex flex-wrap lg:block lg:flex-nowrap gap-[24px]">
+              <div className="w-full flex flex-wrap lg:block lg:flex-nowrap gap-[24px] text-[#23356B]">
               {contactJson.map((data, index) => (
                 <div key={index} className="flex w-max mt-[24px] gap-[16px]">
                   <div className="pt-1" dangerouslySetInnerHTML={{ __html: data.icon }} />

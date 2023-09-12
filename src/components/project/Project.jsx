@@ -50,11 +50,11 @@ const Project = () => {
       </div>
       <div className="mt-[80px]">
         <div className={`mx-[24px] xl:mx-0 ${showOvooTolgoi ? '' : 'hidden'}`}>
-        <div className="text-black text-[32px] font-500 font-sans mb-5 uppercase">төслийн тухай</div>
+        <div className="text-[#454655] text-[32px] font-[500] font-sans mb-5 uppercase">төслийн тухай</div>
 
           <div className="flex flex-col-reverse md:flex-row">
             <div>
-              <div className="text-black text-base font-normal leading-8 mb-5 sm:w-[578px]">
+              <div className="text-[#454655] text-base font-normal leading-8 mb-5 sm:w-[578px]">
                 “Степ Голд” ХХК нь Монголын уул уурхайн салбарт алт, мөнгө үйлдвэрлэлээр
                 тэргүүлэгч аж ахуйн нэгжүүдийн нэг болох зорилтын хүрээнд жилд 60,000
                 унц алт гарган авах төлөвлөгөө тавин ажиллаж байгаа ба Торонтогийн
@@ -66,10 +66,10 @@ const Project = () => {
             </div>
           </div>
           <div className=''>
-            <div className="text-black text-[32px] font-500 font-sans mb-[24px] mt-[80px] uppercase">
+            <div className="text-[#454655] text-[32px] font-[500] font-sans mb-[24px] mt-[80px] uppercase">
               Төслийн хүчин чадал
             </div>
-            <div className="text-black text-base font-normal leading-8 mb-5 w-full sm:w-[480px]">
+            <div className="text-[#454655] text-base font-normal leading-8 mb-5 w-full sm:w-[480px]">
               Одоогийн байдлаар жилийн 1.8 сая.тн хүдэр олборлох хүчин чадалтай.
             </div>
             <div className="text-black text-base font-normal leading-8 mb-5 sm:w-[480px]">
@@ -79,10 +79,10 @@ const Project = () => {
           </div>
         </div>
         <div className={`mx-[24px] xl:mx-0 ${showUurkhainNuurs ? '' : 'hidden'}`}>
-        <div className="text-black text-[32px] font-500 font-sans mb-5 uppercase">төслийн тухай</div>
+        <div className="text-[#454655] text-[32px] font-[500] font-sans mb-5 uppercase">төслийн тухай</div>
           <div className="flex flex-col-reverse md:flex-row">
             <div>
-              <div className="text-black text-base font-normal leading-8 mb-5 sm:w-[520px]">
+              <div className="text-[#454655] text-base font-normal leading-8 mb-5 sm:w-[520px]">
                 Монголын өмнөд хэсэгт орших Өмнөговь аймагт оршдог дэлхийн хамгийн том
                 ашиглагдаагүй коксжих болон эрчим хүчний нүүрсний ордуудын нэг бөгөөд нийт 6.4 тэрбум
                 тонн нөөцтэй ба үүний дөрөвний нэг нь сайн чанарын коксжих нүүрс бүхий стратегийн орд юм.
@@ -93,16 +93,16 @@ const Project = () => {
             </div>
           </div>
           <div>
-            <div className="text-black text-[32px] font-500 font-sans mb-[24px] mt-[80px] uppercase">
+            <div className="text-[#454655] text-[32px] font-[500] font-sans mb-[24px] mt-[80px] uppercase">
               Төслийн хүчин чадал
             </div>
-            <div className="text-black text-base font-normal leading-8 mb-5 sm:w-[480px]">
+            <div className="text-[#454655] text-base font-normal leading-8 mb-5 sm:w-[480px]">
               Одоогоор 4.0 сая м3 уулын цулын ажил гүйцэтгэх хүчин чадалтай.
             </div>
-            <div className="text-black text-base font-normal leading-8 sm:w-[480px]">
+            <div className="text-[#454655] text-base font-normal leading-8 sm:w-[480px]">
               Шинээр тоног төхөөрөмж худалдаж авсны дараа:
             </div>
-            <div className="text-black text-base font-normal leading-8 mb-5 sm:w-[480px]">
+            <div className="text-[#454655] text-base font-normal leading-8 mb-5 sm:w-[480px]">
               6.0 сая м3 уулын цулын ажил хийх хүчин чадалтай болно.
             </div>
           </div>

@@ -79,7 +79,7 @@ const FeedBack =() => {
                     className="peer bg-[#F2F2F2] text-[#fff] p-[10px] text-[12px] bg-opacity-10 block w-full rounded-lg border-0 placeholder-[#fff]"
                     id="exampleInput124"
                     aria-describedby="emailHelp124"
-                    placeholder='Сонгоно уу'
+                    placeholder='Хүсэлтийн гарчиг'
                     />
                 </div>
               </div>
@@ -105,7 +105,7 @@ const FeedBack =() => {
               </div>
             </form>
             <div className=''>
-              <h2 className='text-[32px] font-500 mb-[16px] text-[#fff]'>Санал хүсэлт илгээх</h2>
+              <h2 className='text-[32px] font-[500] mb-[16px] text-[#fff]'>Санал хүсэлт илгээх</h2>
               <p className='text-[16px] font-400 text-[#fff] w-full lg:w-[620px]'>Та манай бүтээгдэхүүн үйлчилгээтэй холбоотой санал хүсэлтээ дараах формоор илгээнэ үү. Манай мэдээллийн ажилтан таны бөглөсөн мэдээллийн дагуу 24 цагийн дотор эргүүлэн холбоо барих болно.</p>
             </div>
           </div>

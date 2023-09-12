@@ -17,7 +17,7 @@ const Layout =()=> {
             {location.pathname !== '/' ? (<div className='absolute h-[280px] overflow-hidden sm:h-[280px] md:h-[350px] lg:h-[350px] xl:h-[450px] w-full' style={{backgroundImage:'linear-gradient(rgba(35, 53, 107, 0.46), rgba(35, 53, 107, 0.46))'}}>
             </div>) : ('')}
             
-            <div className='flex h-16 sm:h-[102px] px-[20px] xl:px-[40px] absolute z-10 items-center w-full justify-between border-b' style={{ background: 'rgba(255, 255, 255, 0.08)' }}>
+            <div className='flex h-16 sm:h-[102px] px-[20px] xl:px-[40px] absolute z-10 items-center w-full justify-between border-b bg-white bg-opacity-10'>
               <div className='flex items-center'>
                 <a href="/">
                     <svg className='my-[24px] w-16 sm:w-[77px]' xmlns="http://www.w3.org/2000/svg" width={100} height={100} viewBox="0 0 78 50" fill="none">
@@ -74,11 +74,13 @@ const Layout =()=> {
         <Contact/>
         </div>
         </AppContainer>
+        
+        <div className='border-t'>
         <AppContainer>
-        <div>
         <Footer/>
-        </div>
         </AppContainer>
+        </div>
+        
         <div className='border-t'>
           <AppContainer>
             <Reverse/>

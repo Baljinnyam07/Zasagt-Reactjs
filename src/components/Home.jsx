@@ -52,17 +52,17 @@ const jsonProject =[
 const Home =()=>{
   return (
     <>
-    <div className='bg-blue-50'>
+    <div className='bg-custom-rgba'>
     <AppContainer>
     <div className='pt-[24px] xl:pt-[79px] pb-[40px] px-[20px] xl:px-0'>
         <div className='mb-[32px] xl:mb-[46px]'>
-          <h1 className='mb-[24px] text-[18px] md:text-[32px] font-[500] uppercase font-bold text-[#23356B]'>Компанийн тухай</h1>
-          <div className='text-justify text-[14px] md:text-[16px] leading-[24px]'>
+          <h1 className='mb-[24px] text-[18px] md:text-[32px] font-[600] uppercase text-[#23356B]'>Компанийн тухай</h1>
+          <div className='text-justify text-[14px] md:text-[16px] leading-[24px] text-[#23356B]'>
           Засагт Хаан ХХК нь 2008 онд уул уурхайн хайгуул, олборлолтын чиглэлээр үйл ажиллагаагаа эхэлсэн бөгөөд 2011 оноос эхлэн орон сууцны болон үйлдвэрийн барилга байгууламжийн угсралт,
           хүнд машин механизмын түрээсийн чиглэлээр үйл ажиллагаагаа өргөтгөсөн өдгөө дараах чиглэлээр үйл ажиллагаа явуулж буй оператор компани юм.
           </div>
         </div>
-        <div className='grid grid-cols-2 xl:grid-cols-3'>
+        <div className='grid grid-cols-2 xl:grid-cols-3 text-[#23356B]'>
         {jsonItems.map((items,index)=>(
           <div key={index} className='flex items-start mt-[10px]'>
           <div className='mr-[16px]' dangerouslySetInnerHTML={{ __html: items.svg }}/>
@@ -79,21 +79,24 @@ const Home =()=>{
 
       <AppContainer>
       <div className='mt-[40px] xl:mt-[80px] animate-fade-up animate-once animate-duration-500 animate-delay-100 animate-ease-linear animate-normal'>
-        <h1 className='uppercase text-[#23356B] text-[24px] xl:text-[32px] px-[20px] xl:px-0  font-[500]'>төслүүд</h1>
+        <h1 className='uppercase text-[#23356B] text-[24px] xl:text-[32px] px-[20px] xl:px-0  font-[600]'>төслүүд</h1>
         <ProjectCarousel items={jsonProject}/>
       </div>
       <div className='mt-[80px] xl:mt-[200px]'>
-      <h1 className='uppercase text-[#23356B] px-[20px] lg:px-0 text-[18px] md:text-[32px] font-[500]'>тоног төхөөрөмж түрээс</h1>
+      <h1 className='uppercase text-[#23356B] px-[20px] lg:px-0 text-[18px] md:text-[32px] font-[600]'>тоног төхөөрөмж түрээс</h1>
       <div className=''>
         <div className='grid sm:grid-cols-2 px-[20px] lg:px-0 sm:gap-[14px] lg:grid-cols-3 justify-center gap-[24px] w-full pt-[32px] pb-[40px]'>
-          <div>
-            <img className='w-full h-[266px] saturate-0 hover:saturate-100 transition ease-in-out delay-150' src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/pexels-ivan-129544.png?alt=media&token=15560a8c-9c7b-4672-a2be-2364fb2a2530" alt="mechanic images" />
+          <div className='relative'>
+            <div className='bg-[#454655] bg-opacity-40 hover:bg-opacity-0 h-[266px] w-full absolute transition duration-700 ease-in-out delay-150'></div>
+            <img className='w-full h-[266px] backdrop-saturate-10 transition ease-in-out delay-150' src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/pexels-ivan-129544.png?alt=media&token=15560a8c-9c7b-4672-a2be-2364fb2a2530" alt="mechanic images" />
           </div>
-          <div>
-          <img className='w-full h-[266px] saturate-0 hover:saturate-100 transition ease-in-out delay-150' src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/pexels-manzil-joshi-3998410.png?alt=media&token=2bfe4ef8-b1b2-4a4a-bc39-960387649313" alt="mechanic images" />
+          <div className='relative'>
+          <div className='bg-[#454655] bg-opacity-40 hover:bg-opacity-0 h-[266px] w-full absolute transition duration-700 ease-in-out delay-150'></div>
+          <img className='w-full h-[266px] transition ease-in-out delay-150' src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/pexels-manzil-joshi-3998410.png?alt=media&token=2bfe4ef8-b1b2-4a4a-bc39-960387649313" alt="mechanic images" />
           </div>
-          <div>
-          <img className='w-full h-[266px] saturate-0 hover:saturate-100 transition ease-in-out delay-150' src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/pexels-de-lemster-krant-13997579.png?alt=media&token=8f638526-7bee-4dda-b5fd-39be64517e32" alt="mechanic images" />
+          <div className='relative'>
+          <div className='bg-[#454655] bg-opacity-40 hover:bg-opacity-0 h-[266px] w-full absolute transition duration-700 ease-in-out delay-150'></div>
+          <img className='w-full h-[266px] transition ease-in-out delay-150' src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/pexels-de-lemster-krant-13997579.png?alt=media&token=8f638526-7bee-4dda-b5fd-39be64517e32" alt="mechanic images" />
           </div>
         </div>
         <div className='text-[16px] mb-[120px] font-[400] text-[#fff] flex justify-center font-400'>

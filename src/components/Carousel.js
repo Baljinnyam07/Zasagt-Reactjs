@@ -51,16 +51,16 @@ export const ImageCarousel = ({ images }) => {
           }`}
         />
       ))}
-      <div className="absolute bottom-0 uppercase text-[#fff] border-t bg-[#fff] bg-opacity-10 border-opacity-75 w-full">
+      <div className="absolute bottom-0 uppercase text-[#fff] border-t bg-[#fff] backdrop-blur-sm bg-white/10 w-full">
         <div className="flex justify-between h-[60px] xl:h-[140px] divide-x divide-gray-400 items-center">
-          <div className="w-full xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:py-[39px] px-[23px] border-opacity-75">
+          <div className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:py-[39px] px-[28px] border-opacity-75">
                 ил уурхайн хөрс хуулалт,
                 олборлолтын ажил
           </div>
-          <div className="w-full xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] py-[18px] xl:py-[53px] px-[40px] xl:pl-[140px] border-opacity-75">
+          <div className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] py-[18px] xl:py-[53px] px-[40px] xl:pl-[140px] border-opacity-75">
                 уул уурхайн туслах ажил
           </div>
-          <div className="w-full xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:text-[21px] py-[18px] px-[23px] xl:py-[53px] xl:px-[100px] border-opacity-75">
+          <div className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:text-[21px] py-[18px] px-[23px] xl:py-[53px] xl:px-[100px] border-opacity-75">
                 тоног төхөөрөмж түрээс
           </div>
         </div>

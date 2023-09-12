@@ -16,6 +16,7 @@ import Admin from './components/admin/Admin';
 import HireEdit from './components/Posts/HireEdit';
 import { auth } from './firebase';
 import Auth from './components/Auth';
+import './index.css'
 
 function App() {
   return (
