@@ -39,7 +39,7 @@ const FeedBack =() => {
     }
   };
   return (
-        <div className='h-[550px] sm:h-[520px] xl:h-max mt-[80px]'>          
+        <div className='h-[550px] sm:h-[520px] xl:h-max'>          
           <div className='py-[80px] px-[20px] xl:px-0  flex flex-col-reverse lg:flex-row gap-[24px] absolute'>
             <form className='w-full lg:w-[588px]' onSubmit={handleFormSubmit}>
               <div className="grid grid-cols-2 gap-[10px] mb-[8px]">

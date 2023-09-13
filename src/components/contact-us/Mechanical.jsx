@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Posts from '../Posts/Posts';
 import { Link, useLocation, useParams } from 'react-router-dom';
-import AppContainer from '../AppContainer';
 
 const Mechanical = () => {
   const location = useLocation();
@@ -27,23 +26,22 @@ const Mechanical = () => {
   }, [location.pathname]);
 
   return (
-    <AppContainer>
-      <div className="flex">
-      <div className="text-[14px] mt-[40px] uppercase xl:block hidden">
+      <div className="flex divide-x">
+      <div className="text-[14px] uppercase xl:block hidden">
         <div
-          className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer"
+          className="text-[#454655] w-[480px] font-medium cursor-pointer border-b py-[40px]"
         >
-          <Link className={`${location.pathname.startsWith('/mechanical/mining')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/mining'>ил уурхайн хөрс хуулалт, олборлолтын ажил</Link>
+          <Link className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/mining')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/mining'><div className='w-[210px]'>ил уурхайн хөрс хуулалт, олборлолтын ажил</div>{location.pathname === '/mechanical/mining' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
-          className="text-black w-[226px] mb-[69px] font-medium mb-5 cursor-pointer"
+          className="text-[#454655] w-[480px] font-medium cursor-pointer border-b py-[40px]"
         >
-          <Link className={`${location.pathname.startsWith('/mechanical/rent')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/rent'>уул уурхайн туслах ажил</Link>
+          <Link className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/rent')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/rent'>уул уурхайн туслах ажил{location.pathname === '/mechanical/rent' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
-          className="text-black w-[246px] mr-[102px] font-medium mb-5 cursor-pointer"
+          className="text-[#454655] w-[480px] font-medium cursor-pointer border-b py-[40px]"
         >
-          <a className={`${location.pathname.startsWith('/mechanical/openings')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/mechanical/openings'>тоног төхөөрөмж түрээс</a>
+          <a className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/openings')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/mechanical/openings'>тоног төхөөрөмж түрээс{location.pathname === '/mechanical/openings' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
       </div>
       <div className='sm:'>
@@ -67,7 +65,6 @@ const Mechanical = () => {
         </div>
       </div>
     </div>
-    </AppContainer>
   );
 };
 

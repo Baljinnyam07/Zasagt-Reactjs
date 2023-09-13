@@ -5,7 +5,6 @@ import humanity2 from './humanity2.png'
 import humanity3 from './humanity3.png'
 
 import Posts from '../Posts/Posts';
-import AppContainer from '../AppContainer';
 
 function Humanity() {
   const [showOvooTolgoi, setShowOvooTolgoi] = useState(true);
@@ -43,36 +42,35 @@ function Humanity() {
   };
 
   return (
-    <AppContainer>
-      <div className="xl:flex inline-block">
-      <div className="text-[14px] mt-[40px] uppercase xl:block hidden">
+      <div className="xl:flex inline-block divide-x">
+      <div className="text-[14px] uppercase xl:block hidden">
         
         <div
-          className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer"
+          className="text-[#454655] w-[480px] font-medium mb-5 cursor-pointer py-[40px] border-b"
           onClick={handleOvooTolgoiClick}
         >
-          <Link className={`flex gap-2 ${location.pathname === '/humanity/resource-policy' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi">хүний нөөцийн бодлого
+          <Link className={`flex pl-[130px] gap-2 ${location.pathname === '/humanity/resource-policy' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi">хүний нөөцийн бодлого
           {location.pathname === '/humanity/resource-policy' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
           
         </div>
         <div
-          className="text-black w-[226px] mb-[69px] font-medium mb-5 cursor-pointer"
+          className="text-[#454655] w-[480px] font-medium mb-5 cursor-pointer py-[40px] border-b"
           onClick={handleAltanTsagaanOvooClick}
         >
-          <Link className={`flex gap-2 ${location.pathname === '/humanity/curriculum' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/tsagaanOvoo">сургалтын хөтөлбөр{location.pathname === '/humanity/curriculum' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`flex pl-[130px] gap-2 ${location.pathname === '/humanity/curriculum' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/tsagaanOvoo">сургалтын хөтөлбөр{location.pathname === '/humanity/curriculum' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
 
 
         <div
-          className="text-black w-[246px] mr-[102px] font-medium mb-5 cursor-pointer"
+          className="text-[#454655] w-[480px] font-medium mb-5 cursor-pointer py-[40px] border-b"
           onClick={handleUurkhainNuursClick}
         >
-          <a className={`flex gap-2 ${location.pathname === '/humanity/hire' ? 'text-[#D0A616]' : 'text-[#000]'}`} href="/humanity/hire">нээлттэй ажлын байр{location.pathname === '/humanity/hire' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
+          <a className={`flex pl-[130px] gap-2 ${location.pathname === '/humanity/hire' ? 'text-[#D0A616]' : 'text-[#000]'}`} href="/humanity/hire">нээлттэй ажлын байр{location.pathname === '/humanity/hire' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
         
       </div>
-      <div className="mt-[80px]">
-        <div className={`mx-[24px] xl:mx-0 ${showOvooTolgoi ? '' : 'hidden'}`}>
+      <div className="pt-[80px] pb-[121px]">
+        <div className={`px-[24px] xl:mx-0 ${showOvooTolgoi ? '' : 'hidden'}`}>
           <div className="w-full">
             <div className='flex flex-col-reverse lg:flex-row mb-[80px]'>
               <div className="text-black text-[32px] font-500 font-sans mb-5 uppercase">
@@ -107,7 +105,7 @@ function Humanity() {
             </div>
           </div>
         </div>
-        <div className={`mx-[24px] xl:mx-0 ${showAltanTsagaanOvoo ? '' : 'hidden'}`}>
+        <div className={`px-[24px] xl:mx-0 ${showAltanTsagaanOvoo ? '' : 'hidden'}`}>
           <div className="flex mb-[42px]">
             <div>
               <div className="text-black text-[32px] font-500 font-sans mb-5">Ур чадвар нэмэгдүүлэх сургалт</div>
@@ -141,7 +139,7 @@ function Humanity() {
             </div>
           </div>
         </div>
-        <div className={`${showUurkhainNuurs ? '' : 'hidden'}`}>
+        <div className={`px-[24px] ${showUurkhainNuurs ? '' : 'hidden'}`}>
           <div className="">
             <div className="">
             <Posts urlType='humanity'/>
@@ -150,7 +148,6 @@ function Humanity() {
         </div>
       </div>
     </div>
-    </AppContainer>
   );
 };
 

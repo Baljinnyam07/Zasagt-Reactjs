@@ -13,7 +13,7 @@ import Nav from './Nav';
 const Layout =()=> {
   const location = useLocation();
   return (
-    <div className='relative'>
+    <div className='relative font-sans'>
             {location.pathname !== '/' ? (<div className='absolute h-[280px] overflow-hidden sm:h-[280px] md:h-[350px] lg:h-[350px] xl:h-[450px] w-full' style={{backgroundImage:'linear-gradient(rgba(35, 53, 107, 0.46), rgba(35, 53, 107, 0.46))'}}>
             </div>) : ('')}
             
