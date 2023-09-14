@@ -34,7 +34,7 @@ export const ImageCarousel = ({ images }) => {
         </svg>
         </div>
       </button>
-      <div className="absolute z-10 top-1/2 text-[24px] xl:text-[64px] left-[64px] xl:left-[144px] w-[350px] xl:w-[900px] -translate-y-1/2 font-bold">
+      <div className="absolute z-10 top-1/2 text-[24px] xl:text-[64px] left-[64px] xl:left-[144px] w-[350px] xl:w-[1000px] -translate-y-1/2 font-bold">
         <div className="uppercase text-[#fff]">
         Exploring, Constructing,
         Excelling
@@ -138,7 +138,7 @@ export const ProjectCarousel = ({ items }) => {
                 </svg>
               </button>
             </div>
-            <img className="m-40 left w-[300px] h-[130px]" src={item.image} alt={`Carousel Item ${index}`} />
+            <img className="mt-[160px] ml-[100px] left w-[300px] h-[110px]" src={item.image} alt={`Carousel Item ${index}`} />
           </div>
         ))}
       </div>
