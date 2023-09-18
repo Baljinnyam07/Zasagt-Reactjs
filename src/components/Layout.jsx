@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Contact from './Contact';
 import Footer from './Footer';
 import Header from './Header';
@@ -11,13 +11,34 @@ import Nav from './Nav';
 
 
 const Layout =()=> {
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    // Add a scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    // Check if the user has scrolled down more than 100 pixels (adjust as needed)
+    if (window.scrollY > 100) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
   return (
     <div className='relative font-sans'>
             {location.pathname !== '/' ? (<div className='absolute h-[280px] overflow-hidden sm:h-[280px] md:h-[350px] lg:h-[350px] xl:h-[450px] w-full' style={{backgroundImage:'linear-gradient(rgba(35, 53, 107, 0.46), rgba(35, 53, 107, 0.46))'}}>
             </div>) : ('')}
             
-            <div className='flex h-16 sm:h-[102px] px-[20px] xl:px-[40px] absolute z-10 items-center w-full justify-between border-b bg-white bg-opacity-10'>
+            <div className={`fixed z-20 w-full`}>
+            <div className={`flex h-16 sm:h-[102px] px-[20px] xl:px-[40px] absolute z-10 items-center w-full justify-between border-b ${scrolled ? 'bg-[#23356B] border-b-none' : 'bg-[#23356B] bg-opacity-10'}`}>
               <div className='flex items-center'>
                 <a href="/">
                     <svg className='my-[24px] w-16 sm:w-[77px]' xmlns="http://www.w3.org/2000/svg" width={100} height={100} viewBox="0 0 78 50" fill="none">
@@ -55,6 +76,7 @@ const Layout =()=> {
                   <div className='border-l h-[102px] absolute top-0 right-[110px]'></div>
                   </div>
               </div>
+            </div>
             </div>
             <div className=''>
               <Header/>

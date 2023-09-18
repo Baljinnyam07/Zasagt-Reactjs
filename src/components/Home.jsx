@@ -42,12 +42,8 @@ const jsonItems = [
 
 const jsonProject =[
   {
-    image: 'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/surface1%20(1).png?alt=media&token=953ab5d9-8708-403c-a9b4-169928c03930',
-    caption: '“Степ Голд” ХХК нь Монголын уул уурхайн салбарт алт, мөнгө үйлдвэрлэлээр тэргүүлэгч аж ахуйн нэгжүүдийн нэг болох зорилтын хүрээнд жилд 60,000 унц алт гарган авах төлөвлөгөө тавин ажиллаж байгаа ба Торонтогийн хөрөнгийн бирж (TSX:STGO) дээр олон нийтэд нээлттэй арилжаалагддаг.',
-  },
-  {
-    image: 'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/logo.png?alt=media&token=4202c68a-98f0-4ec2-ab3f-a2fa6f0af9ed',
-    caption: 'Саусгоби Ресурс Лимитед (Саусгоби) нь Торонто болон Хонконгийн Хөрөнгийн Биржид (TSX: SGQ, HK: 1878) бүртгэлтэй олон нийтэд нээлттэй нүүрс нийлүүлэгч компани бөгөөд Саусгоби компани нь логистикийн дэд бүтэцтэй, арилжааны чадамж бүхий стратегийн ач холбогдолтой нүүрсний орд эзэмшдэг болно.',
+    image: 'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/SouthGove.png?alt=media&token=e6e50db3-3a21-4c27-aed7-b94cc4bac69e',
+    caption: 'Саусгоби Ресурс Лимитед (Саусгоби) нь Торонто болон Хонконгийн Хөрөнгийн Биржид (TSX: SGQ, HK: 1878) бүртгэлтэй олон нийтэд нээлттэй нүүрс нийлүүлэгч компани бөгөөд Саусгоби компани нь логистикийн дэд бүтэцтэй, арилжааны чадамж бүхий стратегийн ач холбогдолтой нүүрсний орд эзэмшдэг болно. Тус орд нь Өмнөговь аймгийн Гурван тэс суманд орших бөгөөд 9,283 га бүхий талбайд 2037 он хүртэл олборлолт хийх ашиглалтын тусгай зөвшөөрөлтэй.',
   },
   {
     image: 'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/welcome-logo.png?alt=media&token=7324ab98-23ef-416c-8ddb-fe615b0994e0',
@@ -71,10 +67,10 @@ const Home =()=>{
         </div>
       </AppContainer>
       <div className='border-y'>
-        <div className='grid grid-cols-2 xl:grid-cols-3 text-[#23356B] divide-y divide-x'>
+        <div className='grid grid-cols-2 xl:grid-cols-3 text-[#23356B] divide-x'>
               {jsonItems
               .map((items,index)=>(
-                <div key={index} className={`flex items-start ${items.id === 1 ? 'pl-[180px]' : ''} ${items.id === 4 ? 'pl-[180px]' : ''} ${items.id === 3 ? 'pr-[180px]' : ''} ${items.id === 6 ? 'pr-[180px]' : ''}`}>
+                <div key={index} className={`flex items-start ${items.id === 1 ? 'pl-[180px]' : ''} ${items.id === 4 ? 'pl-[180px] border-t' : ''} ${items.id === 3 ? 'pr-[120px]' : ''} ${items.id === 6 ? 'pr-[180px] border-t' : ''} ${items.id === 5 ? 'border-t' : ''}`}>
                   <div className='flex px-[17px] py-[40px]'>
                   <div className='mr-[16px]' dangerouslySetInnerHTML={{ __html: items.svg }}/>
                   <div>
@@ -95,18 +91,18 @@ const Home =()=>{
       <h1 className='uppercase text-[#23356B] px-[20px] lg:px-0 text-[18px] md:text-[32px] font-[600]'>тоног төхөөрөмж түрээс</h1>
       <div className=''>
         <div className='grid sm:grid-cols-2 px-[20px] lg:px-0 sm:gap-[14px] lg:grid-cols-3 justify-center gap-[24px] w-full pt-[32px] pb-[40px]'>
-          <div className='relative'>
+          <a href="/mechanical/openings" className='relative'>
             <div className='bg-[#454655] bg-opacity-40 hover:bg-opacity-0 h-[266px] w-full absolute transition duration-700 ease-in-out delay-150'></div>
             <img className='w-full h-[266px] backdrop-saturate-10 transition ease-in-out delay-150' src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/pexels-ivan-129544.png?alt=media&token=15560a8c-9c7b-4672-a2be-2364fb2a2530" alt="mechanic images" />
-          </div>
-          <div className='relative'>
+          </a>
+          <a href="/mechanical/openings" className='relative'>
           <div className='bg-[#454655] bg-opacity-40 hover:bg-opacity-0 h-[266px] w-full absolute transition duration-700 ease-in-out delay-150'></div>
           <img className='w-full h-[266px] transition ease-in-out delay-150' src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/pexels-manzil-joshi-3998410.png?alt=media&token=2bfe4ef8-b1b2-4a4a-bc39-960387649313" alt="mechanic images" />
-          </div>
-          <div className='relative'>
+          </a>
+          <a href="/mechanical/openings" className='relative'>
           <div className='bg-[#454655] bg-opacity-40 hover:bg-opacity-0 h-[266px] w-full absolute transition duration-700 ease-in-out delay-150'></div>
           <img className='w-full h-[266px] transition ease-in-out delay-150' src="https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/pexels-de-lemster-krant-13997579.png?alt=media&token=8f638526-7bee-4dda-b5fd-39be64517e32" alt="mechanic images" />
-          </div>
+          </a>
         </div>
         <div className='text-[16px] mb-[120px] font-[400] text-[#fff] flex justify-center font-400'>
         <a href="/mechanical/mining">

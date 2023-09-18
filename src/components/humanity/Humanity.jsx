@@ -69,7 +69,7 @@ function Humanity() {
         </div>
         
       </div>
-      <div className="pt-[80px] pb-[121px]">
+      <div className="pt-[40px] pb-[121px]">
         <div className={`px-[24px] xl:mx-0 ${showOvooTolgoi ? '' : 'hidden'}`}>
           <div className="w-full">
             <div className='flex flex-col-reverse lg:flex-row mb-[80px]'>

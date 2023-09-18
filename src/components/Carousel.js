@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const ImageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -53,16 +54,16 @@ export const ImageCarousel = ({ images }) => {
       ))}
       <div className="absolute bottom-0 uppercase text-[#fff] border-t bg-[#fff] backdrop-blur-sm bg-white/10 w-full">
         <div className="flex justify-between h-[60px] xl:h-[140px] divide-x divide-gray-400 items-center">
-          <div className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:py-[39px] px-[28px] border-opacity-75">
+          <Link to="/mechanical/mining" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:py-[39px] px-[28px] border-opacity-75">
                 ил уурхайн хөрс хуулалт,
                 олборлолтын ажил
-          </div>
-          <div className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] py-[18px] xl:py-[53px] px-[40px] xl:pl-[140px] border-opacity-75">
+          </Link>
+          <Link to="/mechanical/rent" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] py-[18px] xl:py-[53px] px-[40px] xl:pl-[140px] border-opacity-75">
                 уул уурхайн туслах ажил
-          </div>
-          <div className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:text-[21px] py-[18px] px-[23px] xl:py-[38px] xl:px-[100px] border-opacity-75">
+          </Link>
+          <Link to="/mechanical/openings" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:text-[21px] py-[18px] px-[23px] xl:py-[38px] xl:px-[100px] border-opacity-75">
                 тоног төхөөрөмж түрээс
-          </div>
+          </Link>
         </div>
       </div>
       </div>
@@ -112,20 +113,20 @@ export const ProjectCarousel = ({ items }) => {
             key={index}
             className={`lg:flex-row flex border-b flex-col-reverse carousel-item transition-opacity duration-500 ${index === currentIndex ?  "opacity-100" : "opacity-0 absolute z-0 top-0 left-0 hidden"}`}
           >
-            <div className="border-r pl-[190px] pt-[80px]">
+            <div className="pl-[11.4%] pt-[80px] h-full border-r">
             <h1 className='px-40 uppercase mb-[24px] text-[#23356B] text-[24px] xl:text-[32px] px-[20px] xl:px-0  font-[600]'>төслүүд</h1>
               <div className="w-[54.8vw]">
-              <div className="carousel-caption w-[600px] py-[42px] text-[14px] md:text-[16px]">{item.caption}</div>
+              <div className="carousel-caption w-[600px] h-[180px] text-[14px] md:text-[16px]">{item.caption}</div>
               </div>
               <button
-          className="border z-20 rounded-[90px] mt-[24px] xl:mt-[66px] w-[40px] mr-[16px] h-[40px] bg-opacity-20 p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
-          onClick={prevItem}
-        >
-          <svg width="16" height="16" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g id="ep:arrow-up-bold">
-          <path id="Vector" d="M10.707 14.364C10.8945 14.1765 10.9998 13.9222 10.9998 13.657C10.9998 13.3918 10.8945 13.1375 10.707 12.95L5.757 8.00001L10.707 3.05001C10.8892 2.86141 10.99 2.60881 10.9877 2.34661C10.9854 2.08442 10.8802 1.8336 10.6948 1.64819C10.5094 1.46279 10.2586 1.35762 9.9964 1.35534C9.73421 1.35306 9.48161 1.45386 9.293 1.63601L3.636 7.29301C3.44853 7.48054 3.34322 7.73485 3.34322 8.00001C3.34322 8.26518 3.44853 8.51949 3.636 8.70701L9.293 14.364C9.48053 14.5515 9.73484 14.6568 10 14.6568C10.2652 14.6568 10.5195 14.5515 10.707 14.364Z" fill="#23356B"/>
-          </g>
-          </svg>
+                className="border z-20 rounded-[90px] mt-[24px] xl:mt-[66px] w-[40px] mr-[16px] h-[40px] bg-opacity-20 p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
+                onClick={prevItem}
+              >
+                <svg width="16" height="16" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="ep:arrow-up-bold">
+                <path id="Vector" d="M10.707 14.364C10.8945 14.1765 10.9998 13.9222 10.9998 13.657C10.9998 13.3918 10.8945 13.1375 10.707 12.95L5.757 8.00001L10.707 3.05001C10.8892 2.86141 10.99 2.60881 10.9877 2.34661C10.9854 2.08442 10.8802 1.8336 10.6948 1.64819C10.5094 1.46279 10.2586 1.35762 9.9964 1.35534C9.73421 1.35306 9.48161 1.45386 9.293 1.63601L3.636 7.29301C3.44853 7.48054 3.34322 7.73485 3.34322 8.00001C3.34322 8.26518 3.44853 8.51949 3.636 8.70701L9.293 14.364C9.48053 14.5515 9.73484 14.6568 10 14.6568C10.2652 14.6568 10.5195 14.5515 10.707 14.364Z" fill="#23356B"/>
+                </g>
+                </svg>
               </button>
               <button
                 className="border bg-opacity-20 w-[40px] h-[40px] rounded-[90px] p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
@@ -138,7 +139,7 @@ export const ProjectCarousel = ({ items }) => {
                 </svg>
               </button>
             </div>
-            <img className="mt-[160px] ml-[100px] left w-[300px] h-[110px]" src={item.image} alt={`Carousel Item ${index}`} />
+            <img className="mt-[160px] ml-[100px] left w-[300px] h-[127px]" src={item.image} alt={`Carousel Item ${index}`} />
           </div>
         ))}
       </div>

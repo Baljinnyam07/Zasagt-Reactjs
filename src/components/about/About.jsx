@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Ceo from './ceoImage.jpeg';
 import CeoC from './ceoCeo.png';
 import Assets from './assets.png';
-import HistoryComp from './history.png';
+import HistoryComp from './zasagtStory.png';
 
 const About = () => {
   const [showMandchilgee, setShowMandchilgee] = useState(true);
@@ -61,7 +61,7 @@ const About = () => {
           <Link className={`pl-[130px] mr-[78px] flex gap-2 xl:w-[406px] relative ${location.pathname === '/about/our' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/our">алсын хараа, эрхэм зорилго, үнэт зүйл{location.pathname === '/about/our' && <div className='w-[8px] h-[2px] absolute left-[250px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         </div>
-        <div className='pt-[80px] pb-[121px]'>
+        <div className='pt-[40px] pb-[121px]'>
         <div className={`grid lg:grid-cols-2 grid-cols-1 justify-center w-full ${showMandchilgee ? '' : 'hidden'}`}>
           <div className='col-span-1 mx-[24px]'>
           <img 
@@ -94,7 +94,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className={` mx-[24px] xl:px-0 ${showTaniulgu ? '' : 'hidden'}`}>
+        <div className={`mx-[24px] xl:px-0 ${showTaniulgu ? '' : 'hidden'}`}>
           <div className=''>
           <div className="text-[#454655] text-[32px] font-500 font-sans mb-5 uppercase">танилцуулга</div>
             <div className="text-[#454655] text-base font-normal leading-8 mb-5 w-full xl:w-[1004px] ">
@@ -114,11 +114,11 @@ const About = () => {
           </div>
           <div>
           <div className="text-[#454655] text-[32px] font-500 font-sans mb-5 mb-[24px]">Түүхэн замнал</div>
-            <div className="text-[#454655] text-base font-normal leading-8 mb-5 w-[894px] ">
-              <div className='xl:ml-[100px]'>
+            <div className="text-[#454655] text-base font-normal leading-8 w-[894px] ">
+              <div className=''>
               <img
                   src={HistoryComp}
-                  className='w-max h-[380px] sm:h-[590px] xl:h-[620px]'
+                  className='w-max h-[380px] sm:h-[590px] xl:h-[1020px]'
                   alt="history"
                 />
               </div>

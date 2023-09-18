@@ -18,7 +18,7 @@ function Contact() {
           ></iframe>    
           </div>
           <div className="w-full place-content-center">
-              <h2 className="text-[32px] font-500 flex justify-center lg:justify-start">
+              <h2 className="text-[32px] font-[500] flex justify-center lg:justify-start">
               Бидэнтэй холбогдох
               </h2>
               <div className="w-full flex flex-wrap lg:block lg:flex-nowrap gap-[24px] text-[#23356B]">

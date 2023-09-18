@@ -27,7 +27,7 @@ function PostsMoreHumanity({ posts }) {
         <div className="mx-[24px] xl:mx-0" key={post.id}>
             <div
               key={post.id}
-              className={`bg-white mt-[24px] cursor-pointer rounded border-[1px] border-[#23356B] w-full flex flex-col ${
+              className={`bg-white mt-[24px] cursor-pointer rounded border-[1.5px] border-[#23356B] w-full flex flex-col ${
                 expandedPostId === post.id ? "h-max" : "h-[110px]"
               } overflow-hidden`}
               onClick={() => togglePostExpansion(post.id)}
@@ -35,7 +35,7 @@ function PostsMoreHumanity({ posts }) {
             >             
              <div className="border-b">
               <div className="py-[16px] px-[24px]">
-              <div className="text-[16px] flex justify-between font-[500] text-[#23356B] mb-[24px]">
+              <div className="text-[16px] flex justify-between font-bold text-[#23356B] mb-[24px]">
                 <div>
                     {post.title}
                 </div>

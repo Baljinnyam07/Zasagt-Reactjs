@@ -20,11 +20,11 @@
         "headerTitle":"төслүүд",
         "headerproperty":[
             {
-                "property":"Овоо толгой",
+                "property":"Овоот толгой төсөл",
                 "url":"/project/ovooTolgoi"
             },
             {
-                "property":"Цанхийн баруун уурхайн нүүрс ачилт",
+                "property":"Цанхийн баруун уурхайн нүүрс ачилт төсөл",
                 "url":"/project/UurhaiNvvrs"
             }
         ]
