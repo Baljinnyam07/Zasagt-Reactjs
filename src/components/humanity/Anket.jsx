@@ -9,8 +9,8 @@ const initialFormData = {
             surName:'',
             nickName:'',
             nationality:'',
-            alphabat1:'',
-            alphabat2:'',
+            alphabet1:'',
+            alphabet2:'',
             registration:'',
             gender:'',
             facebook:'',
@@ -275,7 +275,7 @@ const Anket = () =>{
                   <div className="mb-6">
                     <label className="block mb-[8px]">Регистрийн дугаар*</label>
                     <div>
-                    <select className="mb-4 border rounded-l-[8px] w-10 h-[40px]" name="alphabet1" id="alphabet1" value={formData.alphabat1} onChange={handleFormChange}>
+                    <select className="mb-4 border rounded-l-[8px] w-10 h-[40px]" name="alphabet1" id="alphabet1" value={formData.alphabet1} onChange={handleFormChange}>
                       <option value="А">А</option>
                       <option value="Б">Б</option>
                       <option value="В">В</option>
@@ -309,7 +309,7 @@ const Anket = () =>{
                       <option value="Ю">Ю</option>
                       <option value="Я">Я</option>
                     </select>
-                    <select className="mb-4 border w-10 h-[40px]" name="alphabet2" id="alphabet2" value={formData.alphabat2} onChange={handleFormChange}>
+                    <select className="mb-4 border w-10 h-[40px]" name="alphabet2" id="alphabet2" value={formData.alphabet2} onChange={handleFormChange} form="alphabet">
                       <option value="А">А</option>
                       <option value="Б">Б</option>
                       <option value="В">В</option>
