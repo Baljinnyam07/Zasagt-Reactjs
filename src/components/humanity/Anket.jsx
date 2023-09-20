@@ -128,7 +128,7 @@ const Anket = () =>{
         setSubmitButtonClicked(true);
         try {
             const db = getFirestore(app);
-            const collectionRef = collection(db, 'humanity');
+            const collectionRef = collection(db, 'anket');
             const formDataWithoutEmptyStrings = Object.fromEntries(
                 Object.entries(formData).filter(([_, value]) => value !== "")
             );
@@ -355,9 +355,9 @@ const Anket = () =>{
                       className="mb-4 rounded-[8px] border w-full xl:w-[282px] h-[40px]"
                     >
                       <option value="">Сонгоно уу</option>
-                      <option value="male">Эрэгтэй</option>
-                      <option value="female">Эмэгтэй</option>
-                      <option value="other">Бусад</option>
+                      <option value="Эрэгтэй">Эрэгтэй</option>
+                      <option value="Эмэгтэй">Эмэгтэй</option>
+                      <option value="Бусад">Бусад</option>
                     </select>
                   </div>
                   </div>

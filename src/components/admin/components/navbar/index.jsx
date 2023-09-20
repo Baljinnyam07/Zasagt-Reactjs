@@ -31,7 +31,7 @@ function AdminNav(){
           isOpen: false,
           items: [
             { title: 'НЭЭЛТТЭЙ АЖЛЫН БАЙР', url: '/admin/humanity/hire' },
-            { title: 'АЖЛЫН АНКЕТ', url: '/admin/humanity/hired' }
+            { title: 'АЖЛЫН АНКЕТ', url: '/admin/anket/hired' }
 
           ]
         }

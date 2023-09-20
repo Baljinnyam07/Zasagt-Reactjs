@@ -6,22 +6,22 @@ import { db } from "../../firebase";
 import PostsAdminItem from "./PostsAdminItem";
 import AdminNav from "./components/navbar";
 import HireAdminItem from "./HireAdminItem";
+import HumanityAdminItem from "./HumanityAdminItem";
 
-function Admin({props}) {
+function PostsAdmin({props}) {
   const [posts, setPosts] = useState([]);
   const {type} = useParams(props);
   const location = useLocation();
   const pathSegments = location.pathname.split("/");
   const urlType = pathSegments[2]
-  console.log('posts:', posts)
-  console.log('type:', type)
+  console.log('post123:',posts)
+  console.log('props:', props)
   console.log('urlType:', urlType)
   useEffect(() => {
     getPosts();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const getPosts = () => {
-    
     try {
       let q;
       q = query(
@@ -30,7 +30,6 @@ function Admin({props}) {
         orderBy("date", "desc"),
       );
 
-      console.log('Query:', q);
     
     getDocs(q).then((querySnapshot) => {
       const data = querySnapshot.docs.map((doc) => ({
@@ -38,24 +37,22 @@ function Admin({props}) {
         ref: doc,
         ...doc.data()
       }));
-      console.log('ResData:', data)
       if (data.length) {
         setPosts(data);
-        console.log(data)
       }
     });
     } catch (error) {
       console.error("Error fetching posts:", error);
     }
   }
+  console.log('getPosts:', getPosts)
 
-  console.log('getPost:', getPosts)
   return (
     <div className="text-white h-full min-h-screen flex bg-[#4b5563]">
       <AdminNav/>
       <div className="">
-      {type !== 'hire' ? (
-          type !== "hired" ? (
+      {urlType !== 'humanity' ? (
+          urlType !== "anket" ? (
             <div className="flex gap-4 flex-wrap mx-12 mt-8">
             <div className="w-[300px] border bg-gray-400 hover:bg-gray-500 rounded-xl flex justify-center items-center">
               <Link className="w-20 text-[#000]" to={`/admin/${urlType}/${type}/create`}>
@@ -71,11 +68,10 @@ function Admin({props}) {
             ))}
           </div>      
             ) : (
-            <div>
+            <div className="flex gap-10 m-5">
               {posts.map((post) => (
-                <PostsAdminItem post={post}/>
+                <HumanityAdminItem key={post.id} dataType={urlType} post={post} getPosts={getPosts} />
               ))}
-              {posts}
             </div>
           )
         ) : (     
@@ -99,4 +95,4 @@ function Admin({props}) {
   );
 }
 
-export default Admin;
+export default PostsAdmin;

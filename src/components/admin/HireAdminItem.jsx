@@ -11,7 +11,6 @@ function HireAdminItem({ post, dataType, getPosts }) {
       toggleDeleteModal();
     });
   };
-
   const toggleDeleteModal = () => {
     setShowDeleteModal(!showDeleteModal);
   };
@@ -102,7 +101,7 @@ function HireAdminItem({ post, dataType, getPosts }) {
                     </div>
                 </div>
                 </div>
-                </div>
+            </div>
         </fieldset>
        </form>
     </div>

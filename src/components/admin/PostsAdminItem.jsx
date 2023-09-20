@@ -5,7 +5,6 @@ import { db } from "../../firebase";
 
 function PostsAdminItem({ post, dataType, getPosts }) {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
-  console.log('post:',post)
   const remove = () => {
     deleteDoc(doc(db, dataType, post.id)).then(() => {
       getPosts();
