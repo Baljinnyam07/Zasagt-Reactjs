@@ -2,12 +2,221 @@ import React, { useEffect, useState } from 'react';
 import Posts from '../Posts/Posts';
 import { Link, useLocation, useParams } from 'react-router-dom';
 
+
+const tableData1 = [
+  {number: '№', type:'Төрөл', mark:'Марк', unit:'Тоо', image:'Зураг' , info:'Харах'},
+  {
+    number: '1', 
+    type:'Бульдозер', 
+    mark:'CAT D8R', 
+    unit:'1', 
+    image:'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic1.jpeg?alt=media&token=5ff4fe16-902e-44ea-b351-c5636b330b5c' , 
+    info:'Харах',
+    details:[
+      {type:'Шанаганы багтаамж', size:'м3', cat:'6.5'},
+      {type:'Жин', size:'тн', cat:'94.1'},
+      {type:'Өргөн', size:'м', cat:'4.6'},
+      {type:'Өндөр', size:'м', cat:'5.7'},
+      {type:'Урт', size:'м', cat:'16.1'},
+      {type:'Утгалтын гүн', size:'м', cat:'7.2'},
+      {type:'Асгалтын өндөр', size:'м', cat:'7.9'},
+      {type:'Хөдөлгүүр', size:'', cat:'CAT C18'},
+      {type:'Хөдөлгүүрийн чадал', size:'КВт', cat:'404'},
+    ]
+  },
+  {
+    number: '2', 
+    type:'Экскаватор', 
+    mark:'CAT 395D', 
+    unit:'2', 
+    image:'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic2.png?alt=media&token=2916d678-1b50-4d3d-82a7-20937a45a8b2' , 
+    info:'Харах',
+    details:[
+      {type:'Шанаганы багтаамж', size:'м3', cat:'6.5'},
+      {type:'Жин', size:'тн', cat:'94.1'},
+      {type:'Өргөн', size:'м', cat:'4.6'},
+      {type:'Өндөр', size:'м', cat:'5.7'},
+      {type:'Урт', size:'м', cat:'16.1'},
+      {type:'Утгалтын гүн', size:'м', cat:'7.2'},
+      {type:'Асгалтын өндөр', size:'м', cat:'7.9'},
+      {type:'Хөдөлгүүр', size:'', cat:'CAT C18'},
+      {type:'Хөдөлгүүрийн чадал', size:'КВт', cat:'404'},
+    ]
+  },
+  {
+    number: '3', 
+    type:'Автосамосвал', 
+    mark:'LGMG MT-86', unit:'10', 
+    image:'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic3.png?alt=media&token=a47bab8d-ca6e-4f00-b2a9-d7abbb48d889' , 
+    info:'Харах',
+    details:[
+      {type:'Шанаганы багтаамж', size:'м3', cat:'6.5'},
+      {type:'Жин', size:'тн', cat:'94.1'},
+      {type:'Өргөн', size:'м', cat:'4.6'},
+      {type:'Өндөр', size:'м', cat:'5.7'},
+      {type:'Урт', size:'м', cat:'16.1'},
+      {type:'Утгалтын гүн', size:'м', cat:'7.2'},
+      {type:'Асгалтын өндөр', size:'м', cat:'7.9'},
+      {type:'Хөдөлгүүр', size:'', cat:'CAT C18'},
+      {type:'Хөдөлгүүрийн чадал', size:'КВт', cat:'404'},
+    ]
+  },
+  {number: '4', type:'Утгуурт ачигч', mark:'Hyundai HL780-9А', unit:'2', image:'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic4.png?alt=media&token=2fb20141-9185-47ed-902a-53b4267d5aa9' , info:'Харах',details:[
+    {type:'Шанаганы багтаамж', size:'м3', cat:'6.5'},
+    {type:'Жин', size:'тн', cat:'94.1'},
+    {type:'Өргөн', size:'м', cat:'4.6'},
+    {type:'Өндөр', size:'м', cat:'5.7'},
+    {type:'Урт', size:'м', cat:'16.1'},
+    {type:'Утгалтын гүн', size:'м', cat:'7.2'},
+    {type:'Асгалтын өндөр', size:'м', cat:'7.9'},
+    {type:'Хөдөлгүүр', size:'', cat:'CAT C18'},
+    {type:'Хөдөлгүүрийн чадал', size:'КВт', cat:'404'},
+  ]},
+  {number: '5', type:'Усны машин', mark:'Howo', unit:'1', image:'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic5.png?alt=media&token=f87e30a4-7242-4b39-8006-74df960b0b86' , info:'Харах',details:[
+    {type:'Шанаганы багтаамж', size:'м3', cat:'6.5'},
+    {type:'Жин', size:'тн', cat:'94.1'},
+    {type:'Өргөн', size:'м', cat:'4.6'},
+    {type:'Өндөр', size:'м', cat:'5.7'},
+    {type:'Урт', size:'м', cat:'16.1'},
+    {type:'Утгалтын гүн', size:'м', cat:'7.2'},
+    {type:'Асгалтын өндөр', size:'м', cat:'7.9'},
+    {type:'Хөдөлгүүр', size:'', cat:'CAT C18'},
+    {type:'Хөдөлгүүрийн чадал', size:'КВт', cat:'404'},
+  ]},
+  {number: '6', type:'Автогрейдер', mark:'Liugong CLG4180H', unit:'1', image:'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic6.png?alt=media&token=79a22169-e2dd-481c-aace-4a7695aac28b' , info:'Харах',details:[
+    {type:'Шанаганы багтаамж', size:'м3', cat:'6.5'},
+    {type:'Жин', size:'тн', cat:'94.1'},
+    {type:'Өргөн', size:'м', cat:'4.6'},
+    {type:'Өндөр', size:'м', cat:'5.7'},
+    {type:'Урт', size:'м', cat:'16.1'},
+    {type:'Утгалтын гүн', size:'м', cat:'7.2'},
+    {type:'Асгалтын өндөр', size:'м', cat:'7.9'},
+    {type:'Хөдөлгүүр', size:'', cat:'CAT C18'},
+    {type:'Хөдөлгүүрийн чадал', size:'КВт', cat:'404'},
+  ]},
+  {number: '7', type:'Гэрэлт цамхаг', mark:'Pramac LSWP6A', unit:'3', image:'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic7.png?alt=media&token=246af55f-b337-4f69-80d5-db64a1addf9f' , info:'Харах',details:[
+    {type:'Шанаганы багтаамж', size:'м3', cat:'6.5'},
+    {type:'Жин', size:'тн', cat:'94.1'},
+    {type:'Өргөн', size:'м', cat:'4.6'},
+    {type:'Өндөр', size:'м', cat:'5.7'},
+    {type:'Урт', size:'м', cat:'16.1'},
+    {type:'Утгалтын гүн', size:'м', cat:'7.2'},
+    {type:'Асгалтын өндөр', size:'м', cat:'7.9'},
+    {type:'Хөдөлгүүр', size:'', cat:'CAT C18'},
+    {type:'Хөдөлгүүрийн чадал', size:'КВт', cat:'404'},
+  ]},
+]
+const tableData2 = [
+  {number: '№', type:'Төрөл', mark:'Марк', unit:'Тоо', image:'Зураг' , info:'Харах'},
+  {number: '1', type:'Бульдозер', mark:'CAT D8R', unit:'2', image:'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic1.jpeg?alt=media&token=5ff4fe16-902e-44ea-b351-c5636b330b5c' , info:'Харах',details:[
+    {type:'Шанаганы багтаамж', size:'м3', cat:'6.5'},
+    {type:'Жин', size:'тн', cat:'94.1'},
+    {type:'Өргөн', size:'м', cat:'4.6'},
+    {type:'Өндөр', size:'м', cat:'5.7'},
+    {type:'Урт', size:'м', cat:'16.1'},
+    {type:'Утгалтын гүн', size:'м', cat:'7.2'},
+    {type:'Асгалтын өндөр', size:'м', cat:'7.9'},
+    {type:'Хөдөлгүүр', size:'', cat:'CAT C18'},
+    {type:'Хөдөлгүүрийн чадал', size:'КВт', cat:'404'},
+  ]},
+  {
+    number: '2',
+    type:'Экскаватор', 
+    mark:'CAT 395D', 
+    unit:'4', 
+    image:'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic2.png?alt=media&token=2916d678-1b50-4d3d-82a7-20937a45a8b2', 
+    info:'Харах',
+    details:[
+      {type:'Шанаганы багтаамж', size:'м3', cat:'6.5'},
+      {type:'Жин', size:'тн', cat:'94.1'},
+      {type:'Өргөн', size:'м', cat:'4.6'},
+      {type:'Өндөр', size:'м', cat:'5.7'},
+      {type:'Урт', size:'м', cat:'16.1'},
+      {type:'Утгалтын гүн', size:'м', cat:'7.2'},
+      {type:'Асгалтын өндөр', size:'м', cat:'7.9'},
+      {type:'Хөдөлгүүр', size:'', cat:'CAT C18'},
+      {type:'Хөдөлгүүрийн чадал', size:'КВт', cat:'404'},
+    ]
+  },
+  {number: '3', type:'Автосамосвал', mark:'LGMG MT-86', unit:'20', image:'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic3.png?alt=media&token=a47bab8d-ca6e-4f00-b2a9-d7abbb48d889' , info:'Харах',details:[
+    {type:'Шанаганы багтаамж', size:'м3', cat:'6.5'},
+    {type:'Жин', size:'тн', cat:'94.1'},
+    {type:'Өргөн', size:'м', cat:'4.6'},
+    {type:'Өндөр', size:'м', cat:'5.7'},
+    {type:'Урт', size:'м', cat:'16.1'},
+    {type:'Утгалтын гүн', size:'м', cat:'7.2'},
+    {type:'Асгалтын өндөр', size:'м', cat:'7.9'},
+    {type:'Хөдөлгүүр', size:'', cat:'CAT C18'},
+    {type:'Хөдөлгүүрийн чадал', size:'КВт', cat:'404'},
+  ]},
+  {number: '4', type:'Утгуурт ачигч', mark:'Hyundai HL780-9А', unit:'2', image:'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic4.png?alt=media&token=2fb20141-9185-47ed-902a-53b4267d5aa9' , info:'Харах',details:[
+    {type:'Шанаганы багтаамж', size:'м3', cat:'6.5'},
+    {type:'Жин', size:'тн', cat:'94.1'},
+    {type:'Өргөн', size:'м', cat:'4.6'},
+    {type:'Өндөр', size:'м', cat:'5.7'},
+    {type:'Урт', size:'м', cat:'16.1'},
+    {type:'Утгалтын гүн', size:'м', cat:'7.2'},
+    {type:'Асгалтын өндөр', size:'м', cat:'7.9'},
+    {type:'Хөдөлгүүр', size:'', cat:'CAT C18'},
+    {type:'Хөдөлгүүрийн чадал', size:'КВт', cat:'404'},
+  ]},
+  {number: '5', type:'Усны машин', mark:'Howo', unit:'1', image:'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic5.png?alt=media&token=f87e30a4-7242-4b39-8006-74df960b0b86' , info:'Харах',details:[
+    {type:'Шанаганы багтаамж', size:'м3', cat:'6.5'},
+    {type:'Жин', size:'тн', cat:'94.1'},
+    {type:'Өргөн', size:'м', cat:'4.6'},
+    {type:'Өндөр', size:'м', cat:'5.7'},
+    {type:'Урт', size:'м', cat:'16.1'},
+    {type:'Утгалтын гүн', size:'м', cat:'7.2'},
+    {type:'Асгалтын өндөр', size:'м', cat:'7.9'},
+    {type:'Хөдөлгүүр', size:'', cat:'CAT C18'},
+    {type:'Хөдөлгүүрийн чадал', size:'КВт', cat:'404'},
+  ]},
+  {number: '6', type:'Автогрейдер', mark:'Liugong CLG4180H', unit:'2', image:'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic6.png?alt=media&token=79a22169-e2dd-481c-aace-4a7695aac28b' , info:'Харах',details:[
+    {type:'Шанаганы багтаамж', size:'м3', cat:'6.5'},
+    {type:'Жин', size:'тн', cat:'94.1'},
+    {type:'Өргөн', size:'м', cat:'4.6'},
+    {type:'Өндөр', size:'м', cat:'5.7'},
+    {type:'Урт', size:'м', cat:'16.1'},
+    {type:'Утгалтын гүн', size:'м', cat:'7.2'},
+    {type:'Асгалтын өндөр', size:'м', cat:'7.9'},
+    {type:'Хөдөлгүүр', size:'', cat:'CAT C18'},
+    {type:'Хөдөлгүүрийн чадал', size:'КВт', cat:'404'},
+  ]},
+  {number: '7', type:'Гэрэлт цамхаг', mark:'Pramac LSWP6A', unit:'6', image:'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic7.png?alt=media&token=246af55f-b337-4f69-80d5-db64a1addf9f' , info:'Харах',details:[
+    {type:'Шанаганы багтаамж', size:'м3', cat:'6.5'},
+    {type:'Жин', size:'тн', cat:'94.1'},
+    {type:'Өргөн', size:'м', cat:'4.6'},
+    {type:'Өндөр', size:'м', cat:'5.7'},
+    {type:'Урт', size:'м', cat:'16.1'},
+    {type:'Утгалтын гүн', size:'м', cat:'7.2'},
+    {type:'Асгалтын өндөр', size:'м', cat:'7.9'},
+    {type:'Хөдөлгүүр', size:'', cat:'CAT C18'},
+    {type:'Хөдөлгүүрийн чадал', size:'КВт', cat:'404'},
+  ]},
+]
+
 const Mechanical = () => {
   const location = useLocation();
   const [show1, setShow1] = useState(true);
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
+  const [showButton1, setShowButton1] = useState(true);
+  const [showButton2, setShowButton2] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState('');
+  const [modalType, setModalType] = useState('');
+  const [modalImage, setModalImage] = useState('');
+
   const { type } = useParams();
+  const handleButtonClick = (buttonNumber) => {
+    if (buttonNumber === 1) {
+      setShowButton1(true);
+      setShowButton2(false);
+    } else if (buttonNumber === 2) {
+      setShowButton1(false);
+      setShowButton2(true);
+    }
+  };
 
   useEffect(() => {
     if (location.pathname === '/mechanical/mining') {
@@ -24,6 +233,17 @@ const Mechanical = () => {
       setShow3(true);
     }
   }, [location.pathname]);
+
+  const handleTableCellClick = (content, type, image) => {
+    setModalContent(content);
+    setModalType(type)
+    setModalImage(image)
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
       <div className="flex divide-x">
@@ -44,14 +264,79 @@ const Mechanical = () => {
           <a className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/openings')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/mechanical/openings'>тоног төхөөрөмж түрээс{location.pathname === '/mechanical/openings' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
       </div>
-      <div className='sm:'>
-        
-        <div className='border mt-10'>
+      <div className='pl-[24px] pt-[40px]'>
+        <div className='w-[894px]'>
           <div className={`mx-[24px] xl:mx-0 ${show1 ? '' : 'hidden'}`}>
-            <div className='w-full flex gap-20'>
-                <div className='border mt-10 p-2 bg-[#D0A616] text-[#fff]'>1000,0 - 3000,0 m3/жил жил гүйцэтгэх</div>
-                <div className='border mt-10 p-2 bg-[#D0A616] text-[#fff]'>2000,0 - 7000,0 m3/жил жил гүйцэтгэх</div>
+            <div className='uppercase text-[32px] font-[500] text-[#454655]'>дунд оврын тоног төхөөрөмж</div>
+            <div className='w-full flex text-[12px] text-[#23356B] font-[500] uppercase mt-[24px]'>
+                <div className={`border py-[15px] flex justify-center cursor-pointer w-[446px] button1 bg-[#ECEDEE] ${showButton1 ? 'border-[#23356B]' : ''}`} onClick={() => handleButtonClick(1)}>1 - 3 сая m3/жил гүйцэтгэх</div>
+                <div className={`border py-[15px] flex justify-center cursor-pointer w-[446px] button2 bg-[#ECEDEE] ${showButton2 ? 'border-[#23356B]' : ''}`} onClick={() => handleButtonClick(2)}>2 - 7 САЯ m3/жил гүйцэтгэх</div>
             </div>
+            {showButton1 && (
+            <div className='buttonShow1'>
+              <div className='text-[16px] text-[#454655] font-[300] mb-[16px] mt-[24px]'>“Засагт хаан” ХХК нь 1.0 - 3.0 сая.м3/жил хүчин чадал бүхий ил уурхайн хөрс хуулалт, олборлолтын ажлын тоног төхөөрөмжийн хослол санал болгож байна.</div>
+              <div className='text-[32px] font-[500] mb-[16px] text-[#454655]'>Ил уурхайн дунд оврын тоног төхөөрөмжийн хослол</div>
+              <div className='mb-[120px]'>
+              <table className="w-full border-collapse border">
+              <thead>
+                <tr className='text-[16px] font-[500] text-[#23356B]'>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[36px] py-[14px] text-center">{tableData1[0].number}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[167px] py-[14px] text-start pl-[16px]">{tableData1[0].type}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[205px] py-[14px] text-start pl-[16px]">{tableData1[0].mark}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[95px] py-[14px] text-center">{tableData1[0].unit}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[168px] py-[14px] text-center">{tableData1[0].image}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[223px] py-[14px] text-center">{tableData1[0].info}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tableData1.slice(1).map((item, index) => (
+                  <tr className='text-[16px] font-[400] text-[#454655]' key={index}>
+                    <td className="border border-[#23356B] text-center">{item.number}</td>
+                    <td className=" border border-[#23356B] pl-[16px]">{item.type}</td>
+                    <td className="border border-[#23356B] pl-[16px]">{item.mark}</td>
+                    <td className="border border-[#23356B] text-center">{item.unit}</td>
+                    <td className="border border-[#23356B] py-[7px] px-[36px]"><img className='w-[66px] h-[58px]' src={item.image} alt="" /></td>
+                    <td id="modal-switch" className="border border-[#23356B] text-center text-[14px] text-[#23356B] cursor-pointer font-[500] underline" onClick={() => handleTableCellClick(item.details, item.type, item.image)}>{item.info}</td>
+                  </tr>
+                ))}
+              </tbody>
+              </table>
+              </div>
+            </div>
+            )}
+            {showButton2 && (
+            <div className='buttonShow2'>
+            <div className='text-[16px] text-[#454655] font-[300] mb-[16px] mt-[24px]'>“Засагт хаан” ХХК нь 2.0 - 7.0 сая.м3/жил хүчин чадал бүхий ил уурхайн хөрс хуулалт, олборлолтын ажлын тоног төхөөрөмжийн хослол санал болгож байна.</div>
+              <div className='text-[32px] font-[500] mb-[16px] text-[#454655]'>Ил уурхайн дунд оврын тоног төхөөрөмжийн хослол</div>
+              <div className='mb-[120px]'>
+              <table className="w-full border-collapse border">
+              <thead>
+                <tr className='text-[16px] font-[500] text-[#23356B]'>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[36px] py-[14px] text-center">{tableData2[0].number}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[167px] py-[14px] text-start pl-[16px]">{tableData2[0].type}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[205px] py-[14px] text-start pl-[16px]">{tableData2[0].mark}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[95px] py-[14px] text-center">{tableData2[0].unit}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[168px] py-[14px] text-center">{tableData2[0].image}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[223px] py-[14px] text-center">{tableData2[0].info}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tableData2.slice(1).map((item, index) => (
+                  <tr className='text-[16px] font-[400] text-[#454655]' key={index}>
+                    <td className="border border-[#23356B] text-center">{item.number}</td>
+                    <td className=" border border-[#23356B] pl-[16px]">{item.type}</td>
+                    <td className="border border-[#23356B] pl-[16px]">{item.mark}</td>
+                    <td className="border border-[#23356B] text-center">{item.unit}</td>
+                    <td className="border border-[#23356B] py-[7px] px-[36px]"><img className='w-[66px] h-[58px]' src={item.image} alt="" /></td>
+                    <td id="modal-switch" className="border border-[#23356B] text-center text-[14px] text-[#23356B] cursor-pointer font-[500] underline" onClick={() => handleTableCellClick(item.details, item.type, item.image)}>{item.info}</td>
+                  </tr>
+                ))}
+              </tbody>
+              </table>
+              </div>
+            </div>
+            )}
+            <Modal isOpen={isModalOpen} onClose={closeModal} content={modalContent} type={modalType} image={modalImage} />
         </div>
         <div className={`mx-[24px] xl:mx-0 ${show2 ? '' : 'hidden'}`}>
           <div className='w-full flex'>
@@ -69,3 +354,40 @@ const Mechanical = () => {
 };
 
 export default Mechanical;
+
+const Modal = ({ isOpen, onClose, content, type, image }) => {
+  if (!isOpen) return null;
+  console.log('content:',content)
+  return (
+    <div className="fixed inset-0 flex items-center justify-center z-30">
+      <div className="modal-bg fixed inset-0 bg-black opacity-50"></div>
+      <div className="z-50 relative w-[500px] p-[24px] leading-8 bg-white rounded-lg shadow-lg">
+        <div className="modal-header absolute right-6">
+          <span className="close cursor-pointer text-xl" onClick={onClose}>&times;</span>
+        </div>
+        <div className="modal-body">
+          <div className='text-[16px] font-[500] uppercase text-[#23356B]'>{type}</div>
+          <div className='flex justify-center my-[6px]'> <img className='w-[150px] h-[135px]' src={image} alt="" /></div>
+          <table className='w-full'>
+            <thead>
+                  <tr className='text-[14px] w-full text-start font-[500] text-[#23356B] border-b-[1px] border-[#23356B]'>
+                    <th className="text-start">Үзүүлэлт</th>
+                    <th className="text-start">Хэмжих нэгж</th>
+                    <th className="text-start">CAT 395D</th>
+                  </tr>
+            </thead>
+            <tbody>
+              {content.map((detail, index) => (
+                <tr className='text-[14px] font-[400] text-[#454655] border-b' key={index}>
+                  <td>{detail.type} </td>  
+                  <td>{detail.size}</td>
+                  <td>{detail.cat}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+};
