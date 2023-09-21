@@ -1,0 +1,289 @@
+{
+    "tableData1": [
+      {
+        "number": "№",
+        "type": "Төрөл",
+        "mark": "Марк",
+        "unit": "Тоо",
+        "image": "Зураг",
+        "info": "Үзүүлэлт"
+      },
+      {
+        "number": "1",
+        "type": "Бульдозер",
+        "mark": "CAT D8R",
+        "unit": "1",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic1.jpeg?alt=media&token=5ff4fe16-902e-44ea-b351-c5636b330b5c",
+        "info": "Харах",
+        "details": [
+          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+          { "type": "Жин", "size": "тн", "cat": "94.1" },
+          { "type": "Өргөн", "size": "м", "cat": "4.6" },
+          { "type": "Өндөр", "size": "м", "cat": "5.7" },
+          { "type": "Урт", "size": "м", "cat": "16.1" },
+          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+        ]
+      },
+      {
+        "number": "2",
+        "type": "Экскаватор",
+        "mark": "CAT 395D",
+        "unit": "2",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic2.png?alt=media&token=2916d678-1b50-4d3d-82a7-20937a45a8b2",
+        "info": "Харах",
+        "details": [
+          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+          { "type": "Жин", "size": "тн", "cat": "94.1" },
+          { "type": "Өргөн", "size": "м", "cat": "4.6" },
+          { "type": "Өндөр", "size": "м", "cat": "5.7" },
+          { "type": "Урт", "size": "м", "cat": "16.1" },
+          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+        ]
+      },
+      {
+        "number": "3",
+        "type": "Автосамосвал",
+        "mark": "LGMG MT-86",
+        "unit": "10",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic3.png?alt=media&token=a47bab8d-ca6e-4f00-b2a9-d7abbb48d889",
+        "info": "Харах",
+        "details": [
+          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+          { "type": "Жин", "size": "тн", "cat": "94.1" },
+          { "type": "Өргөн", "size": "м", "cat": "4.6" },
+          { "type": "Өндөр", "size": "м", "cat": "5.7" },
+          { "type": "Урт", "size": "м", "cat": "16.1" },
+          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+        ]
+      },
+      {
+        "number": "4",
+        "type": "Утгуурт ачигч",
+        "mark": "Hyundai HL780-9А",
+        "unit": "2",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic4.png?alt=media&token=2fb20141-9185-47ed-902a-53b4267d5aa9",
+        "info": "Харах",
+        "details": [
+          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+          { "type": "Жин", "size": "тн", "cat": "94.1" },
+          { "type": "Өргөн", "size": "м", "cat": "4.6" },
+          { "type": "Өндөр", "size": "м", "cat": "5.7" },
+          { "type": "Урт", "size": "м", "cat": "16.1" },
+          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+        ]
+      },
+      {
+        "number": "5",
+        "type": "Усны машин",
+        "mark": "Howo",
+        "unit": "1",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic5.png?alt=media&token=f87e30a4-7242-4b39-8006-74df960b0b86",
+        "info": "Харах",
+        "details": [
+          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+          { "type": "Жин", "size": "тн", "cat": "94.1" },
+          { "type": "Өргөн", "size": "м", "cat": "4.6" },
+          { "type": "Өндөр", "size": "м", "cat": "5.7" },
+          { "type": "Урт", "size": "м", "cat": "16.1" },
+          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+        ]
+      },
+      {
+        "number": "6",
+        "type": "Автогрейдер",
+        "mark": "Liugong CLG4180H",
+        "unit": "1",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic6.png?alt=media&token=79a22169-e2dd-481c-aace-4a7695aac28b",
+        "info": "Харах",
+        "details": [
+          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+          { "type": "Жин", "size": "тн", "cat": "94.1" },
+          { "type": "Өргөн", "size": "м", "cat": "4.6" },
+          { "type": "Өндөр", "size": "м", "cat": "5.7" },
+          { "type": "Урт", "size": "м", "cat": "16.1" },
+          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+        ]
+      },
+      {
+        "number": "7",
+        "type": "Гэрэлт цамхаг",
+        "mark": "Pramac LSWP6A",
+        "unit": "3",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic7.png?alt=media&token=246af55f-b337-4f69-80d5-db64a1addf9f",
+        "info": "Харах",
+        "details": [
+          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+          { "type": "Жин", "size": "тн", "cat": "94.1" },
+          { "type": "Өргөн", "size": "м", "cat": "4.6" },
+          { "type": "Өндөр", "size": "м", "cat": "5.7" },
+          { "type": "Урт", "size": "м", "cat": "16.1" },
+          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+        ]
+      }
+    ],
+    "tableData2": [
+          {
+            "number": "№",
+            "type": "Төрөл",
+            "mark": "Марк",
+            "unit": "Тоо",
+            "image": "Зураг",
+            "info": "Үзүүлэлт"
+          },
+          {
+            "number": "1",
+            "type": "Бульдозер",
+            "mark": "CAT D8R",
+            "unit": "2",
+            "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic1.jpeg?alt=media&token=5ff4fe16-902e-44ea-b351-c5636b330b5c",
+            "info": "Харах",
+            "details": [
+              { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+              { "type": "Жин", "size": "тн", "cat": "94.1" },
+              { "type": "Өргөн", "size": "м", "cat": "4.6" },
+              { "type": "Өндөр", "size": "м", "cat": "5.7" },
+              { "type": "Урт", "size": "м", "cat": "16.1" },
+              { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+              { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+              { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+              { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+            ]
+          },
+          {
+            "number": "2",
+            "type": "Экскаватор",
+            "mark": "CAT 395D",
+            "unit": "4",
+            "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic2.png?alt=media&token=2916d678-1b50-4d3d-82a7-20937a45a8b2",
+            "info": "Харах",
+            "details": [
+              { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+              { "type": "Жин", "size": "тн", "cat": "94.1" },
+              { "type": "Өргөн", "size": "м", "cat": "4.6" },
+              { "type": "Өндөр", "size": "м", "cat": "5.7" },
+              { "type": "Урт", "size": "м", "cat": "16.1" },
+              { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+              { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+              { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+              { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+            ]
+          },
+          {
+            "number": "3",
+            "type": "Автосамосвал",
+            "mark": "LGMG MT-86",
+            "unit": "20",
+            "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic3.png?alt=media&token=a47bab8d-ca6e-4f00-b2a9-d7abbb48d889",
+            "info": "Харах",
+            "details": [
+              { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+              { "type": "Жин", "size": "тн", "cat": "94.1" },
+              { "type": "Өргөн", "size": "м", "cat": "4.6" },
+              { "type": "Өндөр", "size": "м", "cat": "5.7" },
+              { "type": "Урт", "size": "м", "cat": "16.1" },
+              { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+              { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+              { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+              { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+            ]
+          },
+          {
+            "number": "4",
+            "type": "Утгуурт ачигч",
+            "mark": "Hyundai HL780-9А",
+            "unit": "2",
+            "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic4.png?alt=media&token=2fb20141-9185-47ed-902a-53b4267d5aa9",
+            "info": "Харах",
+            "details": [
+              { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+              { "type": "Жин", "size": "тн", "cat": "94.1" },
+              { "type": "Өргөн", "size": "м", "cat": "4.6" },
+              { "type": "Өндөр", "size": "м", "cat": "5.7" },
+              { "type": "Урт", "size": "м", "cat": "16.1" },
+              { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+              { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+              { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+              { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+            ]
+          },
+          {
+            "number": "5",
+            "type": "Усны машин",
+            "mark": "Howo",
+            "unit": "1",
+            "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic5.png?alt=media&token=f87e30a4-7242-4b39-8006-74df960b0b86",
+            "info": "Харах",
+            "details": [
+              { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+              { "type": "Жин", "size": "тн", "cat": "94.1" },
+              { "type": "Өргөн", "size": "м", "cat": "4.6" },
+              { "type": "Өндөр", "size": "м", "cat": "5.7" },
+              { "type": "Урт", "size": "м", "cat": "16.1" },
+              { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+              { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+              { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+              { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+            ]
+          },
+          {
+            "number": "6",
+            "type": "Автогрейдер",
+            "mark": "Liugong CLG4180H",
+            "unit": "1",
+            "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic6.png?alt=media&token=79a22169-e2dd-481c-aace-4a7695aac28b",
+            "info": "Харах",
+            "details": [
+              { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+              { "type": "Жин", "size": "тн", "cat": "94.1" },
+              { "type": "Өргөн", "size": "м", "cat": "4.6" },
+              { "type": "Өндөр", "size": "м", "cat": "5.7" },
+              { "type": "Урт", "size": "м", "cat": "16.1" },
+              { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+              { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+              { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+              { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+            ]
+          },
+          {
+            "number": "7",
+            "type": "Гэрэлт цамхаг",
+            "mark": "Pramac LSWP6A",
+            "unit": "6",
+            "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic7.png?alt=media&token=246af55f-b337-4f69-80d5-db64a1addf9f",
+            "info": "Харах",
+            "details": [
+              { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+              { "type": "Жин", "size": "тн", "cat": "94.1" },
+              { "type": "Өргөн", "size": "м", "cat": "4.6" },
+              { "type": "Өндөр", "size": "м", "cat": "5.7" },
+              { "type": "Урт", "size": "м", "cat": "16.1" },
+              { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+              { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+              { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+              { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+            ]
+          }
+        ]
+      }
+      
