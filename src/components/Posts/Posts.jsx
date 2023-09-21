@@ -3,15 +3,11 @@ import PostsMore from "./PostsMore";
 import { useEffect, useState } from "react";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../firebase";
-import PostSkeleton from "../Skeleton";
 import PostsMoreHumanity from "./PostMoreHumanity";
 
 function Posts({urlType}) {
 const [posts, setPosts] = useState([]);
 const { type } = useParams();
-  console.log('urlType:', urlType)
-  console.log('data:',posts)
-  console.log('typeIs:',type)
   useEffect(() => {
     getPosts();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -23,7 +19,6 @@ const { type } = useParams();
       collection(db, urlType),
       where('type', '==', type),
     );
-    console.log('Query:', q);
     getDocs(q)
       .then((querySnapshot) => {
         const data = querySnapshot.docs.map((doc) => ({
@@ -31,7 +26,6 @@ const { type } = useParams();
           ref: doc.ref,
           ...doc.data()
         }));
-        console.log('Fetched Data:', data);
 
         if (data.length) {
           setPosts(data);
@@ -46,18 +40,14 @@ return (
   <>
   {type === 'hire' ? (
   <div className="bg-[#ffff] relative pb-[240px]">
-    {posts.length > 0 ? (
+    
             <PostsMoreHumanity posts={posts} type={type} />
-        ) : (
-          <PostSkeleton />
-        )}
+        
   </div>):(<div className="bg-[#ffff] relative pt-[80px] pb-[240px]">
       <div className="container sm:mx-auto">
-      {posts.length > 0 ? (
+      
           <PostsMore posts={posts} type={type} />
-        ) : (
-          <PostSkeleton />
-        )}
+        
             </div>
     </div>
     )}

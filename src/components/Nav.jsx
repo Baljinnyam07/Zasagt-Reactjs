@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import navMenuJson from './json/navbar.json';
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 
 export default function Nav() {
@@ -25,11 +25,11 @@ export default function Nav() {
     return (
         <div className="flex items-center">
             <div className="hidden lg:block">
-            <Link to="/">
+            <a href="/">
                 <div className={`menu-hover text-[14px] font-400 ${url === '/' ? 'text-[#D0A616]' : 'text-[#fff]'} lg:mx-4 uppercase`}>
                     Нүүр
                 </div>
-            </Link>
+            </a>
             </div>
             <div className="lg:hidden relative">
                 <div className="absolute flex w-full h-6 sm:h-10 justify-end">
@@ -61,15 +61,15 @@ export default function Nav() {
                     </div>
                     <div className="invisible absolute z-50 pt-[12px] px-4 divide-y divider-horizontal divide-light-blue-400 flex w-max flex-col group-hover:visible">
                         {items.headerproperty.map((data) => (
-                            <Link
-                                to={data.url}
+                            <a
+                                href={data.url}
                                 key={data.property}
                                 className="block text-[14px] bg-[#FFFFFF8F] bg-opacity-60 backdrop-blur-md p-[12px] pb-[16px] font-400 hover:text-[#D0A616] w-[198px] h-max"
                             >
                                 <div className="">
                                 {data.property}
                                 </div>
-                            </Link>
+                            </a>
                         ))}
                     </div>
                 </div>

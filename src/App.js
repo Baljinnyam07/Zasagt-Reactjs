@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import Home from './components/Home';
@@ -19,7 +19,24 @@ import Auth from './components/Auth';
 import './index.css'
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Simulate a 4-second delay before setting isLoading to false
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
+    <>
+    {isLoading ? (
+     <div class="my-loader-page">
+      <div class="my-loader"></div>
+      <p>Засагт Хаан</p>
+    </div>
+    ) : (
     <IntlProvider locale='en'>
     <Router basename='/'>
       <Routes>
@@ -51,6 +68,8 @@ function App() {
       </Routes>
     </Router>
     </IntlProvider>
+    )}
+    </>
   );
 }
 
