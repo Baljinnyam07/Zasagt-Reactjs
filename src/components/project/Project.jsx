@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import steppe from './erdenestolgoi.png';
 import gobi from './SouthGove.png';
+import proImage1 from './project1.png';
+import proImage2 from './project2.png'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Project = () => {
@@ -50,45 +52,54 @@ const Project = () => {
       <div className="xl:pl-[24px] pt-[40px]">
         <div className={`mx-[24px] xl:mx-0 ${showOvooTolgoi ? '' : 'hidden'}`}>
         <div className="text-[#454655] text-[32px] font-[500] font-sans mb-5 uppercase">төслийн тухай</div>
-
-          <div className="flex flex-col-reverse md:flex-row">
+          <div className="">
             <div>
-              <div className="text-[#454655] text-justify font-normal leading-8 mb-5 sm:w-[578px]">
+              <div className="text-[#454655] text-justify font-[400] leading-8 mb-5 sm:w-[894px]">
               Саусгоби Ресурс Лимитед (Саусгоби) нь Торонто болон Хонконгийн Хөрөнгийн Биржид (TSX: SGQ, HK: 1878) бүртгэлтэй олон нийтэд нээлттэй нүүрс нийлүүлэгч компани бөгөөд Саусгоби компани нь логистикийн дэд бүтэцтэй, арилжааны чадамж бүхий стратегийн ач холбогдолтой нүүрсний орд эзэмшдэг болно. Тус орд нь Өмнөговь аймгийн Гурван тэс суманд орших бөгөөд 9,283 га бүхий талбайд 2037 он хүртэл олборлолт хийх ашиглалтын тусгай зөвшөөрөлтэй.
               </div>
-              <div className="text-[#454655] text-justify font-normal leading-8 mb-5 sm:w-[578px]">
+              <div className="text-[#454655] text-justify font-normal leading-8 mb-5 sm:w-[894px]">
               Манай компани 2022 оноос эхлэн Саусгоби Сэндс компанитай хамтран ажиллаж эхэлсэн бөгөөд Овоот Толгой дахь Нармандах болон Наржаргах уурхайд хөрс хуулалт, нүүрс олборлолтын ажлыг хийж гүйцэтгэж байна.              </div>
             </div>
-            <div className="flex ml-[52px] mb-40">
-              <img src={gobi} width={348} height={107} alt="Steppe" />
+            <div className='relative'>
+              <div className="flex p-[16px] absolute">
+                <img src={gobi} width={120} height={76} alt="Steppe" />
+              </div>
+              <div className='w-[894px]'>
+                <img className='bg-cover' src={proImage1} alt="Steppe" />
+              </div>
             </div>
           </div>
           <div className='mb-[120px]'>
             <div className="text-[#454655] text-[32px] font-[500] font-sans mb-[24px] mt-[80px] uppercase">
               Төслийн одоогийн хүчин чадал
             </div>
-            <div className="text-[#454655] text-base font-normal leading-8 mb-5 sm:w-[620px]">
+            <div className="text-[#454655] text-base font-normal leading-8 mb-5 sm:w-[894px]">
             Засагт Хаан ХХК нь Овоот толгойн ил уурхайд 200 орчим ажилтантай жилийн 7.5 сая.м3 уулын цул олборлох хүчин чадал бүхий утгуурт ачигч болон өөрөө буулгагч машинуудаар үйл ажиллагаа явуулж байна.
             </div>
           </div>
         </div>
         <div className={`mx-[24px] xl:mx-0 ${showUurkhainNuurs ? '' : 'hidden'}`}>
         <div className="text-[#454655] text-[32px] font-[500] font-sans mb-5 uppercase">төслийн тухай</div>
-          <div className="flex flex-col-reverse md:flex-row">
+          <div className="">
             <div>
-              <div className="text-[#454655] text-base font-normal leading-8 mb-5 sm:w-[530px]">
+              <div className="text-[#454655] text-base font-normal leading-8 mb-5 sm:w-[920px]">
               Монголын өмнөд хэсэгт орших Өмнөговь аймагт оршдог дэлхийн хамгийн том ашиглагдаагүй коксжих болон эрчим хүчний нүүрсний ордуудын нэг бөгөөд нийт 2.9 тэрбум тонн нөөцтэй ба үүний дөрөвний нэг нь сайн чанарын коксжих нүүрс бүхий ордтой стратегийн гол орд юм.
               </div>
             </div>
-            <div className="flex ml-[52px] mb-10">
-              <img src={steppe} width={388} height={104} alt="SouthGobi" />
+            <div className='relative'>
+              <div className="absolute p-[16px]">
+                <img src={steppe} width={121} height={44} alt="SouthGobi" />
+              </div>
+              <div className="">
+              <img src={proImage2} width={920} height={372} alt="SouthGobi" />
+              </div>
             </div>
           </div>
           <div className='mb-[120px]'>
             <div className="text-[#454655] text-[32px] font-[500] font-sans mb-[24px] mt-[80px] uppercase">
             Төслийн одоогийн хүчин чадал
             </div>
-            <div className="text-[#454655] text-base font-normal leading-8 mb-5 sm:w-[552px]">
+            <div className="text-[#454655] text-base font-normal leading-8 mb-5 sm:w-[894px]">
             Эрдэнэс Таван Толгой ХХК-ийн баруун цанхийн уурхайн нүүрс ачилтын ажилд 2020 оноос эхлэн одоог хүртэл ажиллаж баялаг бүтээлцэж байгаа бөгөөд жилийн 4.8 сая.тн нүүрс ачилт хийх хүчин чадалтай.            
             </div>
           </div>

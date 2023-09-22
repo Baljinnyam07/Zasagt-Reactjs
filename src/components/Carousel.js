@@ -24,9 +24,10 @@ export const ImageCarousel = ({ images }) => {
   return (
     <div className="relative">
       <button
-        className="absolute z-10 top-1/2 left-[4px] xl:left-[64px] rounded-[90px] bg-[#FFFFFF] bg-opacity-20 p-[6px] xl:p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
+        className="absolute z-20 top-1/2 left-[4px] xl:left-[64px] rounded-[90px] bg-[#FFFFFF] bg-opacity-20 p-[6px] xl:p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
         onClick={prevSlide}
       >
+        
         <div className="w-3 md:w-5">
         <svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="ep:arrow-up-bold">
@@ -41,34 +42,37 @@ export const ImageCarousel = ({ images }) => {
         Excelling
         </div>
       </div>
+      <div className="absolute bg-gradient-to-b from-transparent via-transparent to-blue-900 z-10 w-full h-full"/>
       <div className="relative">
+
       {images.map((image, index) => (
         <img
           key={index}
           src={image}
           alt={`Slide ${index}`}
-          className={`w-full h-[400px] -z-10 xl:h-[769px] object-cover transition-opacity ${
+          className={`w-full h-[400px] -z-10 xl:h-[769px] transition-opacity transition ease-in-out delay-150 duration-300 ${
             index === currentIndex ? "opacity-100" : "opacity-0 absolute top-0 left-0"
           }`}
+          
         />
       ))}
-      <div className="absolute bottom-0 uppercase text-[#fff] border-t bg-[#fff] backdrop-blur-sm bg-white/10 w-full">
+      <div className="absolute bottom-0 z-20 uppercase text-[#fff] border-t bg-[#fff] backdrop-blur-sm bg-white/10 w-full">
         <div className="flex justify-between h-[60px] xl:h-[140px] divide-x divide-gray-400 items-center">
-          <Link to="/mechanical/mining" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:py-[39px] px-[28px] border-opacity-75">
+          <Link to="/mechanical/mining" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:py-[39px] px-[28px] border-opacity-25">
                 ил уурхайн хөрс хуулалт,
                 олборлолтын ажил
           </Link>
-          <Link to="/mechanical/rent" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] py-[18px] xl:py-[53px] px-[40px] xl:pl-[140px] border-opacity-75">
+          <Link to="/mechanical/rent" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] py-[18px] xl:py-[53px] px-[40px] xl:pl-[140px] border-opacity-25">
                 уул уурхайн туслах ажил
           </Link>
-          <Link to="/mechanical/openings" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:text-[21px] py-[18px] px-[23px] xl:py-[38px] xl:px-[100px] border-opacity-75">
+          <Link to="/mechanical/openings" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:text-[21px] py-[18px] px-[23px] xl:py-[38px] xl:px-[100px] border-opacity-25">
                 тоног төхөөрөмж түрээс
           </Link>
         </div>
       </div>
       </div>
       <button
-        className="absolute top-1/2 right-[4px] xl:right-[64px] bg-[#FFFFFF] bg-opacity-20  rounded-[90px] p-[6px] xl:p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
+        className="absolute z-20 top-1/2 right-[4px] xl:right-[64px] bg-[#FFFFFF] bg-opacity-20  rounded-[90px] p-[6px] xl:p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
         onClick={nextSlide}
       >
         <div className="w-3 md:w-5">
@@ -95,7 +99,7 @@ export const ProjectCarousel = ({ items }) => {
     setCurrentIndex((prevIndex) => (prevIndex === items.length - 1 ? 0 : prevIndex + 1));
   };
 
-  const autoplayInterval = 3000;
+  const autoplayInterval = 5000;
 
   useEffect(() => {
     const autoplayTimer = setInterval(nextItem, autoplayInterval);
@@ -111,15 +115,18 @@ export const ProjectCarousel = ({ items }) => {
         {items.map((item, index) => (
           <div
             key={index}
-            className={`lg:flex-row flex border-b flex-col-reverse carousel-item transition-opacity duration-500 ${index === currentIndex ?  "opacity-100" : "opacity-0 absolute z-0 top-0 left-0 hidden"}`}
+            className={`lg:flex-row relative flex border-b flex-col-reverse carousel-item transition-opacity duration-500 ${index === currentIndex ?  "opacity-100" : "opacity-0 absolute z-0 top-0 left-0 hidden"}`}
           >
-            <div className="pl-[11.4%] pt-[80px] h-full border-r">
-            <h1 className='px-40 uppercase mb-[24px] text-[#23356B] text-[24px] xl:text-[32px] px-[20px] xl:px-0  font-[600]'>төслүүд</h1>
+            <div className="pl-[11.4%] pt-[40px] h-[400px] border-r">
+            <h1 className='px-40 uppercase mb-[16px] text-[#23356B] text-[24px] xl:text-[32px] px-[20px] xl:px-0 font-[600]'>{item.proTitle}</h1>
+              <div className="w-[54.8vw] mb-[14px]">
+                <div className="carousel-caption w-[800px] text-justify font-[400] text-[#454655] text-[14px] md:text-[16px]">{item.caption1}</div>
+              </div>
               <div className="w-[54.8vw]">
-              <div className="carousel-caption w-[600px] h-[180px] text-[14px] md:text-[16px]">{item.caption}</div>
+                <div className="carousel-caption w-[800px] text-justify font-[400] text-[#454655] text-[14px] md:text-[16px]">{item.caption2}</div>
               </div>
               <button
-                className="border z-20 rounded-[90px] mt-[24px] xl:mt-[66px] w-[40px] mr-[16px] h-[40px] bg-opacity-20 p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
+                className="border absolute bottom-0 z-20 rounded-[90px] mt-[24px] xl:mt-[66px] w-[40px] mr-[16px] h-[40px] bg-opacity-20 p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
                 onClick={prevItem}
               >
                 <svg width="16" height="16" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -129,7 +136,7 @@ export const ProjectCarousel = ({ items }) => {
                 </svg>
               </button>
               <button
-                className="border bg-opacity-20 w-[40px] h-[40px] rounded-[90px] p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
+                className="border absolute left-[calc(15%)] bottom-0 bg-opacity-20 w-[40px] h-[40px] rounded-[90px] p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
                 onClick={nextItem}
               >
                 <svg width="16" height="16" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -139,7 +146,10 @@ export const ProjectCarousel = ({ items }) => {
                 </svg>
               </button>
             </div>
-            <img className="mt-[160px] ml-[100px] left w-[300px] h-[127px]" src={item.image} alt={`Carousel Item ${index}`} />
+            <div className="w-full">
+            <img className="w-[100%] h-[400px]" src={item.image} alt={`Carousel Item ${index}`} />
+
+            </div>
           </div>
         ))}
       </div>

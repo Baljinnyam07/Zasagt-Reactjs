@@ -11,77 +11,77 @@
       {
         "number": "1",
         "type": "Бульдозер",
-        "mark": "CAT D8R",
+        "mark": "CAT D6R",
         "unit": "1",
-        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic1.jpeg?alt=media&token=5ff4fe16-902e-44ea-b351-c5636b330b5c",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic1.1.jpeg?alt=media&token=1eb0eec4-f463-40af-97c6-25b037e5398c",
         "info": "Харах",
         "details": [
-          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
-          { "type": "Жин", "size": "тн", "cat": "94.1" },
-          { "type": "Өргөн", "size": "м", "cat": "4.6" },
-          { "type": "Өндөр", "size": "м", "cat": "5.7" },
-          { "type": "Урт", "size": "м", "cat": "16.1" },
-          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
-          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
-          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
-          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+          { "type": "Ажлын жин", "size": "тн", "cat": "33.5" },
+          { "type": "Хусуурын багтаамж", "size": "м3", "cat": "8.8" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT 3406C" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "", "cat": "328HP (244.6 kW) " },
+          { "type": "Түлшний банкны багтаамж ", "size": "л", "cat": "625" },
+          { "type": "Урт", "size": "мм", "cat": "6398" },
+          { "type": "Өргөн", "size": "мм", "cat": "2642" },
+          { "type": "Өндөр", "size": "мм", "cat": "3498" }
         ]
       },
       {
         "number": "2",
         "type": "Экскаватор",
-        "mark": "CAT 395D",
+        "mark": "CAT 349D",
         "unit": "2",
-        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic2.png?alt=media&token=2916d678-1b50-4d3d-82a7-20937a45a8b2",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic2.1.jpeg?alt=media&token=eb06ac38-1729-4d0d-870c-d993b1ebfed0",
         "info": "Харах",
         "details": [
-          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
-          { "type": "Жин", "size": "тн", "cat": "94.1" },
-          { "type": "Өргөн", "size": "м", "cat": "4.6" },
-          { "type": "Өндөр", "size": "м", "cat": "5.7" },
-          { "type": "Урт", "size": "м", "cat": "16.1" },
+          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "3.3" },
+          { "type": "Жин", "size": "тн", "cat": "47.7" },
+          { "type": "Өргөн", "size": "м", "cat": "3.6" },
+          { "type": "Өндөр", "size": "м", "cat": "5.0" },
+          { "type": "Урт", "size": "м", "cat": "11.9" },
           { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
-          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
-          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
-          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.4" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C13" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "316" }
         ]
       },
       {
         "number": "3",
         "type": "Автосамосвал",
-        "mark": "LGMG MT-86",
+        "mark": "Howo 336",
         "unit": "10",
-        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic3.png?alt=media&token=a47bab8d-ca6e-4f00-b2a9-d7abbb48d889",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic3.1.png?alt=media&token=76d13d01-43e0-4cc4-ab15-c6eb33db1f8b",
         "info": "Харах",
         "details": [
-          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
-          { "type": "Жин", "size": "тн", "cat": "94.1" },
-          { "type": "Өргөн", "size": "м", "cat": "4.6" },
-          { "type": "Өндөр", "size": "м", "cat": "5.7" },
-          { "type": "Урт", "size": "м", "cat": "16.1" },
-          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
-          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
-          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
-          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+          { "type": "Даац", "size": "тн", "cat": "25.0" },
+          { "type": "Тэвшний багтаамж", "size": "м3", "cat": "18.0" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "SINOTRUK" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "", "cat": "336 НР / 1,400rpm" },
+          { "type": "Дээд хурд", "size": "км/ц", "cat": "90" },
+          { "type": "Урт", "size": "мм", "cat": "8960" },
+          { "type": "Өргөн", "size": "мм", "cat": "2495" },
+          { "type": "Өндөр", "size": "мм", "cat": "3330" }
         ]
       },
       {
         "number": "4",
         "type": "Утгуурт ачигч",
-        "mark": "Hyundai HL780-9А",
+        "mark": "Liugong CLG855H",
         "unit": "2",
-        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic4.png?alt=media&token=2fb20141-9185-47ed-902a-53b4267d5aa9",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic4.1.png?alt=media&token=12fef3d2-b028-4f1e-b25b-a2212150a229",
         "info": "Харах",
         "details": [
-          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
-          { "type": "Жин", "size": "тн", "cat": "94.1" },
-          { "type": "Өргөн", "size": "м", "cat": "4.6" },
-          { "type": "Өндөр", "size": "м", "cat": "5.7" },
-          { "type": "Урт", "size": "м", "cat": "16.1" },
-          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
-          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
-          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
-          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+          { "type": "Ажлын жин", "size": "тн", "cat": "16.7" },
+          { "type": "Утгуурын багтаамж", "size": "м3", "cat": "3" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "Cummins 6LT9.3" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "", "cat": "162 kW / 2,000 rpm" },
+          { "type": "Дээд хурд", "size": "км/ц", "cat": "45" },
+          { "type": "Асгалт хийх хамгийн их өндөр", "size": "мм", "cat": "4400" },
+          { "type": "Ул цэвэрлэх хамгийн их гүн", "size": "мм", "cat": "92" },
+          { "type": "Түлшний банкны багтаамж ", "size": "л", "cat": "300" },
+          { "type": "Урт", "size": "мм", "cat": "8202" },
+          { "type": "Өргөн", "size": "мм", "cat": "2750" },
+          { "type": "Өндөр", "size": "мм", "cat": "3450" }
         ]
       },
       {
@@ -92,15 +92,14 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic5.png?alt=media&token=f87e30a4-7242-4b39-8006-74df960b0b86",
         "info": "Харах",
         "details": [
-          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
-          { "type": "Жин", "size": "тн", "cat": "94.1" },
-          { "type": "Өргөн", "size": "м", "cat": "4.6" },
-          { "type": "Өндөр", "size": "м", "cat": "5.7" },
-          { "type": "Урт", "size": "м", "cat": "16.1" },
-          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
-          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
-          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
-          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+          { "type": "Даац", "size": "тн", "cat": "23.0" },
+          { "type": "Ёмкостьны багтаамж", "size": "м3", "cat": "20.0" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "SINOTRUK" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "", "cat": "336 НР / 1,400rpm" },
+          { "type": "Дээд хурд", "size": "км/ц", "cat": "90" },
+          { "type": "Урт", "size": "мм", "cat": "8960" },
+          { "type": "Өргөн", "size": "мм", "cat": "2495" },
+          { "type": "Өндөр", "size": "мм", "cat": "3330" }
         ]
       },
       {
@@ -111,15 +110,14 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic6.png?alt=media&token=79a22169-e2dd-481c-aace-4a7695aac28b",
         "info": "Харах",
         "details": [
-          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
-          { "type": "Жин", "size": "тн", "cat": "94.1" },
-          { "type": "Өргөн", "size": "м", "cat": "4.6" },
-          { "type": "Өндөр", "size": "м", "cat": "5.7" },
-          { "type": "Урт", "size": "м", "cat": "16.1" },
-          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
-          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
-          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
-          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+          { "type": "Хусуурын багтаамж", "size": "м3", "cat": "4.0" },
+          { "type": "Дээд хурд", "size": "км/ц", "cat": "26.2" },
+          { "type": "Жин", "size": "тн", "cat": "15.5" },
+          { "type": "Өргөн", "size": "м", "cat": "2.6" },
+          { "type": "Өндөр", "size": "м", "cat": "3.5" },
+          { "type": "Урт", "size": "м", "cat": "9.26" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "Cummins 6BTAA5.9-C190" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "142" }
         ]
       },
       {
@@ -130,15 +128,14 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic7.png?alt=media&token=246af55f-b337-4f69-80d5-db64a1addf9f",
         "info": "Харах",
         "details": [
-          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
-          { "type": "Жин", "size": "тн", "cat": "94.1" },
-          { "type": "Өргөн", "size": "м", "cat": "4.6" },
-          { "type": "Өндөр", "size": "м", "cat": "5.7" },
-          { "type": "Урт", "size": "м", "cat": "16.1" },
-          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
-          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
-          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
-          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+          { "type": "Гэрэлтүүлэг", "size": "", "cat": "Халлоген" },
+          { "type": "Чадал", "size": "Вт", "cat": "4*1000" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "Perkins 403D-11" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "", "cat": "1,500rpm" },
+          { "type": "Гэрэлтүүлэх талбай", "size": "м2", "cat": "4000" },
+          { "type": "Цамхагийн өндөр", "size": "мм", "cat": "9150" },
+          { "type": "Ажлын урт", "size": "мм", "cat": "3018" },
+          { "type": "Ажлын өргөн", "size": "мм", "cat": "2776" }
         ]
       }
     ],
@@ -159,15 +156,14 @@
             "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic1.jpeg?alt=media&token=5ff4fe16-902e-44ea-b351-c5636b330b5c",
             "info": "Харах",
             "details": [
-              { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
-              { "type": "Жин", "size": "тн", "cat": "94.1" },
-              { "type": "Өргөн", "size": "м", "cat": "4.6" },
-              { "type": "Өндөр", "size": "м", "cat": "5.7" },
-              { "type": "Урт", "size": "м", "cat": "16.1" },
-              { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
-              { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
-              { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
-              { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+              { "type": "Хусуурын багтаамж", "size": "м3", "cat": "8.0" },
+              { "type": "Дээд хурд", "size": "км/ц", "cat": "26.2" },
+              { "type": "Жин", "size": "тн", "cat": "37.9" },
+              { "type": "Өргөн", "size": "м", "cat": "3.0" },
+              { "type": "Өндөр", "size": "м", "cat": "3.5" },
+              { "type": "Урт", "size": "м", "cat": "6.4" },
+              { "type": "Хөдөлгүүр", "size": "", "cat": "CAT 3406C" },
+              { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "252" }
             ]
           },
           {
@@ -216,15 +212,17 @@
             "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic4.png?alt=media&token=2fb20141-9185-47ed-902a-53b4267d5aa9",
             "info": "Харах",
             "details": [
-              { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
-              { "type": "Жин", "size": "тн", "cat": "94.1" },
-              { "type": "Өргөн", "size": "м", "cat": "4.6" },
-              { "type": "Өндөр", "size": "м", "cat": "5.7" },
-              { "type": "Урт", "size": "м", "cat": "16.1" },
-              { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
-              { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
-              { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
-              { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+              { "type": "Ажлын жин", "size": "тн", "cat": "30.0" },
+              { "type": "Утгуурын багтаамж", "size": "м3", "cat": "5.2" },
+              { "type": "Хөдөлгүүр", "size": "", "cat": "CUMMINS QSX11.9" },
+              { "type": "Хөдөлгүүрийн чадал", "size": "", "cat": "355HP (265 kW) / 2,000rpm" },
+              { "type": "Дээд хурд", "size": "км/ц", "cat": "36" },
+              { "type": "Асгалт хийх хамгийн их өндөр", "size": "мм", "cat": "4560" },
+              { "type": "Ул цэвэрлэх хамгийн их гүн", "size": "мм", "cat": "105" },
+              { "type": "Түлшний банкны багтаамж ", "size": "л", "cat": "460" },
+              { "type": "Урт", "size": "мм", "cat": "9630" },
+              { "type": "Өргөн", "size": "мм", "cat": "3450" },
+              { "type": "Өндөр", "size": "мм", "cat": "3865" }
             ]
           },
           {
@@ -235,15 +233,14 @@
             "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic5.png?alt=media&token=f87e30a4-7242-4b39-8006-74df960b0b86",
             "info": "Харах",
             "details": [
-              { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
-              { "type": "Жин", "size": "тн", "cat": "94.1" },
-              { "type": "Өргөн", "size": "м", "cat": "4.6" },
-              { "type": "Өндөр", "size": "м", "cat": "5.7" },
-              { "type": "Урт", "size": "м", "cat": "16.1" },
-              { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
-              { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
-              { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
-              { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+              { "type": "Даац", "size": "тн", "cat": "23.0" },
+              { "type": "Ёмкостьны багтаамж", "size": "м3", "cat": "20.0" },
+              { "type": "Хөдөлгүүр", "size": "", "cat": "SINOTRUK" },
+              { "type": "Хөдөлгүүрийн чадал", "size": "", "cat": "336 НР / 1,400rpm" },
+              { "type": "Дээд хурд", "size": "км/ц", "cat": "90" },
+              { "type": "Урт", "size": "мм", "cat": "8960" },
+              { "type": "Өргөн", "size": "мм", "cat": "2495" },
+              { "type": "Өндөр", "size": "мм", "cat": "3330" }
             ]
           },
           {
@@ -254,15 +251,14 @@
             "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic6.png?alt=media&token=79a22169-e2dd-481c-aace-4a7695aac28b",
             "info": "Харах",
             "details": [
-              { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
-              { "type": "Жин", "size": "тн", "cat": "94.1" },
-              { "type": "Өргөн", "size": "м", "cat": "4.6" },
-              { "type": "Өндөр", "size": "м", "cat": "5.7" },
-              { "type": "Урт", "size": "м", "cat": "16.1" },
-              { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
-              { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
-              { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
-              { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+              { "type": "Хусуурын багтаамж", "size": "м3", "cat": "4.0" },
+              { "type": "Дээд хурд", "size": "км/ц", "cat": "26.2" },
+              { "type": "Жин", "size": "тн", "cat": "15.5" },
+              { "type": "Өргөн", "size": "м", "cat": "2.6" },
+              { "type": "Өндөр", "size": "м", "cat": "3.5" },
+              { "type": "Урт", "size": "м", "cat": "9.26" },
+              { "type": "Хөдөлгүүр", "size": "", "cat": "Cummins 6BTAA5.9-C190" },
+              { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "142" }
             ]
           },
           {
@@ -273,17 +269,136 @@
             "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic7.png?alt=media&token=246af55f-b337-4f69-80d5-db64a1addf9f",
             "info": "Харах",
             "details": [
-              { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
-              { "type": "Жин", "size": "тн", "cat": "94.1" },
-              { "type": "Өргөн", "size": "м", "cat": "4.6" },
-              { "type": "Өндөр", "size": "м", "cat": "5.7" },
-              { "type": "Урт", "size": "м", "cat": "16.1" },
-              { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
-              { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
-              { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
-              { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+              { "type": "Гэрэлтүүлэг", "size": "", "cat": "Халлоген" },
+              { "type": "Чадал", "size": "Вт", "cat": "4*1000" },
+              { "type": "Хөдөлгүүр", "size": "", "cat": "Perkins 403D-11" },
+              { "type": "Хөдөлгүүрийн чадал", "size": "", "cat": "1,500rpm" },
+              { "type": "Гэрэлтүүлэх талбай", "size": "м2", "cat": "4000" },
+              { "type": "Цамхагийн өндөр", "size": "мм", "cat": "9150" },
+              { "type": "Ажлын урт", "size": "мм", "cat": "3018" },
+              { "type": "Ажлын өргөн", "size": "мм", "cat": "2776" }
             ]
           }
+    ],
+    "tableData3":[
+      {
+        "number": "№",
+        "type": "Төрөл",
+        "mark": "Марк",
+        "unit": "Тоо",
+        "image": "Зураг",
+        "info": "Үзүүлэлт"
+      },
+      {
+        "number": "1",
+        "type": "Утгуурт ачигч",
+        "mark": "Liugong CLG8128H",
+        "unit": "2",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic.3.1.1.png?alt=media&token=0719acfe-4292-47bc-b051-5a6e01413695",
+        "info": "Харах",
+        "details": [
+          { "type": "Хусуурын багтаамж", "size": "м3", "cat": "8.0" },
+          { "type": "Дээд хурд", "size": "км/ц", "cat": "26.2" },
+          { "type": "Жин", "size": "тн", "cat": "37.9" },
+          { "type": "Өргөн", "size": "м", "cat": "3.0" },
+          { "type": "Өндөр", "size": "м", "cat": "3.5" },
+          { "type": "Урт", "size": "м", "cat": "6.4" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT 3406C" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "252" }
+        ]
+      },
+      {
+        "number": "2",
+        "type": "Утгуурт ачигч",
+        "mark": "Liugong CLG855H",
+        "unit": "1",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic4.1.png?alt=media&token=12fef3d2-b028-4f1e-b25b-a2212150a229",
+        "info": "Харах",
+        "details": [
+          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+          { "type": "Жин", "size": "тн", "cat": "94.1" },
+          { "type": "Өргөн", "size": "м", "cat": "4.6" },
+          { "type": "Өндөр", "size": "м", "cat": "5.7" },
+          { "type": "Урт", "size": "м", "cat": "16.1" },
+          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+        ]
+      },
+      {
+        "number": "3",
+        "type": "Автосамосвал",
+        "mark": "Howo 336",
+        "unit": "1",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic3.1.png?alt=media&token=76d13d01-43e0-4cc4-ab15-c6eb33db1f8b",
+        "info": "Харах",
+        "details": [
+          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
+          { "type": "Жин", "size": "тн", "cat": "94.1" },
+          { "type": "Өргөн", "size": "м", "cat": "4.6" },
+          { "type": "Өндөр", "size": "м", "cat": "5.7" },
+          { "type": "Урт", "size": "м", "cat": "16.1" },
+          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
+          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+        ]
+      },
+      {
+        "number": "4",
+        "type": "Усны машин",
+        "mark": "Howo",
+        "unit": "1",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic5.png?alt=media&token=f87e30a4-7242-4b39-8006-74df960b0b86",
+        "info": "Харах",
+        "details": [
+          { "type": "Даац", "size": "тн", "cat": "23.0" },
+          { "type": "Ёмкостьны багтаамж", "size": "м3", "cat": "20.0" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "SINOTRUK" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "", "cat": "336 НР / 1,400rpm" },
+          { "type": "Дээд хурд", "size": "км/ц", "cat": "90" },
+          { "type": "Урт", "size": "мм", "cat": "8960" },
+          { "type": "Өргөн", "size": "мм", "cat": "2495" },
+          { "type": "Өндөр", "size": "мм", "cat": "3330" }
+        ]
+      },
+      {
+        "number": "5",
+        "type": "Автогрейдер",
+        "mark": "Liugong CLG4180H",
+        "unit": "1",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic6.png?alt=media&token=79a22169-e2dd-481c-aace-4a7695aac28b",
+        "info": "Харах",
+        "details": [
+          { "type": "Хусуурын багтаамж", "size": "м3", "cat": "4.0" },
+          { "type": "Дээд хурд", "size": "км/ц", "cat": "26.2" },
+          { "type": "Жин", "size": "тн", "cat": "15.5" },
+          { "type": "Өргөн", "size": "м", "cat": "2.6" },
+          { "type": "Өндөр", "size": "м", "cat": "3.5" },
+          { "type": "Урт", "size": "м", "cat": "9.26" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "Cummins 6BTAA5.9-C190" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "142" }
+        ]
+      },
+      {
+        "number": "6",
+        "type": "Гэрэлт цамхаг",
+        "mark": "Pramac LSWP6A",
+        "unit": "6",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic7.png?alt=media&token=246af55f-b337-4f69-80d5-db64a1addf9f",
+        "info": "Харах",
+        "details": [
+          { "type": "Гэрэлтүүлэг", "size": "", "cat": "Халлоген" },
+          { "type": "Чадал", "size": "Вт", "cat": "4*1000" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "Perkins 403D-11" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "", "cat": "1,500rpm" },
+          { "type": "Гэрэлтүүлэх талбай", "size": "м2", "cat": "4000" },
+          { "type": "Цамхагийн өндөр", "size": "мм", "cat": "9150" },
+          { "type": "Ажлын урт", "size": "мм", "cat": "3018" },
+          { "type": "Ажлын өргөн", "size": "мм", "cat": "2776" }
         ]
       }
+]
+}
       

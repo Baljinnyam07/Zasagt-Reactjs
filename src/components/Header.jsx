@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import {ImageCarousel} from './Carousel';
 const images = [
-    "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/1.png?alt=media&token=1a4b5706-eb2f-4e72-ab56-c09430f66432",
-    "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/2%20(1).png?alt=media&token=f92c8655-1f28-439d-be60-843baaf99dce",
-    "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/3%20(1).png?alt=media&token=0aa6a29a-e214-49d0-93b4-f9186cb2722f",
-    "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/istockphoto-505297676-2048x2048-transformed%201%20(1).png?alt=media&token=56a1c2aa-77d1-459f-91ec-fcd674ce31c8"
+    "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/newHeader1.png?alt=media&token=b277d2cb-da58-4e5d-8230-6615fe50cbf6",
+    "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/newHeader2.png?alt=media&token=1bb1f2b2-7c4e-464c-9e8b-82b82978ba85",
+    "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/newHeader3.png?alt=media&token=a33f34d2-e703-4a30-82cb-6a08b6af3796"
 ];
 
 const Navbar = () => {

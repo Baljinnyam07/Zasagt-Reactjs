@@ -83,7 +83,7 @@ const Mechanical = () => {
             </div>
             {showButton1 && (
             <div className='buttonShow1'>
-              <div className='text-[16px] text-[#454655] font-[300] mb-[16px] mt-[24px]'>“Засагт хаан” ХХК нь 1.0 - 3.0 сая.м3/жил хүчин чадал бүхий ил уурхайн хөрс хуулалт, олборлолтын ажлын тоног төхөөрөмжийн хослол санал болгож байна.</div>
+              <div className='text-[16px] text-[#454655] font-[400] mb-[16px] mt-[24px]'>“Засагт хаан” ХХК нь 1.0 - 3.0 сая.м3/жил хүчин чадал бүхий ил уурхайн хөрс хуулалт, олборлолтын ажлын тоног төхөөрөмжийн хослол санал болгож байна.</div>
               <div className='text-[32px] font-[500] mb-[16px] text-[#454655]'>Ил уурхайн дунд оврын тоног төхөөрөмжийн хослол</div>
               <div className='mb-[120px]'>
               <table className="w-full border-collapse border">
@@ -104,7 +104,7 @@ const Mechanical = () => {
                     <td className=" border border-[#23356B] pl-[16px]">{item.type}</td>
                     <td className="border border-[#23356B] pl-[16px]">{item.mark}</td>
                     <td className="border border-[#23356B] text-center">{item.unit}</td>
-                    <td className="border border-[#23356B] py-[7px] px-[36px]"><img className='w-[66px] h-[58px]' src={item.image} alt="" /></td>
+                    <td className="border border-[#23356B] py-[7px] px-[36px]"><img className='w-[5rem] h-[58px]' src={item.image} alt="" /></td>
                     <td id="modal-switch" className="border border-[#23356B] text-center text-[14px] text-[#23356B] cursor-pointer font-[500] underline" onClick={() => handleTableCellClick(item.details, item.type, item.image)}>{item.info}</td>
                   </tr>
                 ))}
@@ -115,7 +115,7 @@ const Mechanical = () => {
             )}
             {showButton2 && (
             <div className='buttonShow2'>
-            <div className='text-[16px] text-[#454655] font-[300] mb-[16px] mt-[24px]'>“Засагт хаан” ХХК нь 2.0 - 7.0 сая.м3/жил хүчин чадал бүхий ил уурхайн хөрс хуулалт, олборлолтын ажлын тоног төхөөрөмжийн хослол санал болгож байна.</div>
+            <div className='text-[16px] text-[#454655] font-[400] mb-[16px] mt-[24px]'>“Засагт хаан” ХХК нь 2.0 - 7.0 сая.м3/жил хүчин чадал бүхий ил уурхайн хөрс хуулалт, олборлолтын ажлын тоног төхөөрөмжийн хослол санал болгож байна.</div>
               <div className='text-[32px] font-[500] mb-[16px] text-[#454655]'>Ил уурхайн дунд оврын тоног төхөөрөмжийн хослол</div>
               <div className='mb-[120px]'>
               <table className="w-full border-collapse border">
@@ -136,7 +136,7 @@ const Mechanical = () => {
                     <td className=" border border-[#23356B] pl-[16px]">{item.type}</td>
                     <td className="border border-[#23356B] pl-[16px]">{item.mark}</td>
                     <td className="border border-[#23356B] text-center">{item.unit}</td>
-                    <td className="border border-[#23356B] py-[7px] px-[36px]"><img className='w-[66px] h-[58px]' src={item.image} alt="" /></td>
+                    <td className="border border-[#23356B] py-[7px] px-[36px]"><img className='w-[5rem] h-[58px]' src={item.image} alt="" /></td>
                     <td id="modal-switch" className="border border-[#23356B] text-center text-[14px] text-[#23356B] cursor-pointer font-[500] underline" onClick={() => handleTableCellClick(item.details, item.type, item.image)}>{item.info}</td>
                   </tr>
                 ))}
@@ -148,11 +148,39 @@ const Mechanical = () => {
             <Modal isOpen={isModalOpen} onClose={closeModal} content={modalContent} type={modalType} image={modalImage} />
         </div>
         <div className={`mx-[24px] xl:mx-0 ${show2 ? '' : 'hidden'}`}>
-          <div className='w-full flex'>
-                <div className='p-2'>Нүүрс ачилтын ажил </div>
-                <div className='p-2'>Туслах жил</div>
+        <div className='text-[16px] font-[400] text-[#454655]'>“Засагт хаан” ХХК нь 2.0 - 4.0 сая.тн/жил хүчин чадал бүхий экспортын тээврийн хэрэгсэлд нүүрс ачих ажлын тоног төхөөрөмжийн хослол санал болгож байна.</div>
+        <div className='text-[32px] font-[500] text-[#454655] mt-[16px] mb-[16px]'>Тоног төхөөрөмжийн хослол</div>
+        <div className='buttonShow1'>
+              <div className='mb-[120px]'>
+              <table className="w-full border-collapse border">
+              <thead>
+                <tr className='text-[16px] font-[500] text-[#23356B]'>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[36px] py-[14px] text-center">{mechData.tableData1[0].number}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[167px] py-[14px] text-start pl-[16px]">{mechData.tableData1[0].type}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[205px] py-[14px] text-start pl-[16px]">{mechData.tableData1[0].mark}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[95px] py-[14px] text-center">{mechData.tableData1[0].unit}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[168px] py-[14px] text-center">{mechData.tableData1[0].image}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[223px] py-[14px] text-center">{mechData.tableData1[0].info}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {mechData.tableData3.slice(1).map((item, index) => (
+                  <tr className='text-[16px] font-[400] text-[#454655]' key={index}>
+                    <td className="border border-[#23356B] text-center">{item.number}</td>
+                    <td className=" border border-[#23356B] pl-[16px]">{item.type}</td>
+                    <td className="border border-[#23356B] pl-[16px]">{item.mark}</td>
+                    <td className="border border-[#23356B] text-center">{item.unit}</td>
+                    <td className="border border-[#23356B] py-[7px] px-[36px]"><img className='w-full h-[58px]' src={item.image} alt="" /></td>
+                    <td id="modal-switch" className="border border-[#23356B] text-center text-[14px] text-[#23356B] cursor-pointer font-[500] underline" onClick={() => handleTableCellClick(item.details, item.type, item.image)}>{item.info}</td>
+                  </tr>
+                ))}
+              </tbody>
+              </table>
+              </div>
             </div>
         </div>
+        <Modal isOpen={isModalOpen} onClose={closeModal} content={modalContent} type={modalType} image={modalImage} />
+
         </div>
         <div className={`${show3 ? '' : 'hidden'}`}>
           <Posts type={`${type}`} urlType='mechanical'/>
@@ -170,13 +198,13 @@ const Modal = ({ isOpen, onClose, content, type, image }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center z-30">
       <div className="modal-bg fixed inset-0 bg-black opacity-50"></div>
-      <div className="z-50 relative w-[500px] p-[24px] leading-8 bg-white rounded-lg shadow-lg">
+      <div className="z-50 relative w-[550px] p-[24px] leading-8 bg-white rounded-lg shadow-lg">
         <div className="modal-header absolute right-6">
           <span className="close cursor-pointer text-xl" onClick={onClose}>&times;</span>
         </div>
         <div className="modal-body">
           <div className='text-[16px] font-[500] uppercase text-[#23356B]'>{type}</div>
-          <div className='flex justify-center my-[6px]'> <img className='w-[150px] h-[135px]' src={image} alt="" /></div>
+          <div className='flex justify-center my-[6px]'> <img className='w-max h-[135px]' src={image} alt="" /></div>
           <table className='w-full'>
             <thead>
                   <tr className='text-[14px] w-full text-start font-[500] text-[#23356B] border-b-[1px] border-[#23356B]'>
