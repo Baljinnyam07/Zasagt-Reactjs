@@ -77,11 +77,6 @@ function AdminNav(){
                 </defs>
             </svg>
           </li>
-          <li>
-            <Link className="hover:underline" to="/admin">
-              Dashboard
-            </Link>
-          </li>
           {dropdowns.map((dropdown, index) => (
             <li key={index} className="group">
               <span
