@@ -98,7 +98,7 @@ const PostEdit = () => {
 
   return <>
  <div>
-      <div className="bg-[#94a3b8] p-8 flex">
+      <div className="bg-[#e9ebf0] p-8 flex">
           <div className="w-[700px] h-full p-8 bg-[#374151] text-white">
             <h2 className="text-xl font-semibold mb-4">Засварлах</h2>
             <div className="mb-6">

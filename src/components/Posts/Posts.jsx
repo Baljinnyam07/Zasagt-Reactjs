@@ -40,14 +40,10 @@ return (
   <>
   {type === 'hire' ? (
   <div className="bg-[#ffff] relative pb-[240px]">
-    
             <PostsMoreHumanity posts={posts} type={type} />
-        
-  </div>):(<div className="bg-[#ffff] relative pt-[80px] pb-[240px]">
+  </div>):(<div className="bg-[#ffff] relative pt-[40px] pb-[240px]">
       <div className="container sm:mx-auto">
-      
           <PostsMore posts={posts} type={type} />
-        
             </div>
     </div>
     )}

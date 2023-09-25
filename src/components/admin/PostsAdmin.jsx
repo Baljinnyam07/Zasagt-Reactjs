@@ -54,7 +54,7 @@ function PostsAdmin({props}) {
   console.log('getPosts:', getPosts)
 
   return (
-    <div className="text-white h-full min-h-screen flex bg-[#e9ebf0]">
+    <div className="text-white h-full min-h-screen flex bg-[#ffffff]">
       <AdminNav/>
       <div className="w-full">
       <div className="mx-12 mt-8 mb-8">
@@ -79,9 +79,7 @@ function PostsAdmin({props}) {
                       <a href='/admin/posts/news' className={`hover:text-[#D0A616] ${location.pathname === '/admin/posts/news' ? 'text-[#D0A616] border-b border-[#D0A616]' : 'text-gray-500'} w-max p-2 h-full`}>Цаг үеийн мэдээлэ</a>
                       <a href='/admin/posts/corp-news' className={`${location.pathname === '/admin/posts/corp-news' ? 'text-[#D0A616] border-b border-[#D0A616]' : 'text-gray-500'} w-max hover:text-[#D0A616] p-2 h-full`}>Байгуулагын мэдээ</a>
                       <a href='/admin/posts/social-resp' className={`${location.pathname === '/admin/posts/social-resp' ? 'text-[#D0A616] border-b border-[#D0A616]' : 'text-gray-500'} w-max hover:text-[#D0A616] p-2 h-full`}>Нийгмийн хариуцлага</a>
-
                     </div>
-                    
                 </div>
                 </div>
               )
@@ -100,13 +98,13 @@ function PostsAdmin({props}) {
       <div className="">
       {urlType !== 'humanity' ? (
           urlType !== "anket" ? (
-            <div className="flex gap-4 flex-wrap mx-12 p-10 pt-20 bg-[#fff] relative">
+            <div className="flex gap-4 flex-wrap mx-12 p-10 pt-20 relative">
               <button onClick={handleAddElementClick} className="absolute top-5 right-5 p-2 border border-gray-500 hover:border-lime-600 m-1 flex gap-3 px-2 rounded-xl items-center bg-[#203060] text-[#fff]">
               <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
                 <path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 24 13 L 24 24 L 13 24 L 13 26 L 24 26 L 24 37 L 26 37 L 26 26 L 37 26 L 37 24 L 26 24 L 26 13 L 24 13 z"></path>
               </svg>
               <div className="">
-                Add an element
+                Create
               </div>
             </button>
               <div className="">
@@ -135,7 +133,7 @@ function PostsAdmin({props}) {
                 <path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 24 13 L 24 24 L 13 24 L 13 26 L 24 26 L 24 37 L 26 37 L 26 26 L 37 26 L 37 24 L 26 24 L 26 13 L 24 13 z"></path>
               </svg>
               <div className="">
-                Add an element
+              Create
               </div>
             </button>
             <div className="">

@@ -1,8 +1,7 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
-import AppContainer from "../AppContainer";
 function extractImageAndParagraph(html) {
   const tempElement = document.createElement("div");
   tempElement.innerHTML = html;
@@ -11,11 +10,12 @@ function extractImageAndParagraph(html) {
   if (imageElement) {
     imageElement.remove();
   }
-  const paragraph = tempElement.textContent.trim();
+  const paragraph = tempElement.innerHTML
   return {
     image: imageSrc,
     paragraph: paragraph,
   };
+  
 }
 
 function Post() {
@@ -27,6 +27,7 @@ function Post() {
   const [image, setImage] = useState('')
   const [paragraph,setParagraph] = useState('')
   const navigate = useNavigate();
+  const location = useLocation();
   useEffect(() => {
     const docRef = doc(db, "posts", postId);
 
@@ -56,31 +57,28 @@ function Post() {
 
   return (
     <>
-      <AppContainer>
-      <div className="flex">
-      <div className="text-[14px] mt-[40px] uppercase">
+      <div className="flex divide-x">
+      <div className="text-[14px] uppercase xl:block hidden">
         <div
-          className="text-black w-[226px] mb-[79px] font-medium mb-5 cursor-pointer"
+          className="text-black w-[460px] font-medium mb-5 cursor-pointer border-b py-[40px]"
         >
-          <a href='/posts/news'>цаг үеийн мэдээлэл</a>
+          <a className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/posts/news')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/posts/news'>цаг үеийн мэдээлэл{location.pathname === '/posts/news' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
         <div
-          className="text-black w-[226px] mb-[69px] font-medium mb-5 cursor-pointer"
+          className="text-black w-[460px] font-medium mb-5 cursor-pointer border-b py-[40px]"
         >
-          <a href='/posts/corp-news'>байгууллагын мэдээ</a>
+          <a className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/posts/corp-news') ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/posts/corp-news'>байгууллагын мэдээ{location.pathname === '/posts/corp-news' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
         <div
-          className="text-black w-[246px] mr-[102px] font-medium mb-5 cursor-pointer"
+          className="text-black w-[460px] font-medium mb-5 cursor-pointer border-b py-[40px]"
         >
-          <a href='/posts/social'>нийгмийн хариуцлага</a>
+          <a className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/posts/social-resp')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/posts/social-resp'>нийгмийн хариуцлага{location.pathname === '/posts/social-resp' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
       </div>
       <div>
-      <div className="pb-[140px] ml-[127px]">
-      <div className="font-Montserrat max-w-[680px] mx-auto px-[34px] text-[10px] sm:text-[14px] mb-[80px] text-[#3973C5]">
-          </div>
+      <div className="pb-[140px]">
           <div className="container px-[26px] sm:mx-auto max-w-[996px]">
-          <div className="container sm:mx-auto pt-[17px] max-w-[800px] mb-[92px]">
+          <div className="container sm:mx-auto pt-[40px] max-w-[800px] mb-[92px]">
           <div>
             {image && <img className="w-full h-[380px]" src={image} alt="Post" />}
           </div>
@@ -91,13 +89,12 @@ function Post() {
               {createdAt ? date : (new Date(parseInt(date) * 1000)).toJSON()?.slice(0, 10)}
             </div>
             <div className="text-[24px] leading-12 font-bold mb-[16px] text-[#35363B]">{title}</div>
-            <div className="text-[16px] text-justify text-[#8F9099]">{paragraph}</div>
+            <div className="text-[16px] text-justify text-[#8F9099]" dangerouslySetInnerHTML={{ __html: paragraph }} />
           </div>
         </div>
       </div>
       </div>
     </div>
-      </AppContainer>
       
     </>
   );
