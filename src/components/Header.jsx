@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import {ImageCarousel} from './Carousel';
 const images = [
-    "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/newHeader1.png?alt=media&token=b277d2cb-da58-4e5d-8230-6615fe50cbf6",
-    "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/newHeader2.png?alt=media&token=1bb1f2b2-7c4e-464c-9e8b-82b82978ba85",
-    "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/newHeader3.png?alt=media&token=a33f34d2-e703-4a30-82cb-6a08b6af3796"
+    "https://ik.imagekit.io/baljinnyam/ZasagtKhaan/Home/newHeader1.png?updatedAt=1695613724474",
+    "https://ik.imagekit.io/baljinnyam/ZasagtKhaan/Home/newHeader2.png?updatedAt=1695613725029",
+    "https://ik.imagekit.io/baljinnyam/ZasagtKhaan/Home/newHeader3.png?updatedAt=1695613721903"
 ];
 
 const Navbar = () => {

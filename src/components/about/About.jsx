@@ -114,11 +114,11 @@ const About = () => {
           </div>
           <div>
           <div className="text-[#454655] text-[32px] font-500 font-sans mb-5 mb-[24px]">Түүхэн замнал</div>
-            <div className="text-[#454655] text-base font-normal leading-8 w-[894px] ">
+            <div className="text-[#454655] text-base font-normal leading-8">
               <div className=''>
               <img
                   src={HistoryComp}
-                  className='w-max h-[380px] sm:h-[590px] xl:h-[1020px]'
+                  className='w-max h-[380px] sm:h-[90px] xl:h-[1020px]'
                   alt="history"
                 />
               </div>

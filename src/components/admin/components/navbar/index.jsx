@@ -10,30 +10,19 @@ function AdminNav(){
   const [dropdowns, setDropdowns] = useState([
         {
           title: 'Мэдээ',
-          isOpen: false,
-          items: [
-            { title: 'ЦАГ ҮЕИЙН МЭДЭЭЛЭЛ', url: '/admin/posts/news' },
-            { title: 'БАЙГУУЛЛАГЫН МЭДЭЭ', url: '/admin/posts/corp-news' },
-            { title: 'НИЙГМИЙН ХАРИУЦЛАГА', url: '/admin/posts/social-resp' }
-          ]
+          url:'/admin/posts/news'
         },
         {
           title: 'Хамтран ажиллах',
-          isOpen: false,
-          items: [
-            { title: 'ОЛБОРЛОЛТЫН АЖИЛ', url: '/admin/mechanical/mining' },
-            { title: 'УУЛ УУРХАЙН ТУСЛАХ АЖИЛ', url: '/admin/mechanical/openings' },
-            { title: 'ТОНОГ ТӨХӨӨРӨМЖ ТҮРЭЭС', url: '/admin/mechanical/rent' }
-          ]
+          url:'/admin/mechanical/mining'
         },
         {
           title: 'Хүний Нөөц',
-          isOpen: false,
-          items: [
-            { title: 'НЭЭЛТТЭЙ АЖЛЫН БАЙР', url: '/admin/humanity/hire' },
-            { title: 'АЖЛЫН АНКЕТ', url: '/admin/anket/hired' }
-
-          ]
+          url:'/admin/humanity/hire'
+        },
+        {
+          title: 'Анкет',
+          url:'/admin/anket/hired'
         }
       ]);
 
@@ -56,7 +45,7 @@ function AdminNav(){
 
     return(
         <nav className="relative">
-        <ul className="bg-gray-800 w-max h-4/5 p-5 leading-10">
+        <ul className="bg-[#203060] w-max h-4/5 p-5 leading-10">
           <li className="w-full mb-20 flex justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="78" height="50" viewBox="0 0 78 50" fill="none">
                 <g clipPath="url(#clip0_322_545)">
@@ -78,29 +67,14 @@ function AdminNav(){
             </svg>
           </li>
           {dropdowns.map((dropdown, index) => (
-            <li key={index} className="group">
-              <span
+            <li key={index} className="group flex">
+              <a
+                href={dropdown.url}
                 className="col-span-1 hover:underline cursor-pointer"
                 onClick={() => toggleDropdown(index)}
               >
                 {dropdown.title}
-              </span>
-              <span className="w-max h-full">
-              {dropdown.isOpen && (
-                <ul className="bg-gray-900 text-gray-300 z-10 mt-2 rounded shadow-lg">
-                  {dropdown.items.map((item, itemIndex) => (
-                    <li key={itemIndex}>
-                      <a
-                        className="hover:bg-blue-500 w-[200px] hover:text-white block px-2 py-1 text-[12px]"
-                        href={item.url}
-                      >
-                        {item.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
-              </span>
+              </a>
             </li>
           ))}
           <li>
@@ -120,12 +94,12 @@ function AdminNav(){
 						</div>
 						<div className="flex flex-col space-y-1 justify-center items-center w-full">
                   <div className="mt-2 bg-gray-900 text-gray-300 z-10 rounded shadow-lg">
-                              <button
-                                  className="hover:bg-blue-500 hover:text-white rounded-md block px-2 py-1 text-xs"
-                                  onClick={logout}
-                              >
-                                  Гарах
-                              </button>
+                      <button
+                        className="hover:bg-blue-500 hover:text-white rounded-md block px-2 py-1 text-xs"
+                        onClick={logout}
+                      >
+                        Гарах
+                      </button>
                   </div>
 						</div>
 					</div>

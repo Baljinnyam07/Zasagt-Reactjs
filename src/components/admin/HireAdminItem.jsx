@@ -21,9 +21,8 @@ function HireAdminItem({ post, dataType, getPosts }) {
        
        <form className="p-2 relative">
         <fieldset className="border border-gray-300 p-4 rounded-lg mb-4">
-            <legend className="text-lg font-semibold mb-2">{post.title}</legend>
+            <legend className="text-lg text-[#080341] font-semibold mb-2">{post.title}</legend>
             <div className="ml-auto absolute right-10 top-8">
-
                 <Link to={`/admin/${dataType}/${post.type}/edit/${post.id}`}>
                 <button
                 className="mr-2 hover:bg-green-300 p-2 rounded-full"
@@ -31,7 +30,6 @@ function HireAdminItem({ post, dataType, getPosts }) {
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none">
                     <path fillRule="evenodd" clipRule="evenodd" d="M8.56078 20.2501L20.5608 8.25011L15.7501 3.43945L3.75012 15.4395V20.2501H8.56078ZM15.7501 5.56077L18.4395 8.25011L16.5001 10.1895L13.8108 7.50013L15.7501 5.56077ZM12.7501 8.56079L15.4395 11.2501L7.93946 18.7501H5.25012L5.25012 16.0608L12.7501 8.56079Z" fill="#080341"/>
                 </svg>
-
               </button>
                 </Link>
               <button
@@ -61,7 +59,7 @@ function HireAdminItem({ post, dataType, getPosts }) {
                   </div>
                 </div>
               )}
-            <div className="py-[16px] px-[24px] text-[#cbd5e1] text-[12px]">
+            <div className="py-[16px] px-[24px] text-[#080341] text-[12px]">
                     <div className="font-[500] mb-[8px]">Гүйцэтгэх үндсэн үүрэг</div>
                     <div className="font-400 mb-[24px]">
                         {post.basicissues}

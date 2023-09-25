@@ -37,16 +37,16 @@ const Project = () => {
       <div className="xl:flex block divide-x">
       <div className="text-[14px] uppercase xl:block hidden">
         <div
-          className="text-[#454655] w-[400px] font-medium cursor-pointer py-[40px] border-b"
+          className="text-[#454655] w-[480px] font-medium cursor-pointer py-[40px] border-b"
           onClick={handleOvooTolgoiClick}
         >
-          <Link className={`flex pl-[120px] gap-2 ${location.pathname === '/project/ovooTolgoi' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi">овоот толгой{location.pathname === '/project/ovooTolgoi' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`flex pl-[130px] gap-2 ${location.pathname === '/project/ovooTolgoi' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi">овоот толгой{location.pathname === '/project/ovooTolgoi' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
-          className="text-[#454655] w-[400px] font-medium cursor-pointer border-b py-[40px]"
+          className="text-[#454655] w-[480px] font-medium cursor-pointer border-b py-[40px]"
           onClick={handleUurkhainNuursClick}
         >
-          <Link className={`flex pl-[120px] ${location.pathname === '/project/UurhaiNvvrs' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/UurhaiNvvrs"><span className='w-[215px]'>цанхийн баруун уурхайн НҮҮРС АЧИЛТ</span>{location.pathname === '/project/UurhaiNvvrs' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`flex pl-[130px] ${location.pathname === '/project/UurhaiNvvrs' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/UurhaiNvvrs"><span className='w-[215px]'>цанхийн баруун уурхайн НҮҮРС АЧИЛТ</span>{location.pathname === '/project/UurhaiNvvrs' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
       </div>
       <div className="xl:pl-[24px] pt-[40px]">
@@ -87,11 +87,11 @@ const Project = () => {
               </div>
             </div>
             <div className='relative'>
-              <div className="absolute p-[16px]">
+              <div className="flex absolute p-[16px]">
                 <img src={steppe} width={121} height={44} alt="SouthGobi" />
               </div>
-              <div className="">
-              <img src={proImage2} width={920} height={372} alt="SouthGobi" />
+              <div className="w-[894px]">
+                <img className='bg-cover' src={proImage2} alt="SouthGobi" />
               </div>
             </div>
           </div>

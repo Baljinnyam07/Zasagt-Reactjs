@@ -98,9 +98,8 @@ const PostEdit = () => {
 
   return <>
  <div>
-      <div className="bg-[#94a3b8] grid h-full grid-cols-6 gap-3">
-        <div className="col-span-2">
-          <div className="w-full h-full p-8 bg-[#374151] text-white">
+      <div className="bg-[#94a3b8] p-8 flex">
+          <div className="w-[700px] h-full p-8 bg-[#374151] text-white">
             <h2 className="text-xl font-semibold mb-4">Засварлах</h2>
             <div className="mb-6">
               <label htmlFor="title" className="block text-white">Гарчиг</label>
@@ -159,9 +158,8 @@ const PostEdit = () => {
               </button>
             </div>
           </div>
-        </div>
-        <div className='col-span-4'>
-        <div className='grid grid-cols-4 gap-3 m-10'>
+          <div className=''>
+        <div className='grid grid-cols-4 gap-3 px-10'>
         <div className='col-span-2'>
         <div className="bg-white text-[#8F9099] w-[400px] rounded p-2">
               <div className="aspect-video" style={{ backgroundImage: `url("${image}")` }}></div>
@@ -187,25 +185,6 @@ const PostEdit = () => {
               </div>
             </div>
         </div>
-        <div className='col-span-2 '>
-            <div className='bg-white rounded p-2'>
-            <div className="font-Montserrat max-w-[680px] mx-auto px-[34px] text-[10px] sm:text-[14px] text-[#3973C5]">
-            </div>
-            <div className="">
-            <div>
-              {image && <img className="w-full" src={image} alt="Post" />}
-            </div>
-            <div className="text-[#35363B] mb-[18px] mt-[18px] text-[#8F9099] text-[12px]">
-                <svg className="inline-block mr-[8px] mb-[5px]" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13.75 2.875H11.125V1.875C11.125 1.80625 11.0688 1.75 11 1.75H10.125C10.0562 1.75 10 1.80625 10 1.875V2.875H6V1.875C6 1.80625 5.94375 1.75 5.875 1.75H5C4.93125 1.75 4.875 1.80625 4.875 1.875V2.875H2.25C1.97344 2.875 1.75 3.09844 1.75 3.375V13.75C1.75 14.0266 1.97344 14.25 2.25 14.25H13.75C14.0266 14.25 14.25 14.0266 14.25 13.75V3.375C14.25 3.09844 14.0266 2.875 13.75 2.875ZM13.125 13.125H2.875V7.1875H13.125V13.125ZM2.875 6.125V4H4.875V4.75C4.875 4.81875 4.93125 4.875 5 4.875H5.875C5.94375 4.875 6 4.81875 6 4.75V4H10V4.75C10 4.81875 10.0562 4.875 10.125 4.875H11C11.0688 4.875 11.125 4.81875 11.125 4.75V4H13.125V6.125H2.875Z" fill="#8F9099"/>
-                </svg>
-                {date}
-              </div>
-              <div className="text-[24px] leading-12 font-bold mb-[16px] text-[#35363B]" style={{ maxHeight: "3em", lineClamp: 2 }} >{title}</div>
-              <div className="text-[16px] text-justify text-[#8F9099]" dangerouslySetInnerHTML={{ __html: extractContent(content) }}></div>
-            </div>
-            </div>
-          </div>
         </div>
         </div>
       </div>
