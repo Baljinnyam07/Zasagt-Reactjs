@@ -22,7 +22,8 @@ function PostsAdminItem({ post, dataType, getPosts }) {
   };
 
   return (
-      <div className="text-gray-400 relative leading-8 group">
+      <>
+        <div className="text-gray-400 relative leading-8 group">
       <div className="h-full border border-gray-400 rounded-xl p-2 w-[300px]">
         <div className="flex absolute top-5 right-6 gap-2 invisible group-hover:visible">
         <button className="btn-edit text-lime-600 rounded-full p-2 bg-green-300 hover:-translate-y-1" onClick={toggleEditModal}>
@@ -61,19 +62,21 @@ function PostsAdminItem({ post, dataType, getPosts }) {
           </div>
         </div>
       )}
-      {showEditModal && (
-        <div className="absolute z-10 top-0 bg-gray-700 w-[1200px] h-full rounded-xl text-[#000]">
-          {/* Edit Modal */}
-          <PostEdit post={post} dataType={dataType} getPosts={getPosts} />
-          <button
-            className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1"
-            onClick={toggleEditModal} // Close the edit modal when this button is clicked
-          >
-            Close
-          </button>
-        </div>
-      )}
+      
     </div>
+    {showEditModal && (
+      <div className="absolute z-10 top-0 bg-gray-700 w-[1200px] rounded-xl text-[#000]">
+        {/* Edit Modal */}
+        <PostEdit post={post} dataType={dataType} getPosts={getPosts} />
+        <button
+          className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1"
+          onClick={toggleEditModal} // Close the edit modal when this button is clicked
+        >
+          Close
+        </button>
+      </div>
+    )}
+      </>
   );
 }
 

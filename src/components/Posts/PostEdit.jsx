@@ -2,11 +2,11 @@ import Editor from './Editor';
 import { useEffect, useState } from 'react';
 import { collection, addDoc, serverTimestamp, doc, getDoc, updateDoc } from "firebase/firestore"; 
 import { db, storage } from '../../firebase';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 
 
-const PostEdit = () => {
+const PostEdit = ({post}) => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [date, setDate] = useState((new Date()).toJSON().slice(0, 10));
@@ -17,11 +17,15 @@ const PostEdit = () => {
   const urlType = pathSegments[2];
   const [dataType] = useState(urlType);
   const navigate = useNavigate();
-  const {type, postId} = useParams();
+  const {postId} = post.id;
+  const {type} = post.type
+  console.log('HelloooHelooo:', post)
+  console.log('postId:',postId)
+  console.log('postIdID:', post.id)
 
   useEffect(() => {
-    if (postId) {
-      const docRef = doc(db, dataType, postId);
+    if (post.id) {
+      const docRef = doc(db, dataType, post.id);
       getDoc(docRef).then((docSnap) => {
         if (docSnap.exists()) {
           const data = docSnap.data();
@@ -34,15 +38,15 @@ const PostEdit = () => {
         }
       });
     }
-  }, [dataType,postId]);
+  }, [dataType,post.id]);
 
   const save = async () => {
     if (!dataType) {
       console.error("dataType is empty");
       return;
     }
-    if (postId) {
-      await updateDoc(doc(db, dataType, postId), {
+    if (post.id) {
+      await updateDoc(doc(db, dataType, post.id), {
         title: title,
         content: content,
         image: image,
@@ -50,7 +54,7 @@ const PostEdit = () => {
         updatedAt: serverTimestamp(),
         type: type,
       });
-      navigate(`/${type}/${postId}`);
+      navigate(`/${type}/${post.id}`);
     } else {
       const docRef = await addDoc(collection(db, dataType), {
         title: title,

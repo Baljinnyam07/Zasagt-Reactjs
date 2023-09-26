@@ -33,7 +33,7 @@ function App() {
     <>
     {isLoading ? (
      <div class="my-loader-page">
-       <div class="lds-ripple"><div></div><div></div></div>
+               <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>      
     </div>
     ) : (
     <IntlProvider locale='en'>
