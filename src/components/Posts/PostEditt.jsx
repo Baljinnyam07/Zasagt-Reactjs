@@ -2,11 +2,11 @@ import Editor from './Editor';
 import { useEffect, useState } from 'react';
 import { collection, addDoc, serverTimestamp, doc, getDoc, updateDoc } from "firebase/firestore"; 
 import { db, storage } from '../../firebase';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 
 
-const PostCreate = ({post , onClose}) => {
+const PostEditt = ({post}) => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [date, setDate] = useState((new Date()).toJSON().slice(0, 10));
@@ -17,11 +17,12 @@ const PostCreate = ({post , onClose}) => {
   const urlType = pathSegments[2];
   const [dataType] = useState(urlType);
   const navigate = useNavigate();
-  const {type,postId} = useParams()
+  const {postId} = post.id;
+  const {type} = post.type
 
   useEffect(() => {
-    if (postId) {
-      const docRef = doc(db, dataType, postId);
+    if (post.id) {
+      const docRef = doc(db, dataType, post.id);
       getDoc(docRef).then((docSnap) => {
         if (docSnap.exists()) {
           const data = docSnap.data();
@@ -34,23 +35,23 @@ const PostCreate = ({post , onClose}) => {
         }
       });
     }
-  }, [dataType,postId]);
+  }, [dataType,post.id]);
 
   const save = async () => {
     if (!dataType) {
       console.error("dataType is empty");
       return;
     }
-    if (postId) {
-      await updateDoc(doc(db, dataType, postId), {
+    if (post.id) {
+      await updateDoc(doc(db, dataType, post.id), {
         title: title,
         content: content,
         image: image,
         date: date,
         updatedAt: serverTimestamp(),
-        type: type,
+        type: post.type,
       });
-      navigate(`/${type}/${postId}`);
+      navigate(`/${type}/${post.id}`);
     } else {
       const docRef = await addDoc(collection(db, dataType), {
         title: title,
@@ -58,7 +59,7 @@ const PostCreate = ({post , onClose}) => {
         image: image,
         date: date,
         createdAt: serverTimestamp(),
-        type: type,
+        type: post.type,
       });
       navigate(`/${dataType}/${type}/${docRef.id}`);
     }
@@ -96,20 +97,8 @@ const PostCreate = ({post , onClose}) => {
   return <>
  <div>
       <div className="bg-[#e9ebf0] p-8 flex">
-      <button
-        className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1 absolute top-[95px] right-[60px]"
-        onClick={onClose} // Close the edit modal when this button is clicked
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xmlSpace="preserve">
-        <g>
-          <g>
-            <polygon points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512     512,452.922 315.076,256   "/>
-          </g>
-        </g>
-        </svg>
-      </button>
           <div className="max-w-[700px] max-h-[500px] overflow-auto p-8 bg-[#374151] text-white">
-            <h2 className="text-xl font-semibold mb-4">Create</h2>
+            <h2 className="text-xl font-semibold mb-4">Засварлах</h2>
             <div className="mb-6">
               <label htmlFor="title" className="block text-white">Гарчиг</label>
               <input
@@ -139,7 +128,7 @@ const PostCreate = ({post , onClose}) => {
             </div>
             </div>
             {percent > 0 && percent < 100 && (
-                <div className='w-full h-4 bg-gray-200 rounded'>
+                <div className='w-100 h-4 bg-gray-200 rounded'>
                   <div
                     className={`w-${percent} bg-green-400 h-full rounded`}
                   ></div>
@@ -162,7 +151,6 @@ const PostCreate = ({post , onClose}) => {
             </div>
           </div>
           <div className=''>
-            
         <div className='grid grid-cols-4 gap-3 px-10'>
         <div className='col-span-2'>
         <div className="bg-white text-[#8F9099] w-[400px] rounded p-2">
@@ -196,4 +184,4 @@ const PostCreate = ({post , onClose}) => {
   </>;
 }
 
-export default PostCreate;
+export default PostEditt;

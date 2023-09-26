@@ -14,6 +14,8 @@ const Mechanical = () => {
   const [modalContent, setModalContent] = useState('');
   const [modalType, setModalType] = useState('');
   const [modalImage, setModalImage] = useState('');
+  const [modalMark, setModalMark] = useState('');
+
 
   const { type } = useParams();
   const handleButtonClick = (buttonNumber) => {
@@ -42,10 +44,11 @@ const Mechanical = () => {
     }
   }, [location.pathname]);
 
-  const handleTableCellClick = (content, type, image) => {
+  const handleTableCellClick = (content, type, image, mark) => {
     setModalContent(content);
     setModalType(type)
     setModalImage(image)
+    setModalMark(mark)
     setIsModalOpen(true);
   };
 
@@ -78,13 +81,14 @@ const Mechanical = () => {
           {showButton1 && (<div className='uppercase text-[32px] font-[500] text-[#454655]'>бага оврын тоног төхөөрөмж</div>)}
           {showButton2 && (<div className='uppercase text-[32px] font-[500] text-[#454655]'>дунд оврын тоног төхөөрөмж</div>)}
             <div className='w-full flex text-[12px] text-[#23356B] font-[500] uppercase mt-[24px]'>
-                <div className={`border py-[15px] flex justify-center cursor-pointer w-[446px] button1 bg-[#ECEDEE] ${showButton1 ? 'border-[#23356B]' : ''}`} onClick={() => handleButtonClick(1)}>1 - 3 сая m3/жил гүйцэтгэх</div>
-                <div className={`border py-[15px] flex justify-center cursor-pointer w-[446px] button2 bg-[#ECEDEE] ${showButton2 ? 'border-[#23356B]' : ''}`} onClick={() => handleButtonClick(2)}>2 - 7 САЯ m3/жил гүйцэтгэх</div>
+                <div className={`border py-[15px] flex justify-center font-bold cursor-pointer w-[446px] button1 bg-[#ECEDEE] ${showButton1 ? 'border-[#23356B]' : ''}`} onClick={() => handleButtonClick(1)}>1 - 3 сая m3/жил гүйцэтгэх</div>
+                <div className={`border py-[15px] flex justify-center font-bold cursor-pointer w-[446px] button2 bg-[#ECEDEE] ${showButton2 ? 'border-[#23356B]' : ''}`} onClick={() => handleButtonClick(2)}>2 - 7 САЯ m3/жил гүйцэтгэх</div>
             </div>
             {showButton1 && (
             <div className='buttonShow1'>
               <div className='text-[16px] text-[#454655] font-[400] mb-[16px] mt-[24px]'>“Засагт хаан” ХХК нь 1.0 - 3.0 сая.м3/жил хүчин чадал бүхий ил уурхайн хөрс хуулалт, олборлолтын ажлын тоног төхөөрөмжийн хослол санал болгож байна.</div>
-              <div className='text-[32px] font-[500] mb-[16px] text-[#454655]'>Ил уурхайн дунд оврын тоног төхөөрөмжийн хослол</div>
+              {showButton1 && (<div className='text-[32px] font-[500] mb-[16px] text-[#454655]'>Ил уурхайн бага оврын тоног төхөөрөмжийн хослол</div>)}
+              {showButton2 && (<div className='text-[32px] font-[500] mb-[16px] text-[#454655]'>Ил уурхайн дунд оврын тоног төхөөрөмжийн хослол</div>)}
               <div className='mb-[120px]'>
               <table className="w-full border-collapse border">
               <thead>
@@ -105,7 +109,7 @@ const Mechanical = () => {
                     <td className="border border-[#23356B] pl-[16px]">{item.mark}</td>
                     <td className="border border-[#23356B] text-center">{item.unit}</td>
                     <td className="border border-[#23356B] py-[7px] px-[36px]"><img className='w-[5rem] h-[58px]' src={item.image} alt="" /></td>
-                    <td id="modal-switch" className="border border-[#23356B] text-center text-[14px] text-[#23356B] cursor-pointer font-[500] underline" onClick={() => handleTableCellClick(item.details, item.type, item.image)}>{item.info}</td>
+                    <td id="modal-switch" className="border border-[#23356B] text-center text-[14px] text-[#23356B] cursor-pointer font-[500] underline" onClick={() => handleTableCellClick(item.details, item.type, item.image, item.mark)}>{item.info}</td>
                   </tr>
                 ))}
               </tbody>
@@ -137,7 +141,7 @@ const Mechanical = () => {
                     <td className="border border-[#23356B] pl-[16px]">{item.mark}</td>
                     <td className="border border-[#23356B] text-center">{item.unit}</td>
                     <td className="border border-[#23356B] py-[7px] px-[36px]"><img className='w-[5rem] h-[58px]' src={item.image} alt="" /></td>
-                    <td id="modal-switch" className="border border-[#23356B] text-center text-[14px] text-[#23356B] cursor-pointer font-[500] underline" onClick={() => handleTableCellClick(item.details, item.type, item.image)}>{item.info}</td>
+                    <td id="modal-switch" className="border border-[#23356B] text-center text-[14px] text-[#23356B] cursor-pointer font-[500] underline" onClick={() => handleTableCellClick(item.details, item.type, item.image, item.mark)}>{item.info}</td>
                   </tr>
                 ))}
               </tbody>
@@ -145,7 +149,7 @@ const Mechanical = () => {
               </div>
             </div>
             )}
-            <Modal isOpen={isModalOpen} onClose={closeModal} content={modalContent} type={modalType} image={modalImage} />
+            <Modal isOpen={isModalOpen} onClose={closeModal} content={modalContent} type={modalType} image={modalImage} mark={modalMark} />
         </div>
         <div className={`mx-[24px] xl:mx-0 ${show2 ? '' : 'hidden'}`}>
         <div className='text-[16px] font-[400] text-[#454655]'>“Засагт хаан” ХХК нь 2.0 - 4.0 сая.тн/жил хүчин чадал бүхий экспортын тээврийн хэрэгсэлд нүүрс ачих ажлын тоног төхөөрөмжийн хослол санал болгож байна.</div>
@@ -171,7 +175,7 @@ const Mechanical = () => {
                     <td className="border border-[#23356B] pl-[16px]">{item.mark}</td>
                     <td className="border border-[#23356B] text-center">{item.unit}</td>
                     <td className="border border-[#23356B] py-[7px] px-[36px]"><img className='w-full h-[58px]' src={item.image} alt="" /></td>
-                    <td id="modal-switch" className="border border-[#23356B] text-center text-[14px] text-[#23356B] cursor-pointer font-[500] underline" onClick={() => handleTableCellClick(item.details, item.type, item.image)}>{item.info}</td>
+                    <td id="modal-switch" className="border border-[#23356B] text-center text-[14px] text-[#23356B] cursor-pointer font-[500] underline" onClick={() => handleTableCellClick(item.details, item.type, item.image, item.mark)}>{item.info}</td>
                   </tr>
                 ))}
               </tbody>
@@ -179,8 +183,7 @@ const Mechanical = () => {
               </div>
             </div>
         </div>
-        <Modal isOpen={isModalOpen} onClose={closeModal} content={modalContent} type={modalType} image={modalImage} />
-
+        <Modal isOpen={isModalOpen} onClose={closeModal} content={modalContent} type={modalType} image={modalImage} mark={modalMark} />
         </div>
         <div className={`${show3 ? '' : 'hidden'}`}>
           <Posts type={`${type}`} urlType='mechanical'/>
@@ -192,9 +195,8 @@ const Mechanical = () => {
 
 export default Mechanical;
 
-const Modal = ({ isOpen, onClose, content, type, image }) => {
+const Modal = ({ isOpen, onClose, content, type, image, mark }) => {
   if (!isOpen) return null;
-  console.log('content:',content)
   return (
     <div className="fixed inset-0 flex items-center justify-center z-30">
       <div className="modal-bg fixed inset-0 bg-black opacity-50"></div>
@@ -203,14 +205,14 @@ const Modal = ({ isOpen, onClose, content, type, image }) => {
           <span className="close cursor-pointer text-xl" onClick={onClose}>&times;</span>
         </div>
         <div className="modal-body">
-          <div className='text-[16px] font-[500] uppercase text-[#23356B]'>{type}</div>
+          <div className='text-[16px] font-bold uppercase text-[#23356B]'>{type}</div>
           <div className='flex justify-center my-[6px]'> <img className='w-max h-[135px]' src={image} alt="" /></div>
           <table className='w-full'>
             <thead>
                   <tr className='text-[14px] w-full text-start font-[500] text-[#23356B] border-b-[1px] border-[#23356B]'>
                     <th className="text-start">Үзүүлэлт</th>
                     <th className="text-start">Хэмжих нэгж</th>
-                    <th className="text-start">CAT 395D</th>
+                    <th className="text-start">{mark}</th>
                   </tr>
             </thead>
             <tbody>

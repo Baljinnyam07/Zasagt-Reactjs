@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase";
-import PostEdit from "../Posts/PostEdit";
+import PostEditt from "../Posts/PostEditt";
 
 function PostsAdminItem({ post, dataType, getPosts }) {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -23,7 +23,7 @@ function PostsAdminItem({ post, dataType, getPosts }) {
 
   return (
       <>
-        <div className="text-gray-400 relative leading-8 group">
+    <div className="text-gray-400 relative leading-8 group">
       <div className="h-full border border-gray-400 rounded-xl p-2 w-[300px]">
         <div className="flex absolute top-5 right-6 gap-2 invisible group-hover:visible">
         <button className="btn-edit text-lime-600 rounded-full p-2 bg-green-300 hover:-translate-y-1" onClick={toggleEditModal}>
@@ -65,15 +65,23 @@ function PostsAdminItem({ post, dataType, getPosts }) {
       
     </div>
     {showEditModal && (
-      <div className="absolute z-10 top-0 bg-gray-700 w-[1200px] rounded-xl text-[#000]">
-        {/* Edit Modal */}
-        <PostEdit post={post} dataType={dataType} getPosts={getPosts} />
-        <button
-          className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1"
-          onClick={toggleEditModal} // Close the edit modal when this button is clicked
-        >
-          Close
-        </button>
+      <div className="fixed inset-0 z-50 backdrop-blur backdrop-opacity-100 flex items-center justify-center">
+        <div className="bg-white w-[1200px] rounded-xl text-[#000] relative">
+          {/* Edit Modal */}
+          <PostEditt post={post} dataType={dataType} getPosts={getPosts} />
+          <button
+            className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1 absolute top-4 right-4"
+            onClick={toggleEditModal} // Close the edit modal when this button is clicked
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xmlSpace="preserve">
+            <g>
+              <g>
+                <polygon points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512     512,452.922 315.076,256   "/>
+              </g>
+            </g>
+            </svg>
+          </button>
+        </div>
       </div>
     )}
       </>

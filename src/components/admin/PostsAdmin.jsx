@@ -23,6 +23,10 @@ function PostsAdmin({props}) {
     setShowPostEdit(true); // Show PostEdit
     setShowHireAdminItem(false); // Hide HireAdminItem
   };
+  const handleClosePostEdit = () => {
+    setShowPostEdit(false);
+    setShowHireAdminItem(true); // Hide HireAdminItem
+  };
   useEffect(() => {
     getPosts();
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -108,7 +112,7 @@ function PostsAdmin({props}) {
               </div>
             </button>
               <div className="">
-              {showPostEdit && <PostEdit/>} {/* Conditionally render the PostEdit component */}
+              {showPostEdit && <PostEdit onClose={handleClosePostEdit}/>} {/* Conditionally render the PostEdit component */}
             </div>
             {showHireAdminItem && (
               <>
@@ -137,7 +141,7 @@ function PostsAdmin({props}) {
               </div>
             </button>
             <div className="">
-              {showPostEdit && <HireEdit/>} {/* Conditionally render the PostEdit component */}
+              {showPostEdit && <HireEdit onClose={handleClosePostEdit}/>} {/* Conditionally render the PostEdit component */}
             </div>
             {showHireAdminItem && (
               <>

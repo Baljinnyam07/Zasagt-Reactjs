@@ -9,7 +9,7 @@ import {
 import { db } from "../../firebase";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
-const HireCreate = ({post, onClose}) => {
+const HireEditt = ({post}) => {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState((new Date()).toJSON().slice(0, 10));
   const [addInformation, setAddInformation] = useState("");
@@ -26,11 +26,12 @@ const HireCreate = ({post, onClose}) => {
   const [dataType] = useState(urlType);
 
   const navigate = useNavigate();
-  const { type, postId } = useParams();
+  const {postId} = post.id
+  const { type } = post.type;
 
   useEffect(() => {
-    if (postId) {
-      const docRef = doc(db, dataType, postId);
+    if (post.id) {
+      const docRef = doc(db, dataType, post.id);
       getDoc(docRef).then((docSnap) => {
         if (docSnap.exists()) {
           const data = docSnap.data();
@@ -49,18 +50,18 @@ const HireCreate = ({post, onClose}) => {
         }
       });
     }
-  }, [dataType, postId]);
+  }, [dataType, post.id]);
 
   const save = async () => {
     if (!dataType) {
       console.error("dataType is empty");
       return;
     }
-    if (postId) {
-      await updateDoc(doc(db, dataType, postId), {
+    if (post.id) {
+      await updateDoc(doc(db, dataType, post.id), {
         title: title,
         date: date,
-        type: type,
+        type: post.type,
         addinformation: addInformation,
         basicissues: basicIssues,
         industry: industry,
@@ -70,12 +71,12 @@ const HireCreate = ({post, onClose}) => {
         location: locations,
         requirements: requirements,
       });
-      navigate(`/${type}/${postId}`);
+      navigate(`/${type}/${post.id}`);
     } else {
       const docRef = await addDoc(collection(db, dataType), {
         title: title,
         date: date,
-        type: type,
+        type: post.type,
         addinformation: addInformation,
         basicissues: basicIssues,
         industry: industry,
@@ -85,7 +86,7 @@ const HireCreate = ({post, onClose}) => {
         location: locations,
         requirements: requirements,
       });
-      navigate(`/admin/humanity`);
+      navigate(`/${dataType}/${type}/${docRef.id}`);
     }
   };
   const handleRequirementChange = (value, index) => {
@@ -105,18 +106,6 @@ const HireCreate = ({post, onClose}) => {
   };
   return <>
     <div className="grid grid-cols-6">
-    <button
-        className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1 absolute top-[95px] right-[20px]"
-        onClick={onClose} // Close the edit modal when this button is clicked
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xmlSpace="preserve">
-        <g>
-          <g>
-            <polygon points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512     512,452.922 315.076,256   "/>
-          </g>
-        </g>
-        </svg>
-      </button>
       <div className="col-span-2 items-center bg-[#94a3b8] p-4">
         <div className="bg-[#374151] text-[#fff] rounded-xl w-full border-r h-max p-8">
           <h2 className="text-2xl font-semibold mb-6">Нээлттэй ажлын байр</h2>
@@ -261,7 +250,7 @@ const HireCreate = ({post, onClose}) => {
           </div>
         </div>
       </div>
-    <div className="col-span-4 p-40 bg-[#94a3b8] max-w-[1200px]">
+    <div className="col-span-4 p-40 bg-[#94a3b8]">
     <div className="bg-white rounded border">
               <div className="border-b">
               <div className="py-[16px] px-[24px]">
@@ -306,15 +295,15 @@ const HireCreate = ({post, onClose}) => {
                     {basicIssues}
                 </div>
                 <div className="mb-[8px] font-[500]">Ажлын байранд тавигдах шаардлага</div>
-                <div className="mb-[24px] w-[400px] ">
-                <ul className="">
+                <div className="mb-[24px]">
+                <ul>
                   {requirements.map((item, index) => (
-                    <li className="w-[200px] flex flex-wrap" key={index}>{item}</li>
+                    <li key={index}>{item}</li>
                   ))}
                 </ul>
                 </div>
                 <div className="mb-[8px] font-[500]">Нэмэлт мэдээлэл</div>
-              <div className="mb-[24px] break-words">
+              <div className="mb-[24px]">
                 {addInformation}
               </div>
                 <div className="mb-[8px] font-[500]">Бусад</div>
@@ -347,4 +336,4 @@ const HireCreate = ({post, onClose}) => {
   </>;
 }
 
-export default HireCreate;
+export default HireEditt;
