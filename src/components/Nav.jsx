@@ -40,10 +40,10 @@ export default function Nav() {
                     </span>
                 </div>
             </div>
-            {navMenuJson.map((items) => (
+            {navMenuJson.map((items, index) => (
                 <div className="group relative cursor-pointer hidden lg:block" key={items.headerTitle}>
                     <div className="flex items-center px-[20px]">
-                    <div className={`menu-hover text-[14px] font-400 mr-[4px] uppercase ${url.startsWith(items.headerproperty[0].url) || url.startsWith(items.headerproperty[1].url) || url.startsWith(items.headerproperty[2].url) ? 'text-[#D0A616]' : 'text-[#fff]'}`}>
+                    <div className={`menu-hover text-[14px] font-400 mr-[4px] uppercase ${url.startsWith((items.headerproperty[index] || {}).url) ? 'text-[#D0A616]' : 'text-[#fff]'}`}>
                             {items.headerTitle}
                     </div>
                         <span className="text-[#fff] group-hover:rotate-180 transform transition ease-in-out delay-150">
