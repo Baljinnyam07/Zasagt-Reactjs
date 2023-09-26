@@ -46,29 +46,49 @@ code {
   justify-content: center;
   align-items: center;
 }
-.my-loader {
-  width: 100px;
-  height: 100px;
-  border: 10px solid #bbb;
-  border-left: 10px solid blue;
-  border-right: 10px solid blueviolet;
-  border-radius: 50%;
-  animation: spin 2s linear infinite;
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
 }
-
-@keyframes spin {
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #23356B;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
   0% {
-    transform: rotate(0deg);
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
   }
   100% {
-    transform: rotate(360deg);
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
   }
-}
-
-.map {
-  -webkit-filter: grayscale(100%);
-     -moz-filter: grayscale(100%);
-      -ms-filter: grayscale(100%);
-       -o-filter: grayscale(100%);
-          filter: grayscale(100%);
 }

@@ -12,13 +12,10 @@ const PostEdit = () => {
   const [date, setDate] = useState((new Date()).toJSON().slice(0, 10));
   const [image, setImage] = useState("");
   const [percent, setPercent] = useState(0);
-
   const location = useLocation();
   const pathSegments = location.pathname.split("/");
   const urlType = pathSegments[2];
-
   const [dataType] = useState(urlType);
-
   const navigate = useNavigate();
   const {type, postId} = useParams();
 

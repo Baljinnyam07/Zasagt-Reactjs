@@ -31,11 +31,11 @@ const Mechanical = () => {
       setShow1(true);
       setShow2(false);
       setShow3(false);
-    } else if (location.pathname === '/mechanical/rent') {
+    } else if (location.pathname === '/mechanical/openings') {
       setShow1(false);
       setShow2(true);
       setShow3(false);
-    } else if (location.pathname === '/mechanical/openings') {
+    } else if (location.pathname === '/mechanical/rent') {
       setShow1(false);
       setShow2(false);
       setShow3(true);
@@ -64,12 +64,12 @@ const Mechanical = () => {
         <div
           className="text-[#454655] w-[480px] font-medium cursor-pointer border-b py-[40px]"
         >
-          <Link className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/rent')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/rent'>уул уурхайн туслах ажил{location.pathname === '/mechanical/rent' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/openings')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/openings'>уул уурхайн туслах ажил{location.pathname === '/mechanical/openings' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
           className="text-[#454655] w-[480px] font-medium cursor-pointer border-b py-[40px]"
         >
-          <a className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/openings')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/mechanical/openings'>тоног төхөөрөмж түрээс{location.pathname === '/mechanical/openings' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
+          <a className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/rent')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/mechanical/rent'>тоног төхөөрөмж түрээс{location.pathname === '/mechanical/rent' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
       </div>
       <div className='pl-[24px] pt-[40px]'>

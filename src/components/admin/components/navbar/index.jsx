@@ -14,7 +14,7 @@ function AdminNav(){
         },
         {
           title: 'Хамтран ажиллах',
-          url:'/admin/mechanical/mining'
+          url:'/admin/mechanical/rent'
         },
         {
           title: 'Хүний Нөөц',

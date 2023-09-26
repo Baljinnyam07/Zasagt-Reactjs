@@ -105,8 +105,8 @@ const HireEdit = () => {
   };
   return <>
     <div className="grid grid-cols-6">
-      <div className="col-span-2 items-center">
-        <div className="bg-[#374151] text-[#fff] w-full border-r h-max p-8">
+      <div className="col-span-2 items-center bg-[#94a3b8] p-4">
+        <div className="bg-[#374151] text-[#fff] rounded-xl w-full border-r h-max p-8">
           <h2 className="text-2xl font-semibold mb-6">Нээлттэй ажлын байр</h2>
           <div className="mb-6">
             <label htmlFor="title" className="block text-[#fff] font-semibold mb-1">Албан тушаалын нэр</label>
