@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const ImageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  
   const nextSlide = () => {
     setCurrentIndex((currentIndex + 1) % images.length);
   };
@@ -21,6 +21,9 @@ export const ImageCarousel = ({ images }) => {
     // eslint-disable-next-line
   }, [currentIndex]);
 
+  const handlePointClick = (index) => {
+    setCurrentIndex(index);
+  };
   return (
     <div className="relative">
       <button
@@ -44,7 +47,17 @@ export const ImageCarousel = ({ images }) => {
       </div>
       <div className="absolute bg-gradient-to-b from-transparent via-transparent to-blue-900 z-10 w-full h-full"/>
       <div className="relative">
-
+      <div className="flex  justify-center">
+      <ul className="absolute z-50 top-[580px] cursor-pointer carousel-points flex space-x-10 justify-center">
+          {images.map((_, index) => (
+            <li
+              key={index}
+              className={`carousel-point w-3 h-3 rounded-full ${index === currentIndex ? "bg-[#fff]" : "border"}`}
+              onClick={() => handlePointClick(index)}
+            ></li>
+          ))}
+        </ul>
+      </div>
       {images.map((image, index) => (
         <img
           key={index}
@@ -56,6 +69,7 @@ export const ImageCarousel = ({ images }) => {
           
         />
       ))}
+      
       <div className="absolute bottom-0 z-20 uppercase text-[#fff] border-t bg-[#fff] backdrop-blur-sm bg-white/10 w-full">
         <div className="flex justify-between h-[60px] xl:h-[140px] divide-x divide-gray-400 items-center">
           <Link to="/mechanical/mining" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:py-[39px] px-[28px] border-opacity-25">
@@ -148,7 +162,6 @@ export const ProjectCarousel = ({ items }) => {
             </div>
             <div className="w-full">
             <img className="w-[100%] h-[400px]" src={item.image} alt={`Carousel Item ${index}`} />
-
             </div>
           </div>
         ))}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Posts from '../Posts/Posts';
-import { Link, useLocation, useParams } from 'react-router-dom';
+// import Posts from '../Posts/Posts';
+import { Link, useLocation } from 'react-router-dom';
 import mechData from '../json/mechanical.json'
 
 const Mechanical = () => {
@@ -17,7 +17,7 @@ const Mechanical = () => {
   const [modalMark, setModalMark] = useState('');
 
 
-  const { type } = useParams();
+  // const { type } = useParams();
   const handleButtonClick = (buttonNumber) => {
     if (buttonNumber === 1) {
       setShowButton1(true);
@@ -186,7 +186,9 @@ const Mechanical = () => {
         <Modal isOpen={isModalOpen} onClose={closeModal} content={modalContent} type={modalType} image={modalImage} mark={modalMark} />
         </div>
         <div className={`${show3 ? '' : 'hidden'}`}>
-          <Posts type={`${type}`} urlType='mechanical'/>
+          {/* <Posts type={`${type}`} urlType='mechanical'/> */}
+          <div className='w-[800px] h-[800px]'></div>
+
         </div>
       </div>
     </div>

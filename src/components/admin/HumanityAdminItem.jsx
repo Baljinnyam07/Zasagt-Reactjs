@@ -13,17 +13,17 @@ function HumanityAdminItem({ post }) {
   };
 
   return (
-    <div className={`rounded-lg p-1 w-64 h-max shadow-md bg-[#6b7280] relative`}>
+    <div className={`rounded-lg p-1 w-[400px] h-max shadow-md border border-[#8F9099] relative`}>
         <div className="text-center mb-4">
           <img
             src={post.image}
             alt=""
-            className="w-32 h-32 rounded-full mx-auto mb-2 border-[2px] border-[#cbd5e1]"
+            className="w-32 h-32 rounded-full mx-auto mb-2 border-[2px] border-[#8F9099]"
           />
           <h2 className="text-xl font-semibold text-[#262626]">
             {post.surName} {post.nickName}
           </h2>
-          <p className="text-sm text-[#cbd5e1]">{post.positionOfInterest}</p>
+          <p className="text-sm text-[#262626]">{post.positionOfInterest}</p>
         </div>
         <hr className="my-4 border-white" />
         <div className="text-[16px] text-[#cbd5e1] leading-6 font-bold m-4">
@@ -31,7 +31,7 @@ function HumanityAdminItem({ post }) {
             <p><div className="text-[12px] text-[#1e293b]">Утас:</div> {post.phone}</p>
             <p><div className="text-[12px] text-[#1e293b]">Хүйс:</div> {post.gender}</p>
           </div>
-          <p><div className="text-[12px] text-[#1e293b]">Шуудан:</div> {post.mail}</p>
+          <p className=""><div className="text-[12px] text-[#262626]">Шуудан:</div> {post.mail}</p>
           <p>
             <div className="text-[#1e293b] text-[12px]">Регистрийн дугаар:</div>
             {post.alphabet1}

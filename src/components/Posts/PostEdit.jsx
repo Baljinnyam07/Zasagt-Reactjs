@@ -96,7 +96,7 @@ const PostCreate = ({post , onClose}) => {
  <div>
       <div className="bg-[#e9ebf0] p-8 flex">
       <button
-        className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1 absolute top-[95px] right-[60px]"
+        className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1 absolute top-[55px] right-[60px]"
         onClick={onClose} // Close the edit modal when this button is clicked
       >
         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xmlSpace="preserve">
@@ -107,7 +107,7 @@ const PostCreate = ({post , onClose}) => {
         </g>
         </svg>
       </button>
-          <div className="max-w-[700px] max-h-[500px] overflow-auto p-8 bg-[#374151] text-white">
+          <div className="w-full max-h-[500px] overflow-auto p-8 bg-[#374151] text-white">
             <h2 className="text-xl font-semibold mb-4">Create</h2>
             <div className="mb-6">
               <label htmlFor="title" className="block text-white">Гарчиг</label>
@@ -162,7 +162,7 @@ const PostCreate = ({post , onClose}) => {
           </div>
           <div className=''>
             
-        <div className='grid grid-cols-4 gap-3 px-10'>
+        <div className='w-2/5 grid grid-cols-4 gap-3 px-10'>
         <div className='col-span-2'>
         <div className="bg-white text-[#8F9099] w-[400px] rounded p-2">
               <div className="aspect-video" style={{ backgroundImage: `url("${image}")` }}></div>

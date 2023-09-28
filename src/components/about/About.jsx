@@ -1,9 +1,9 @@
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
-import Ceo from './ceoImage.jpeg';
-import CeoC from './ceoCeo.png';
+// import Ceo from './ceoImage.jpeg';
+// import CeoC from './ceoCeo.png';
 import Assets from './assets.png';
-import HistoryComp from './zasagtStory.png';
+import HistoryComp from './history2.png';
 
 const About = () => {
   const [showMandchilgee, setShowMandchilgee] = useState(true);
@@ -63,7 +63,7 @@ const About = () => {
         </div>
         <div className='pt-[40px] pb-[121px]'>
         <div className={`grid lg:grid-cols-2 grid-cols-1 justify-center w-full ${showMandchilgee ? '' : 'hidden'}`}>
-          <div className='col-span-1 mx-[24px]'>
+          {/* <div className='col-span-1 mx-[24px]'>
           <img 
             className="animate-fade-up w-[400px] h-[576px] w-full rounded-md xl:rounded-none mb-10"
             src={Ceo}
@@ -91,7 +91,9 @@ const About = () => {
             <div>
             <img src={CeoC} width={126} height={104} alt="Ceo" />
             </div>
-          </div>
+          </div> */}
+                  <div className='w-[800px] h-[800px]'></div>
+
         </div>
 
         <div className={`mx-[24px] xl:px-0 ${showTaniulgu ? '' : 'hidden'}`}>

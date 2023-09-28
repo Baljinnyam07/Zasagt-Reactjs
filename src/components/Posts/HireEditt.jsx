@@ -94,8 +94,8 @@ const HireEditt = ({post, getPosts}) => {
     setRequirements(updatedRequirements);
   };
   return <>
-    <div className="grid grid-cols-6 gap-40">
-      <div className="col-span-3 w-[600px] overflow-auto">
+    <div className="grid grid-cols-6 gap-20">
+      <div className="col-span-3 w-[700px] overflow-auto">
         <div className="bg-[#374151] text-[#fff] rounded-xl  overflow-auto max-h-[800px] border-r p-8">
           <h2 className="text-2xl font-semibold mb-6">Нээлттэй ажлын байр</h2>
           <div className="mb-6">

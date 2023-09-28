@@ -103,7 +103,7 @@ const HireCreate = ({ onClose}) => {
     setRequirements(updatedRequirements);
   };
   return <>
-    <div className="grid grid-cols-6">
+    <div className="flex bg-[#94a3b8]">
     <button
         className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1 absolute top-[95px] right-[20px]"
         onClick={onClose} // Close the edit modal when this button is clicked
@@ -116,8 +116,8 @@ const HireCreate = ({ onClose}) => {
         </g>
         </svg>
       </button>
-      <div className="col-span-2 items-center bg-[#94a3b8] p-4">
-        <div className="bg-[#374151] text-[#fff] rounded-xl w-full border-r h-max p-8">
+      <div className="col-span-3 items-center p-4 w-[1200px]">
+        <div className="bg-[#374151] text-[#fff] rounded-xl border-r h-max p-8">
           <h2 className="text-2xl font-semibold mb-6">Нээлттэй ажлын байр</h2>
           <div className="mb-6">
             <label htmlFor="title" className="block text-[#fff] font-semibold mb-1">Албан тушаалын нэр</label>
@@ -260,12 +260,12 @@ const HireCreate = ({ onClose}) => {
           </div>
         </div>
       </div>
-    <div className="col-span-4 p-40 bg-[#94a3b8] max-w-[1200px]">
-    <div className="bg-white rounded border">
+    <div className="col-span-3 p-4">
+    <div className="bg-white rounded border w-[900px]">
               <div className="border-b">
               <div className="py-[16px] px-[24px]">
-              <div className="text-[16px] flex justify-between font-[500] text-[#23356B] mb-[24px]">
-                <div>
+              <div className="text-[16px] flex justify-between font-[500] text-[#23356B] mb-[24px] ">
+                <div className="break-words">
                     {title}
                 </div>
                 <div className="p-[8px] border">
@@ -301,11 +301,11 @@ const HireCreate = ({ onClose}) => {
               </div>
               <div className="py-[16px] px-[24px] text-[#454655] text-[16px]">
                 <div className="font-[500] mb-[8px]">Гүйцэтгэх үндсэн үүрэг</div>
-                <div className="font-400 mb-[24px]">
+                <div className="font-400 mb-[24px] break-words">
                     {basicIssues}
                 </div>
                 <div className="mb-[8px] font-[500]">Ажлын байранд тавигдах шаардлага</div>
-                <div className="mb-[24px] w-[400px] ">
+                <div className="mb-[24px] w-[400px]">
                 <ul className="">
                   {requirements.map((item, index) => (
                     <li className="w-[200px] flex flex-wrap" key={index}>{item}</li>
@@ -317,9 +317,9 @@ const HireCreate = ({ onClose}) => {
                 {addInformation}
               </div>
                 <div className="mb-[8px] font-[500]">Бусад</div>
-              <div className="flex gap-[24px]">
-              <div>
-                <div>Байршил:</div>
+              <div className="flex gap-[24px] break-words ">
+              <div className="">
+                <div className="break-words">Байршил:</div>
                 <div>Салбар:</div>
                 <div>Түвшин:</div>
                 <div>Төрөл:</div>
