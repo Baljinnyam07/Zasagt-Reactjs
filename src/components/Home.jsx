@@ -90,7 +90,7 @@ const Home =()=>{
     <div className=' animate-fade-up animate-once animate-duration-500 animate-delay-100 animate-ease-linear animate-normal'>
         <ProjectCarousel items={jsonProject}/>
       </div>
-      <AppContainer>
+      {/* <AppContainer>
       <div className='mt-[80px] xl:mt-[200px]'>
       <h1 className='uppercase text-[#23356B] px-[20px] lg:px-0 text-[18px] md:text-[32px] font-[600]'>тоног төхөөрөмж түрээс</h1>
       <div className=''>
@@ -117,7 +117,7 @@ const Home =()=>{
         </div>
       </div>
       </div>
-      </AppContainer>
+      </AppContainer> */}
     </>
   )
 }
