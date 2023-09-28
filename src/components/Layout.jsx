@@ -85,7 +85,7 @@ const Layout =()=> {
       </div>
         <div className='bg-[#23356B]'>
           <AppContainer>
-          <div className='mt-[120px]'>
+          <div className=''>
           <FeedBack/>
           </div>
           </AppContainer>

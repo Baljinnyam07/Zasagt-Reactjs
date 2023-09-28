@@ -87,7 +87,7 @@ const Home =()=>{
         </div>
       </div>
     </div>
-    <div className=' animate-fade-up animate-once animate-duration-500 animate-delay-100 animate-ease-linear animate-normal'>
+    <div className=' animate-fade-up animate-once animate-duration-500 animate-delay-100 animate-ease-linear animate-normal mb-[120px]'>
         <ProjectCarousel items={jsonProject}/>
       </div>
       {/* <AppContainer>
