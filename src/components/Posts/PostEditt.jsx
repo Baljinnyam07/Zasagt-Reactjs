@@ -2,7 +2,7 @@ import Editor from './Editor';
 import { useEffect, useState } from 'react';
 import { collection, addDoc, serverTimestamp, doc, getDoc, updateDoc } from "firebase/firestore"; 
 import { db, storage } from '../../firebase';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 
 
@@ -17,9 +17,7 @@ const PostEditt = ({post}) => {
   const urlType = pathSegments[2];
   const [dataType] = useState(urlType);
   const navigate = useNavigate();
-  const {postId} = post.id;
   const {type} = post.type
-
   useEffect(() => {
     if (post.id) {
       const docRef = doc(db, dataType, post.id);
@@ -51,18 +49,8 @@ const PostEditt = ({post}) => {
         updatedAt: serverTimestamp(),
         type: post.type,
       });
-      navigate(`/${type}/${post.id}`);
-    } else {
-      const docRef = await addDoc(collection(db, dataType), {
-        title: title,
-        content: content,
-        image: image,
-        date: date,
-        createdAt: serverTimestamp(),
-        type: post.type,
-      });
-      navigate(`/${dataType}/${type}/${docRef.id}`);
-    }
+      navigate(`/admin/${dataType}/${type}`);
+    } 
   }
 
   const upload = (e) => {
@@ -142,12 +130,12 @@ const PostEditt = ({post}) => {
               <Editor content={content} setContent={setContent} />
             </div>
             <div className="flex justify-end">
-              <button
+              <a href={`/admin/${dataType}/${pathSegments[3]}`}
                 className="bg-green-500 text-white px-6 py-2 rounded"
                 onClick={save}
               >
                 Хадгалах
-              </button>
+              </a>
             </div>
           </div>
           <div className=''>
@@ -161,7 +149,7 @@ const PostEditt = ({post}) => {
               <path d="M13.75 2.875H11.125V1.875C11.125 1.80625 11.0688 1.75 11 1.75H10.125C10.0562 1.75 10 1.80625 10 1.875V2.875H6V1.875C6 1.80625 5.94375 1.75 5.875 1.75H5C4.93125 1.75 4.875 1.80625 4.875 1.875V2.875H2.25C1.97344 2.875 1.75 3.09844 1.75 3.375V13.75C1.75 14.0266 1.97344 14.25 2.25 14.25H13.75C14.0266 14.25 14.25 14.0266 14.25 13.75V3.375C14.25 3.09844 14.0266 2.875 13.75 2.875ZM13.125 13.125H2.875V7.1875H13.125V13.125ZM2.875 6.125V4H4.875V4.75C4.875 4.81875 4.93125 4.875 5 4.875H5.875C5.94375 4.875 6 4.81875 6 4.75V4H10V4.75C10 4.81875 10.0562 4.875 10.125 4.875H11C11.0688 4.875 11.125 4.81875 11.125 4.75V4H13.125V6.125H2.875Z" fill="#8F9099"/>
               </svg>
                 {date}
-            </div>
+              </div>
                 <div className="text-[#454655] font-500 w-[300px] h-[68px] text-[23px] font-bold mb-[16px] line-clamp-2" style={{ maxHeight: "3em", lineClamp: 2 }}>
                   {title}
                 </div>

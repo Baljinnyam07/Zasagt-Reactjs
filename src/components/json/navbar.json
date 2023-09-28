@@ -4,15 +4,15 @@
         "headerproperty":[
             {
                 "property":"Захирлын мэндчилгээ",
-                "url":"/about/ceo"
+                "path":"/about/ceo"
             },
             {
                 "property":"Компанийн танилцуулга",
-                "url":"/about/about-us"
+                "path":"/about/about-us"
             },
             {
                 "property":"Алсын хараа, эрхэм зорилго, үнэт зүйл",
-                "url":"/about/our"
+                "path":"/about/our"
             }
         ]
     },
@@ -21,11 +21,11 @@
         "headerproperty":[
             {
                 "property":"Овоот толгой",
-                "url":"/project/ovooTolgoi"
+                "path":"/project/ovooTolgoi"
             },
             {
                 "property":"Цанхийн баруун уурхайн нүүрс ачилт",
-                "url":"/project/UurhaiNvvrs"
+                "path":"/project/UurhaiNvvrs"
             }
         ]
     },
@@ -34,15 +34,15 @@
         "headerproperty":[
             {
                 "property":"Ил уурхайн хөрс хуулалт, олборлолтын ажил",
-                "url":"/mechanical/mining"
+                "path":"/mechanical/mining"
             },
             {
                 "property":"Уул уурхайн туслах ажил",
-                "url":"/mechanical/openings"
+                "path":"/mechanical/openings"
             },
             {
                 "property":"Тоног төхөөрөмж түрээс",
-                "url":"/mechanical/rent"
+                "path":"/mechanical/rent"
             }
         ]
     },
@@ -51,15 +51,15 @@
         "headerproperty":[
             {
                 "property":"Цаг үеийн мэдээлэл",
-                "url":"/posts/news"
+                "path":"/posts/news"
             },
             {
                 "property":"Байгууллагын мэдээ",
-                "url":"/posts/corp-news"
+                "path":"/posts/corp-news"
             },
             {
                 "property":"Нийгмийн хариуцлага",
-                "url":"/posts/social-resp"
+                "path":"/posts/social-resp"
             }
         ]
     },
@@ -68,15 +68,15 @@
         "headerproperty":[
             {
                 "property":"Хүний нөөцийн бодлого",
-                "url":"/humanity/resource-policy"
+                "path":"/humanity/resource-policy"
             },
             {
                 "property":"Сургалтын хөтөлбөр",
-                "url":"/humanity/curriculum"
+                "path":"/humanity/curriculum"
             },
             {
                 "property":"Нээлттэй ажлын байр",
-                "url":"/humanity/hire"
+                "path":"/humanity/hire"
             }
         ]
     }

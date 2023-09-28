@@ -2,7 +2,7 @@ import Editor from './Editor';
 import { useEffect, useState } from 'react';
 import { collection, addDoc, serverTimestamp, doc, getDoc, updateDoc } from "firebase/firestore"; 
 import { db, storage } from '../../firebase';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 
 
@@ -18,7 +18,6 @@ const PostCreate = ({post , onClose}) => {
   const [dataType] = useState(urlType);
   const navigate = useNavigate();
   const {type,postId} = useParams()
-
   useEffect(() => {
     if (postId) {
       const docRef = doc(db, dataType, postId);
@@ -60,7 +59,7 @@ const PostCreate = ({post , onClose}) => {
         createdAt: serverTimestamp(),
         type: type,
       });
-      navigate(`/${dataType}/${type}/${docRef.id}`);
+      navigate(`/admin/${dataType}/${type}`);
     }
   }
 
@@ -153,12 +152,12 @@ const PostCreate = ({post , onClose}) => {
               <Editor content={content} setContent={setContent} />
             </div>
             <div className="flex justify-end">
-              <button
+              <Link to='admin/posts/news'
                 className="bg-green-500 text-white px-6 py-2 rounded"
                 onClick={save}
               >
                 Хадгалах
-              </button>
+              </Link>
             </div>
           </div>
           <div className=''>

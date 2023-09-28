@@ -8,7 +8,7 @@ import AdminNav from "./components/navbar";
 import HireAdminItem from "./HireAdminItem";
 import HumanityAdminItem from "./HumanityAdminItem";
 import PostEdit from "../Posts/PostEdit";
-import HireEdit from "../Posts/HireEdit";
+import HireCreate from "../Posts/HireEdit";
 
 function PostsAdmin({props}) {
   const [posts, setPosts] = useState([]);
@@ -141,7 +141,7 @@ function PostsAdmin({props}) {
               </div>
             </button>
             <div className="">
-              {showPostEdit && <HireEdit onClose={handleClosePostEdit}/>} {/* Conditionally render the PostEdit component */}
+              {showPostEdit && <HireCreate onClose={handleClosePostEdit}/>}
             </div>
             {showHireAdminItem && (
               <>

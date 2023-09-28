@@ -17,6 +17,7 @@ import HireEdit from './components/Posts/HireEdit';
 import { auth } from './firebase';
 import Auth from './components/Auth';
 import './index.css'
+import HireEditt from './components/Posts/HireEditt';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -61,7 +62,7 @@ function App() {
             <Route path='admin/anket/:type' element={<RequireAuth><PostsAdmin/></RequireAuth>}/>
             <Route path="/admin/anket/:type/create" element={<RequireAuth><HireEdit/></RequireAuth>} />
             <Route path="/admin/anket/:type/edit/:postId" element={<RequireAuth><HireEdit /></RequireAuth>} />
-            <Route path="/admin/humanity/:type/edit/:postId" element={<RequireAuth><HireEdit /></RequireAuth>} />
+            <Route path="/admin/humanity/:type/edit/:postId" element={<RequireAuth><HireEditt /></RequireAuth>} />
             <Route path="/admin/feedbacks/:type" element={<RequireAuth><PostsAdmin /></RequireAuth>} />
             <Route path="/auth" element={<Auth />} />
       </Routes>

@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase";
-import { Link} from "react-router-dom";
 import HireEditt from "../Posts/HireEditt";
 
 function HireAdminItem({ post, dataType, getPosts }) {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false); // State for edit modal
-
-  const remove = () => {
-    deleteDoc(doc(db, dataType, post.id)).then(() => {
+  
+  const remove = async () => {
+    try {
+      console.log('Removing data:', dataType, post.id);
+      await deleteDoc(doc(db, dataType, post.id));
       getPosts();
       toggleDeleteModal();
-    });
+      console.log('Data removed successfully.');
+    } catch (error) {
+      console.error('Error removing data:', error);
+    }
   };
   const toggleDeleteModal = () => {
     setShowDeleteModal(!showDeleteModal);
@@ -20,20 +24,19 @@ function HireAdminItem({ post, dataType, getPosts }) {
   const toggleEditModal = () => {
     setShowEditModal(!showEditModal); // Toggle the edit modal state
   };
-  
+
   return (
       <>
         <div className="m-8 text-[#cbd5e1] rounded-lg mb-4 relative">
-       
-       <form className="p-2 relative">
+       <form className="p-2 relative" onSubmit={(e) => {e.preventDefault()}}>
         <fieldset className="border border-gray-300 p-4 rounded-lg mb-4">
             <legend className="text-lg text-[#080341] font-semibold mb-2">{post.title}</legend>
             <div className="ml-auto absolute right-10 top-8">
-            <button className="btn-edit rounded-full p-2 hover:bg-green-300 hover:-translate-y-1" onClick={toggleEditModal}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none">
+            <button type="button" className=" text-lime-600 rounded-full p-2 hover:bg-green-300 hover:-translate-y-1" onClick={toggleEditModal}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none">
                     <path fillRule="evenodd" clipRule="evenodd" d="M8.56078 20.2501L20.5608 8.25011L15.7501 3.43945L3.75012 15.4395V20.2501H8.56078ZM15.7501 5.56077L18.4395 8.25011L16.5001 10.1895L13.8108 7.50013L15.7501 5.56077ZM12.7501 8.56079L15.4395 11.2501L7.93946 18.7501H5.25012L5.25012 16.0608L12.7501 8.56079Z" fill="#080341"/>
                 </svg>
-              </button>
+            </button>
               <button
               type="button"
                 className="hover:bg-rose-300 p-2 rounded-full hover:-translate-y-1"
@@ -54,7 +57,7 @@ function HireAdminItem({ post, dataType, getPosts }) {
                       <button className="border rounded-xl px-4" onClick={toggleDeleteModal}>
                         Үгүй
                       </button>
-                      <button className="border rounded-xl px-4 bg-[#dc2626]" onClick={remove}>
+                      <button type="button" className="border rounded-xl px-4 bg-[#dc2626]" onClick={remove}>
                         Тийм
                       </button>
                     </div>
@@ -106,12 +109,14 @@ function HireAdminItem({ post, dataType, getPosts }) {
        </form>
     </div>
     {showEditModal && (
-      <div className="fixed inset-0 z-50 backdrop-blur backdrop-opacity-100 flex items-center justify-center">
-        <div className="bg-white w-[1200px] rounded-xl text-[#000] relative">
+      <div className="fixed inset-0 z-40 backdrop-blur-xl backdrop-opacity-100 flex items-center justify-center">
+        <div className="w-max flex p-40 rounded-xl text-[#000] relative">
           {/* Edit Modal */}
-          <HireEditt post={post} dataType={dataType} getPosts={getPosts} />
-          <button
-            className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1 absolute top-4 right-4"
+          <HireEditt  post={post} dataType={dataType} getPosts={getPosts} />
+          
+        </div>
+        <button
+            className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1 absolute top-6 right-6"
             onClick={toggleEditModal} // Close the edit modal when this button is clicked
           >
             <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xmlSpace="preserve">
@@ -121,9 +126,8 @@ function HireAdminItem({ post, dataType, getPosts }) {
               </g>
             </g>
             </svg>
-          </button>
-        </div>
-      </div>
+          </button>     
+         </div>
     )}
       </>
   );

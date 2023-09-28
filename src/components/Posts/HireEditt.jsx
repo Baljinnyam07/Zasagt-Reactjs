@@ -7,9 +7,9 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { db } from "../../firebase";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const HireEditt = ({post}) => {
+const HireEditt = ({post, getPosts}) => {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState((new Date()).toJSON().slice(0, 10));
   const [addInformation, setAddInformation] = useState("");
@@ -24,7 +24,6 @@ const HireEditt = ({post}) => {
   const pathSegments = location.pathname.split("/");
   const urlType = pathSegments[2];
   const [dataType] = useState(urlType);
-
   const navigate = useNavigate();
   const {postId} = post.id
   const { type } = post.type;
@@ -53,42 +52,32 @@ const HireEditt = ({post}) => {
   }, [dataType, post.id]);
 
   const save = async () => {
-    if (!dataType) {
-      console.error("dataType is empty");
-      return;
-    }
-    if (post.id) {
-      await updateDoc(doc(db, dataType, post.id), {
-        title: title,
-        date: date,
-        type: post.type,
-        addinformation: addInformation,
-        basicissues: basicIssues,
-        industry: industry,
-        joblocation: jobLocation,
-        jobtype: jobType,
-        level: level,
-        location: locations,
-        requirements: requirements,
-      });
-      navigate(`/${type}/${post.id}`);
-    } else {
-      const docRef = await addDoc(collection(db, dataType), {
-        title: title,
-        date: date,
-        type: post.type,
-        addinformation: addInformation,
-        basicissues: basicIssues,
-        industry: industry,
-        joblocation: jobLocation,
-        jobtype: jobType,
-        level: level,
-        location: locations,
-        requirements: requirements,
-      });
-      navigate(`/${dataType}/${type}/${docRef.id}`);
+    try {
+      if (!dataType) {
+        console.error("dataType is empty");
+        return;
+      }
+      if (post.id) {
+        await updateDoc(doc(db, dataType, post.id), {
+          title: title,
+          date: date,
+          type: post.type,
+          addinformation: addInformation,
+          basicissues: basicIssues,
+          industry: industry,
+          joblocation: jobLocation,
+          jobtype: jobType,
+          level: level,
+          location: locations,
+          requirements: requirements,
+        });
+      }
+      window.location.reload();
+    } catch (error) {
+      console.error("Error while saving:", error);
     }
   };
+  
   const handleRequirementChange = (value, index) => {
     const updatedRequirements = [...requirements];
     updatedRequirements[index] = value;
@@ -105,9 +94,9 @@ const HireEditt = ({post}) => {
     setRequirements(updatedRequirements);
   };
   return <>
-    <div className="grid grid-cols-6">
-      <div className="col-span-2 items-center bg-[#94a3b8] p-4">
-        <div className="bg-[#374151] text-[#fff] rounded-xl w-full border-r h-max p-8">
+    <div className="grid grid-cols-6 gap-40">
+      <div className="col-span-3 w-[600px] overflow-auto">
+        <div className="bg-[#374151] text-[#fff] rounded-xl  overflow-auto max-h-[800px] border-r p-8">
           <h2 className="text-2xl font-semibold mb-6">Нээлттэй ажлын байр</h2>
           <div className="mb-6">
             <label htmlFor="title" className="block text-[#fff] font-semibold mb-1">Албан тушаалын нэр</label>
@@ -242,6 +231,7 @@ const HireEditt = ({post}) => {
           </div>
           <div className="flex justify-end">
             <button
+              type="button"
               className="bg-green-500 text-white px-6 py-2 rounded"
               onClick={save}
             >
@@ -250,88 +240,90 @@ const HireEditt = ({post}) => {
           </div>
         </div>
       </div>
-    <div className="col-span-4 p-40 bg-[#94a3b8]">
-    <div className="bg-white rounded border">
-              <div className="border-b">
-              <div className="py-[16px] px-[24px]">
-              <div className="text-[16px] flex justify-between font-[500] text-[#23356B] mb-[24px]">
-                <div>
-                    {title}
+      <div className="col-span-3">
+      <form action="">
+      <div className="bg-[#ffffff] rounded border">
+                <div className="border-b">
+                <div className="py-[16px] px-[24px]">
+                <div className="text-[16px] flex justify-between font-[500] text-[#23356B] mb-[24px]">
+                  <div>
+                      {title}
+                  </div>
+                  <div className="p-[8px] border">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M8.00048 7.21883L4.70048 10.5188L3.75781 9.57616L8.00048 5.3335L12.2431 9.57616L11.2998 10.5188L7.99981 7.21883H8.00048Z" fill="#23356B"/>
+                      </svg>
+                  </div>
                 </div>
-                <div className="p-[8px] border">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M8.00048 7.21883L4.70048 10.5188L3.75781 9.57616L8.00048 5.3335L12.2431 9.57616L11.2998 10.5188L7.99981 7.21883H8.00048Z" fill="#23356B"/>
-                    </svg>
+                <div className="flex gap-[24px] pb-[18px]">
+                  <div className="flex items-center gap-[8px]">
+                      <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <path fillRule="evenodd" clipRule="evenodd" d="M8.00014 14.1257L8.4809 13.584C9.02643 12.9593 9.51709 12.3665 9.95366 11.8027L10.314 11.3273C11.8188 9.29983 12.5716 7.69069 12.5716 6.50136C12.5716 3.96269 10.5251 1.90479 8.00014 1.90479C5.47519 1.90479 3.42871 3.96269 3.42871 6.50136C3.42871 7.69069 4.18147 9.29983 5.68623 11.3273L6.04662 11.8027C6.66943 12.6007 7.32103 13.3751 8.00014 14.1257Z" stroke="#8F9099" strokeLinecap="round" strokeLinejoin="round"/>
+                              <path d="M8.00047 8.38081C9.05244 8.38081 9.90523 7.52802 9.90523 6.47605C9.90523 5.42408 9.05244 4.57129 8.00047 4.57129C6.94849 4.57129 6.0957 5.42408 6.0957 6.47605C6.0957 7.52802 6.94849 8.38081 8.00047 8.38081Z" stroke="#8F9099" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                      </div>
+                      <div className="text-[12px] text-[#8F9099] font-400">
+                          {locations}
+                      </div>
+                  </div>
+                  <div className="flex items-center gap-[8px]">
+                      <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <path d="M13.75 2.875H11.125V1.875C11.125 1.80625 11.0688 1.75 11 1.75H10.125C10.0562 1.75 10 1.80625 10 1.875V2.875H6V1.875C6 1.80625 5.94375 1.75 5.875 1.75H5C4.93125 1.75 4.875 1.80625 4.875 1.875V2.875H2.25C1.97344 2.875 1.75 3.09844 1.75 3.375V13.75C1.75 14.0266 1.97344 14.25 2.25 14.25H13.75C14.0266 14.25 14.25 14.0266 14.25 13.75V3.375C14.25 3.09844 14.0266 2.875 13.75 2.875ZM13.125 13.125H2.875V7.1875H13.125V13.125ZM2.875 6.125V4H4.875V4.75C4.875 4.81875 4.93125 4.875 5 4.875H5.875C5.94375 4.875 6 4.81875 6 4.75V4H10V4.75C10 4.81875 10.0562 4.875 10.125 4.875H11C11.0688 4.875 11.125 4.81875 11.125 4.75V4H13.125V6.125H2.875Z" fill="#8F9099"/>
+                          </svg>
+                      </div>
+                      <div className="text-[12px] text-[#8F9099] font-400">
+                      {date}
+                      </div>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-[24px] pb-[18px]">
-                <div className="flex items-center gap-[8px]">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M8.00014 14.1257L8.4809 13.584C9.02643 12.9593 9.51709 12.3665 9.95366 11.8027L10.314 11.3273C11.8188 9.29983 12.5716 7.69069 12.5716 6.50136C12.5716 3.96269 10.5251 1.90479 8.00014 1.90479C5.47519 1.90479 3.42871 3.96269 3.42871 6.50136C3.42871 7.69069 4.18147 9.29983 5.68623 11.3273L6.04662 11.8027C6.66943 12.6007 7.32103 13.3751 8.00014 14.1257Z" stroke="#8F9099" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M8.00047 8.38081C9.05244 8.38081 9.90523 7.52802 9.90523 6.47605C9.90523 5.42408 9.05244 4.57129 8.00047 4.57129C6.94849 4.57129 6.0957 5.42408 6.0957 6.47605C6.0957 7.52802 6.94849 8.38081 8.00047 8.38081Z" stroke="#8F9099" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                    </div>
-                    <div className="text-[12px] text-[#8F9099] font-400">
-                        {locations}
-                    </div>
                 </div>
-                <div className="flex items-center gap-[8px]">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M13.75 2.875H11.125V1.875C11.125 1.80625 11.0688 1.75 11 1.75H10.125C10.0562 1.75 10 1.80625 10 1.875V2.875H6V1.875C6 1.80625 5.94375 1.75 5.875 1.75H5C4.93125 1.75 4.875 1.80625 4.875 1.875V2.875H2.25C1.97344 2.875 1.75 3.09844 1.75 3.375V13.75C1.75 14.0266 1.97344 14.25 2.25 14.25H13.75C14.0266 14.25 14.25 14.0266 14.25 13.75V3.375C14.25 3.09844 14.0266 2.875 13.75 2.875ZM13.125 13.125H2.875V7.1875H13.125V13.125ZM2.875 6.125V4H4.875V4.75C4.875 4.81875 4.93125 4.875 5 4.875H5.875C5.94375 4.875 6 4.81875 6 4.75V4H10V4.75C10 4.81875 10.0562 4.875 10.125 4.875H11C11.0688 4.875 11.125 4.81875 11.125 4.75V4H13.125V6.125H2.875Z" fill="#8F9099"/>
-                        </svg>
-                    </div>
-                    <div className="text-[12px] text-[#8F9099] font-400">
-                    {date}
-                    </div>
                 </div>
-              </div>
-              </div>
-              </div>
-              <div className="py-[16px] px-[24px] text-[#454655] text-[16px]">
-                <div className="font-[500] mb-[8px]">Гүйцэтгэх үндсэн үүрэг</div>
-                <div className="font-400 mb-[24px]">
-                    {basicIssues}
-                </div>
-                <div className="mb-[8px] font-[500]">Ажлын байранд тавигдах шаардлага</div>
+                <div className="py-[16px] px-[24px] text-[#454655] text-[16px]">
+                  <div className="font-[500] mb-[8px]">Гүйцэтгэх үндсэн үүрэг</div>
+                  <div className="font-400 mb-[24px]">
+                      {basicIssues}
+                  </div>
+                  <div className="mb-[8px] font-[500]">Ажлын байранд тавигдах шаардлага</div>
+                  <div className="mb-[24px]">
+                  <ul>
+                    {requirements.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                  </div>
+                  <div className="mb-[8px] font-[500]">Нэмэлт мэдээлэл</div>
                 <div className="mb-[24px]">
-                <ul>
-                  {requirements.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
+                  {addInformation}
                 </div>
-                <div className="mb-[8px] font-[500]">Нэмэлт мэдээлэл</div>
-              <div className="mb-[24px]">
-                {addInformation}
-              </div>
-                <div className="mb-[8px] font-[500]">Бусад</div>
-              <div className="flex gap-[24px]">
-              <div>
-                <div>Байршил:</div>
-                <div>Салбар:</div>
-                <div>Түвшин:</div>
-                <div>Төрөл:</div>
-              </div>
-              <div>
-                <div className="">
-                    {jobLocation}
+                  <div className="mb-[8px] font-[500]">Бусад</div>
+                <div className="flex gap-[24px]">
+                <div>
+                  <div>Байршил:</div>
+                  <div>Салбар:</div>
+                  <div>Түвшин:</div>
+                  <div>Төрөл:</div>
                 </div>
-                <div className="">
-                    {industry}
+                <div>
+                  <div className="">
+                      {jobLocation}
+                  </div>
+                  <div className="">
+                      {industry}
+                  </div>
+                  <div className="">
+                      {level}
+                  </div>
+                  <div className="">
+                      {jobType}
+                  </div>
                 </div>
-                <div className="">
-                    {level}
                 </div>
-                <div className="">
-                    {jobType}
                 </div>
-              </div>
-              </div>
-              </div>
-            </div>
-    </div>
+      </div>
+      </form>
+      </div>
     </div>
   </>;
 }

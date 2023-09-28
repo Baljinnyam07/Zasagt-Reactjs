@@ -9,7 +9,7 @@ import {
 import { db } from "../../firebase";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
-const HireCreate = ({post, onClose}) => {
+const HireCreate = ({ onClose}) => {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState((new Date()).toJSON().slice(0, 10));
   const [addInformation, setAddInformation] = useState("");
@@ -24,7 +24,6 @@ const HireCreate = ({post, onClose}) => {
   const pathSegments = location.pathname.split("/");
   const urlType = pathSegments[2];
   const [dataType] = useState(urlType);
-
   const navigate = useNavigate();
   const { type, postId } = useParams();
 
@@ -85,7 +84,7 @@ const HireCreate = ({post, onClose}) => {
         location: locations,
         requirements: requirements,
       });
-      navigate(`/admin/humanity`);
+      navigate(`/admin/humanity/hire`);
     }
   };
   const handleRequirementChange = (value, index) => {
@@ -252,12 +251,12 @@ const HireCreate = ({post, onClose}) => {
               </div>
           </div>
           <div className="flex justify-end">
-            <button
+            <a href="/admin/humanity/hire"
               className="bg-green-500 text-white px-6 py-2 rounded"
               onClick={save}
             >
               Save
-            </button>
+            </a>
           </div>
         </div>
       </div>
