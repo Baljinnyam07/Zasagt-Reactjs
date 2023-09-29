@@ -94,9 +94,9 @@ const HireEditt = ({post, getPosts}) => {
     setRequirements(updatedRequirements);
   };
   return <>
-    <div className="grid grid-cols-6 gap-20">
-      <div className="col-span-3 w-[700px] overflow-auto">
-        <div className="bg-[#374151] text-[#fff] rounded-xl  overflow-auto max-h-[800px] border-r p-8">
+    <div className="grid grid-cols-6 w-full mr-6 bg-[#94a3b8]">
+      <div className="col-span-3 w-full overflow-auto">
+        <div className="bg-[#374151] m-10  text-[#fff] overflow-auto h-[545px] border-r p-8">
           <h2 className="text-2xl font-semibold mb-6">Нээлттэй ажлын байр</h2>
           <div className="mb-6">
             <label htmlFor="title" className="block text-[#fff] font-semibold mb-1">Албан тушаалын нэр</label>
@@ -242,7 +242,7 @@ const HireEditt = ({post, getPosts}) => {
       </div>
       <div className="col-span-3">
       <form action="">
-      <div className="bg-[#ffffff] rounded border">
+      <div className="bg-[#ffffff] rounded border m-10">
                 <div className="border-b">
                 <div className="py-[16px] px-[24px]">
                 <div className="text-[16px] flex justify-between font-[500] text-[#23356B] mb-[24px]">

@@ -13,7 +13,7 @@ function HumanityAdminItem({ post }) {
   };
 
   return (
-    <div className={`rounded-lg p-10 w-[250px] h-max hover:shadow-xl shadow-md border border-[#8F9099] relative`}>
+    <div className={`rounded-lg p-10 w-[250px] h-max hover:shadow-xl border border-[#8F9099] relative`}>
         <div onClick={handleModalOpen} className="cursor-pointer">
         <div className="text-center mb-4">
           <img
@@ -42,9 +42,10 @@ export default HumanityAdminItem;
 
 function HumanityAdminModal({ post, onClose }) {
   return (
-    <div className="fixed top-0 left-0 w-full h-full backdrop-blur flex items-center justify-center overflow-auto z-50">
+    <div className="fixed top-0 h-full left-0 w-full backdrop-brightness-50 flex items-center justify-center z-50">
        
-          <div className="bg-[#64748b] text-[#fff] rounded-lg p-6 w-full mt-[2800px] m-[300px]">
+          <div className="bg-[] text-[#000] mx-80 mt-10 h-[800px] overflow-auto rounded-lg p-6 w-full">
+          <div className="m-2 bg-[#fff] border p-10 ">
           <main className="relative">
           <button
             onClick={onClose}
@@ -94,7 +95,7 @@ function HumanityAdminModal({ post, onClose }) {
                   </div>
                   <div className="mb-6">
                     <p>Хүйс*</p>
-                    <p className="mb-4 rounded-[8px] border w-full xl:w-[282px] p-2 h-[40px]">{post.gender}</p>
+                    <p className="mb-4 rounded-[8px] border w-full xl:w-[182px] p-2 h-[40px]">{post.gender}</p>
                   </div>
                 </div>
                 <div className="xl:flex gap-[24px] text-[14px] font-[400]">
@@ -540,6 +541,7 @@ function HumanityAdminModal({ post, onClose }) {
             </div>
 
             </main>
+          </div>
 
           </div>
 
