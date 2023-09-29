@@ -3,6 +3,8 @@ import steppe from './erdenestolgoi.png';
 import gobi from './SouthGove.png';
 import proImage1 from './project1.png';
 import proImage2 from './project2.png'
+import { FormattedMessage } from 'react-intl';
+
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Project = () => {
@@ -40,13 +42,13 @@ const Project = () => {
           className="text-[#454655] w-[480px] font-medium cursor-pointer py-[40px] border-b"
           onClick={handleOvooTolgoiClick}
         >
-          <Link className={`flex pl-[130px] gap-2 ${location.pathname === '/project/ovooTolgoi' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi">овоот толгой{location.pathname === '/project/ovooTolgoi' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`flex pl-[130px] gap-2 ${location.pathname === '/project/ovooTolgoi' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi"><FormattedMessage id="OvootHeader"/>{location.pathname === '/project/ovooTolgoi' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
           className="text-[#454655] w-[480px] font-medium cursor-pointer border-b py-[40px]"
           onClick={handleUurkhainNuursClick}
         >
-          <Link className={`flex pl-[130px] ${location.pathname === '/project/UurhaiNvvrs' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/UurhaiNvvrs"><span className='w-[215px]'>цанхийн баруун уурхайн НҮҮРС АЧИЛТ</span>{location.pathname === '/project/UurhaiNvvrs' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`flex pl-[130px] ${location.pathname === '/project/UurhaiNvvrs' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/UurhaiNvvrs"><span className='w-[215px]'><FormattedMessage id='tsankhi'/></span>{location.pathname === '/project/UurhaiNvvrs' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
       </div>
       <div className="xl:pl-[24px] pt-[40px]">

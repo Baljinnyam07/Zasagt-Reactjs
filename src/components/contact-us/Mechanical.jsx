@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import Posts from '../Posts/Posts';
 import { Link, useLocation } from 'react-router-dom';
 import mechData from '../json/mechanical.json'
+import { FormattedMessage } from 'react-intl';
 
 const Mechanical = () => {
   const location = useLocation();
@@ -62,17 +63,17 @@ const Mechanical = () => {
         <div
           className="text-[#454655] w-[480px] font-medium cursor-pointer border-b py-[40px]"
         >
-          <Link className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/mining')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/mining'><div className='w-[210px]'>ил уурхайн хөрс хуулалт, олборлолтын ажил</div>{location.pathname === '/mechanical/mining' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/mining')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/mining'><div className='w-[210px]'><FormattedMessage id='strip'/></div>{location.pathname === '/mechanical/mining' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
           className="text-[#454655] w-[480px] font-medium cursor-pointer border-b py-[40px]"
         >
-          <Link className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/openings')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/openings'>уул уурхайн туслах ажил{location.pathname === '/mechanical/openings' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/openings')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/openings'><FormattedMessage id='miningSup'/>{location.pathname === '/mechanical/openings' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
           className="text-[#454655] w-[480px] font-medium cursor-pointer border-b py-[40px]"
         >
-          <a className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/rent')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/mechanical/rent'>тоног төхөөрөмж түрээс{location.pathname === '/mechanical/rent' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
+          <a className={`pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/rent')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/mechanical/rent'><FormattedMessage id='rentalEq'/>{location.pathname === '/mechanical/rent' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
       </div>
       <div className='pl-[24px] pt-[40px]'>

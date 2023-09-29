@@ -2,7 +2,7 @@ import Editor from './Editor';
 import { useEffect, useState } from 'react';
 import { collection, addDoc, serverTimestamp, doc, getDoc, updateDoc } from "firebase/firestore"; 
 import { db, storage } from '../../firebase';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import {  useLocation, useNavigate } from 'react-router-dom';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 
 
@@ -15,9 +15,12 @@ const PostEditt = ({post}) => {
   const location = useLocation();
   const pathSegments = location.pathname.split("/");
   const urlType = pathSegments[2];
+  console.log('urlType', urlType)
+
   const [dataType] = useState(urlType);
   const navigate = useNavigate();
   const {type} = post.type
+  console.log('type:', post.type)
   useEffect(() => {
     if (post.id) {
       const docRef = doc(db, dataType, post.id);
@@ -49,8 +52,19 @@ const PostEditt = ({post}) => {
         updatedAt: serverTimestamp(),
         type: post.type,
       });
-      navigate(`/admin/${dataType}/${type}`);
-    } 
+      navigate(`/admin/${dataType}/${post.type}`);
+      window.location.reload();
+    } else {
+      const docRef = await addDoc(collection(db, dataType), {
+        title: title,
+        content: content,
+        image: image,
+        date: date,
+        createdAt: serverTimestamp(),
+        type: type,
+      });
+      navigate(`/admin/${dataType}/${post.type}`);
+    }
   }
 
   const upload = (e) => {
@@ -130,12 +144,12 @@ const PostEditt = ({post}) => {
               <Editor content={content} setContent={setContent} />
             </div>
             <div className="flex justify-end">
-              <a href={`/admin/${dataType}/${pathSegments[3]}`}
+              <button
                 className="bg-green-500 text-white px-6 py-2 rounded"
                 onClick={save}
               >
                 Хадгалах
-              </a>
+              </button>
             </div>
           </div>
           <div className=''>

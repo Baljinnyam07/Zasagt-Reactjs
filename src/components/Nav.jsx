@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import navMenuJson from './json/navbar.json';
 import { useLocation } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 
 export default function Nav() {
@@ -26,7 +27,7 @@ export default function Nav() {
             <div className="hidden lg:block">
             <a href="/">
                 <div className={`menu-hover text-[14px] font-400 ${url === '/' ? 'text-[#D0A616]' : 'text-[#fff]'} lg:mx-4 uppercase`}>
-                    Нүүр
+                    <FormattedMessage id="home"/>
                 </div>
             </a>
             </div>
@@ -43,7 +44,7 @@ export default function Nav() {
                 <div className="group relative cursor-pointer hidden lg:block" key={items.headerTitle}>
                     <div className="flex items-center px-[20px]">
                     <div className={`menu-hover text-[14px] font-400 mr-[4px] uppercase ${items.headerproperty.some(item => url.startsWith(item.path)) ? 'text-[#D0A616]' : 'text-[#fff]'}`}>
-                            {items.headerTitle}
+                        <FormattedMessage id={items.id}/>
                     </div>
                         <span className="text-[#fff] group-hover:rotate-180 transform transition ease-in-out delay-150">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11">
@@ -66,7 +67,7 @@ export default function Nav() {
                                 className="block text-[14px] bg-[#FFFFFF8F] bg-opacity-60 backdrop-blur-md p-[12px] pb-[16px] font-400 hover:text-[#D0A616] w-[198px] h-max"
                             >
                                 <div className="">
-                                {data.property}
+                                <FormattedMessage id={data.id}/>
                                 </div>
                             </a>
                         ))}
@@ -75,7 +76,7 @@ export default function Nav() {
             ))}
             <div className="hidden lg:block mr-[30px]">
                 <div onClick={handleScrollClick} className={`menu-hover cursor-pointer text-[14px] text-[#fff] pr-[34px] font-400 lg:mx-4 uppercase`}>
-                холбоо барих
+                <FormattedMessage id="contacts"/>
                 </div>
             </div>
         </div>

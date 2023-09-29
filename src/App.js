@@ -18,10 +18,28 @@ import { auth } from './firebase';
 import Auth from './components/Auth';
 import './index.css'
 import HireEditt from './components/Posts/HireEditt';
+import FeedbackMore from './components/Posts/FeedbackMore';
+import mn from './locale/mn';
+import en from './locale/en';
+
+const messages = {
+  mn: mn,
+  en: en
+}
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [locale, setLocale] = useState("mn");
 
+  useEffect(() => {
+    const l = localStorage.getItem('language_local');
+
+    if (l) {
+      setLocale(l);
+    } else {
+      localStorage.setItem('language_local', 'mn');
+    }
+  }, []);
   // Simulate a 4-second delay before setting isLoading to false
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -37,10 +55,10 @@ function App() {
                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>      
     </div>
     ) : (
-    <IntlProvider locale='en'>
-    <Router basename='/'>
+      <IntlProvider messages={messages[locale]} locale={locale} defaultLocale="mn">
+      <Router basename='/'>
       <Routes>
-            <Route  element={<Layout />}>
+            <Route  element={<Layout  locale={locale} setLocale={setLocale}/>}>
               <Route path="/" element={<Home />} />
               <Route path="/about/:type"  element={<About/>}/>
               <Route path="/project/:type"  element={<Project/>}/>
@@ -63,7 +81,7 @@ function App() {
             <Route path="/admin/anket/:type/create" element={<RequireAuth><HireEdit/></RequireAuth>} />
             <Route path="/admin/anket/:type/edit/:postId" element={<RequireAuth><HireEdit /></RequireAuth>} />
             <Route path="/admin/humanity/:type/edit/:postId" element={<RequireAuth><HireEditt /></RequireAuth>} />
-            <Route path="/admin/feedbacks/:type" element={<RequireAuth><PostsAdmin /></RequireAuth>} />
+            <Route path="/admin/feedbacks/:type" element={<RequireAuth><FeedbackMore /></RequireAuth>} />
             <Route path="/auth" element={<Auth />} />
       </Routes>
     </Router>

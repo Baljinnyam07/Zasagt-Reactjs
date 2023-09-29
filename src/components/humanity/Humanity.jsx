@@ -5,6 +5,7 @@ import humanity2 from './humanity2.png'
 import humanity3 from './humanity3.png'
 
 import Posts from '../Posts/Posts';
+import { FormattedMessage } from 'react-intl';
 
 function Humanity() {
   const [showOvooTolgoi, setShowOvooTolgoi] = useState(true);
@@ -49,7 +50,7 @@ function Humanity() {
           className="text-[#454655] w-[480px] font-medium mb-5 cursor-pointer py-[40px] border-b"
           onClick={handleOvooTolgoiClick}
         >
-          <Link className={`flex pl-[130px] gap-2 ${location.pathname === '/humanity/resource-policy' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi">хүний нөөцийн бодлого
+          <Link className={`flex pl-[130px] gap-2 ${location.pathname === '/humanity/resource-policy' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi"><FormattedMessage id='humanPolicy'/>
           {location.pathname === '/humanity/resource-policy' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
           
         </div>
@@ -57,7 +58,7 @@ function Humanity() {
           className="text-[#454655] w-[480px] font-medium mb-5 cursor-pointer py-[40px] border-b"
           onClick={handleAltanTsagaanOvooClick}
         >
-          <Link className={`flex pl-[130px] gap-2 ${location.pathname === '/humanity/curriculum' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/tsagaanOvoo">сургалтын хөтөлбөр{location.pathname === '/humanity/curriculum' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`flex pl-[130px] gap-2 ${location.pathname === '/humanity/curriculum' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/tsagaanOvoo"><FormattedMessage id='curriculum'/>{location.pathname === '/humanity/curriculum' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
 
 
@@ -65,7 +66,7 @@ function Humanity() {
           className="text-[#454655] w-[480px] font-medium mb-5 cursor-pointer py-[40px] border-b"
           onClick={handleUurkhainNuursClick}
         >
-          <a className={`flex pl-[130px] gap-2 ${location.pathname === '/humanity/hire' ? 'text-[#D0A616]' : 'text-[#000]'}`} href="/humanity/hire">нээлттэй ажлын байр{location.pathname === '/humanity/hire' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
+          <a className={`flex pl-[130px] gap-2 ${location.pathname === '/humanity/hire' ? 'text-[#D0A616]' : 'text-[#000]'}`} href="/humanity/hire"><FormattedMessage id='availavleJob'/>{location.pathname === '/humanity/hire' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
         
       </div>

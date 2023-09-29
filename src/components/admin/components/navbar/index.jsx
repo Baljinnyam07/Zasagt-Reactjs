@@ -42,7 +42,6 @@ function AdminNav(){
         });
       };
     
-
     return(
       <nav className="relative">
       <div className="h-full fixed">
@@ -73,7 +72,7 @@ function AdminNav(){
           <li key={index} className="group flex">
             <a
               href={dropdown.url}
-              className="col-span-1 hover:underline cursor-pointer"
+              className="col-span-1 text-[#ffffff] hover:underline cursor-pointer"
               onClick={() => toggleDropdown(index)}
             >
               {dropdown.title}
@@ -81,7 +80,7 @@ function AdminNav(){
           </li>
         ))}
         <li>
-          <Link className="hover:underline" to="/admin/feedbacks/feedback">
+          <Link className="hover:underline text-[#ffffff]" to="/admin/feedbacks/feedback">
             Санал Хүсэлт
           </Link>
         </li>

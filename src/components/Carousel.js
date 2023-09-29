@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 
 export const ImageCarousel = ({ images }) => {
@@ -48,7 +49,7 @@ export const ImageCarousel = ({ images }) => {
       <div className="absolute bg-gradient-to-b from-transparent via-transparent to-blue-900 z-10 w-full h-full"/>
       <div className="relative">
       <div className="flex  justify-center">
-      <ul className="absolute z-50 top-[580px] cursor-pointer carousel-points flex space-x-10 justify-center">
+      <ul className="absolute z-20 top-[580px] cursor-pointer carousel-points flex space-x-10 justify-center">
           {images.map((_, index) => (
             <li
               key={index}
@@ -72,15 +73,16 @@ export const ImageCarousel = ({ images }) => {
       
       <div className="absolute bottom-0 z-20 uppercase text-[#fff] border-t bg-[#fff] backdrop-blur-sm bg-white/10 w-full">
         <div className="flex justify-between h-[60px] xl:h-[140px] divide-x divide-gray-400 items-center">
-          <Link to="/mechanical/mining" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:py-[39px] px-[28px] border-opacity-25">
-                ил уурхайн хөрс хуулалт,
-                олборлолтын ажил
+          <Link to="/mechanical/mining" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:py-[39px] sm:px-[58px] border-opacity-25">
+                <FormattedMessage id="strip"/>
           </Link>
           <Link to="/mechanical/rent" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] py-[18px] xl:py-[53px] px-[40px] xl:pl-[140px] border-opacity-25">
-                уул уурхайн туслах ажил
+                <FormattedMessage id="miningSup"/>
           </Link>
-          <Link to="/mechanical/openings" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:text-[21px] py-[18px] px-[23px] xl:py-[38px] xl:px-[100px] border-opacity-25">
-                тоног төхөөрөмж түрээс
+          <Link to="/mechanical/openings" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:text-[21px] py-[18px] px-[23px] xl:px-[100px] border-opacity-25">
+          <div className="xl:h-[105px] flex justify-center items-center">
+          <FormattedMessage id="rentalEq"/>
+          </div>
           </Link>
         </div>
       </div>
@@ -132,12 +134,12 @@ export const ProjectCarousel = ({ items }) => {
             className={`lg:flex-row relative flex border-b flex-col-reverse carousel-item transition-opacity duration-500 ${index === currentIndex ?  "opacity-100" : "opacity-0 absolute z-0 top-0 left-0 hidden"}`}
           >
             <div className="pl-[11.4%] pt-[40px] h-[400px] border-r">
-            <h1 className='px-40 uppercase mb-[16px] text-[#23356B] text-[24px] xl:text-[32px] px-[20px] xl:px-0 font-[600]'>{item.proTitle}</h1>
+            <h1 className='px-40 uppercase mb-[16px] text-[#23356B] text-[24px] xl:text-[32px] px-[20px] xl:px-0 font-[600]'><FormattedMessage id={item.proLan}/></h1>
               <div className="w-[54.8vw] mb-[14px]">
-                <div className="carousel-caption w-[800px] text-justify font-[400] text-[#454655] text-[14px] md:text-[16px]">{item.caption1}</div>
+                <div className="carousel-caption w-[800px] text-justify font-[400] text-[#454655] text-[14px] md:text-[16px]"><FormattedMessage id={item.lan1}/></div>
               </div>
               <div className="w-[54.8vw]">
-                <div className="carousel-caption w-[800px] text-justify font-[400] text-[#454655] text-[14px] md:text-[16px]">{item.caption2}</div>
+                <div className="carousel-caption w-[800px] text-justify font-[400] text-[#454655] text-[14px] md:text-[16px]"><FormattedMessage id={item.lan2}/></div>
               </div>
               <button
                 className="border absolute bottom-0 z-20 rounded-[90px] mt-[24px] xl:mt-[66px] w-[40px] mr-[16px] h-[40px] bg-opacity-20 p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"

@@ -1,82 +1,101 @@
 [
     {
         "headerTitle":"Бидний тухай",
+        "headerId":"about",
         "headerproperty":[
             {
                 "property":"Захирлын мэндчилгээ",
-                "url":"/about/ceo"
+                "url":"/about/ceo",
+                "proId":"greeting"
             },
             {
                 "property":"Компанийн танилцуулга",
-                "url":"/about/about-us"
+                "url":"/about/about-us",
+                "proId":"introCom"
             },
             {
                 "property":"Алсын хараа, эрхэм зорилго, үнэт зүйл",
-                "url":"/about/our"
+                "url":"/about/our",
+                "proId":"vision"
             }
         ]
     },
     {
         "headerTitle":"төслүүд",
+        "headerId":"projects",
         "headerproperty":[
             {
                 "property":"Овоот толгой төсөл",
-                "url":"/project/ovooTolgoi"
+                "url":"/project/ovooTolgoi",
+                "proId":"Ovoot"
             },
             {
                 "property":"Цанхийн баруун уурхайн нүүрс ачилт төсөл",
-                "url":"/project/UurhaiNvvrs"
+                "url":"/project/UurhaiNvvrs",
+                "proId":"tsankhi"
             }
         ]
     },
     {
         "headerTitle":"хамтран ажиллах",
+        "headerId":"cooperate",
         "headerproperty":[
             {
                 "property":"Ил уурхайн хөрс хуулалт, олборлолтын ажил",
-                "url":"/mechanical/mining"
+                "url":"/mechanical/mining",
+                "proId":"strip"
             },
             {
                 "property":"Уул уурхайн туслах ажил",
-                "url":"/mechanical/openings"
+                "url":"/mechanical/openings",
+                "proId":"miningSup"
             },
             {
                 "property":"Тоног төхөөрөмж түрээс",
-                "url":"/mechanical/rent"
+                "url":"/mechanical/rent",
+                "proId":"rentalEq"
             }
         ]
     },
     {
         "headerTitle":"мэдээ мэдээлэл",
+        "headerId":"news",
         "headerproperty":[
             {
                 "property":"Цаг үеийн мэдээлэл",
-                "url":"/posts/news"
+                "url":"/posts/news",
+                "proId":"currentNews"
             },
             {
                 "property":"Байгууллагын мэдээ",
-                "url":"/posts/corp-news"
+                "url":"/posts/corp-news",
+                "proId":"comNews"
             },
             {
                 "property":"Нийгмийн хариуцлага",
-                "url":"/posts/social-resp"
+                "url":"/posts/social-resp",
+                "proId":"socialRes"
             }
         ]
     },
     {
         "headerTitle":"хүний нөөц",
+        "headerId":"hr",
         "headerproperty":[
             {
                 "property":"Хүний нөөцийн бодлого",
-                "url":"/humanity/resource-policy"
+                "url":"/humanity/resource-policy",
+                "proId":"humanPolicy"
             },
             {
                 "property":"Сургалтын хөтөлбөр",
-                "url":"/humanity/curriculum"
+                "url":"/humanity/curriculum",
+                "proId":"curriculum"
             },
             {
                 "property":"Нээлттэй ажлын байр",
-                "url":"/humanity/hire"
+                "url":"/humanity/hire",
+                "proId":"availavleJob"
             }
         ]
     }

@@ -7,7 +7,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { db } from "../../firebase";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 
 const HireCreate = ({ onClose}) => {
   const [title, setTitle] = useState("");
@@ -84,7 +84,8 @@ const HireCreate = ({ onClose}) => {
         location: locations,
         requirements: requirements,
       });
-      navigate(`/admin/humanity/hire`);
+      navigate(`/admin/${dataType}/${type}`);
+      window.location.reload();
     }
   };
   const handleRequirementChange = (value, index) => {
@@ -103,9 +104,9 @@ const HireCreate = ({ onClose}) => {
     setRequirements(updatedRequirements);
   };
   return <>
-    <div className="flex bg-[#94a3b8]">
+    <div className="flex bg-[#94a3b8] mr-[25px]">
     <button
-        className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1 absolute top-[95px] right-[20px]"
+        className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1 absolute top-[95px] right-[50px]"
         onClick={onClose} // Close the edit modal when this button is clicked
       >
         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xmlSpace="preserve">
@@ -116,8 +117,8 @@ const HireCreate = ({ onClose}) => {
         </g>
         </svg>
       </button>
-      <div className="col-span-3 items-center p-4 w-[1200px]">
-        <div className="bg-[#374151] text-[#fff] rounded-xl border-r h-max p-8">
+      <div className="col-span-3 items-center p-4 w-[700px] h-[545px] overflow-auto">
+        <div className="bg-[#374151] text-[#fff] border-r h-max p-8">
           <h2 className="text-2xl font-semibold mb-6">Нээлттэй ажлын байр</h2>
           <div className="mb-6">
             <label htmlFor="title" className="block text-[#fff] font-semibold mb-1">Албан тушаалын нэр</label>
@@ -251,17 +252,17 @@ const HireCreate = ({ onClose}) => {
               </div>
           </div>
           <div className="flex justify-end">
-            <a href="/admin/humanity/hire"
+            <Link href="/admin/humanity/hire"
               className="bg-green-500 text-white px-6 py-2 rounded"
               onClick={save}
             >
               Save
-            </a>
+            </Link>
           </div>
         </div>
       </div>
-    <div className="col-span-3 p-4">
-    <div className="bg-white rounded border w-[900px]">
+    <div className="col-span-3 p-4 pr-[90px]">
+    <div className="bg-white rounded border w-[700px]">
               <div className="border-b">
               <div className="py-[16px] px-[24px]">
               <div className="text-[16px] flex justify-between font-[500] text-[#23356B] mb-[24px] ">

@@ -1,6 +1,7 @@
 import React from "react"
 import contactJson from "./json/contact.json"
 import '../index.css'
+import { FormattedMessage } from "react-intl"
 
 function Contact() {
   return (
@@ -35,13 +36,13 @@ function Contact() {
           </div>
           <div className="w-full place-content-center">
               <h2 className="text-[32px] font-[500] flex justify-center lg:justify-start">
-              Бидэнтэй холбогдох
+              <FormattedMessage id="contact"/>
               </h2>
               <div className="w-full flex flex-wrap lg:block lg:flex-nowrap gap-[24px] text-[#23356B]">
               {contactJson.map((data, index) => (
                 <div key={index} className="flex w-max mt-[24px] gap-[16px]">
                   <div className="pt-1" dangerouslySetInnerHTML={{ __html: data.icon }} />
-                  <a href={data.link} target="_blank" rel="noreferrer" className="text-[16px] w-full font-400 lg:w-[433px]">{data.property}</a>
+                  <a href={data.link} target="_blank" rel="noreferrer" className="text-[16px] w-full font-400 lg:w-[433px]"><FormattedMessage id={data.id}/></a>
                 </div>
               ))}
               </div>

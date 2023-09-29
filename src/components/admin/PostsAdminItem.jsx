@@ -23,7 +23,8 @@ function PostsAdminItem({ post, dataType, getPosts }) {
 
   return (
       <>
-    <div className="text-gray-400 relative leading-8 group">
+    {!showEditModal && (
+      <div className="text-gray-400 relative leading-8 group">
       <div className="h-full border border-gray-400 rounded-xl p-2 w-full">
         <div className="flex absolute top-5 right-6 gap-2 invisible group-hover:visible">
         <button className="btn-edit text-lime-600 rounded-full p-2 bg-green-300 hover:-translate-y-1" onClick={toggleEditModal}>
@@ -64,6 +65,7 @@ function PostsAdminItem({ post, dataType, getPosts }) {
       )}
       
     </div>
+    )}
     {showEditModal && (
       <div className="fixed inset-0 z-50 backdrop-blur backdrop-opacity-100 flex items-center justify-center">
         <div className="bg-white w-[1200px] rounded-xl text-[#000] relative">

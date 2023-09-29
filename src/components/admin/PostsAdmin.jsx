@@ -9,6 +9,7 @@ import HireAdminItem from "./HireAdminItem";
 import HumanityAdminItem from "./HumanityAdminItem";
 import PostEdit from "../Posts/PostEdit";
 import HireCreate from "../Posts/HireEdit";
+import FeedbackMore from "../Posts/FeedbackMore";
 
 function PostsAdmin({props}) {
   const [posts, setPosts] = useState([]);
@@ -67,9 +68,11 @@ function PostsAdmin({props}) {
           urlType !== 'anket' ? (
               urlType !== 'posts' ? (
                 urlType !== 'mechanical' ? (
-                  <div className="">
-
-                  </div>
+                    urlType !== "feedbacks" ? (
+                      <div></div>
+                    ) : (
+                      <div><FeedbackMore dataType={urlType} post={posts} getPosts={getPosts}/></div>
+                    )
                 ) : (
                   <div className="">
                     <div className="text-gray-500 text-[42px] mb-14">Хамтран ажиллах</div>
@@ -112,7 +115,6 @@ function PostsAdmin({props}) {
               </div>
             </button>
               {showPostEdit && <PostEdit onClose={handleClosePostEdit}/>} {/* Conditionally render the PostEdit component */}
-           
             {showHireAdminItem && (
               <>
                 <div className="grid grid-cols-4 gap-4">

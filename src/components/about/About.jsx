@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 // import CeoC from './ceoCeo.png';
 import Assets from './assets.png';
 import HistoryComp from './history2.png';
+import { FormattedMessage } from 'react-intl';
 
 const About = () => {
   const [showMandchilgee, setShowMandchilgee] = useState(true);
@@ -46,22 +47,22 @@ const About = () => {
           className="text-[#454655] w-[480px] font-medium  cursor-pointer border-b py-[40px]"
           onClick={handleMandchilgeeClick}
         >
-          <Link className={`pl-[130px] flex gap-2 ${location.pathname === '/about/ceo' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/ceo">Захирлын мэндчилгээ{location.pathname === '/about/ceo' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`pl-[130px] flex gap-2 ${location.pathname === '/about/ceo' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/ceo"><FormattedMessage id='greeting'/>{location.pathname === '/about/ceo' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
           className="text-[#454655] w-[480px] font-medium cursor-pointer border-b py-[40px]"
           onClick={handleTaniulguClick}
         >
-          <Link className={`pl-[130px] flex gap-2 ${location.pathname === '/about/about-us' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/about-us">компанийн танилцуулга{location.pathname === '/about/about-us' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`pl-[130px] flex gap-2 ${location.pathname === '/about/about-us' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/about-us"><FormattedMessage id='introCom'/>{location.pathname === '/about/about-us' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
           className="text-[#454655] w-mx w-[480px] font-medium mb-5 cursor-pointer border-b py-[40px]"
           onClick={handleUnetZuylClick}
         >
-          <Link className={`pl-[130px] mr-[78px] flex gap-2 xl:w-[406px] relative ${location.pathname === '/about/our' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/our">алсын хараа, эрхэм зорилго, үнэт зүйл{location.pathname === '/about/our' && <div className='w-[8px] h-[2px] absolute left-[250px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`pl-[130px] mr-[78px] flex gap-2 xl:w-[406px] relative ${location.pathname === '/about/our' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/our"><FormattedMessage id='vision'/>{location.pathname === '/about/our' && <div className='w-[8px] h-[2px] absolute left-[250px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         </div>
-        <div className='pt-[40px] pb-[121px]'>
+        <div className=' pb-[121px]'>
         <div className={`grid lg:grid-cols-2 grid-cols-1 justify-center w-full ${showMandchilgee ? '' : 'hidden'}`}>
           {/* <div className='col-span-1 mx-[24px]'>
           <img 
@@ -96,11 +97,11 @@ const About = () => {
 
         </div>
 
-        <div className={`mx-[24px] xl:px-0 ${showTaniulgu ? '' : 'hidden'}`}>
+        <div className={`mx-[24px] pt-[40px] xl:px-0 ${showTaniulgu ? '' : 'hidden'}`}>
           <div className=''>
           <div className="text-[#454655] text-[32px] font-500 font-sans mb-5 uppercase">танилцуулга</div>
             <div className="text-[#454655] text-base font-normal leading-8 mb-5 w-full xl:w-[1004px] ">
-            “Засагт Хаан” ХХК нь 2008 онд уул уурхайн хайгуул, олборлолтын чиглэлээр үйл ажиллагаагаа эхэлсэн бөгөөд 2011 оноос эхлэн орон сууцны болон үйлдвэрийн барилга байгууламжийн угсралт, хүнд машин механизмын түрээсийн чиглэлээр үйл ажиллагаагаа өргөтгөн өдгөө дараах чиглэлээр үйл ажиллагаа явуулж буй уул уурхайн ажил гүйцэтгэгч компани юм. 
+              <FormattedMessage id='History'/>
             </div>
           </div>
           <div>
@@ -181,7 +182,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className={`flex my-10 ${showUnit ? '' : 'hidden'}`}>
+        <div className={` pt-[30px] flex ${showUnit ? '' : 'hidden'}`}>
                 <img
                   src={Assets}
                   width={1236}
