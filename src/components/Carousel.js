@@ -133,16 +133,17 @@ export const ProjectCarousel = ({ items }) => {
             key={index}
             className={`lg:flex-row relative flex border-b flex-col-reverse carousel-item transition-opacity duration-500 ${index === currentIndex ?  "opacity-100" : "opacity-0 absolute z-0 top-0 left-0 hidden"}`}
           >
-            <div className="pl-[11.4%] pt-[40px] h-[400px] border-r">
-            <h1 className='px-40 uppercase mb-[16px] text-[#23356B] text-[24px] xl:text-[32px] px-[20px] xl:px-0 font-[600]'><FormattedMessage id={item.proLan}/></h1>
-              <div className="w-[54.8vw] mb-[14px]">
-                <div className="carousel-caption w-[800px] text-justify font-[400] text-[#454655] text-[14px] md:text-[16px]"><FormattedMessage id={item.lan1}/></div>
+            <div className="px-[20px] xl:px-[0px] xl:pl-[11.4%] pt-[40px] h-[430px] xl:h-[400px] border-r">
+            <h1 className='uppercase mb-[16px] text-[#23356B] text-[24px] xl:text-[32px] xl:px-0 font-[600]'><FormattedMessage id={item.proLan}/></h1>
+              <div className=" w-full xl:w-[54.8vw] mb-[14px]">
+                <div className="carousel-caption w-full xl:w-[800px] text-justify font-[400] text-[#454655] text-[14px] md:text-[16px]"><FormattedMessage id={item.lan1}/></div>
               </div>
-              <div className="w-[54.8vw]">
-                <div className="carousel-caption w-[800px] text-justify font-[400] text-[#454655] text-[14px] md:text-[16px]"><FormattedMessage id={item.lan2}/></div>
+              <div className="w-full xl:w-[54.8vw]">
+                <div className="carousel-caption w-full xl:w-[800px] text-justify font-[400] text-[#454655] text-[14px] md:text-[16px]"><FormattedMessage id={item.lan2}/></div>
               </div>
+              <div className="flex items-end absolute bottom-0">
               <button
-                className="border absolute bottom-0 z-20 rounded-[90px] mt-[24px] xl:mt-[66px] w-[40px] mr-[16px] h-[40px] bg-opacity-20 p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
+                className="border rounded-[90px] mt-[24px] xl:mt-[66px] w-[40px] mr-[16px] h-[40px] bg-opacity-20 p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
                 onClick={prevItem}
               >
                 <svg width="16" height="16" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,7 +153,7 @@ export const ProjectCarousel = ({ items }) => {
                 </svg>
               </button>
               <button
-                className="border absolute left-[calc(15%)] bottom-0 bg-opacity-20 w-[40px] h-[40px] rounded-[90px] p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
+                className="border rounded-[90px] mt-[24px] xl:mt-[66px] w-[40px] mr-[16px] h-[40px] bg-opacity-20 p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"
                 onClick={nextItem}
               >
                 <svg width="16" height="16" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -161,9 +162,10 @@ export const ProjectCarousel = ({ items }) => {
                 </g>
                 </svg>
               </button>
+              </div>
             </div>
             <div className="w-full">
-            <img className="w-[100%] h-[400px]" src={item.image} alt={`Carousel Item ${index}`} />
+            <img className="w-full xl:w-[100%] h-full xl:h-[400px]" src={item.image} alt={`Carousel Item ${index}`} />
             </div>
           </div>
         ))}

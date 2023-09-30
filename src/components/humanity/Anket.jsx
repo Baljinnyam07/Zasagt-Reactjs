@@ -185,7 +185,7 @@ const Anket = () =>{
             <div className="px-[24px] xl:px-0">
             <header className="">
             <div>
-              <div className="text-black text-[32px] font-500 font-sans mb-5">Ажилд орохыг хүсэгчийн анкет</div>
+              <div className="text-black text-[24px] xl:text-[32px] font-500 font-sans mb-5">Ажилд орохыг хүсэгчийн анкет</div>
             </div>
             <div>
             <div className= {`w-full xl:w-[894px] bg-[#E9EBF0] rounded-[8px] mb-[40px]`}>
@@ -198,7 +198,7 @@ const Anket = () =>{
                     </ol>
               </div>
             </div>
-            <div className="border bg-[#E9EBF0] mb-[40px] h-max w-[894px]">
+            <div className="border bg-[#E9EBF0] mb-[40px] h-max xl:w-[894px]">
               <ul className="flex text-[6px] xl:text-[12px] font-[400] text-[#23356B]">
                 <li className={`py-[8px] xl:py-[15px] px-[10px] xl:px-[19px] ${step <= 1 ? (step === 1 ? "border-[1px] border-[#23356B]" : "") : "bg-[#23356B] text-white"}`}>ҮНДСЭЛ МЭДЭЭЛЭЛ</li>
                 <li className={`py-[8px] xl:py-[15px] px-[10px] xl:px-[19px] ${step <= 2 ? (step === 2 ? "border-[1px] border-[#23356B]" : "") : "bg-[#23356B] text-white"}`}>ГЭР БҮЛИЙН БАЙДАЛ</li>

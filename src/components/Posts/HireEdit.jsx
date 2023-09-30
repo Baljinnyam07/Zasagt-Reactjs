@@ -126,7 +126,7 @@ const HireCreate = ({ onClose}) => {
               type="text"
               name="title"
               id="title"
-              className="form-input w-full bg-[#4b5563] rounded"
+              className="form-input w-full bg-[#4b5563] rounded p-2"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
@@ -138,7 +138,7 @@ const HireCreate = ({ onClose}) => {
                   type="text"
                   name="locations"
                   id="locations"
-                  className="form-input w-full bg-[#4b5563] rounded"
+                  className="form-input w-full bg-[#4b5563] rounded p-2"
                   value={locations}
                   onChange={(e) => setLocations(e.target.value)}
               />
@@ -149,7 +149,7 @@ const HireCreate = ({ onClose}) => {
                   type="date"
                   name="date"
                   id="date"
-                  className="form-input w-full bg-[#4b5563] rounded"
+                  className="form-input w-full bg-[#4b5563] rounded p-2"
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
               />
@@ -160,7 +160,7 @@ const HireCreate = ({ onClose}) => {
             <textarea
               name="basicIssues"
               id="basicIssues"
-              className="form-textarea w-full bg-[#4b5563] rounded"
+              className="form-textarea w-full bg-[#4b5563] rounded pl-2"
               value={basicIssues}
               onChange={(e) => setBasicIssues(e.target.value)}
             />
@@ -172,7 +172,7 @@ const HireCreate = ({ onClose}) => {
                   <div key={index} className="flex items-center mb-2">
                       <input
                       type="text"
-                      className="form-input w-full bg-[#4b5563]"
+                      className="form-input w-full bg-[#4b5563] pl-2"
                       value={req}
                       onChange={(e) => handleRequirementChange(e.target.value, index)}
                       />
@@ -197,7 +197,7 @@ const HireCreate = ({ onClose}) => {
             <textarea
               name="addInformation"
               id="addInformation"
-              className="form-textarea w-full bg-[#4b5563] rounded"
+              className="form-textarea w-full bg-[#4b5563] rounded pl-2"
               value={addInformation}
               onChange={(e) => setAddInformation(e.target.value)}
             />
@@ -211,7 +211,7 @@ const HireCreate = ({ onClose}) => {
                   type="text"
                   name="jobLocation"
                   id="jobLocation"
-                  className="form-textarea w-full bg-[#4b5563] rounded"
+                  className="form-textarea w-full bg-[#4b5563] rounded pl-2"
                   value={jobLocation}
                   onChange={(e) => setJobLocation(e.target.value)}
               />
@@ -222,7 +222,7 @@ const HireCreate = ({ onClose}) => {
                   type="text"
                   name="industry"
                   id="industry"
-                  className="form-input w-full bg-[#4b5563] rounded"
+                  className="form-input w-full bg-[#4b5563] rounded pl-2"
                   value={industry}
                   onChange={(e) => setIndustry(e.target.value)}
               />
@@ -233,7 +233,7 @@ const HireCreate = ({ onClose}) => {
                   type="text"
                   name="level"
                   id="level"
-                  className="form-input w-full bg-[#4b5563] rounded"
+                  className="form-input w-full bg-[#4b5563] rounded pl-2"
                   value={level}
                   onChange={(e) => setLevel(e.target.value)}
               />
@@ -245,7 +245,7 @@ const HireCreate = ({ onClose}) => {
                   type="text"
                   name="jobType"
                   id="jobType"
-                  className="form-textarea w-full bg-[#4b5563] rounded"
+                  className="form-textarea w-full bg-[#4b5563] rounded pl-2"
                   value={jobType}
                   onChange={(e) => setJobType(e.target.value)}
               />

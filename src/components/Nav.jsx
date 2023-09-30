@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import navMenuJson from './json/navbar.json';
 import { useLocation } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
@@ -7,13 +7,33 @@ import { FormattedMessage } from "react-intl";
 export default function Nav() {
     const location = useLocation();
     const url = location.pathname;
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [expandedItems, setExpandedItems] = useState([]);
+  
 
-    const [isModalOpen, setIsModalOpen] = useState(false); // Add state for the modal
-
-    const toggleModal = () => {
-        setIsModalOpen(!isModalOpen);
+    useEffect(() => {
+      document.addEventListener("click", hideMenus);
+      return () => {
+        document.removeEventListener("click", hideMenus);
+      };
+    }, []);
+      
+    const toggleMobileMenu = (id) => {
+      // Toggle the 'isExpanded' state for the clicked item
+      setExpandedItems((prevItems) =>
+        prevItems.includes(id)
+          ? prevItems.filter((item) => item !== id)
+          : [...prevItems, id]
+      );
     };
-
+    function showMenu() {
+      const menuElement = document.getElementById('menu');
+      if (menuElement) {
+        menuElement.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      }
+    }
+    
     const handleScrollClick = () => {
     window.scrollTo({
         top:document.documentElement.scrollHeight,
@@ -21,8 +41,22 @@ export default function Nav() {
         behavior: 'smooth',
     });
   };
+  const hideMenus = (e) => {
+    // Close all expanded menus when clicking outside
+    setExpandedItems([]);
+  };
+
+  const isItemExpanded = (id) => {
+    return expandedItems.includes(id);
+  };
 
     return (
+        <>
+        <button className="text-white rounded-full pr-10 sm:hidden" onClick={showMenu}>
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                  <path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
         <div className="flex items-center">
             <div className="hidden lg:block">
             <a href="/">
@@ -31,7 +65,7 @@ export default function Nav() {
                 </div>
             </a>
             </div>
-            <div className="lg:hidden relative">
+            {/* <div className="lg:hidden relative">
                 <div className="absolute flex w-full h-6 sm:h-10 justify-end">
                     <span id="mobile_menu_academy" className="mobile_menu" onClick={toggleModal}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 70 600 612" width='100%' height='100%' fill="#fff">
@@ -39,7 +73,7 @@ export default function Nav() {
                         </svg>
                     </span>
                 </div>
-            </div>
+            </div> */}
             {navMenuJson.map((items, index) => (
                 <div className="group relative cursor-pointer hidden lg:block" key={items.headerTitle}>
                     <div className="flex items-center px-[20px]">
@@ -80,5 +114,6 @@ export default function Nav() {
                 </div>
             </div>
         </div>
+        </>
     );
 }

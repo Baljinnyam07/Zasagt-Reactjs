@@ -44,29 +44,29 @@ function Humanity() {
 
   return (
       <div className="xl:flex inline-block divide-x">
-      <div className="text-[14px] uppercase xl:block hidden">
+      <div className="text-[14px] uppercase xl:block flex divide-x">
         
         <div
-          className="text-[#454655] w-[480px] font-medium mb-5 cursor-pointer py-[40px] border-b"
+          className="text-[#454655] w-full xl:w-[480px] text-center xl:text-start font-medium mb-5 cursor-pointer py-[40px] border-b"
           onClick={handleOvooTolgoiClick}
         >
-          <Link className={`flex pl-[130px] gap-2 ${location.pathname === '/humanity/resource-policy' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi"><FormattedMessage id='humanPolicy'/>
-          {location.pathname === '/humanity/resource-policy' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`flex xl:pl-[130px] gap-2 ${location.pathname === '/humanity/resource-policy' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi"><FormattedMessage id='humanPolicy'/>
+          {location.pathname === '/humanity/resource-policy' && <div className='w-[8px] h-[2px] flex-shrink-0 xl:block hidden bg-[#D0A616] mt-[9px]'></div>}</Link>
           
         </div>
         <div
-          className="text-[#454655] w-[480px] font-medium mb-5 cursor-pointer py-[40px] border-b"
+          className="text-[#454655] w-full xl:w-[480px] text-center xl:text-start font-medium mb-5 cursor-pointer py-[40px] border-b"
           onClick={handleAltanTsagaanOvooClick}
         >
-          <Link className={`flex pl-[130px] gap-2 ${location.pathname === '/humanity/curriculum' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/tsagaanOvoo"><FormattedMessage id='curriculum'/>{location.pathname === '/humanity/curriculum' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`flex xl:pl-[130px] gap-2 ${location.pathname === '/humanity/curriculum' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/tsagaanOvoo"><FormattedMessage id='curriculum'/>{location.pathname === '/humanity/curriculum' && <div className='w-[8px] hidden xl:block h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
 
 
         <div
-          className="text-[#454655] w-[480px] font-medium mb-5 cursor-pointer py-[40px] border-b"
+          className="text-[#454655] w-full xl:w-[480px] text-center xl:text-start font-medium mb-5 cursor-pointer py-[40px] border-b"
           onClick={handleUurkhainNuursClick}
         >
-          <a className={`flex pl-[130px] gap-2 ${location.pathname === '/humanity/hire' ? 'text-[#D0A616]' : 'text-[#000]'}`} href="/humanity/hire"><FormattedMessage id='availavleJob'/>{location.pathname === '/humanity/hire' && <div className='w-[8px] h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
+          <a className={`flex xl:pl-[130px] gap-2 ${location.pathname === '/humanity/hire' ? 'text-[#D0A616]' : 'text-[#000]'}`} href="/humanity/hire"><FormattedMessage id='availavleJob'/>{location.pathname === '/humanity/hire' && <div className='w-[8px] h-[2px] xl:block hidden flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
         
       </div>
@@ -107,12 +107,11 @@ function Humanity() {
           </div>
         </div>
         <div className={`px-[24px] xl:mx-0 ${showAltanTsagaanOvoo ? '' : 'hidden'}`}>
-        <div className='w-[800px] h-[800px]'></div>
 
         </div>
         <div className={`px-[24px] ${showUurkhainNuurs ? '' : 'hidden'}`}>
-          <div className="">
-            <div className="">
+          <div className="w-full">
+            <div className="w-full">
             <Posts urlType='humanity'/>
             </div>
           </div>

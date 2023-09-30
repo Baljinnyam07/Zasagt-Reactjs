@@ -39,7 +39,7 @@ const { type } = useParams();
 return (
   <>
   {type === 'hire' ? (
-  <div className="bg-[#ffff] relative pb-[240px]">
+  <div className="bg-[#ffff] relative pb-[240px] w-full">
             <PostsMoreHumanity posts={posts} type={type} />
   </div>):(<div className="bg-[#ffff] relative pt-[40px] pb-[240px]">
       <div className="container sm:mx-auto">

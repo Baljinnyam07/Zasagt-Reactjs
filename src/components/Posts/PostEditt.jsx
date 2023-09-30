@@ -107,7 +107,7 @@ const PostEditt = ({post}) => {
                 type="text"
                 name="title"
                 id="title"
-                className="form-control bg-[#4b5563] w-full rounded"
+                className="form-control bg-[#4b5563] p-2 w-full rounded"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                   />

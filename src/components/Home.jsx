@@ -87,12 +87,12 @@ const Home =()=>{
         <div className='grid grid-cols-2 xl:grid-cols-3 text-[#23356B] divide-x'>
               {jsonItems
               .map((items,index)=>(
-                <div key={index} className={`flex items-start ${items.id === 1 ? 'pl-[180px]' : ''} ${items.id === 4 ? 'pl-[180px] border-t' : ''} ${items.id === 3 ? 'pr-[120px]' : ''} ${items.id === 6 ? 'pr-[180px] border-t' : ''} ${items.id === 5 ? 'border-t' : ''}`}>
-                  <div className='flex px-[17px] py-[40px]'>
+                <div key={index} className={`flex items-start ${items.id === 1 ? 'xl:pl-[180px] border-b xl:border-0' : ''} ${items.id === 4 ? 'xl:pl-[180px] border-t' : ''} ${items.id === 3 ? 'xl:pr-[120px]' : ''} ${items.id === 6 ? 'xl:pr-[180px] border-t' : ''} ${items.id === 5 ? 'border-t' : ''}`}>
+                  <div className='flex px-[20px] py-[40px]'>
                   <div className='mr-[16px]' dangerouslySetInnerHTML={{ __html: items.svg }}/>
                   <div>
                     <h1 className='text-[16px] sm:text-[24px] xl:text-[32px] font-[700]'>{items.number}</h1>
-                    <div className='text-[8px] sm:text-[12px] xl:text-[16px] text-[#23356B] w-full'><FormattedMessage id={items.lan}/></div>
+                    <div className='text-[8px] sm:text-[12px] xl:text-[16px] text-[#23356B] w-full xl:w-full'><FormattedMessage id={items.lan}/></div>
                   </div>
                 </div>
               </div>
