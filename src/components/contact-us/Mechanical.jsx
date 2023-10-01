@@ -59,21 +59,21 @@ const Mechanical = () => {
 
   return (
       <div className="xl:flex divide-x">
-      <div className="text-[14px] uppercase xl:block flex divide-x">
+      <div className="text-[10px] xl:text-[14px] uppercase xl:block flex divide-x">
         <div
-          className="text-[#454655] xl:w-[480px] w-[200px] p-1 text-center xl:text-start font-medium cursor-pointer border-b py-[40px]"
+          className="text-[#454655] w-1/3 xl:w-[480px] w-[200px] p-1 text-center xl:text-start font-medium cursor-pointer border-b xl:py-[40px]"
         >
           <Link className={`xl:pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/mining')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/mining'><div className='w-[210px]'><FormattedMessage id='strip'/></div>{location.pathname === '/mechanical/mining' && <div className='w-[8px] xl:block hidden h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
-          className="text-[#454655] xl:w-[480px] text-center xl:text-start font-medium cursor-pointer border-b py-[40px]"
+          className="text-[#454655] w-1/3 xl:w-[480px] text-center xl:text-start font-medium cursor-pointer border-b xl:py-[40px]"
         >
-          <Link className={`xl:pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/openings')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/openings'><FormattedMessage id='miningSup'/>{location.pathname === '/mechanical/openings' && <div className='w-[8px] h-[2px] xl:block hidden flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`xl:pl-[130px] flex mt-3 xl:mt-0 gap-2 ${location.pathname.startsWith('/mechanical/openings')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/openings'><FormattedMessage id='miningSup'/>{location.pathname === '/mechanical/openings' && <div className='w-[8px] h-[2px] xl:block hidden flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
-          className="text-[#454655] xl:w-[480px p-1 text-center xl:text-start font-medium cursor-pointer border-b py-[40px]"
+          className="text-[#454655] w-1/3 xl:w-[480px] p-1 text-center xl:text-start font-medium cursor-pointer border-b xl:py-[40px]"
         >
-          <a className={`xl:pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/rent')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/mechanical/rent'><FormattedMessage id='rentalEq'/>{location.pathname === '/mechanical/rent' && <div className='w-[8px] h-[2px] xl:block hidden flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
+          <a className={`xl:pl-[130px] flex mt-2 xl:mt-0 gap-2 ${location.pathname.startsWith('/mechanical/rent')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/mechanical/rent'><FormattedMessage id='rentalEq'/>{location.pathname === '/mechanical/rent' && <div className='w-[8px] h-[2px] xl:block hidden flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
       </div>
       <div className='xl:pl-[24px] pt-[40px]'>
@@ -81,7 +81,7 @@ const Mechanical = () => {
           <div className={`xl:mx-[24px] xl:mx-0 ${show1 ? '' : 'hidden'}`}>
           {showButton1 && (<div className='uppercase text-[24px] xl:text-[32px] font-[500] text-[#454655]'>бага оврын тоног төхөөрөмж</div>)}
           {showButton2 && (<div className='uppercase text-[24px] xl:text-[32px] font-[500] text-[#454655]'>дунд оврын тоног төхөөрөмж</div>)}
-            <div className='w-full xl:flex grid grid-cols-2 text-[12px] text-[#23356B] font-[500] uppercase mt-[24px]'>
+            <div className='w-full xl:flex grid grid-cols-2 text-[10px] xl:text-[12px] text-[#23356B] font-[500] uppercase mt-[24px]'>
                 <div className={`border py-[15px] flex justify-center font-bold cursor-pointer w-full xl:w-[446px] button1 bg-[#ECEDEE] ${showButton1 ? 'border-[#23356B]' : ''}`} onClick={() => handleButtonClick(1)}>1 - 3 сая m3/жил гүйцэтгэх</div>
                 <div className={`border py-[15px] flex justify-center font-bold cursor-pointer w-full xl:w-[446px] button2 bg-[#ECEDEE] ${showButton2 ? 'border-[#23356B]' : ''}`} onClick={() => handleButtonClick(2)}>2 - 7 САЯ m3/жил гүйцэтгэх</div>
             </div>

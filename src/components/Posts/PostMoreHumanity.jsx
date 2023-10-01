@@ -20,8 +20,8 @@ function PostsMoreHumanity({ posts }) {
       <>
         {!showAnket && (
           <div className="transition duration-150 ease-out">
-          <div className="mx-[24px] xl:mx-0 w-full xl:w-[1020px]">
-              <div className="text-[#454655] text-[32px] font-[500] font-sans mb-5">Нээлттэй ажлын байрууд</div>
+          <div className="mx-[24px] xl:mx-0 w-max xl:w-[1020px]">
+              <div className="text-[#454655] text-[24px] xl:text-[32px] font-[500] font-sans mb-5">Нээлттэй ажлын байрууд</div>
             </div>
       {posts.map((post) => (
         <div className="mx-[24px] xl:mx-0" key={post.id}>

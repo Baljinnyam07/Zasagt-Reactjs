@@ -58,7 +58,7 @@ const Navbar = () => {
   return (
     <>
       {location.pathname !== '/' ? (
-        <nav className="flex bg-scroll w-full bg-no-repeat bg-cover h-full w-full md:h-[350px] px-[40px] xl:h-[450px]"
+        <nav className="flex bg-scroll w-full bg-no-repeat bg-cover h-full w-full md:h-[350px] px-[20px] xl:h-[450px]"
         style={{
           backgroundImage: `url('${bgImage}')`,
           backgroundSize:'100% 100%'

@@ -67,7 +67,7 @@ const Auth = () => {
   };
 
   return (
-    <body className='flex h-screen relative' style={{backgroundImage: `url(${backImage})`, backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
+<body className='flex h-screen relative' style={{ background: 'linear-gradient(to bottom, #4F5D89, #23356B)' }}>
       <div className="w-full max-w-xs m-auto bg-gray-300 rounded p-5">
         <header>
           <div className="w-20 mx-auto mb-5">
@@ -137,7 +137,6 @@ const Auth = () => {
         <div>
         </div>
       </div>
-      <div className='absolute right-10 top-6'>123</div>
     </body>
   );
 }

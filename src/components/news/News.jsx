@@ -8,7 +8,7 @@ const News = () => {
   const { type } = useParams();
   return (
       <div className="xl:flex divide-x">
-      <div className="text-[14px] uppercase xl:block flex  divide-x">
+      <div className="text-[10px] xl:text-[14px] uppercase xl:block flex  divide-x">
         <div
           className="text-black w-full xl:w-[460px] font-medium mb-5 cursor-pointer border-b xl:py-[40px]"
         >

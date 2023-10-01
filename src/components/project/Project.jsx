@@ -37,9 +37,9 @@ const Project = () => {
   return (
     
       <div className="xl:flex block divide-x">
-      <div className="text-[14px] uppercase grid grid-cols-2 xl:block divide-x">
+      <div className="text-[10px] xl:text-[14px] uppercase grid grid-cols-2 xl:block divide-x">
         <div
-          className="text-[#454655] xl:w-[480px] font-medium cursor-pointer xl:py-[40px] border-b"
+          className="text-[#454655] xl:w-[480px] font-medium cursor-pointer  xl:py-[40px] border-b"
           onClick={handleOvooTolgoiClick}
         >
           <Link className={`flex xl:pl-[130px] pl-[70px] py-4 gap-2 text-center xl:text-start ${location.pathname === '/project/ovooTolgoi' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi"><FormattedMessage id="OvootHeader"/>{location.pathname === '/project/ovooTolgoi' && <div className='w-[8px] h-[2px] hidden xl:block flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
@@ -48,7 +48,7 @@ const Project = () => {
           className="text-[#454655] xl:w-[480px] font-medium cursor-pointer border-b xl:py-[40px]"
           onClick={handleUurkhainNuursClick}
         >
-          <Link className={`flex xl:pl-[130px] px-10 p-2  text-center xl:text-start ${location.pathname === '/project/UurhaiNvvrs' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/UurhaiNvvrs"><span className='w-[215px]'><FormattedMessage id='tsankhi'/></span>{location.pathname === '/project/UurhaiNvvrs' && <div className='w-[8px] hidden xl:block h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`flex xl:pl-[130px] px-2 p-2  text-center xl:text-start ${location.pathname === '/project/UurhaiNvvrs' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/UurhaiNvvrs"><span className='w-[215px]'><FormattedMessage id='tsankhi'/></span>{location.pathname === '/project/UurhaiNvvrs' && <div className='w-[8px] hidden xl:block h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
       </div>
       <div className="xl:pl-[24px] pt-[40px]">

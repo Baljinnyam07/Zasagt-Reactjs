@@ -68,7 +68,7 @@ const FeedBack =() => {
           <img className="absolute top-[-14px] right-[-8px] cursor-pointer" onClick={(event) => hidePromoNotif(event)} src="/images/close.svg" alt='close'/>
         </div>
       </div>      
-          <div className='py-[80px] px-[20px] xl:px-0  flex flex-col-reverse lg:flex-row gap-[24px] absolute'>
+          <div className='py-[40px] xl:py-[80px] px-[20px] xl:px-0  flex flex-col-reverse lg:flex-row gap-[24px] absolute'>
             <form className='w-full lg:w-[588px]' onSubmit={handleFormSubmit}>
               <div className="grid grid-cols-2 gap-[10px] mb-[8px]">
                 <div className="relative" data-te-input-wrapper-init>

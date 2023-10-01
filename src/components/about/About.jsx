@@ -42,24 +42,24 @@ const About = () => {
   };
   return (
         <div className="xl:flex block divide-x">
-        <div className="text-[14px] uppercase xl:block flex divide-x">
+        <div className="text-[8px] xl:text-[14px] uppercase xl:block flex divide-x">
           <div
-          className="text-[#454655] xl:w-[480px] font-medium  cursor-pointer border-b xl:py-[40px]"
+          className="text-[#454655] w-1/3 xl:w-[480px] font-medium  cursor-pointer border-b xl:py-[40px]"
           onClick={handleMandchilgeeClick}
         >
           <Link className={`xl:pl-[130px] flex gap-2 p-4 px-8 text-center xl:text-start ${location.pathname === '/about/ceo' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/ceo"><FormattedMessage id='greeting'/>{location.pathname === '/about/ceo' && <div className='w-[8px] xl:block hidden h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
-          className="text-[#454655] xl:w-[480px] font-medium cursor-pointer border-b xl:py-[40px]"
+          className="text-[#454655] w-1/3  xl:w-[480px] font-medium cursor-pointer border-b xl:py-[40px]"
           onClick={handleTaniulguClick}
         >
           <Link className={`xl:pl-[130px] flex gap-2 p-4 px-8 text-center xl:text-start ${location.pathname === '/about/about-us' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/about-us"><FormattedMessage id='introCom'/>{location.pathname === '/about/about-us' && <div className='w-[8px] xl:block hidden h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
-          className="text-[#454655] xl:w-[480px] font-medium xl:mb-5 cursor-pointer border-b xl:py-[40px]"
+          className="text-[#454655] w-1/3  xl:w-[480px] font-medium xl:mb-5 cursor-pointer border-b xl:py-[40px]"
           onClick={handleUnetZuylClick}
         >
-          <Link className={`xl:pl-[130px] xl:mr-[78px] flex gap-2 p-2 xl:w-[406px] relative text-center xl:text-start ${location.pathname === '/about/our' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/our"><FormattedMessage id='vision'/>{location.pathname === '/about/our' && <div className='w-[8px] h-[2px] xl:block hidden absolute left-[250px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`xl:pl-[130px] xl:mr-[78px] flex gap-2 p-4 xl:w-[406px] relative text-center xl:text-start ${location.pathname === '/about/our' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/about/our"><FormattedMessage id='vision'/>{location.pathname === '/about/our' && <div className='w-[8px] h-[2px] xl:block hidden absolute left-[380px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         </div>
         <div className=' pb-[121px]'>
@@ -93,7 +93,6 @@ const About = () => {
             <img src={CeoC} width={126} height={104} alt="Ceo" />
             </div>
           </div> */}
-                  <div className='w-[800px] h-[800px]'></div>
 
         </div>
 
@@ -106,9 +105,9 @@ const About = () => {
           </div>
           <div>
           <div className="text-[#454655] text-[32px] font-500 font-sans mb-5 mb-[24px]">Одоогийн үйл ажиллагааны чиглэл</div>
-            <div className="text-[#454655] text-base font-normal leading-8 mb-[54px] w-[894px] ">
-              <ul className='w-max grid grid-cols-2 gap-10 xl:flex xl:gap-[24px]'>
-                <li className='border border-[#23356B] rounded-[4px] pt-[16px] pb-[26px] w-[180px] h-[130px]'>
+            <div className="text-[#454655] text-base font-normal leading-8 mb-[54px] w-max xl:w-[894px] ">
+              <ul className='w-max grid grid-cols-2 gap-2 xl:flex xl:gap-[24px]'>
+                <li className='border border-[#23356B] rounded-[4px] pt-[16px] pb-[26px] w-[160px] xl:w-[180px] h-[130px]'>
                   <div className='flex justify-center pb-[16px]'>
                   <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
                   <path d="M46.7975 32.9267C48.0179 32.9267 47.9999 31.7414 47.9999 31.7414V29.7495C47.9999 28.3313 46.7257 28.4749 46.7257 28.4749H46.2295C46.094 28.1381 45.7644 27.9005 45.3797 27.9005H41.5384C41.1537 27.9005 40.8241 28.1381 40.6891 28.4749H39.5102V25.8543C39.5102 24.9567 38.5049 24.9208 38.5049 24.9208H34.1686C33.8014 24.2399 32.1583 21.5787 28.9188 21.5787L27.0885 20.8247L26.8889 20.9551L22.0987 20.081C21.9315 20.0506 21.77 20.1143 21.6674 20.2349L18.654 19.6847L18.7416 19.4309L16.6677 19L13.7056 22.9585L13.8603 23.1966L12.1826 25.9779C12.1215 26.0792 12.1253 26.2027 12.1818 26.3014L10.1673 29.6418H10.1356C9.97192 29.6418 9.83942 29.7748 9.83942 29.938C9.83942 30.0458 9.89712 30.1402 9.98303 30.1919L9.65989 31.9936C8.9418 32.2983 9.4684 32.9446 9.4684 32.9446L9.74794 33.4298C9.11791 34.5787 9.74794 35.4532 9.74794 35.4532C10.5558 36.4227 14.2719 36.1529 14.2719 36.1529V35.911L13.491 35.5071L11.5782 32.2253L17.5298 23.3628L17.5538 23.2799C19.6845 23.406 27.0808 23.9514 30.6858 25.597L32.175 27.6885C32.1335 27.7838 32.1425 27.9 32.2088 27.9932L32.885 28.9421C32.8478 31.0776 33.2637 32.9275 33.2637 32.9275H36.1356V33.4661H32.3793C31.3381 33.4661 30.4948 34.3094 30.4948 35.3502C30.4948 36.391 31.3385 37.2352 32.3793 37.2352H45.667C46.7082 37.2352 47.5515 36.391 47.5515 35.3502C47.5515 34.3094 46.7078 33.4661 45.667 33.4661H42.1667V32.9275H46.7975V32.9267ZM10.9678 31.585L10.0903 31.9564L10.3057 30.2334H10.3147C10.3925 30.2334 10.463 30.2035 10.516 30.1548H11.5141L10.9678 31.585ZM11.6851 29.7077H10.5169L12.4673 26.4733C12.5814 26.4775 12.6917 26.4233 12.7532 26.3215L13.3645 25.3081L11.6851 29.7077ZM18.056 21.4984L18.1761 21.0735L18.5035 20.1224L21.5853 20.6849C21.6387 20.8337 21.7678 20.9504 21.9341 20.9812L25.7772 21.6826L25.6079 21.7937L18.056 21.4984ZM32.6948 27.6457C32.6285 27.5525 32.5217 27.5059 32.4182 27.5141L31.2577 25.8851C31.3821 25.9552 31.5001 26.027 31.6104 26.1005L32.9978 27.4029C32.9713 27.5953 32.9504 27.7885 32.9337 27.9813L32.6948 27.6457Z" fill="#D0A616"/>

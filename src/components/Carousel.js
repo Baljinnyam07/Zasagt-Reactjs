@@ -40,7 +40,7 @@ export const ImageCarousel = ({ images }) => {
         </svg>
         </div>
       </button>
-      <div className="absolute z-10 top-1/2 text-[24px] xl:text-[64px] left-[64px] xl:left-[144px] w-[350px] xl:w-[1000px] -translate-y-1/2 font-bold">
+      <div className="absolute z-10 top-1/2 text-[18px] xl:text-[64px] left-[64px] xl:left-[144px] w-[300px] xl:w-[1000px] -translate-y-1/2 font-bold">
         <div className="uppercase text-[#fff]">
         Exploring, Constructing,
         Excelling
@@ -49,11 +49,11 @@ export const ImageCarousel = ({ images }) => {
       <div className="absolute bg-gradient-to-b from-transparent via-transparent to-blue-900 z-10 w-full h-full"/>
       <div className="relative">
       <div className="flex  justify-center">
-      <ul className="absolute z-20 top-[580px] cursor-pointer carousel-points flex space-x-10 justify-center">
+      <ul className="absolute z-20 top-[300px]  xl:top-[580px] cursor-pointer carousel-points flex space-x-3 xl:space-x-10 justify-center">
           {images.map((_, index) => (
             <li
               key={index}
-              className={`carousel-point w-3 h-3 rounded-full ${index === currentIndex ? "bg-[#fff]" : "border"}`}
+              className={`carousel-point w-2 h-2 xl:w-3 xl:h-3 rounded-full ${index === currentIndex ? "bg-[#fff]" : "border"}`}
               onClick={() => handlePointClick(index)}
             ></li>
           ))}
@@ -73,13 +73,13 @@ export const ImageCarousel = ({ images }) => {
       
       <div className="absolute bottom-0 z-20 uppercase text-[#fff] border-t bg-[#fff] backdrop-blur-sm bg-white/10 w-full">
         <div className="flex justify-between h-[60px] xl:h-[140px] divide-x divide-gray-400 items-center">
-          <Link to="/mechanical/mining" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:py-[39px] sm:px-[58px] border-opacity-25">
+          <Link to="/mechanical/mining" className="w-1/3 hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:py-[39px] sm:px-[58px] border-opacity-25">
                 <FormattedMessage id="strip"/>
           </Link>
-          <Link to="/mechanical/rent" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] py-[18px] xl:py-[53px] px-[40px] xl:pl-[140px] border-opacity-25">
+          <Link to="/mechanical/rent" className="w-1/3 hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] py-[18px] xl:py-[53px] px-[30px] xl:pl-[140px] border-opacity-25">
                 <FormattedMessage id="miningSup"/>
           </Link>
-          <Link to="/mechanical/openings" className="w-full hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:text-[21px] py-[18px] px-[23px] xl:px-[100px] border-opacity-25">
+          <Link to="/mechanical/openings" className="1/3 hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:text-[21px] py-[18px] px-[23px] xl:px-[100px] border-opacity-25">
           <div className="xl:h-[105px] flex justify-center items-center">
           <FormattedMessage id="rentalEq"/>
           </div>
@@ -133,7 +133,7 @@ export const ProjectCarousel = ({ items }) => {
             key={index}
             className={`lg:flex-row relative flex border-b flex-col-reverse carousel-item transition-opacity duration-500 ${index === currentIndex ?  "opacity-100" : "opacity-0 absolute z-0 top-0 left-0 hidden"}`}
           >
-            <div className="px-[20px] xl:px-[0px] xl:pl-[11.4%] pt-[40px] h-[430px] xl:h-[400px] border-r">
+            <div className="px-[20px] xl:px-[0px] xl:pl-[11.4%] pt-[40px] h-[500px] xl:h-[400px] border-r">
             <h1 className='uppercase mb-[16px] text-[#23356B] text-[24px] xl:text-[32px] xl:px-0 font-[600]'><FormattedMessage id={item.proLan}/></h1>
               <div className=" w-full xl:w-[54.8vw] mb-[14px]">
                 <div className="carousel-caption w-full xl:w-[800px] text-justify font-[400] text-[#454655] text-[14px] md:text-[16px]"><FormattedMessage id={item.lan1}/></div>
@@ -165,7 +165,7 @@ export const ProjectCarousel = ({ items }) => {
               </div>
             </div>
             <div className="w-full">
-            <img className="w-full xl:w-[100%] h-full xl:h-[400px]" src={item.image} alt={`Carousel Item ${index}`} />
+            <img className="w-full xl:w-[100%] h-[300px] xl:h-[400px]" src={item.image} alt={`Carousel Item ${index}`} />
             </div>
           </div>
         ))}
