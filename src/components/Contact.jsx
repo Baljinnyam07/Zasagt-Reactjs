@@ -5,7 +5,7 @@ import { FormattedMessage } from "react-intl"
 
 function Contact() {
   return (
-    <div className="container mx-auto py-[120px] px-[20px] xl:px-0  text-[#23356B]">
+    <div className="container mx-auto py-[60px] xl:py-[120px] px-[20px] xl:px-0  text-[#23356B]">
         <div className="flex flex-col-reverse lg:flex-row gap-[24px] inline-block ">
           <div className="w-full">
           <iframe
