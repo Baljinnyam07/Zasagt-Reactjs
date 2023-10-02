@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 
-export const ImageCarousel = ({ images }) => {
+export const ImageCarousel = ({ images, lan }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const nextSlide = () => {
@@ -72,15 +72,15 @@ export const ImageCarousel = ({ images }) => {
       ))}
       
       <div className="absolute bottom-0 z-20 uppercase text-[#fff] border-t bg-[#fff] backdrop-blur-sm bg-white/10 w-full">
-        <div className="flex justify-between h-[60px] xl:h-[140px] divide-x divide-gray-400 items-center">
-          <Link to="/mechanical/mining" className="w-1/3 hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:py-[39px] sm:px-[58px] border-opacity-25">
+        <div className={`flex justify-between ${lan === "mn" ? "h-[20px]" : ""} xl:h-[140px] divide-x divide-gray-400 items-center`}>
+          <Link to="/mechanical/mining" className={`${lan === "mn" ? 'w-4/8' : 'w-[120px] px-2'} hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:py-[39px] sm:px-[58px] border-opacity-25`}>
                 <FormattedMessage id="strip"/>
           </Link>
-          <Link to="/mechanical/rent" className="w-1/3 hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] py-[18px] xl:py-[53px] px-[30px] xl:pl-[140px] border-opacity-25">
+          <Link to="/mechanical/rent" className="w-[140px] flex justify-center items-center hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] py-[18px] xl:py-[53px] px-[30px] xl:pl-[140px] border-opacity-25">
                 <FormattedMessage id="miningSup"/>
           </Link>
-          <Link to="/mechanical/openings" className="1/3 hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:text-[21px] py-[18px] px-[23px] xl:px-[100px] border-opacity-25">
-          <div className="xl:h-[105px] flex justify-center items-center">
+          <Link to="/mechanical/openings" className="w-[140px] hover:text-[#D0A616] xl:w-[500px] text-center font-[300] text-[8px] xl:text-[21px] xl:text-[21px] py-[18px] px-[18px] xl:px-[100px] border-opacity-25">
+          <div className=" xl:h-[105px] flex justify-center items-center">
           <FormattedMessage id="rentalEq"/>
           </div>
           </Link>

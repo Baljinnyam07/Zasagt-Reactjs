@@ -10,7 +10,6 @@ import HumanityAdminItem from "./HumanityAdminItem";
 import PostEdit from "../Posts/PostEdit";
 import HireCreate from "../Posts/HireEdit";
 import FeedbackMore from "../Posts/FeedbackMore";
-import PostEditt from "../Posts/PostEditt";
 
 function PostsAdmin({props}) {
   const [posts, setPosts] = useState([]);
@@ -20,16 +19,7 @@ function PostsAdmin({props}) {
   const urlType = pathSegments[2]
   const [showPostEdit, setShowPostEdit] = useState(false); // Initialize the state variable for PostEdit
   const [showHireAdminItem, setShowHireAdminItem] = useState(true); // Initialize the state variable for HireAdminItem
-  const [editPostId, setEditPostId] = useState(null);
-  const [editingPostId, setEditingPostId] = useState(null);
 
-  const startEditing = (postId) => {
-    setEditingPostId(postId);
-  };
-
-  const stopEditing = () => {
-    setEditingPostId(null);
-  };
   const handleAddElementClick = () => {
     setShowPostEdit(true); // Show PostEdit
     setShowHireAdminItem(false); // Hide HireAdminItem
@@ -133,8 +123,6 @@ function PostsAdmin({props}) {
                 {posts.map((post) => (
                 <PostsAdminItem key={post.id} dataType={urlType} post={post} getPosts={getPosts} />
                 ))}
-
-                
                 </div>
               </>
             )}

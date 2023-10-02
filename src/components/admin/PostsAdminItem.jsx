@@ -67,12 +67,12 @@ function PostsAdminItem({ post, dataType, getPosts }) {
     </div>
     )}
     {showEditModal && (
-      <div className="fixed inset-0 z-50 backdrop-blur backdrop-opacity-100 flex items-center justify-center">
-        <div className="bg-white w-[1200px] rounded-xl text-[#000] relative">
+      <div className="fixed z-50 backdrop-blur backdrop-opacity-100 flex h-max items-center justify-center">
+        <div className="bg-white w-full rounded-xl text-[#000] relative">
           {/* Edit Modal */}
           <PostEditt post={post} dataType={dataType} getPosts={getPosts} />
           <button
-            className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1 absolute top-4 right-4"
+            className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1 absolute top-4 right-16"
             onClick={toggleEditModal} // Close the edit modal when this button is clicked
           >
             <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xmlSpace="preserve">

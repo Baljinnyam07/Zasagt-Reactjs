@@ -51,7 +51,7 @@ const PostCreate = ({post , onClose}) => {
       });
       navigate(`/${type}/${postId}`);
     } else {
-      const docRef = await addDoc(collection(db, dataType), {
+       await addDoc(collection(db, dataType), {
         title: title,
         content: content,
         image: image,

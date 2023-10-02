@@ -47,7 +47,8 @@ const mn = {
     "reverse":"Засагт Хаан ХХК | Бүх эрх хуулиар хамгаалагдсан.",
     "comPhone":"99110583",
     "comEmail":"erdenejargal@zasagt.mn",
-    "comFace":"Засагт хаан ХХК"
+    "comFace":"Засагт хаан ХХК",
+
 }
 
 export default mn

@@ -2,7 +2,7 @@ const en = {
     "home":"Home",
     "about":"About us",
     "projects":"Projects",
-    "cooperate":"Cooperate",
+    "cooperate":"partnership",
     "news":"News",
     "hr":"Human resource",
     "contacts":"Contacts",
@@ -47,7 +47,7 @@ const en = {
     "reverse":"Zasagt Khaan LLC | All rights reserved.",
     "comPhone":"99110583",
     "comEmail":"erdenejargal@zasagt.mn",
-    "comFace":"Засагт хаан ХХК"
+    "comFace":"Засагт хаан ХХК",
 }
 
 export default en

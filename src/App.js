@@ -60,7 +60,7 @@ function App() {
       <Routes>
             <Route  element={<Layout  locale={locale} setLocale={setLocale}/>}>
               <Route path="/" element={<Home />} />
-              <Route path="/about/:type"  element={<About/>}/>
+              <Route path="/about/:type"  element={<About lan={locale}/>}/>
               <Route path="/project/:type"  element={<Project/>}/>
               <Route path="/humanity/:type"  element={<Humanity/>}/>
               <Route path="/posts/:type" element={<News />} />

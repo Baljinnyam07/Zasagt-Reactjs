@@ -7,7 +7,6 @@ function HireAdminItem({ post, dataType, getPosts }) {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false); // State for edit modal
   const [expandedPostId, setExpandedPostId] = useState(null);
-  const [showAnket, setShowAnket] = useState(false); // State to show Anket component
 
   const togglePostExpansion = (postId) => {
     setExpandedPostId((prevExpandedPostId) =>
@@ -15,9 +14,6 @@ function HireAdminItem({ post, dataType, getPosts }) {
     );
   };
 
-  const handleAnketButtonClick = () => {
-    setShowAnket(true);
-  };
   const remove = async () => {
     try {
       console.log('Removing data:', dataType, post.id);
@@ -167,14 +163,14 @@ function HireAdminItem({ post, dataType, getPosts }) {
       </div>
         )}
         {showEditModal && (
-          <div className="">
+          <div className="relative">
             <div className=" flex rounded-xl text-[#000] relative">
               {/* Edit Modal */}
               <HireEditt toggleEditModal={toggleEditModal}  post={post} dataType={dataType} getPosts={getPosts} />
             </div>
-              <div className="relative">
+              <div className="absolute top-2 right-8">
               <button
-                className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1 absolute top-[-610px] right-10"
+                className="btn-remove text-rose-700 rounded-full p-2 bg-rose-300 hover:-translate-y-1"
                 onClick={toggleEditModal} // Close the edit modal when this button is clicked
               >
                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xmlSpace="preserve">

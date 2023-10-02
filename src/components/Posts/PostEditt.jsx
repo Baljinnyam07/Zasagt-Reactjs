@@ -55,7 +55,7 @@ const PostEditt = ({post}) => {
       navigate(`/admin/${dataType}/${post.type}`);
       window.location.reload();
     } else {
-      const docRef = await addDoc(collection(db, dataType), {
+      await addDoc(collection(db, dataType), {
         title: title,
         content: content,
         image: image,
@@ -98,8 +98,8 @@ const PostEditt = ({post}) => {
 
   return <>
  <div>
-      <div className="bg-[#e9ebf0] p-8 flex">
-          <div className="max-w-[700px] max-h-[500px] overflow-auto p-8 bg-[#374151] text-white">
+      <div className="bg-[#e9ebf0] p-8 flex mr-12">
+          <div className="w-full max-h-[600px] overflow-auto p-8 bg-[#374151] text-white">
             <h2 className="text-xl font-semibold mb-4">Засварлах</h2>
             <div className="mb-6">
               <label htmlFor="title" className="block text-white">Гарчиг</label>
@@ -153,7 +153,7 @@ const PostEditt = ({post}) => {
             </div>
           </div>
           <div className=''>
-        <div className='grid grid-cols-4 gap-3 px-10'>
+        <div className='w-2/5 grid grid-cols-4 gap-3 px-10'>
         <div className='col-span-2'>
         <div className="bg-white text-[#8F9099] w-[400px] rounded p-2">
               <div className="aspect-video" style={{ backgroundImage: `url("${image}")` }}></div>
