@@ -20,7 +20,7 @@ function PostsMoreHumanity({ posts }) {
       <>
         {!showAnket && (
           <div className="transition duration-150 ease-out">
-          <div className="mx-[24px] xl:mx-0 w-max xl:w-[1020px]">
+          <div className="mx-[24px] xl:mx-0 w-max xl:w-full">
               <div className="text-[#454655] text-[24px] xl:text-[32px] font-[500] font-sans mb-5">Нээлттэй ажлын байрууд</div>
             </div>
       {posts.map((post) => (
@@ -73,23 +73,23 @@ function PostsMoreHumanity({ posts }) {
               </div>
               </div>
               <div className="py-[16px] px-[24px] text-[#454655] text-[16px]">
-                <div className="font-[500] mb-[8px]">Гүйцэтгэх үндсэн үүрэг</div>
+                <div className="font-bold mb-[8px]">Гүйцэтгэх үндсэн үүрэг</div>
                 <div className="font-400 mb-[24px]">
                     {post.basicissues}
                 </div>
-                <div className="mb-[8px] font-[500]">Ажлын байранд тавигдах шаардлага</div>
+                <div className="mb-[8px] font-bold">Ажлын байранд тавигдах шаардлага</div>
                 <div className="mb-[24px]">
                 <ul>
                   {post.requirements.map((item, index) => (
-                    <li key={index}>{item}</li>
+                    <li key={index}>{index + 1}. {item}</li>
                   ))}
                 </ul>
                 </div>
-                <div className="mb-[8px] font-[500]">Нэмэлт мэдээлэл</div>
+                <div className="mb-[8px] font-bold">Нэмэлт мэдээлэл</div>
               <div className="mb-[24px]">
                 {post.addinformation}
               </div>
-                <div className="mb-[8px] font-[500]">Бусад</div>
+                <div className="mb-[8px] font-bold">Бусад</div>
               <div className="flex gap-[24px]">
               <div>
                 <div>Байршил:</div>
