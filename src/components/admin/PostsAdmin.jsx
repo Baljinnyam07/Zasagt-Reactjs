@@ -57,7 +57,7 @@ function PostsAdmin({props}) {
         id: doc.id,
         ref: doc,
         ...doc.data()
-      }));
+      }))
       if (data.length) {
         setPosts(data);
       }
