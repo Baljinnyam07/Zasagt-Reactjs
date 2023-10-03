@@ -24,7 +24,7 @@ function PostsAdminItem({ post, dataType, getPosts }) {
   return (
       <>
     {!showEditModal && (
-      <div className="text-gray-400 relative leading-8 group">
+      <div className="text-gray-400 relative leading-8 group fontSomething">
       <div className="h-full border border-gray-400 rounded-xl p-2 w-full">
       <div className="flex absolute top-5 right-6 gap-2 invisible group-hover:visible">
         <button className="btn-edit text-lime-600 rounded-full p-2 bg-green-300 hover:-translate-y-1" onClick={toggleEditModal}>

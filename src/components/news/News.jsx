@@ -25,7 +25,7 @@ const News = () => {
           <a className={`xl:pl-[130px] flex gap-2 text-center xl:text-start  ${location.pathname.startsWith('/posts/social-resp')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/posts/social-resp'><FormattedMessage id='socialRes'/>{location.pathname === '/posts/social-resp' && <div className='w-[8px] xl:block hidden h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
       </div>
-      <div className='px-[24px]'>
+      <div className='px-[20px]'>
         <Posts type={`${type}`} urlType='posts' />
       </div>
     </div>

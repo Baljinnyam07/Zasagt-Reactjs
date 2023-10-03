@@ -61,23 +61,23 @@ const Mechanical = () => {
       <div className="xl:flex divide-x">
       <div className="text-[10px] xl:text-[14px] uppercase xl:block flex divide-x">
         <div
-          className="text-[#454655] w-1/3 xl:w-[480px] p-2 text-center xl:text-start font-medium cursor-pointer border-b xl:py-[40px]"
+          className="text-[#454655] w-1/3 xl:w-[480px] p-4 text-center xl:text-start font-medium cursor-pointer border-b xl:py-[40px]"
         >
           <Link className={`xl:pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/mining')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/mining'><div className='w-[210px]'><FormattedMessage id='strip'/></div>{location.pathname === '/mechanical/mining' && <div className='w-[8px] xl:block hidden h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
-          className="text-[#454655] w-1/3 xl:w-[480px] p-2 text-center xl:text-start font-medium cursor-pointer border-b xl:py-[40px]"
+          className="text-[#454655] w-1/3 xl:w-[480px] flex  p-2 text-center xl:text-start font-medium cursor-pointer border-b xl:py-[40px]"
         >
-          <Link className={`xl:pl-[130px] flex  gap-2 ${location.pathname.startsWith('/mechanical/openings')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/openings'><FormattedMessage id='miningSup'/>{location.pathname === '/mechanical/openings' && <div className='w-[8px] h-[2px] xl:block hidden flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`xl:pl-[130px] flex justify-center items-center xl:mt-0 gap-2 ${location.pathname.startsWith('/mechanical/openings')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/openings'><FormattedMessage id='miningSup'/>{location.pathname === '/mechanical/openings' && <div className='w-[8px] h-[2px] xl:block hidden flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
-          className="text-[#454655] w-1/3 xl:w-[480px] p-2 text-center xl:text-start font-medium cursor-pointer border-b xl:py-[40px]"
+          className="text-[#454655] w-1/3 xl:w-[480px] flex p-2 text-center xl:text-start font-medium cursor-pointer border-b xl:py-[40px]"
         >
-          <a className={`xl:pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/rent')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/mechanical/rent'><FormattedMessage id='rentalEq'/>{location.pathname === '/mechanical/rent' && <div className='w-[8px] h-[2px] xl:block hidden flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
+          <a className={`xl:pl-[130px] flex justify-center items-center xl:mt-0 gap-2 ${location.pathname.startsWith('/mechanical/rent')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/mechanical/rent'><FormattedMessage id='rentalEq'/>{location.pathname === '/mechanical/rent' && <div className='w-[8px] h-[2px] xl:block hidden flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
       </div>
       <div className='xl:pl-[24px] pt-[40px]'>
-        <div className='xl:w-[894px] m-[20px]'>
+        <div className='xl:w-[894px] mx-[20px]'>
           <div className={`xl:mx-[24px] xl:mx-0 ${show1 ? '' : 'hidden'}`}>
           {showButton1 && (<div className='uppercase text-[24px] xl:text-[32px] font-[500] text-[#454655]'>бага оврын тоног төхөөрөмж</div>)}
           {showButton2 && (<div className='uppercase text-[24px] xl:text-[32px] font-[500] text-[#454655]'>дунд оврын тоног төхөөрөмж</div>)}

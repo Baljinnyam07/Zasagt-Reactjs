@@ -60,7 +60,7 @@ function PostsAdmin({props}) {
 
 
   return (
-    <div className="text-white h-full min-h-screen flex bg-[#ffffff]">
+    <div className="text-white h-full min-h-screen flex bg-[#ffffff] fontSomething">
        <AdminNav/>
       <div className="w-full pl-[150px] overflow-auto">
       <div className="mx-12 mt-8 mb-8">

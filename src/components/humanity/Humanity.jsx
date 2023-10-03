@@ -70,28 +70,28 @@ function Humanity() {
         </div>
         
       </div>
-      <div className="pt-[40px] pb-[121px]">
-        <div className={`px-[24px] xl:mx-0 ${showOvooTolgoi ? '' : 'hidden'}`}>
+      <div className="xl:pt-[40px] pb-[121px]">
+        <div className={`px-[20px] xl:mx-0 ${showOvooTolgoi ? '' : 'hidden'}`}>
           <div className="w-full">
             <div className='flex flex-col-reverse lg:flex-row mb-[80px]'>
               <div className="text-black text-[32px] font-500 font-sans mb-5 uppercase">
                   <img className='w-full xl:w-[384px] h-[262px] ' src={humanity1} alt="humanityPhoto" />
               </div>
-              <div className="text-[#454655] text-justify align-center mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px] sm:pl-[24px]">
+              <div className="text-[#454655] text-justify align-center xl:mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px] sm:pl-[24px]">
                 <h1 className='text-[32px] uppercase'>бодлого</h1>
                 <div className='py-[24px] leading-[24px] sm:pr-[45px] w-full'>
                 Бид “Засагт Хаан” компанийн үнэт зүйлс болон ёс зүйн зан төлвийг зохистойгоор баримтлан ажиллахыг хичээдэг. Манай ажилтнуудын соёл нь аюулгүй осолгүй ажиллагаа, ёс зүй, хамтын ажиллагаа, хариуцлага гэсэн үндсэн 3 тулгуур багана дээр суурилдаг.
                 </div>
               </div>
             </div>
-            <div className='lg:flex  mb-[80px]'>
-              <div className="text-[#454655] text-justify align-center h-max mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px]">
+            <div className='lg:flex mb-[80px]'>
+              <div className="text-[#454655] text-justify align-center h-max xl:mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px]">
                 <h1 className='text-[32px] uppercase'>зорилго, зорилт</h1>
-                <div className='py-[24px] leading-[24px] mr-[45px]'>
+                <div className='py-[24px] leading-[24px] xl:mr-[45px]'>
                   Байгууллага доторх ажиллах хүчийг бүрдүүлж, чадварлаг, мэргэшсэн ажил горилогчийг сонгон шалгаруулж , тогтвор суурьшилтай ажиллуулах, хөгжүүлэх, дэмжлэг туслалцаа үзүүлэх зорилготой.
                 </div>                
               </div>
-              <div className="text-black text-[32px] mr-[45px] font-500 font-sans mb-5 uppercase">
+              <div className="text-black text-[32px] xl:mr-[45px] font-500 font-sans mb-5 uppercase">
                   <img className='w-full xl:w-[384px] h-[262px]' src={humanity2} alt="humanityPhoto" />
               </div>
             </div>
@@ -99,7 +99,7 @@ function Humanity() {
               <div className="text-black text-[32px] font-500 font-sans mb-5 uppercase">
                   <img className='w-full xl:w-[384px] h-[262px]' src={humanity3} alt="humanityPhoto" />
               </div>
-              <div className="text-[#454655] text-start xl:text-justify align-center h-max mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px] sm:pl-[24px]">
+              <div className="text-[#454655] text-start xl:text-justify align-center h-max xl:mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px] sm:pl-[24px]">
                 <h1 className='text-[32px] uppercase'>Ажилд авах журам</h1>
                 <div className='py-[24px] leading-[24px] sm:pr-[45px]'>Бид ажилд орох хүсэлт гаргасан иргэн бүрд адил, тэгш боломж олгож, ажилтан сонгон шалгаруулалтаа шударга, ил тодоор явуулдаг.</div>
               </div>
@@ -109,7 +109,7 @@ function Humanity() {
         <div className={` xl:mx-0 ${showAltanTsagaanOvoo ? '' : 'hidden'}`}>
 
         </div>
-        <div className={`xl:px-[24px] ${showUurkhainNuurs ? '' : 'hidden'}`}>
+        <div className={`xl:px-[20px] ${showUurkhainNuurs ? '' : 'hidden'}`}>
           <div className="w-full">
             <div className="w-full">
             <Posts urlType='humanity'/>

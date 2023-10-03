@@ -42,9 +42,9 @@ export default HumanityAdminItem;
 
 function HumanityAdminModal({ post, onClose }) {
   return (
-    <div className="fixed top-0 h-full left-0 w-full backdrop-brightness-50 flex items-center justify-center z-50">
-          <div className=" text-[#000] mx-80 mt-10 h-[800px] overflow-auto rounded-lg w-full">
-          <div className="m-2 bg-[#fff] w-[1000px] border p-10 ">
+    <div className="fixed top-0 h-full left-0 w-full backdrop-brightness-50 flex items-center justify-center z-50 fontSomething">
+          <div className=" text-[#000] p-10 mt-10 h-[800px] overflow-auto rounded-lg w-max">
+          <div className="m-2 bg-[#fff] w-full border p-10 ">
           <main className="relative">
             <button
               onClick={onClose}
@@ -113,7 +113,7 @@ function HumanityAdminModal({ post, onClose }) {
                 </div>
               </div>
               <h1 className="mb-[16px] text-[#23356B] text-[14px] font-[500]">Оршин суугаа хаягийн мэдээлэл</h1>
-              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-[24px] text-[14px]">
+              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-[24px] text-[14px] w-max">
                 <div className="">
                   <p>Аймаг хот*</p>
                   <p className="rounded-[8px] border w-full xl:w-[282px] h-[40px] p-2">{post.city}</p>
@@ -365,9 +365,9 @@ function HumanityAdminModal({ post, onClose }) {
                     </div>
                   </div>
                   <div>
-                    <div className="mt-[40px] text-[14px]">
+                    <div className="mt-[40px] text-[14px] w-max">
                       <p className="block mb-[8px]">Үндсэн мэргэжлээсээ гадна ямар чиглэлийн ажил хийх сонирхол, хүсэлтэй вэ?</p>
-                      <p className="rounded-[8px] border w-full h-[40px] p-2">{post.kindOfWork}</p>
+                      <p className="rounded-[8px] border w-full h-[40px] w-full p-2">{post.kindOfWork}</p>
                     </div>
                     <div className="xl:flex gap-[24px] mt-[24px] text-[14px]">
                       <div>
@@ -522,13 +522,13 @@ function HumanityAdminModal({ post, onClose }) {
       </div>
     </div>
     <div className="flex gap-[13px] mb-[40px]">
-      <div className="w-full">
-        <p className="block mb-[8px]">Таны ирээдүйн зорилго:</p>
+      <div className="w-[880px]">
+        <p className="block mb-[8px">Таны ирээдүйн зорилго:</p>
         <p className="rounded-[8px] w-full h-[40px] border p-2" >{post.futureGoals}</p>
       </div>
     </div>
     <div className="flex gap-[13px] mb-[40px]">
-      <div className="w-full">
+      <div className="w-[880px]">
         <p className="block mb-[8px]">Өөрийнхөө талаарх нэмж танилцуулах боломж:</p>
         <p className="rounded-[8px] w-full h-max border p-2" >{post.yourself}</p>
       </div>

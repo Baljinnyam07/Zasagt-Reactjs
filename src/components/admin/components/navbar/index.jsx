@@ -17,7 +17,7 @@ function AdminNav(){
           url:'/admin/mechanical/rent'
         },
         {
-          title: 'Хүний Нөөц',
+          title: 'Хүний нөөц',
           url:'/admin/humanity/hire'
         },
         {
@@ -44,7 +44,7 @@ function AdminNav(){
     
     return(
       <nav className="relative">
-      <div className="h-full fixed">
+      <div className="h-full fixed fontSomething">
       <ul className="bg-[#2b4287] w-max p-5 h-4/5 leading-10">
         <li className="w-full mb-20 flex justify-center">
         <a href="/admin">
@@ -72,7 +72,7 @@ function AdminNav(){
           <li key={index} className="group flex">
             <a
               href={dropdown.url}
-              className="col-span-1 text-[#ffffff] hover:underline cursor-pointer"
+              className="col-span-1 text-[#ffffff] hover:underline cursor-pointer fontSomething"
               onClick={() => toggleDropdown(index)}
             >
               {dropdown.title}
@@ -80,8 +80,8 @@ function AdminNav(){
           </li>
         ))}
         <li>
-          <Link className="hover:underline text-[#ffffff]" to="/admin/feedbacks/feedback">
-            Санал Хүсэлт
+          <Link className="hover:underline text-[#ffffff] fontSomething" to="/admin/feedbacks/feedback">
+            Санал хүсэлт
           </Link>
         </li>
       </ul>

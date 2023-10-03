@@ -42,17 +42,17 @@ const Project = () => {
           className="text-[#454655] xl:w-[480px] font-medium cursor-pointer  xl:py-[40px] border-b"
           onClick={handleOvooTolgoiClick}
         >
-          <Link className={`flex xl:pl-[130px] pl-[70px] py-4 gap-2 text-center xl:text-start ${location.pathname === '/project/ovooTolgoi' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi"><FormattedMessage id="OvootHeader"/>{location.pathname === '/project/ovooTolgoi' && <div className='w-[8px] h-[2px] hidden xl:block flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`flex xl:pl-[130px] justify-center xl:justify-normal items-center xl:items-start py-4 gap-2 text-center w-full xl:text-start ${location.pathname === '/project/ovooTolgoi' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi"><div className='w-12 xl:w-max'><FormattedMessage id="OvootHeader"/></div>{location.pathname === '/project/ovooTolgoi' && <div className='w-[8px] h-[2px] hidden xl:block flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
           className="text-[#454655] xl:w-[480px] font-medium cursor-pointer border-b xl:py-[40px]"
           onClick={handleUurkhainNuursClick}
         >
-          <Link className={`flex xl:pl-[130px] px-2 p-2  text-center xl:text-start ${location.pathname === '/project/UurhaiNvvrs' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/UurhaiNvvrs"><span className='w-[215px]'><FormattedMessage id='tsankhi'/></span>{location.pathname === '/project/UurhaiNvvrs' && <div className='w-[8px] hidden xl:block h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`flex xl:pl-[130px] justify-center xl:justify-normal items-center xl:items-start px-[20px] py-4 gap-2 text-center w-full xl:text-start ${location.pathname === '/project/UurhaiNvvrs' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/UurhaiNvvrs"><span className='xl:w-[215px]'><FormattedMessage id='tsankhi'/></span>{location.pathname === '/project/UurhaiNvvrs' && <div className='w-[8px] hidden xl:block h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
       </div>
       <div className="xl:pl-[24px] pt-[40px]">
-        <div className={`mx-[24px] xl:mx-0 ${showOvooTolgoi ? '' : 'hidden'}`}>
+        <div className={`mx-[20px] xl:mx-0 ${showOvooTolgoi ? '' : 'hidden'}`}>
         <div className="text-[#454655] text-[32px] font-[500] font-sans mb-5 uppercase">төслийн тухай</div>
           <div className="">
             <div>
@@ -80,7 +80,7 @@ const Project = () => {
             </div>
           </div>
         </div>
-        <div className={`mx-[24px] xl:mx-0 ${showUurkhainNuurs ? '' : 'hidden'}`}>
+        <div className={`mx-[20px] xl:mx-0 ${showUurkhainNuurs ? '' : 'hidden'}`}>
         <div className="text-[#454655] text-[32px] font-[500] font-sans mb-5 uppercase">төслийн тухай</div>
           <div className="">
             <div>

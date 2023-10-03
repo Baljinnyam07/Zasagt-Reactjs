@@ -13,7 +13,7 @@ module.exports = {
         'custom-rgba': 'rgba(35, 53, 107, 0.04)',
       },
       fontFamily: {
-        'sans': ['Helvetica', 'Arial', 'sans-serif'],
+        'sans': ['sans-serif'],
       },
     },
   },

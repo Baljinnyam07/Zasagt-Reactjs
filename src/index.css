@@ -10,6 +10,9 @@ body {
 code {
   font-family: 'Fira Sans', sans-serif;}
 
+.fontSomething{
+  font-family: 'Fira Sans', sans-serif;}
+
 .modal-overlay {
   opacity: 0;
   pointer-events: none;
