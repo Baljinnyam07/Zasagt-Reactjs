@@ -85,7 +85,7 @@ const Layout =({locale, setLocale})=> {
               </div>
               <div className="flex py-[40px]">
               
-                  <Nav/>
+                  <Nav lan={locale}/>
                   <span id="translate_lang" className="px-[0px] sm:px-[20px] py-[20px] cursor-pointer" onClick={() => {changeLocale()}}>
                   {locale === "mn" ? <div className="">
                   <svg width="33" height="16" viewBox="0 0 33 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
