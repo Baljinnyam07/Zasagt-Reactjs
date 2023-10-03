@@ -53,14 +53,15 @@ const Project = () => {
       </div>
       <div className="xl:pl-[24px] pt-[40px]">
         <div className={`mx-[20px] xl:mx-0 ${showOvooTolgoi ? '' : 'hidden'}`}>
-        <div className="text-[#454655] text-[32px] font-[500] font-sans mb-5 uppercase">төслийн тухай</div>
+        <div className="text-[#454655] text-[32px] font-[500] font-sans mb-5 uppercase"><FormattedMessage id='aboutPro'/></div>
           <div className="">
             <div>
               <div className="text-[#454655] text-justify font-[400] leading-8 mb-5 sm:w-[894px]">
-              Саусгоби Ресурс Лимитед (Саусгоби) нь Торонто болон Хонконгийн Хөрөнгийн Биржид (TSX: SGQ, HK: 1878) бүртгэлтэй олон нийтэд нээлттэй нүүрс нийлүүлэгч компани бөгөөд Саусгоби компани нь логистикийн дэд бүтэцтэй, арилжааны чадамж бүхий стратегийн ач холбогдолтой нүүрсний орд эзэмшдэг болно. Тус орд нь Өмнөговь аймгийн Гурван тэс суманд орших бөгөөд 9,283 га бүхий талбайд 2037 он хүртэл олборлолт хийх ашиглалтын тусгай зөвшөөрөлтэй.
+              <FormattedMessage id='proOne'/>
               </div>
               <div className="text-[#454655] text-justify font-normal leading-8 mb-5 sm:w-[894px]">
-              Манай компани 2022 оноос эхлэн Саусгоби Сэндс компанитай хамтран ажиллаж эхэлсэн бөгөөд Овоот Толгой дахь Нармандах болон Наржаргах уурхайд хөрс хуулалт, нүүрс олборлолтын ажлыг хийж гүйцэтгэж байна.              </div>
+              <FormattedMessage id='proTwo'/>
+             </div>
             </div>
             <div className='relative'>
               <div className="flex p-[16px] absolute">
@@ -73,19 +74,19 @@ const Project = () => {
           </div>
           <div className='mb-[120px]'>
             <div className="text-[#454655] text-[32px] font-[500] font-sans mb-[24px] mt-[80px] uppercase">
-              Төслийн одоогийн хүчин чадал
+              <FormattedMessage id='proCap' />
             </div>
             <div className="text-[#454655] text-base font-normal leading-8 mb-5 sm:w-[894px]">
-            Засагт Хаан ХХК нь Овоот толгойн ил уурхайд 200 орчим ажилтантай жилийн 7.5 сая.м3 уулын цул олборлох хүчин чадал бүхий утгуурт ачигч болон өөрөө буулгагч машинуудаар үйл ажиллагаа явуулж байна.
+            <FormattedMessage id='proCapOne'/>
             </div>
           </div>
         </div>
         <div className={`mx-[20px] xl:mx-0 ${showUurkhainNuurs ? '' : 'hidden'}`}>
-        <div className="text-[#454655] text-[32px] font-[500] font-sans mb-5 uppercase">төслийн тухай</div>
+        <div className="text-[#454655] text-[32px] font-[500] font-sans mb-5 uppercase"><FormattedMessage id='aboutPro'/></div>
           <div className="">
             <div>
               <div className="text-[#454655] text-base font-normal leading-8 mb-5 sm:w-[920px]">
-              Монголын өмнөд хэсэгт орших Өмнөговь аймагт оршдог дэлхийн хамгийн том ашиглагдаагүй коксжих болон эрчим хүчний нүүрсний ордуудын нэг бөгөөд нийт 2.9 тэрбум тонн нөөцтэй ба үүний дөрөвний нэг нь сайн чанарын коксжих нүүрс бүхий ордтой стратегийн гол орд юм.
+                <FormattedMessage id='proTwo'/>
               </div>
             </div>
             <div className='relative'>
@@ -99,10 +100,10 @@ const Project = () => {
           </div>
           <div className='mb-[120px]'>
             <div className="text-[#454655] text-[32px] font-[500] font-sans mb-[24px] mt-[80px] uppercase">
-            Төслийн одоогийн хүчин чадал
+              <FormattedMessage id='proCap'/>
             </div>
             <div className="text-[#454655] text-base font-normal leading-8 mb-5 sm:w-[894px]">
-            Эрдэнэс Таван Толгой ХХК-ийн баруун цанхийн уурхайн нүүрс ачилтын ажилд 2020 оноос эхлэн одоог хүртэл ажиллаж баялаг бүтээлцэж байгаа бөгөөд жилийн 4.8 сая.тн нүүрс ачилт хийх хүчин чадалтай.            
+              <FormattedMessage id='proCapTwo'/>
             </div>
           </div>
         </div>

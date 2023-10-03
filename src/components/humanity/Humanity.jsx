@@ -50,12 +50,12 @@ function Humanity() {
           className="text-[#454655] w-1/3 xl:w-[480px] text-center xl:text-start font-medium mb-5 cursor-pointer py-[20px] xl:py-[40px] border-b"
           onClick={handleOvooTolgoiClick}
         >
-          <Link className={`flex xl:pl-[130px] px-[20px] xl:px-[0px] gap-2 ${location.pathname === '/humanity/resource-policy' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi"><FormattedMessage id='humanPolicy'/>
+          <Link className={`flex xl:pl-[130px] flex justify-center xl:justify-normal items-center xl:items-start xl:px-[0px] px-[10px] gap-2 ${location.pathname === '/humanity/resource-policy' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/ovooTolgoi"><FormattedMessage id='humanPolicy'/>
           {location.pathname === '/humanity/resource-policy' && <div className='w-[8px] h-[2px] flex-shrink-0 xl:block hidden bg-[#D0A616] mt-[9px]'></div>}</Link>
           
         </div>
         <div
-          className="text-[#454655] w-1/3 xl:w-[480px] text-center xl:text-start font-medium mb-5 cursor-pointer py-[20px] xl:py-[40px] border-b"
+          className="text-[#454655] w-1/3 xl:w-[480px] flex justify-center xl:justify-normal items-center xl:items-start text-center xl:text-start font-medium mb-5 cursor-pointer py-[20px] xl:py-[40px] border-b"
           onClick={handleAltanTsagaanOvooClick}
         >
           <Link className={`flex xl:pl-[130px] px-[20px] xl:px-[0px] gap-2 ${location.pathname === '/humanity/curriculum' ? 'text-[#D0A616]' : 'text-[#000]'}`} to="/project/tsagaanOvoo"><FormattedMessage id='curriculum'/>{location.pathname === '/humanity/curriculum' && <div className='w-[8px] hidden xl:block h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
@@ -63,7 +63,7 @@ function Humanity() {
 
 
         <div
-          className="text-[#454655] w-1/3 xl:w-[480px] text-center xl:text-start font-medium mb-5 cursor-pointer py-[20px] xl:py-[40px] border-b"
+          className="text-[#454655] w-1/3 xl:w-[480px] flex justify-center xl:justify-normal items-center xl:items-start text-center xl:text-start font-medium mb-5 cursor-pointer py-[20px] xl:py-[40px] border-b"
           onClick={handleUurkhainNuursClick}
         >
           <a className={`flex xl:pl-[130px] px-[20px] xl:px-[0px] gap-2 ${location.pathname === '/humanity/hire' ? 'text-[#D0A616]' : 'text-[#000]'}`} href="/humanity/hire"><FormattedMessage id='availavleJob'/>{location.pathname === '/humanity/hire' && <div className='w-[8px] h-[2px] xl:block hidden flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
@@ -78,17 +78,17 @@ function Humanity() {
                   <img className='w-full xl:w-[384px] h-[262px] ' src={humanity1} alt="humanityPhoto" />
               </div>
               <div className="text-[#454655] text-justify align-center xl:mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px] sm:pl-[24px]">
-                <h1 className='text-[32px] uppercase'>бодлого</h1>
+                <h1 className='text-[32px] uppercase'><FormattedMessage id='policy'/></h1>
                 <div className='py-[24px] leading-[24px] sm:pr-[45px] w-full'>
-                Бид “Засагт Хаан” компанийн үнэт зүйлс болон ёс зүйн зан төлвийг зохистойгоор баримтлан ажиллахыг хичээдэг. Манай ажилтнуудын соёл нь аюулгүй осолгүй ажиллагаа, ёс зүй, хамтын ажиллагаа, хариуцлага гэсэн үндсэн 3 тулгуур багана дээр суурилдаг.
+                  <FormattedMessage id='title1'/>
                 </div>
               </div>
             </div>
             <div className='lg:flex mb-[80px]'>
               <div className="text-[#454655] text-justify align-center h-max xl:mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px]">
-                <h1 className='text-[32px] uppercase'>зорилго, зорилт</h1>
+                <h1 className='text-[32px] uppercase'><FormattedMessage id='purpose'/></h1>
                 <div className='py-[24px] leading-[24px] xl:mr-[45px]'>
-                  Байгууллага доторх ажиллах хүчийг бүрдүүлж, чадварлаг, мэргэшсэн ажил горилогчийг сонгон шалгаруулж , тогтвор суурьшилтай ажиллуулах, хөгжүүлэх, дэмжлэг туслалцаа үзүүлэх зорилготой.
+                  <FormattedMessage id='title2'/>
                 </div>                
               </div>
               <div className="text-black text-[32px] xl:mr-[45px] font-500 font-sans mb-5 uppercase">
@@ -100,8 +100,8 @@ function Humanity() {
                   <img className='w-full xl:w-[384px] h-[262px]' src={humanity3} alt="humanityPhoto" />
               </div>
               <div className="text-[#454655] text-start xl:text-justify align-center h-max xl:mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px] sm:pl-[24px]">
-                <h1 className='text-[32px] uppercase'>Ажилд авах журам</h1>
-                <div className='py-[24px] leading-[24px] sm:pr-[45px]'>Бид ажилд орох хүсэлт гаргасан иргэн бүрд адил, тэгш боломж олгож, ажилтан сонгон шалгаруулалтаа шударга, ил тодоор явуулдаг.</div>
+                <h1 className='text-[32px] uppercase'><FormattedMessage id='procedure'/></h1>
+                <div className='py-[24px] leading-[24px] sm:pr-[45px]'><FormattedMessage id='title3'/></div>
               </div>
             </div>
           </div>

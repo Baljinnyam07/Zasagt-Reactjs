@@ -66,30 +66,30 @@ const Mechanical = () => {
           <Link className={`xl:pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/mining')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/mining'><div className='w-[210px]'><FormattedMessage id='strip'/></div>{location.pathname === '/mechanical/mining' && <div className='w-[8px] xl:block hidden h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
-          className="text-[#454655] w-1/3 xl:w-[480px] flex  p-2 text-center xl:text-start font-medium cursor-pointer border-b xl:py-[40px]"
+          className="text-[#454655] w-1/3 px-10 xl:px-0 xl:w-[480px] flex justify-center xl:justify-normal items-center xl:items:start p-2 text-center xl:text-start font-medium cursor-pointer border-b xl:py-[40px]"
         >
-          <Link className={`xl:pl-[130px] flex justify-center items-center xl:mt-0 gap-2 ${location.pathname.startsWith('/mechanical/openings')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/openings'><FormattedMessage id='miningSup'/>{location.pathname === '/mechanical/openings' && <div className='w-[8px] h-[2px] xl:block hidden flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
+          <Link className={`xl:pl-[130px] flex xl:mt-0 gap-2 ${location.pathname.startsWith('/mechanical/openings')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/openings'><FormattedMessage id='miningSup'/>{location.pathname === '/mechanical/openings' && <div className='w-[8px] h-[2px] xl:block hidden flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>
         <div
-          className="text-[#454655] w-1/3 xl:w-[480px] flex p-2 text-center xl:text-start font-medium cursor-pointer border-b xl:py-[40px]"
+          className="text-[#454655] w-1/3 px-10 xl:px-0 xl:w-[480px] flex justify-center xl:justify-normal items-center xl:items:start p-2 text-center xl:text-start font-medium cursor-pointer border-b xl:py-[40px]"
         >
-          <a className={`xl:pl-[130px] flex justify-center items-center xl:mt-0 gap-2 ${location.pathname.startsWith('/mechanical/rent')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/mechanical/rent'><FormattedMessage id='rentalEq'/>{location.pathname === '/mechanical/rent' && <div className='w-[8px] h-[2px] xl:block hidden flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
+          <a className={`xl:pl-[130px] flex xl:mt-0 gap-2 ${location.pathname.startsWith('/mechanical/rent')  ? 'text-[#D0A616]' : 'text-[#000]'}`} href='/mechanical/rent'><FormattedMessage id='rentalEq'/>{location.pathname === '/mechanical/rent' && <div className='w-[8px] h-[2px] xl:block hidden flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</a>
         </div>
       </div>
       <div className='xl:pl-[24px] pt-[40px]'>
         <div className='xl:w-[894px] mx-[20px]'>
           <div className={`xl:mx-[24px] xl:mx-0 ${show1 ? '' : 'hidden'}`}>
-          {showButton1 && (<div className='uppercase text-[24px] xl:text-[32px] font-[500] text-[#454655]'>бага оврын тоног төхөөрөмж</div>)}
-          {showButton2 && (<div className='uppercase text-[24px] xl:text-[32px] font-[500] text-[#454655]'>дунд оврын тоног төхөөрөмж</div>)}
+          {showButton1 && (<div className='uppercase text-[24px] xl:text-[32px] font-[500] text-[#454655]'><FormattedMessage id='mechanicTitleSmall'/></div>)}
+          {showButton2 && (<div className='uppercase text-[24px] xl:text-[32px] font-[500] text-[#454655]'><FormattedMessage id='mechanicTitle'/></div>)}
             <div className='w-full xl:flex grid grid-cols-2 text-[10px] xl:text-[12px] text-[#23356B] font-[500] uppercase mt-[24px]'>
-                <div className={`border py-[15px] flex justify-center font-bold cursor-pointer w-full xl:w-[446px] button1 bg-[#ECEDEE] ${showButton1 ? 'border-[#23356B]' : ''}`} onClick={() => handleButtonClick(1)}>1 - 3 сая m3/жил гүйцэтгэх</div>
-                <div className={`border py-[15px] flex justify-center font-bold cursor-pointer w-full xl:w-[446px] button2 bg-[#ECEDEE] ${showButton2 ? 'border-[#23356B]' : ''}`} onClick={() => handleButtonClick(2)}>2 - 7 САЯ m3/жил гүйцэтгэх</div>
+                <div className={`border py-[15px] flex justify-center font-bold cursor-pointer w-full xl:w-[446px] button1 bg-[#ECEDEE] ${showButton1 ? 'border-[#23356B]' : ''}`} onClick={() => handleButtonClick(1)}><FormattedMessage id='sp1'/></div>
+                <div className={`border py-[15px] flex justify-center font-bold cursor-pointer w-full xl:w-[446px] button2 bg-[#ECEDEE] ${showButton2 ? 'border-[#23356B]' : ''}`} onClick={() => handleButtonClick(2)}><FormattedMessage id='sp2'/></div>
             </div>
             {showButton1 && (
             <div className='buttonShow1'>
-              <div className='text-[16px] w-full text-[#454655] font-[400] mb-[16px] mt-[24px]'>“Засагт хаан” ХХК нь 1.0 - 3.0 сая.м3/жил хүчин чадал бүхий ил уурхайн хөрс хуулалт, олборлолтын ажлын тоног төхөөрөмжийн хослол санал болгож байна.</div>
-              {showButton1 && (<div className='xl:text-[32px] font-[500] mb-[16px] text-[#454655]'>Ил уурхайн бага оврын тоног төхөөрөмжийн хослол</div>)}
-              {showButton2 && (<div className='xl:text-[32px] font-[500] mb-[16px] text-[#454655]'>Ил уурхайн дунд оврын тоног төхөөрөмжийн хослол</div>)}
+              <div className='text-[16px] w-full text-[#454655] font-[400] mb-[16px] mt-[24px]'><FormattedMessage id='spp1'/></div>
+              {showButton1 && (<div className='xl:text-[32px] font-[500] mb-[16px] text-[#454655]'><FormattedMessage id='spe1'/></div>)}
+              {showButton2 && (<div className='xl:text-[32px] font-[500] mb-[16px] text-[#454655]'><FormattedMessage id='spe2'/></div>)}
               <div className='mb-[120px]'>
                 <table className="xl:w-full border-collapse border">
                   <thead>
@@ -120,8 +120,8 @@ const Mechanical = () => {
             )}
             {showButton2 && (
             <div className='buttonShow2'>
-            <div className='text-[16px] text-[#454655] font-[400] mb-[16px] mt-[24px]'>“Засагт хаан” ХХК нь 2.0 - 7.0 сая.м3/жил хүчин чадал бүхий ил уурхайн хөрс хуулалт, олборлолтын ажлын тоног төхөөрөмжийн хослол санал болгож байна.</div>
-              <div className='xl:text-[32px] font-[500] mb-[16px] text-[#454655]'>Ил уурхайн дунд оврын тоног төхөөрөмжийн хослол</div>
+            <div className='text-[16px] text-[#454655] font-[400] mb-[16px] mt-[24px]'><FormattedMessage id='spp2'/></div>
+              <div className='xl:text-[32px] font-[500] mb-[16px] text-[#454655]'><FormattedMessage id='spe2'/></div>
               <div className='mb-[120px]'>
               <table className="w-full border-collapse border">
               <thead>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Anket from "../humanity/Anket";
+import { FormattedMessage } from "react-intl";
 
 function PostsMoreHumanity({ posts }) {
   const [expandedPostId, setExpandedPostId] = useState(null);
@@ -21,7 +22,7 @@ function PostsMoreHumanity({ posts }) {
         {!showAnket && (
           <div className="transition duration-150 ease-out">
           <div className="mx-[20px] xl:mx-0 w-max xl:w-full">
-              <div className="text-[#454655] text-[24px] xl:text-[32px] font-[500] font-sans mb-5">Нээлттэй ажлын байрууд</div>
+              <div className="text-[#454655] text-[24px] xl:text-[32px] font-[500] font-sans mb-5"><FormattedMessage id="openings"/></div>
             </div>
       {posts.map((post) => (
         <div className="mx-[20px] xl:mx-0" key={post.id}>
