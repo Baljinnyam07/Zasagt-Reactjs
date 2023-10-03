@@ -118,10 +118,7 @@ const Layout =({locale, setLocale})=> {
                   <div className='border-l h-full sm:h-[102px] absolute top-0 right-[70px] sm:right-[140px]'></div>
                   </div>}
                   </span>
-                  
-                  
                   <div>
-                  
                   </div>
               </div>
             </div>
