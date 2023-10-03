@@ -67,7 +67,7 @@ function PostsAdminItem({ post, dataType, getPosts }) {
     </div>
     )}
     {showEditModal && (
-      <div className="fixed z-50 backdrop-blur backdrop-opacity-100 flex h-max items-center justify-center">
+      <div className="fixed z-50 bottom-10 backdrop-blur backdrop-opacity-100 flex h-max items-center justify-center">
         <div className="bg-white w-full rounded-xl text-[#000] relative">
           {/* Edit Modal */}
           <PostEditt post={post} dataType={dataType} getPosts={getPosts} />
