@@ -138,9 +138,6 @@ export const ProjectCarousel = ({ items }) => {
               <div className=" w-full xl:w-[54.8vw] mb-[14px]">
                 <div className="carousel-caption w-full xl:w-[800px] text-justify font-[400] text-[#454655] text-[14px] md:text-[16px]"><FormattedMessage id={item.lan1}/></div>
               </div>
-              <div className="w-full xl:w-[54.8vw]">
-                <div className="carousel-caption w-full xl:w-[800px] text-justify font-[400] text-[#454655] text-[14px] md:text-[16px]"><FormattedMessage id={item.lan2}/></div>
-              </div>
               <div className="flex items-end absolute bottom-0">
               <button
                 className="border rounded-[90px] mt-[24px] xl:mt-[66px] w-[40px] mr-[16px] h-[40px] bg-opacity-20 p-[12px] transform -translate-y-1/2 text-3xl text-gray-500 focus:outline-none"

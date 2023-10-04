@@ -59,9 +59,6 @@ const Project = () => {
               <div className="text-[#454655] text-justify font-[400] leading-8 mb-5 sm:w-[894px]">
               <FormattedMessage id='proOne'/>
               </div>
-              <div className="text-[#454655] text-justify font-normal leading-8 mb-5 sm:w-[894px]">
-              <FormattedMessage id='proTwo'/>
-             </div>
             </div>
             <div className='relative'>
               <div className="flex p-[16px] absolute">
