@@ -31,7 +31,7 @@
         "type": "Экскаватор",
         "mark": "CAT 349D",
         "unit": "2",
-        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic2.1.jpeg?alt=media&token=eb06ac38-1729-4d0d-870c-d993b1ebfed0",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/2e582d2ae8c1a1c6f4184000a6c4af5e.png?alt=media&token=93a5cfec-667c-4080-a33c-78d6e88d226a&_gl=1*dzpcjk*_ga*NjE4OTAxNTUxLjE2ODY2MjIzMjE.*_ga_CW55HF8NVT*MTY5NjM4NjUxNS4xOTQuMS4xNjk2MzkxODI3LjcuMC4w",
         "info": "Харах",
         "details": [
           { "type": "Шанаганы багтаамж", "size": "м3", "cat": "3.3" },
@@ -107,7 +107,7 @@
         "type": "Автогрейдер",
         "mark": "Liugong CLG4180H",
         "unit": "1",
-        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic6.png?alt=media&token=79a22169-e2dd-481c-aace-4a7695aac28b",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/b7a8a186b01d91a0581c2148c6dc4bc3.png?alt=media&token=54b66dd0-01ff-4cc8-b767-12980ba17c70&_gl=1*19m4240*_ga*NjE4OTAxNTUxLjE2ODY2MjIzMjE.*_ga_CW55HF8NVT*MTY5NjM4NjUxNS4xOTQuMS4xNjk2MzkxODk3LjI1LjAuMA..",
         "info": "Харах",
         "details": [
           { "type": "Хусуурын багтаамж", "size": "м3", "cat": "4.0" },
@@ -190,18 +190,17 @@
             "type": "Автосамосвал",
             "mark": "LGMG MT-86",
             "unit": "20",
-            "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic3.png?alt=media&token=a47bab8d-ca6e-4f00-b2a9-d7abbb48d889",
+            "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/Picture1.png?alt=media&token=850eb5af-ef12-418a-a897-b681af3138b3&_gl=1*3rzzp1*_ga*NjE4OTAxNTUxLjE2ODY2MjIzMjE.*_ga_CW55HF8NVT*MTY5NjM4NjUxNS4xOTQuMS4xNjk2MzkxMzQ0LjM5LjAuMA..",
             "info": "Харах",
             "details": [
-              { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
-              { "type": "Жин", "size": "тн", "cat": "94.1" },
-              { "type": "Өргөн", "size": "м", "cat": "4.6" },
-              { "type": "Өндөр", "size": "м", "cat": "5.7" },
-              { "type": "Урт", "size": "м", "cat": "16.1" },
-              { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
-              { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
-              { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
-              { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+              { "type": "Тэвшний багтаамж", "size": "м3", "cat": "34" },
+              { "type": "Даац", "size": "тн", "cat": "60" },
+              { "type": "Дээд хурд", "size": "км/ц", "cat": "44" },
+              { "type": "Жин", "size": "тн", "cat": "31.7" },
+              { "type": "Өргөн", "size": "м", "cat": "3.55" },
+              { "type": "Өндөр", "size": "м", "cat": "4.05" },
+              { "type": "Урт", "size": "м", "cat": "9.07" },
+              { "type": "Хөдөлгүүр", "size": "", "cat": "WP12G430E310" }
             ]
           },
           {
@@ -248,7 +247,7 @@
             "type": "Автогрейдер",
             "mark": "Liugong CLG4180H",
             "unit": "1",
-            "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic6.png?alt=media&token=79a22169-e2dd-481c-aace-4a7695aac28b",
+            "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/b7a8a186b01d91a0581c2148c6dc4bc3.png?alt=media&token=54b66dd0-01ff-4cc8-b767-12980ba17c70&_gl=1*19m4240*_ga*NjE4OTAxNTUxLjE2ODY2MjIzMjE.*_ga_CW55HF8NVT*MTY5NjM4NjUxNS4xOTQuMS4xNjk2MzkxODk3LjI1LjAuMA..",
             "info": "Харах",
             "details": [
               { "type": "Хусуурын багтаамж", "size": "м3", "cat": "4.0" },
@@ -297,14 +296,23 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic.3.1.1.png?alt=media&token=0719acfe-4292-47bc-b051-5a6e01413695",
         "info": "Харах",
         "details": [
-          { "type": "Хусуурын багтаамж", "size": "м3", "cat": "8.0" },
-          { "type": "Дээд хурд", "size": "км/ц", "cat": "26.2" },
-          { "type": "Жин", "size": "тн", "cat": "37.9" },
-          { "type": "Өргөн", "size": "м", "cat": "3.0" },
-          { "type": "Өндөр", "size": "м", "cat": "3.5" },
-          { "type": "Урт", "size": "м", "cat": "6.4" },
-          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT 3406C" },
-          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "252" }
+          { "type": "Ажлын жин", "size": "тн", "cat": "52.0" },
+          { "type": "Утгуурын багтаамж", "size": "м3", "cat": "10.0" },
+          { "type": "Хамгийн бага мөчлөгийн хугацаа", "size": "с", "cat": "14.6" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "Cummins QSK19" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "", "cat": "419 kW (570 hp) @ 1600 rpm" },
+          { "type": "Дээд хурд", "size": "км/ц", "cat": "36" },
+          { "type": "Асгалт хийх хамгийн их өндөр", "size": "мм", "cat": "5649" },
+          { "type": "Ул цэвэрлэх хамгийн их гүн", "size": "мм", "cat": "139" },
+          { "type": "Түлшний банкны багтаамж ", "size": "л", "cat": "667" },
+          { "type": "Урт", "size": "мм", "cat": "11847" },
+          { "type": "Дугуйн гадна талаар авсан өргөн", "size": "мм", "cat": "3590" },
+          { "type": "Шанаганы өргөн", "size": "мм", "cat": "4120" },
+          { "type": "Өндөр", "size": "мм", "cat": "4195" },
+          { "type": "Эргэлтийн радиус", "size": "мм", "cat": "8620" },
+          { "type": "Явах ангиар тооцсон эргэлтийн радиус", "size": "мм", "cat": "7620" }
+
+
         ]
       },
       {
@@ -368,7 +376,7 @@
         "type": "Автогрейдер",
         "mark": "Liugong CLG4180H",
         "unit": "1",
-        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic6.png?alt=media&token=79a22169-e2dd-481c-aace-4a7695aac28b",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/b7a8a186b01d91a0581c2148c6dc4bc3.png?alt=media&token=54b66dd0-01ff-4cc8-b767-12980ba17c70&_gl=1*19m4240*_ga*NjE4OTAxNTUxLjE2ODY2MjIzMjE.*_ga_CW55HF8NVT*MTY5NjM4NjUxNS4xOTQuMS4xNjk2MzkxODk3LjI1LjAuMA..",
         "info": "Харах",
         "details": [
           { "type": "Хусуурын багтаамж", "size": "м3", "cat": "4.0" },

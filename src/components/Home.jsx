@@ -51,7 +51,7 @@ const jsonProject =[
   {
     proTitle:'Овоот толгой төсөл',
     proLan:"Ovoot",
-    image: 'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/project1.png?alt=media&token=863a2f07-77b5-47bd-8d14-11ccf8f56c21',
+    image: 'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/project2.png?alt=media&token=4fdd57b4-9ad2-4025-a88e-652ef37957f8',
     caption1: 'Саусгоби Ресурс Лимитед (Саусгоби) нь Торонто болон Хонконгийн Хөрөнгийн Биржид (TSX: SGQ, HK: 1878) бүртгэлтэй олон нийтэд нээлттэй нүүрс нийлүүлэгч компани бөгөөд Саусгоби компани нь логистикийн дэд бүтэцтэй, арилжааны чадамж бүхий стратегийн ач холбогдолтой нүүрсний орд эзэмшдэг болно. Тус орд нь Өмнөговь аймгийн Гурван тэс суманд орших бөгөөд 9,283 га бүхий талбайд 2037 он хүртэл олборлолт хийх ашиглалтын тусгай зөвшөөрөлтэй.',
     caption2:' Манай компани 2022 оноос эхлэн Саусгоби Сэндс компанитай хамтран ажиллаж эхэлсэн бөгөөд Овоот Толгой дахь Нармандах болон Наржаргах уурхайд хөрс хуулалт, нүүрс олборлолтын ажлыг хийж гүйцэтгэж байна.',
     lan1:"caroHis1",
@@ -60,7 +60,7 @@ const jsonProject =[
   {
     proTitle:'цанхийн баруун уурхайн нүүрс ачилт',
     proLan:"tsankhi",
-    image: 'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/project2.png?alt=media&token=4fdd57b4-9ad2-4025-a88e-652ef37957f8',
+    image: 'https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/homeImage2.png?alt=media&token=fe26a66f-7f0d-46c3-9d3a-f455b1bb5eaa&_gl=1*1yid6cd*_ga*NjE4OTAxNTUxLjE2ODY2MjIzMjE.*_ga_CW55HF8NVT*MTY5NjM4NjUxNS4xOTQuMS4xNjk2MzkyODM4LjI5LjAuMA..',
     caption1: 'Монголын өмнөд хэсэгт орших Өмнөговь аймагт оршдог дэлхийн хамгийн том ашиглагдаагүй коксжих болон эрчим хүчний нүүрсний ордуудын нэг бөгөөд нийт 2.9 тэрбум тонн нөөцтэй ба үүний дөрөвний нэг нь сайн чанарын коксжих нүүрс бүхий ордтой стратегийн гол орд юм.',
     caption2:'',
     lan1:"caroHis2",

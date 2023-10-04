@@ -10,7 +10,7 @@ const en = {
     "miningSup":"Mining support",
     "rentalEq":"Equipment rental",
     "AboutCom":"About company",
-    "History":"Zasagt Khan LLC started its activities in the field of mining exploration and production in 2008. Since 2011, it has expanded its activities in the field of construction of residential and industrial buildings and rental of heavy machinery, and is currently operating in the following areas.",
+    "History":"Zasagt Khaan LLC started its activities in the field of mining exploration and production in 2008. Since 2011, it has expanded its activities in the field of construction of residential and industrial buildings and rental of heavy machinery, and is currently operating in the following areas.",
     "totalPro":"Total implemented projects",
     "totalTehc":"Total technical capacity",
     "danger":"There are no cases of accidents and incapacity for work have occured since its establishments",
@@ -62,8 +62,8 @@ const en = {
     "mechanicTitleSmall":"small equipment",
     "sp1":"1 - 3 million m3/year",
     "sp2":"2 - 7 million m3/year",
-    "spp1":"Zasagt Khan LLC offers a combination of open pit stripping and mining equipment with a capacity of 1.0 - 3.0 million m3/year.",
-    "spp2":"Zasagt Khan LLC offers a combination of open pit stripping and mining equipment with a capacity of 2.0 - 7.0 million m3/year.",
+    "spp1":"Zasagt Khaan LLC offers a combination of open pit stripping and mining equipment with a capacity of 1.0 - 3.0 million m3/year.",
+    "spp2":"Zasagt Khaan LLC offers a combination of open pit stripping and mining equipment with a capacity of 2.0 - 7.0 million m3/year.",
     "spe1":"A combination of small-scale mining equipment",
     "spe2":"A combination of medium-sized open-pit mining equipment",
     "tech1":"Bulldozer",
@@ -79,14 +79,14 @@ const en = {
     "tech11":"quantity",
     "tech12":"Indicator",
     "policy":"Policy",
-    "title1":"We try to work in accordance with the values and ethical behavior of Zasagt Haan company. Our employee culture is based on 3 key pillars: safe accident-free operations, ethics, cooperation and responsibility.",
+    "title1":"By actively supporting the continuous learning and growth of employees, we will form an ethical and competent team and create long-term and sustainable business success.",
     "purpose":"PURPOSE",
-    "title2":"It aims to form the workforce within the organization, select skilled and qualified candidates, provide stable employment, development, and support.",
+    "title2":`<ul class="list-disc list-outside text-justify leading-8"><li>Creating an environment for employees to learn and develop</li><li>Provide market competitive wages, benefits and supplies</li><li>Adopting a culture of a team where employees adhere to ethical norms and work satisfactorily</li><li>Forming a professional team based on knowledge and skills</li></ul>`,
     "procedure":"RECRUITMENT PROCEDURE",
     "title3":"We provide equal and equal opportunities to every citizen who applies for employment, and conduct employee selection in a fair and transparent manner.",
     "upskill":"Upskilling training",
     "ohs":"Occupational Health and Safety (OHS)",
-    "openings":"Open positions"
+    "openings":"Available jobs"
 }
 
 export default en

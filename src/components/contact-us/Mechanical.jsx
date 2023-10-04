@@ -61,7 +61,7 @@ const Mechanical = () => {
       <div className="xl:flex divide-x">
       <div className="text-[10px] xl:text-[14px] uppercase xl:block flex divide-x">
         <div
-          className="text-[#454655] w-1/3 xl:w-[480px] p-4 text-center xl:text-start font-medium cursor-pointer border-b xl:py-[40px]"
+          className="text-[#454655] w-1/3 xl:w-[480px] p-4 xl:p-0 text-center xl:text-start font-medium cursor-pointer border-b xl:py-[40px]"
         >
           <Link className={`xl:pl-[130px] flex gap-2 ${location.pathname.startsWith('/mechanical/mining')  ? 'text-[#D0A616]' : 'text-[#000]'}`} to='/mechanical/mining'><div className='w-[210px]'><FormattedMessage id='strip'/></div>{location.pathname === '/mechanical/mining' && <div className='w-[8px] xl:block hidden h-[2px] flex-shrink-0 bg-[#D0A616] mt-[9px]'></div>}</Link>
         </div>

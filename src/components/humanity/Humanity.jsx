@@ -5,7 +5,7 @@ import humanity2 from './humanity2.png'
 import humanity3 from './humanity3.png'
 
 import Posts from '../Posts/Posts';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 function Humanity() {
   const [showOvooTolgoi, setShowOvooTolgoi] = useState(true);
@@ -13,6 +13,7 @@ function Humanity() {
   const [showUurkhainNuurs, setShowUurkhainNuurs] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const intl = useIntl();
 
   useEffect(() => {
     if (location.pathname === '/humanity/resource-policy') {
@@ -78,7 +79,7 @@ function Humanity() {
                   <img className='w-full xl:w-[384px] h-[262px] ' src={humanity1} alt="humanityPhoto" />
               </div>
               <div className="text-[#454655] text-justify align-center xl:mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px] sm:pl-[24px]">
-                <h1 className='text-[32px] uppercase'><FormattedMessage id='policy'/></h1>
+                <h1 className='text-[32px]'><FormattedMessage id='policy'/></h1>
                 <div className='py-[24px] leading-[24px] sm:pr-[45px] w-full'>
                   <FormattedMessage id='title1'/>
                 </div>
@@ -86,9 +87,9 @@ function Humanity() {
             </div>
             <div className='lg:flex mb-[80px]'>
               <div className="text-[#454655] text-justify align-center h-max xl:mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px]">
-                <h1 className='text-[32px] uppercase'><FormattedMessage id='purpose'/></h1>
-                <div className='py-[24px] leading-[24px] xl:mr-[45px]'>
-                  <FormattedMessage id='title2'/>
+                <h1 className='text-[32px]'><FormattedMessage id='purpose'/></h1>
+                <div className='py-[24px] ml-4 leading-[24px] xl:mr-[45px]'>
+                  <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "title2"}) }} />
                 </div>                
               </div>
               <div className="text-black text-[32px] xl:mr-[45px] font-500 font-sans mb-5 uppercase">
@@ -100,8 +101,8 @@ function Humanity() {
                   <img className='w-full xl:w-[384px] h-[262px]' src={humanity3} alt="humanityPhoto" />
               </div>
               <div className="text-[#454655] text-start xl:text-justify align-center h-max xl:mt-[50px] font-normal leading-8 mb-5 w-full xl:w-[604px] sm:pl-[24px]">
-                <h1 className='text-[32px] uppercase'><FormattedMessage id='procedure'/></h1>
-                <div className='py-[24px] leading-[24px] sm:pr-[45px]'><FormattedMessage id='title3'/></div>
+                <h1 className='text-[32px]'><FormattedMessage id='procedure'/></h1>
+                <div className='py-[24px] text-justify leading-[24px] sm:pr-[45px]'><FormattedMessage id='title3'/></div>
               </div>
             </div>
           </div>
