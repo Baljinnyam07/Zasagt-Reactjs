@@ -323,15 +323,17 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic4.1.png?alt=media&token=12fef3d2-b028-4f1e-b25b-a2212150a229",
         "info": "Харах",
         "details": [
-          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
-          { "type": "Жин", "size": "тн", "cat": "94.1" },
-          { "type": "Өргөн", "size": "м", "cat": "4.6" },
-          { "type": "Өндөр", "size": "м", "cat": "5.7" },
-          { "type": "Урт", "size": "м", "cat": "16.1" },
-          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
-          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
-          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
-          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+          { "type": "Ажлын жин", "size": "тн", "cat": "16.7" },
+          { "type": "Утгуурын багтаамж", "size": "м3", "cat": "3" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "Cummins 6LT9.3" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "", "cat": "162 kW / 2,000 rpm" },
+          { "type": "Дээд хурд", "size": "км/ц", "cat": "45" },
+          { "type": "Асгалт хийх хамгийн их өндөр", "size": "мм", "cat": "4400" },
+          { "type": "Ул цэвэрлэх хамгийн их гүн", "size": "мм", "cat": "92" },
+          { "type": "Түлшний банкны багтаамж ", "size": "л", "cat": "300" },
+          { "type": "Урт", "size": "мм", "cat": "8202" },
+          { "type": "Өргөн", "size": "мм", "cat": "2750" },
+          { "type": "Өндөр", "size": "мм", "cat": "3450" }
         ]
       },
       {
@@ -342,15 +344,14 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/zasagt-khaann.appspot.com/o/mechanic3.1.png?alt=media&token=76d13d01-43e0-4cc4-ab15-c6eb33db1f8b",
         "info": "Харах",
         "details": [
-          { "type": "Шанаганы багтаамж", "size": "м3", "cat": "6.5" },
-          { "type": "Жин", "size": "тн", "cat": "94.1" },
-          { "type": "Өргөн", "size": "м", "cat": "4.6" },
-          { "type": "Өндөр", "size": "м", "cat": "5.7" },
-          { "type": "Урт", "size": "м", "cat": "16.1" },
-          { "type": "Утгалтын гүн", "size": "м", "cat": "7.2" },
-          { "type": "Асгалтын өндөр", "size": "м", "cat": "7.9" },
-          { "type": "Хөдөлгүүр", "size": "", "cat": "CAT C18" },
-          { "type": "Хөдөлгүүрийн чадал", "size": "КВт", "cat": "404" }
+          { "type": "Даац", "size": "тн", "cat": "25.0" },
+          { "type": "Тэвшний багтаамж", "size": "м3", "cat": "18.0" },
+          { "type": "Хөдөлгүүр", "size": "", "cat": "SINOTRUK" },
+          { "type": "Хөдөлгүүрийн чадал", "size": "", "cat": "336 НР / 1,400rpm" },
+          { "type": "Дээд хурд", "size": "км/ц", "cat": "90" },
+          { "type": "Урт", "size": "мм", "cat": "8960" },
+          { "type": "Өргөн", "size": "мм", "cat": "2495" },
+          { "type": "Өндөр", "size": "мм", "cat": "3330" }
         ]
       },
       {
