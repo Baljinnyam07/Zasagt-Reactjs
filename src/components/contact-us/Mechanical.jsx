@@ -77,7 +77,7 @@ const Mechanical = () => {
         </div>
       </div>
       <div className='xl:pl-[24px] pt-[40px]'>
-        <div className='xl:w-[894px] mx-[20px]'>
+        <div className='xl:w-[894px] mx-[20px] xl:mx-[0px]'>
           <div className={`xl:mx-[24px] xl:mx-0 ${show1 ? '' : 'hidden'}`}>
           {showButton1 && (<div className='uppercase text-[24px] xl:text-[32px] font-[500] text-[#454655]'><FormattedMessage id='mechanicTitleSmall'/></div>)}
           {showButton2 && (<div className='uppercase text-[24px] xl:text-[32px] font-[500] text-[#454655]'><FormattedMessage id='mechanicTitle'/></div>)}
@@ -90,16 +90,16 @@ const Mechanical = () => {
               <div className='text-[16px] w-full text-[#454655] font-[400] mb-[16px] mt-[24px]'><FormattedMessage id='spp1'/></div>
               {showButton1 && (<div className='xl:text-[32px] font-[500] mb-[16px] text-[#454655]'><FormattedMessage id='spe1'/></div>)}
               {showButton2 && (<div className='xl:text-[32px] font-[500] mb-[16px] text-[#454655]'><FormattedMessage id='spe2'/></div>)}
-              <div className='mb-[120px]'>
-                <table className="xl:w-full border-collapse border">
+              <div className='mb-[120px] w-full overflow-x-auto'>
+                <table className="w-[400px] xl:w-full border-collapse border">
                   <thead>
                     <tr className='text-[12px] xl:text-[16px] font-[500] text-[#23356B]'>
-                      <th className="bg-[#E9EBF0] border  border-[#23356B] w-[24px] xl:w-[36px] py-[14px] text-center">{mechData.tableData1[0].number}</th>
-                      <th className="bg-[#E9EBF0] border  border-[#23356B] w-[20px] xl:w-[167px] py-[14px] text-start pl-[16px]">{mechData.tableData1[0].type}</th>
-                      <th className="bg-[#E9EBF0] border  border-[#23356B] w-[20px] xl:w-[205px] py-[14px] text-start pl-[16px]">{mechData.tableData1[0].mark}</th>
-                      <th className="bg-[#E9EBF0] border  border-[#23356B] w-[10px] xl:w-[95px] py-[14px] text-center">{mechData.tableData1[0].unit}</th>
-                      <th className="bg-[#E9EBF0] border  border-[#23356B] w-[160px] xl:w-[168px] py-[14px] text-center">{mechData.tableData1[0].image}</th>
-                      <th className="bg-[#E9EBF0] border  border-[#23356B] w-[2px] xl:w-[223px] py-[14px] text-center">{mechData.tableData1[0].info}</th>
+                      <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[36px] py-[14px] text-center">{mechData.tableData1[0].number}</th>
+                      <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[167px] py-[14px] text-start pl-[16px]">{mechData.tableData1[0].type}</th>
+                      <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[205px] py-[14px] text-start pl-[16px]">{mechData.tableData1[0].mark}</th>
+                      <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[95px] py-[14px] text-center">{mechData.tableData1[0].unit}</th>
+                      <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[168px] py-[14px] text-center">{mechData.tableData1[0].image}</th>
+                      <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[223px] py-[14px] text-center">{mechData.tableData1[0].info}</th>
                     </tr>
                   </thead>
                   <tbody className=''>
@@ -109,7 +109,7 @@ const Mechanical = () => {
                         <td className=" border border-[#23356B] pl-[16px]">{item.type}</td>
                         <td className="border border-[#23356B] pl-[16px]">{item.mark}</td>
                         <td className="border border-[#23356B] text-center">{item.unit}</td>
-                        <td className="border border-[#23356B] py-[7px] px-[36px]"><img className='w-[5rem] h-[58px]' src={item.image} alt="" /></td>
+                        <td className="border border-[#23356B] p-3 xl:py-[7px] xl:px-[36px]"><img className='w-full xl:w-[5rem] h-[42px] xl:h-[58px]' src={item.image} alt="" /></td>
                         <td id="modal-switch" className="border border-[#23356B] text-center text-[14px] text-[#23356B] cursor-pointer font-[500] underline" onClick={() => handleTableCellClick(item.details, item.type, item.image, item.mark)}>{item.info}</td>
                       </tr>
                     ))}
@@ -122,16 +122,16 @@ const Mechanical = () => {
             <div className='buttonShow2'>
             <div className='text-[16px] text-[#454655] font-[400] mb-[16px] mt-[24px]'><FormattedMessage id='spp2'/></div>
               <div className='xl:text-[32px] font-[500] mb-[16px] text-[#454655]'><FormattedMessage id='spe2'/></div>
-              <div className='mb-[120px]'>
-              <table className="w-full border-collapse border">
+              <div className='mb-[120px] w-full overflow-x-auto'>
+              <table className="w-[400px] xl:w-full border-collapse border">
               <thead>
                 <tr className='text-[12px] xl:text-[16px] font-[500] text-[#23356B]'>
-                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[24px] xl:w-[36px] py-[14px] text-center">{mechData.tableData2[0].number}</th>
-                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[20px] xl:w-[167px] py-[14px] text-start pl-[16px]">{mechData.tableData2[0].type}</th>
-                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[20px] xl:w-[205px] py-[14px] text-start pl-[16px]">{mechData.tableData2[0].mark}</th>
-                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[10px] xl:w-[95px] py-[14px] text-center">{mechData.tableData2[0].unit}</th>
-                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[180px] xl:w-[168px] py-[14px] text-center">{mechData.tableData2[0].image}</th>
-                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[2px] xl:w-[223px] py-[14px] text-center">{mechData.tableData2[0].info}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[36px] py-[14px] text-center">{mechData.tableData2[0].number}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[167px] py-[14px] text-start pl-[16px]">{mechData.tableData2[0].type}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[205px] py-[14px] text-start pl-[16px]">{mechData.tableData2[0].mark}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[95px] py-[14px] text-center">{mechData.tableData2[0].unit}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[168px] py-[14px] text-center">{mechData.tableData2[0].image}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[223px] py-[14px] text-center">{mechData.tableData2[0].info}</th>
                 </tr>
               </thead>
               <tbody>
@@ -141,7 +141,7 @@ const Mechanical = () => {
                     <td className=" border border-[#23356B] pl-[16px]">{item.type}</td>
                     <td className="border border-[#23356B] pl-[16px]">{item.mark}</td>
                     <td className="border border-[#23356B] text-center">{item.unit}</td>
-                    <td className="border border-[#23356B] py-[7px] px-[36px]"><img className='w-[5rem] h-[58px]' src={item.image} alt="" /></td>
+                    <td className="border border-[#23356B] p-3 xl:py-[7px] xl:px-[36px]"><img className='w-full xl:w-[5rem] h-[42px] xl:h-[58px]' src={item.image} alt="" /></td>
                     <td id="modal-switch" className="border border-[#23356B] text-center text-[14px] text-[#23356B] cursor-pointer font-[500] underline" onClick={() => handleTableCellClick(item.details, item.type, item.image, item.mark)}>{item.info}</td>
                   </tr>
                 ))}
@@ -156,26 +156,26 @@ const Mechanical = () => {
         <div className='text-[16px] font-[400] text-[#454655]'>“Засагт хаан” ХХК нь 2.0 - 4.0 сая.тн/жил хүчин чадал бүхий экспортын тээврийн хэрэгсэлд нүүрс ачих ажлын тоног төхөөрөмжийн хослол санал болгож байна.</div>
         <div className='text-[32px] font-[500] text-[#454655] mt-[16px] mb-[16px]'>Тоног төхөөрөмжийн хослол</div>
         <div className='buttonShow1'>
-              <div className='mb-[120px]'>
-              <table className="w-full border-collapse border">
+              <div className='mb-[120px] w-full overflow-x-auto'>
+              <table className="w-[400px] xl:w-full border-collapse border">
               <thead>
                 <tr className='text-[12px] xl:text-[16px] font-[500] text-[#23356B]'>
-                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[24px] xl:w-[36px] py-[14px] text-center">{mechData.tableData1[0].number}</th>
-                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[20px] xl:w-[167px] py-[14px] text-start pl-[16px]">{mechData.tableData1[0].type}</th>
-                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[20px] xl:w-[205px] py-[14px] text-start pl-[16px]">{mechData.tableData1[0].mark}</th>
-                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[10px] xl:w-[95px] py-[14px] text-center">{mechData.tableData1[0].unit}</th>
-                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[180px] xl:w-[168px] py-[14px] text-center">{mechData.tableData1[0].image}</th>
-                  <th className="bg-[#E9EBF0] border  border-[#23356B] w-[2px] xl:w-[223px] py-[14px] text-center">{mechData.tableData1[0].info}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[36px] py-[14px] text-center">{mechData.tableData1[0].number}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[167px] py-[14px] text-start pl-[16px]">{mechData.tableData1[0].type}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[205px] py-[14px] text-start pl-[16px]">{mechData.tableData1[0].mark}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[95px] py-[14px] text-center">{mechData.tableData1[0].unit}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[168px] py-[14px] text-center">{mechData.tableData1[0].image}</th>
+                  <th className="bg-[#E9EBF0] border  border-[#23356B] xl:w-[223px] py-[14px] text-center">{mechData.tableData1[0].info}</th>
                 </tr>
               </thead>
               <tbody>
                 {mechData.tableData3.slice(1).map((item, index) => (
-                  <tr className='text-[12px] xl:text-[16px] font-[400] text-[#454655]' key={index}>
+                  <tr className='text-[10px] xl:text-[16px] font-[400] text-[#454655]' key={index}>
                     <td className="border border-[#23356B] text-center">{item.number}</td>
-                    <td className=" border border-[#23356B] pl-[16px]">{item.type}</td>
-                    <td className="border border-[#23356B] pl-[16px]">{item.mark}</td>
+                    <td className=" border border-[#23356B] p-[2px] xl:pl-[16px]">{item.type}</td>
+                    <td className="border border-[#23356B] p-[2px] xl:pl-[16px]">{item.mark}</td>
                     <td className="border border-[#23356B] text-center">{item.unit}</td>
-                    <td className="border border-[#23356B] py-[7px] px-[36px]"><img className='w-full h-[58px]' src={item.image} alt="" /></td>
+                    <td className="border border-[#23356B] p-5 px-[30px] xl:py-[7px] xl:px-[36px]"><img className='w-full xl:w-[5rem] h-[50px] xl:h-[58px]' src={item.image} alt="" /></td>
                     <td id="modal-switch" className="border border-[#23356B] text-center text-[14px] text-[#23356B] cursor-pointer font-[500] underline" onClick={() => handleTableCellClick(item.details, item.type, item.image, item.mark)}>{item.info}</td>
                   </tr>
                 ))}
@@ -202,27 +202,27 @@ const Modal = ({ isOpen, onClose, content, type, image, mark }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center z-30">
       <div className="modal-bg fixed inset-0 bg-black opacity-50"></div>
-      <div className="z-50 relative w-[550px] p-[24px] leading-8 bg-white rounded-lg shadow-lg">
+      <div className="z-50 relative m-4 xl:m-0 w-[650px] xl:w-max h-[400px] xl:h-max overflow-y-auto p-[24px] leading-8 bg-white rounded-lg shadow-lg">
         <div className="modal-header absolute right-6">
           <span className="close cursor-pointer text-xl" onClick={onClose}>&times;</span>
         </div>
         <div className="modal-body">
           <div className='text-[16px] font-bold uppercase text-[#23356B]'>{type}</div>
-          <div className='flex justify-center my-[6px]'> <img className='w-max h-[135px]' src={image} alt="" /></div>
+          <div className='flex justify-center my-[6px]'> <img className='w-[200px] xl:w-max xl:h-[135px]' src={image} alt="" /></div>
           <table className='w-full'>
             <thead>
-                  <tr className='text-[14px] w-full text-start font-[500] text-[#23356B] border-b-[1px] border-[#23356B]'>
+                  <tr className='text-[8px] xl:text-[14px] w-full text-start font-[500] text-[#23356B] border-b-[1px] border-[#23356B]'>
                     <th className="text-start">Үзүүлэлт</th>
                     <th className="text-start">Хэмжих нэгж</th>
-                    <th className="text-start">{mark}</th>
+                    <th className="text-start pl-2">{mark}</th>
                   </tr>
             </thead>
             <tbody>
               {content.map((detail, index) => (
-                <tr className='text-[14px] font-[400] text-[#454655] border-b' key={index}>
+                <tr className='text-[10px] xl:text-[14px] font-[400] text-[#454655] border-b' key={index}>
                   <td>{detail.type} </td>  
                   <td>{detail.size}</td>
-                  <td>{detail.cat}</td>
+                  <td className='pl-2'>{detail.cat}</td>
                 </tr>
               ))}
             </tbody>
