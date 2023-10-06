@@ -99,12 +99,16 @@ export default function Nav({lan}) {
     
     
     const handleScrollClick = () => {
-    window.scrollTo({
-        top:document.documentElement.scrollHeight,
-        left:'',
-        behavior: 'smooth',
-    });
-  };
+      const scrollHeight = document.documentElement.scrollHeight;
+      const windowHeight = window.innerHeight;
+      const offset = 250; // Adjust this value as needed
+  
+      window.scrollTo({
+          top: scrollHeight - windowHeight - offset,
+          left: 0,
+          behavior: 'smooth',
+      });
+  }
   
 
     return (
